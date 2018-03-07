@@ -24,3 +24,5 @@ node_modules
 yarn.lock
 .tea
 /build/
+/lib/
+/es/

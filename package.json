@@ -10,6 +10,11 @@
     "antui",
     "mini-program"
   ],
-  "author": "temu.psc@alipay.com",
-  "license": "ISC"
+  "devDependencies": {
+    "rc-tools": "6.x"
+  },
+  "scripts": {
+    "build": "rc-tools run compile && node scripts/cp.js",
+    "pub": "git push origin && npm run build && tnpm publish"
+  }
 }
