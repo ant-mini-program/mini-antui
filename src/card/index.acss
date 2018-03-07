@@ -1,0 +1,109 @@
+.am-card .am-card-header {
+  font-size: 14px;
+  color: #888;
+  margin: 15px 15px 8px;
+}
+
+.am-card .am-card-item {
+  background-color: #fff;
+  border-radius: 2px;
+  margin: 6px 10px;
+}
+
+.am-card .am-card-minfo {
+  min-height: 86px;
+  display: flex;
+  align-items: center;
+  padding: 0 16px;
+  box-sizing: border-box;
+}
+
+.am-card .am-card-thumb {
+  margin-right: 10px;
+}
+
+.am-card .am-card-thumb img {
+  width: 48px;
+  height: 48px;
+  float: left;
+  border-radius: 2px;
+  -webkit-background-clip: padding-box;
+}
+
+.am-card .am-card-content {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  min-width: 100px;
+}
+
+.am-card .am-card-title {
+  font-size: 20px;
+  line-height: 25px;
+  color: #333;
+}
+
+.am-card .am-card-subtitle {
+  font-size: 14px;
+  line-height: 20px;
+  color: #999;
+  margin-bottom: 2px;
+}
+
+.am-card .am-card-noicon.am-card-minfo, .am-card.am-card-noicon .am-card-minfo {
+  min-height: 81px;
+  padding: 16px;
+}
+
+.am-card .am-card-noicon .am-card-title, .am-card.am-card-noicon .am-card-title {
+  font-size: 18px;
+  margin-bottom: 4px;
+}
+
+.am-card .am-card-noicon .am-card-subtitle, .am-card.am-card-noicon .am-card-subtitle {
+  margin: 0;
+}
+
+.am-card .am-card-footnote {
+  background: linear-gradient(180deg, #fff, #fff) top left no-repeat, linear-gradient(0deg, #fff, #fff) bottom left no-repeat, linear-gradient(180deg, #ddd, #ddd 33%, transparent 33%) top left no-repeat, linear-gradient(0deg, #ddd, #ddd 33%, transparent 33%) bottom left no-repeat, #fff;
+  background-size: 0 0, 100% 1px, 100% 1px, 0 0;
+  padding: 10px 0;
+  margin: -4px 16px 0;
+  font-size: 14px;
+  line-height: 20px;
+  color: #999;
+}
+
+.am-card .am-card-footnote img {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  margin-right: 4px;
+  vertical-align: -2px;
+}
+
+.am-card a.am-card-minfo .hover, .am-card a.am-card-minfo:active {
+  background: #D9D9D9;
+}
+
+.am-card .am-list-arrow {
+  margin-left: 8px;
+  margin-right: -2px;
+  width: 12px;
+  padding: 15px 0;
+}
+
+.am-card .am-icon.arrow {
+  display: block;
+  overflow: hidden;
+  width: 13px;
+  height: 13px;
+}
+
+.am-card .am-icon.arrow:before {
+  content: "";
+  display: block;
+  width: 13px;
+  height: 13px;
+  background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAaCAYAAAC+aNwHAAAAkElEQVR4AWJwL/BhAJRWByYAgkAUhmdpkDZxlJZqD9UpXCPyBUTEga9+4IkI94F1XaWUTdH+a67inPOhjP2OgD+IFoTcm1GY3khrbfGAGFG6kBmAkPCw1rq6iBYb0VkEzJD+hHQWAz6iJBtQdP8YiQEbUQNiAF0BP0T+Gnkj8VbmHxMq5gOFjzQ+VPlYxz+WEyrVzhdMcxADAAAAAElFTkSuQmCC") center center no-repeat;
+  background-size: 8px 13px;
+}

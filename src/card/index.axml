@@ -1,0 +1,11 @@
+<view class="am-card">
+  <view class="{{`am-card-item am-card-minfo am-card-noicon`}}" onTap="onCardClick">
+      <view class="am-card-content">
+          <view class="am-card-title">{{title}}</view>
+          <view class="am-card-subtitle">{{subTitle}}</view>
+      </view>
+      <view class="am-list-arrow" aria-hidden="true">
+          <text class="am-icon arrow horizontal" />
+      </view>
+  </view>
+</view>

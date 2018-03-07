@@ -1,0 +1,3 @@
+<view class="container" key="container">
+  <list items="{{items}}" onItemClick="{{onItemClick}}" />
+</view>

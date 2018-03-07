@@ -1,0 +1,14 @@
+{
+  "pages": [
+    "list/demo/index"
+  ],
+  "window": {
+    "enableWK": "YES",
+    "enableDSL": true,
+    "defaultTitle": "小程序版AntUI",
+    "backgroundColor": "#F5F5F9",
+    "pullRefresh": false,
+    "allowsBounceVertical": true
+  },
+  "debug": true
+}

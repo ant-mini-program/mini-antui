@@ -11,8 +11,5 @@
     "mini-program"
   ],
   "author": "temu.psc@alipay.com",
-  "license": "ISC",
-  "dependencies": {
-    "@alipay/antui": "^10.1.10"
-  }
+  "license": "ISC"
 }

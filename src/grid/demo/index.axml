@@ -1,0 +1,5 @@
+<view class="container" key="container">
+  <view class="slogon">
+    <grid onGridItemClick="onItemClick" columnNum="{{4}}" list="{{list}}" />
+  </view>
+</view>

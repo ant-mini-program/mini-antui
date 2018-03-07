@@ -1,0 +1,5 @@
+<view class="container" key="container">
+  <view class="slogon">
+    <card title="卡片标题22" subTitle="副标题非必填22" onCardClick="onCardClick" />
+  </view>
+</view>

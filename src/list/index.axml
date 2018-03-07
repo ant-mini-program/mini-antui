@@ -1,0 +1,24 @@
+<view class="am-list">
+  <block a:if={{header}}>
+    <view class="am-list-header">{{header}}</view>
+  </block>
+  <view a:if={{items}} class="am-list-body">
+    <block a:for={{items}}>
+      <view
+        class="am-list-item {{index !== (data.length - 1) ? '': 'last'}} am-list-item-{{item.align || 'middle'}}"
+        hover-class="am-list-item-hover"
+        onTap="{{onItemTap}}"
+        data-index={{index}}
+        ket="item-{{index}}"
+      >
+        <view class="am-list-item-line {{item.textMode ? 'am-list-item-line-' + item.textMode : ''}}">
+          <image a:if={{item.thumb}} class="am-list-item-thumb" src="{{item.thumb}}" mode="scaleToFill" />
+          <text class="am-list-item-content">{{item.title}}</text>
+          <view a:if={{item.extra}} class="am-list-item-extra" >{{item.extra}}</view>
+          <view a:if={{item.arrow}} class="am-list-arrow am-list-arrow-{{item.arrow}}" />
+          <view class="am-list-item-bottom" />
+        </view>
+      </view>
+    </block>
+  </view>
+</view>
