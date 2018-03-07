@@ -1,10 +1,16 @@
 {
-  "name": "mini-antui",
-  "version": "1.0.0",
+  "name": "@alipay/mini-antui",
+  "version": "0.0.1",
   "description": "小程序版AntUI",
   "repository": {
     "type": "git",
     "url": "git@gitlab.alipay-inc.com:mini-program/mini-antui.git"
+  },
+  "files": [
+    "es"
+  ],
+  "publishConfig": {
+    "registry": "http://registry.npm.alibaba-inc.com"
   },
   "keywords": [
     "antui",
