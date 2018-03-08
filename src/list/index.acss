@@ -1,131 +1,24 @@
 .am-list {
     box-sizing: border-box;
+    margin: 10px 0;
 }
 
 .am-list-header {
-    padding: 30rpx 30rpx 18rpx;
-    font-size: 28rpx;
+    padding: 15px 15px 9px;
+    font-size: 14px;
     color: #888;
-    display: inline-block;
+    display: block;
     width: 100%;
+    box-sizing: border-box;
+    background: #f5f5f9;
+    z-index: 9999;
+}
+
+.am-list-footer {
+    padding: 9px 15px 15px 15px;
+    font-size: 14px;
+    color: #888;
+    display: block;
     box-sizing: border-box;
 }
 
-.am-list-item {
-    display: flex;
-    font-size: 30rpx;
-    line-height: 1.5;
-    color: #333333;
-    min-height: 88rpx;
-    align-items: center;
-    padding-left: 30rpx;
-    background: #fff;
-}
-
-.am-list-item-bottom {
-    display: block;
-    position: absolute;
-    width: 100%;
-    border-bottom: 1px solid #ddd;
-    left: 0;
-    bottom: 0;
-    right: auto;
-    top: auto;
-}
-
-.am-list-item-thumb {
-    width: 44rpx;
-    height: 44rpx;
-    margin-right: 30rpx;
-}
-
-.am-list-item-line {
-    position: relative;
-    display: flex;
-    flex: 1;
-    align-items: center;
-    align-self: stretch;
-    padding-right: 30rpx;
-    min-height: 88rpx;
-    overflow: hidden;
-}
-
-am-list-item-top .am-list-item-line {
-    align-items: flex-start;
-}
-
-.am-list-item-middle .am-list-item-line {
-    align-items: center;
-}
-
-.am-list-item-bottom .am-list-item-line {
-    align-items: flex-end;
-}
-
-.am-list-item-content {
-    flex: 1;
-    color: #000;
-    font-size: .34rem;
-    text-align: left;
-    line-height: 1.5;
-    width: auto;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    padding-top: .14rem;
-    padding-bottom: .14rem;
-}
-
-.am-list-item.last .am-list-item-bottom{
-    border-bottom: none;
-}
-
-.am-list-item-extra {
-    flex-basis: 36%;
-    color: #888;
-    font-size: 32rpx;
-    text-align: right;
-    line-height: 1.5;
-    width: auto;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    padding-top: .14rem;
-    padding-bottom: .14rem;
-}
-
-.am-list-item-content,
-.am-list-item-extra {
-    white-space: normal;
-}
-
-.am-list-item.am-list-item-hover {
-    background-color: #ddd;
-}
-
-.am-list-arrow {
-    display: block;
-    width: 30rpx;
-    height: 30rpx;
-    margin-left: 16rpx;
-    background-image: url('data:image/svg+xml;charset=utf-8,<svg width="16" height="26" viewBox="0 0 16 26" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g id="UI-KIT_基础元件" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g id="9.9基础元件" transform="translate(-5809.000000, -8482.000000)" fill="#C7C7CC"><polygon id="Disclosure-Indicator" points="5811 8482 5809 8484 5820.5 8495 5809 8506 5811 8508 5825 8495"></polygon></g></g></svg>');
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: 50% 50%;
-    visibility: hidden;
-    transition: transform 0.3s;
-}
-
-am-list-arrow-horizontal {
-    visibility: visible;
-}
-
-.am-list-arrow-vertical {
-    visibility: visible;
-    transform: rotate(90deg);
-}
-
-.am-list-arrow-vertical-up {
-    visibility: visible;
-    transform: rotate(270deg);
-}

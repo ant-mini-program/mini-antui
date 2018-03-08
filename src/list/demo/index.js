@@ -2,24 +2,54 @@ Page({
   data: {
     items: [
       {
-        title: '标题文字',
-        extra: '基本使用'
+        title: '单行列表',
+        extra: '详细信息'
       },
+    ],
+    items2: [
       {
-        thumb: 'https://zos.alipayobjects.com/rmsportal/NTuILTPhmSpJdydEVwoO.png',
-        title: '标题图片',
+        title: '多行列表',
         arrow: 'horizontal',
       },
       {
-        title: '标题文字',
+        title: '多行列表',
         arrow: 'horizontal',
-        extra: '带箭头'
       },
       {
-        thumb: 'https://zos.alipayobjects.com/rmsportal/NTuILTPhmSpJdydEVwoO.png',
-        title: '标题文字',
+        title: '多行列表',
         arrow: 'horizontal',
-        extra: '完整使用'
+      },
+    ],
+    items3: [
+      {
+        title: '双行列表',
+        extra: '描述信息',
+        arrow: 'horizontal',
+      },
+    ],
+    items4: [
+      {
+        title: '双行列表',
+        brief: '描述信息',
+        extra: '描述信息',
+        arrow: 'horizontal',
+      },
+      {
+        title: '双行列表',
+        extra: '描述信息',
+        arrow: 'horizontal',
+      },
+      {
+        title: '双行列表',
+        extra: '描述信息',
+        arrow: 'horizontal',
+      },
+    ],
+    items5: [
+      {
+        thumb: 'https://gw.alipayobjects.com/zos/rmsportal/KXDIRejMrRdKlSEcLseB.png',
+        title: '固定到头部',
+        arrow: 'horizontal',
       },
       {
         title: '标题文字不换行很长很长很长很长很长很长很长很长很长很长',
@@ -94,6 +124,16 @@ Page({
   onItemClick: function(ev) {
     my.alert({
       content: ev.target.dataset.index,
+    });
+  },
+  onCardClick: function(ev) {
+    my.alert({
+      content: ev.e2 || '3131',
+    });
+  },
+  onTapHeader(ev) {
+    my.alert({
+      content: 'onTapHeader',
     });
   }
 });

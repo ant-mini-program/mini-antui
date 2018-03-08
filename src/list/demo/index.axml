@@ -1,3 +1,173 @@
-<view class="container" key="container">
-  <list items="{{items}}" onItemClick="{{onItemClick}}" />
-</view>
+<!--<card title="卡片标题22" subTitle="副标题非必填22" onCardClick="onCardClick" />-->
+<list>
+  <view slot="listheader" style="display: flex;">
+    <view style="flex:1;">
+      列表头部
+    </view>
+    <view style="flex:1; text-align: right;" onTap="onTapHeader">
+      <image style="width: 20px;height: 20px;" src="https://gw.alipayobjects.com/zos/rmsportal/KXDIRejMrRdKlSEcLseB.png" mode="scaleToFill" />
+    </view>
+  </view>
+  <view slot="listitems">
+    <block a:for="{{items}}">
+      <listitem
+        thumb="{{item.thumb}}"
+        arrow="{{item.arrow}}"
+        align="{{item.align}}"
+        data-index="{{index}}"
+        onClick="{{onItemClick}}"
+        className="{{index === 0 ? 'am-list-sticky' : ''}}"
+        key="items-{{index}}"
+      >
+        <view slot="content">
+          {{item.title}}
+          <view class="am-list-brief">{{item.brief}}</view>
+        </view>
+        <view slot="extra">
+          {{item.extra}}
+        </view>
+      </listitem>
+    </block>
+    <block a:for="{{items2}}">
+      <listitem
+        thumb="{{item.thumb}}"
+        arrow="{{item.arrow}}"
+        onClick="{{onItemClick}}"
+        key="items2-{{index}}"
+        className="{{index === 0 ? 'am-list-sticky' : ''}}"
+      >
+        <view slot="content">
+          {{item.title}}
+          <view class="am-list-brief">{{item.brief}}</view>
+        </view>
+        <view a:if="{{item.extra}}" slot="extra">
+          {{item.extra}}
+        </view>
+      </listitem>
+    </block>
+    <block a:for="{{items3}}">
+      <listitem
+        thumb="{{item.thumb}}"
+        arrow="{{item.arrow}}"
+        onClick="{{onItemClick}}"
+        key="items2-{{index}}"
+        className="{{index === 0 ? 'am-list-sticky' : ''}}"
+      >
+        <view slot="content">
+          {{item.title}}
+          <view class="am-list-brief">{{item.brief}}</view>
+        </view>
+        <view a:if="{{item.extra}}" slot="extra">
+          {{item.extra}}
+        </view>
+      </listitem>
+    </block>
+    <block a:for="{{items4}}">
+      <listitem
+        thumb="{{item.thumb}}"
+        arrow="{{item.arrow}}"
+        onClick="{{onItemClick}}"
+        last="{{index === (items4.length - 1)}}"
+        key="items3-{{index}}"
+        className="{{index === 0 ? 'am-list-sticky' : '222'}}"
+      >
+        <view slot="content">
+          {{item.title}}
+          <view class="am-list-brief">{{item.brief}}</view>
+        </view>
+        <view a:if="{{item.extra}}" slot="extra">
+          {{item.extra}}
+        </view>
+      </listitem>
+    </block>
+  </view>
+  <view slot="listfooter">
+    列表尾部
+  </view>
+</list>
+<list >
+  <view slot="listitems">
+    <block a:for="{{items3}}">
+      <listitem
+        thumb="{{item.thumb}}"
+        arrow="{{item.arrow}}"
+        onClick="{{onItemClick}}"
+        last="{{index !== (items2.length - 1)}}"
+        key="items2-{{index}}"
+        className="{{index === 0 ? 'am-list-sticky' : '2222'}}"
+      >
+        <view slot="content">
+          {{item.title}}
+          <view class="am-list-brief">{{item.brief}}</view>
+        </view>
+        <view a:if="{{item.extra}}" slot="extra">
+          {{item.extra}}
+        </view>
+      </listitem>
+    </block>
+  </view>
+</list>
+<list >
+  <view slot="listitems">
+    <block a:for="{{items4}}">
+      <listitem
+        thumb="{{item.thumb}}"
+        arrow="{{item.arrow}}"
+        onClick="{{onItemClick}}"
+        last="{{index !== (items3.length - 1)}}"
+        key="items3-{{index}}"
+        className="{{index % 2 === 0 ? 'am-list-sticky' : '222'}}"
+      >
+        <view slot="content">
+          {{item.title}}
+          <view class="am-list-brief">{{item.brief}}</view>
+        </view>
+        <view a:if="{{item.extra}}" slot="extra">
+          {{item.extra}}
+        </view>
+      </listitem>
+    </block>
+  </view>
+</list>
+<list >
+  <view slot="listitems">
+    <block a:for="{{items5}}">
+      <listitem
+        thumb="{{item.thumb}}"
+        arrow="{{item.arrow}}"
+        onClick="{{onItemClick}}"
+        last="{{index !== (items4.length - 1)}}"
+        key="items4-{{index}}"
+      >
+        <view slot="content">
+          {{item.title}}
+          <view class="am-list-brief">{{item.brief}}</view>
+        </view>
+        <view a:if="{{item.extra}}" slot="extra">
+          {{item.extra}}
+        </view>
+      </listitem>
+    </block>
+  </view>
+</list>
+<list >
+  <view slot="listitems">
+    <block a:for="{{items5}}">
+      <listitem
+        thumb="{{item.thumb}}"
+        arrow="{{item.arrow}}"
+        onClick="{{onItemClick}}"
+        last="{{index === (items5.length - 1)}}"
+        key="items5-{{index}}"
+        className="{{index === 0 ? 'am-list-sticky' : ''}}"
+      >
+        <view slot="content">
+          {{item.title}}
+        </view>
+        <view a:if="{{item.extra}}" slot="extra">
+          {{item.extra}}
+        </view>
+      </listitem>
+    </block>
+  </view>
+</list>

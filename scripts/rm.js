@@ -5,7 +5,7 @@ const path = require('path');
 const dirs = fs.readdirSync(path.join(__dirname, '../es'));
 
 dirs.forEach((item) => {
-  if (item.includes('app.') || item.includes('DS_Store')) {
+  if (item.includes('app.') || item.includes('DS_Store') || item.includes('demo')) {
     fs.removeSync(path.join(__dirname, '../es/', item));
   } else {
     const moduleDirs = fs.readdirSync(path.join(__dirname, '../es/', item));
