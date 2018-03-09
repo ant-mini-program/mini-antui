@@ -204,16 +204,6 @@ Page({
       content: `点击了第${ev.index + 1}行`,
     });
   },
-  onCardClick: function(ev) {
-    my.alert({
-      content: ev.e2 || '3131',
-    });
-  },
-  onTapHeader(ev) {
-    my.alert({
-      content: 'onTapHeader',
-    });
-  },
   onScrollToLower() {
     const { items5 } = this.data;
     const newItems = items5.concat(newitems);

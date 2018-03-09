@@ -7,7 +7,6 @@
 |slotName | 说明 |
 |----|----|
 |header | 可选，列表头部|
-|items | 可选，列表项|
 |footer | 可选，用于渲染列表尾部|
 
 ### using
@@ -29,16 +28,12 @@
 // page.axml
 <list>
   <view slot="header">列表头部</view>
-  <view slot="items">
-    <block a:for="{{items}}">
-      <list-item key="item-{{index}}">
-        <view slot="content">
-          {{item.title}}
-          <view class="am-list-brief">{{item.brief}}</view>
-        </view>
-      </list-item>
-    </block>
-  </view>
+  <block a:for="{{items}}">
+    <list-item key="item-{{index}}">
+      {{item.title}}
+      <view class="am-list-brief">{{item.brief}}</view>
+    </list-item>
+  </block>
   <view slot="footer">列表尾部</view>
 </list>
 ```
@@ -59,7 +54,6 @@
 
 | slotname | 说明 |
 |----|----|
-|content | 可选，用于渲染列表项左边内容|
 |extra | 可选，用于渲染列表项右边说明|
 
 ### examples
@@ -71,13 +65,11 @@
   arrow="{{item.arrow}}"
   align="{{item.align}}"
   index="{{index}}"
-  onClick="{{onItemClick}}"
+  onClick="onItemClick"
   key="items-{{index}}"
 >
-  <view slot="content">
-    {{item.title}}
-    <view class="am-list-brief">{{item.brief}}</view>
-  </view>
+  {{item.title}}
+  <view class="am-list-brief">{{item.brief}}</view>
   <view slot="extra">
     {{item.extra}}
   </view>

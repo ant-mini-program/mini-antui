@@ -7,7 +7,7 @@
 	<view class="am-list-item-line {{textMode ? 'am-list-item-line-' + textMode : ''}}">
 		<image a:if={{thumb}} class="am-list-item-thumb" src="{{thumb}}" mode="scaleToFill" />
 		<view class="am-list-item-content">
-			<slot name="content" />
+			<slot />
 		</view>
 		<view a:if={{$slots.extra}} class="am-list-item-extra" >
 			<slot name="extra" />
