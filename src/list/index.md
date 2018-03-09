@@ -10,6 +10,18 @@
 |listItems | 可选，用于渲染列表尾部|
 |listFooter | 可选，用于渲染列表项|
 
+### using
+
+```page.json
+{
+  "defaultTitle": "小程序AntUI组件库",
+  "usingComponents":{
+    "list":"@alipay/mini-antui/list/index",
+    "list-item":"@alipay/mini-antui/list/list-item/index"
+  }
+}
+```
+
 ### examples
 
 ```axml
@@ -17,12 +29,12 @@
   <view slot="listHeader">列表头部</view>
   <view slot="listItems">
     <block a:for="{{items}}">
-      <listitem key="item-{{index}}">
+      <list-item key="item-{{index}}">
         <view slot="content">
           {{item.title}}
           <view class="am-list-brief">{{item.brief}}</view>
         </view>
-      </listitem>
+      </list-item>
     </block>
   </view>
   <view slot="listFooter">列表尾部</view>
@@ -50,7 +62,7 @@
 ### examples
 
 ```axml
-<listitem
+<list-item
   className="{{index === 0 ? 'am-list-sticky' : ''}}"
   thumb="{{item.thumb}}"
   arrow="{{item.arrow}}"
@@ -66,6 +78,6 @@
   <view slot="extra">
     {{item.extra}}
   </view>
-</listitem>
+</list-item>
 
 ```
