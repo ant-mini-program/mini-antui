@@ -1,6 +1,6 @@
 <view
-	class="am-list-item am-list-item-{{align || 'middle'}} {{last ? 'last': ''}} {{className}}"
-	hover-class="am-list-item-hover"
+	class="am-list-item am-list-item-{{align}} {{last ? 'last': ''}} {{className}}"
+	hover-class="{{disabled ? '' : 'am-list-item-hover'}}"
 	onTap="onItemTap"
 	data-index="{{index}}"
 >

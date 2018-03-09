@@ -201,7 +201,7 @@ Page({
   },
   onItemClick: function(ev) {
     my.alert({
-      content: ev.target.dataset.index,
+      content: `点击了第${ev.index + 1}行`,
     });
   },
   onCardClick: function(ev) {

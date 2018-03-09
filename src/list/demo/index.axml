@@ -1,10 +1,10 @@
 <!--<card title="卡片标题22" subTitle="副标题非必填22" onCardClick="onCardClick" />-->
-<view>
-	<image src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png" mode="scaleToFill" style="height:20vh;" />
+<view style="width: 100%;">
+	<image src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png" mode="aspectFill" style="height:20vh;width: 100%;" />
 </view>
 <scroll-view style="height: 80vh;" scroll-y onScrollToLower="onScrollToLower">
 	<!--<list>-->
-		<!--<view slot="listHeader" style="display: flex;">-->
+		<!--<view slot="header" style="display: flex;">-->
 			<!--<view style="flex:1;">-->
 				<!--列表头部-->
 			<!--</view>-->
@@ -12,7 +12,7 @@
 				<!--<image style="width: 20px;height: 20px;" src="https://gw.alipayobjects.com/zos/rmsportal/KXDIRejMrRdKlSEcLseB.png" mode="scaleToFill" />-->
 			<!--</view>-->
 		<!--</view>-->
-		<!--<view slot="listItems">-->
+		<!--<view slot="items">-->
 			<!--<block a:for="{{items}}">-->
 				<!--<list-item-->
 					<!--className="{{index === 0 ? 'am-list-sticky' : ''}}"-->
@@ -85,12 +85,12 @@
 				<!--</list-item>-->
 			<!--</block>-->
 		<!--</view>-->
-		<!--<view slot="listFooter">-->
+		<!--<view slot="footer">-->
 			<!--列表尾部-->
 		<!--</view>-->
 	<!--</list>-->
 	<!--<list >-->
-		<!--<view slot="listItems">-->
+		<!--<view slot="items">-->
 			<!--<block a:for="{{items3}}">-->
 				<!--<list-item-->
 					<!--thumb="{{item.thumb}}"-->
@@ -112,7 +112,7 @@
 		<!--</view>-->
 	<!--</list>-->
 	<!--<list >-->
-		<!--<view slot="listItems">-->
+		<!--<view slot="items">-->
 			<!--<block a:for="{{items4}}">-->
 				<!--<list-item-->
 					<!--thumb="{{item.thumb}}"-->
@@ -134,7 +134,7 @@
 		<!--</view>-->
 	<!--</list>-->
 	<!--<list >-->
-		<!--<view slot="listItems">-->
+		<!--<view slot="items">-->
 			<!--<block a:for="{{items5}}">-->
 				<!--<list-item-->
 					<!--thumb="{{item.thumb}}"-->
@@ -155,15 +155,17 @@
 		<!--</view>-->
 	<!--</list>-->
 	<list >
-		<view slot="listItems">
+		<view slot="items">
 			<block a:for="{{items5}}">
 				<list-item
+					className="{{item.sticky ? 'am-list-sticky' : ''}}"
 					thumb="{{item.thumb}}"
 					arrow="{{item.arrow}}"
-					onClick="{{onItemClick}}"
 					last="{{index === (items5.length - 1)}}"
+					index="{{index}}"
 					key="items5-{{index}}"
-					className="{{item.sticky ? 'am-list-sticky' : ''}}"
+					onClick="onItemClick"
+					disabled="{{item.sticky}}"
 				>
 					<view slot="content">
 						{{item.title}}{{index}}

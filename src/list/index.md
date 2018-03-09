@@ -6,9 +6,9 @@
 ### slots
 |slotName | 说明 |
 |----|----|
-|listHeader | 可选，用于渲染列表头部|
-|listItems | 可选，用于渲染列表尾部|
-|listFooter | 可选，用于渲染列表项|
+|header | 可选，列表头部|
+|items | 可选，列表项|
+|footer | 可选，用于渲染列表尾部|
 
 ### using
 
@@ -28,8 +28,8 @@
 ```axml
 // page.axml
 <list>
-  <view slot="listHeader">列表头部</view>
-  <view slot="listItems">
+  <view slot="header">列表头部</view>
+  <view slot="items">
     <block a:for="{{items}}">
       <list-item key="item-{{index}}">
         <view slot="content">
@@ -39,7 +39,7 @@
       </list-item>
     </block>
   </view>
-  <view slot="listFooter">列表尾部</view>
+  <view slot="footer">列表尾部</view>
 </list>
 ```
 
@@ -51,8 +51,9 @@
 |thumb| 缩略图 | 图片地址 |  |
 |arrow| 箭头方向(右,上,下), 可选，`horizontal`,`up`,`down`,`empty`，如果是empty则存在对应的dom,但是不显示 | String | |
 |align| 子元素垂直对齐，可选`top`,`middle`,`bottom` | String | `middle` |
-|index| | | |
-|onClick| | | |
+|index| 列表项的唯一索引| string | |
+|onClick| 点击list-item时调用此函数 | function({index}) | |
+|disabled| 不可点击，且无hover效果 | Boolean | `false` |
 
 ### slots
 
