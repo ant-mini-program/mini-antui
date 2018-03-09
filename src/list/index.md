@@ -12,7 +12,8 @@
 
 ### using
 
-```page.json
+```
+// page.json
 {
   "defaultTitle": "小程序AntUI组件库",
   "usingComponents":{
@@ -25,6 +26,7 @@
 ### examples
 
 ```axml
+// page.axml
 <list>
   <view slot="listHeader">列表头部</view>
   <view slot="listItems">
