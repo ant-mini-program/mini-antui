@@ -1,3 +1,80 @@
+
+const newitems = [
+  {
+    thumb: 'https://gw.alipayobjects.com/zos/rmsportal/KXDIRejMrRdKlSEcLseB.png',
+    title: '固定到头部',
+    arrow: 'horizontal',
+    sticky: true,
+  },
+  {
+    title: '标题文字不换行很长很长很长很长很长很长很长很长很长很长',
+    arrow: 'horizontal',
+  },
+  {
+    title: '标题文字换行很长很长很长很长很长很长很长很长很长很长',
+    arrow: 'horizontal',
+    textMode: 'wrap'
+  },
+  {
+    title: '标题文字很长很长很长很长很长很长很长很长很长很长很长很长很长很长',
+    extra: '没有箭头',
+    textMode: 'wrap'
+  },
+  {
+    title: '标题文字很长很长很长很长很长很长很长很长很长很长很长很长很长很长',
+    extra: '子元素垂直对齐',
+    textMode: 'wrap',
+    align: 'top'
+  },
+  {
+    title: '标题文字换行很长很长很长很长很长很长很长很长很长很长',
+    arrow: 'horizontal',
+    textMode: 'wrap'
+  },
+  {
+    title: '标题文字很长很长很长很长很长很长很长很长很长很长很长很长很长很长',
+    extra: '没有箭头',
+    textMode: 'wrap'
+  },
+  {
+    title: '标题文字很长很长很长很长很长很长很长很长很长很长很长很长很长很长',
+    extra: '子元素垂直对齐',
+    textMode: 'wrap',
+    align: 'top'
+  },
+  {
+    title: '标题文字换行很长很长很长很长很长很长很长很长很长很长',
+    arrow: 'horizontal',
+    textMode: 'wrap'
+  },
+  {
+    title: '标题文字很长很长很长很长很长很长很长很长很长很长很长很长很长很长',
+    extra: '没有箭头',
+    textMode: 'wrap'
+  },
+  {
+    title: '标题文字很长很长很长很长很长很长很长很长很长很长很长很长很长很长',
+    extra: '子元素垂直对齐',
+    textMode: 'wrap',
+    align: 'top'
+  },
+  {
+    title: '标题文字换行很长很长很长很长很长很长很长很长很长很长',
+    arrow: 'horizontal',
+    textMode: 'wrap'
+  },
+  {
+    title: '标题文字很长很长很长很长很长很长很长很长很长很长很长很长很长很长',
+    extra: '没有箭头',
+    textMode: 'wrap'
+  },
+  {
+    title: '标题文字很长很长很长很长很长很长很长很长很长很长很长很长很长很长',
+    extra: '子元素垂直对齐',
+    textMode: 'wrap',
+    align: 'top'
+  },
+];
 Page({
   data: {
     items: [
@@ -50,6 +127,7 @@ Page({
         thumb: 'https://gw.alipayobjects.com/zos/rmsportal/KXDIRejMrRdKlSEcLseB.png',
         title: '固定到头部',
         arrow: 'horizontal',
+        sticky: true,
       },
       {
         title: '标题文字不换行很长很长很长很长很长很长很长很长很长很长',
@@ -134,6 +212,14 @@ Page({
   onTapHeader(ev) {
     my.alert({
       content: 'onTapHeader',
+    });
+  },
+  onScrollToLower() {
+    const { items5 } = this.data;
+    const newItems = items5.concat(newitems);
+    console.log(newItems.length);
+    this.setData({
+      items5: newItems,
     });
   }
 });

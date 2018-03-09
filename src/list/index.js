@@ -1,7 +1,5 @@
 Component({
-  methods: {
-    onListTap(ev) {
-      console.log('listssss');
-    }
+  props: {
+    className: '',
   }
 });

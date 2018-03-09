@@ -1,11 +1,11 @@
-<view class="am-list" onTap="onListTap">
-  <view class="am-list-header" a:if="{{$slots.listheader}}">
-    <slot name="listheader" />
+<view class="am-list {{className}}">
+  <view class="am-list-header" a:if="{{$slots.listHeader}}">
+    <slot name="listHeader" />
   </view>
-  <view class="am-list-body"  a:if="{{$slots.listitems}}">
-    <slot name="listitems" />
+  <view class="am-list-body"  a:if="{{$slots.listItems}}">
+    <slot name="listItems" />
   </view>
-  <view class="am-list-footer" a:if="{{$slots.listfooter}}">
-    <slot name="listfooter" />
+  <view class="am-list-footer" a:if="{{$slots.listFooter}}">
+    <slot name="listFooter" />
   </view>
 </view>
