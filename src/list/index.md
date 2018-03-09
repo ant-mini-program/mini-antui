@@ -29,7 +29,10 @@
 <list>
   <view slot="header">列表头部</view>
   <block a:for="{{items}}">
-    <list-item key="item-{{index}}">
+    <list-item
+      key="item-{{index}}"
+      last="{{index === (items.length - 1)}}"
+    >
       {{item.title}}
       <view class="am-list-brief">{{item.brief}}</view>
     </list-item>
@@ -48,6 +51,7 @@
 |align| 子元素垂直对齐，可选`top`,`middle`,`bottom` | String | `middle` |
 |index| 列表项的唯一索引| string | |
 |onClick| 点击list-item时调用此函数 | function({index}) | |
+|last | 是否是列表的最后一项|boolean|false |
 |disabled| 不可点击，且无hover效果 | Boolean | `false` |
 
 ### slots
