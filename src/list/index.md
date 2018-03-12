@@ -73,6 +73,8 @@
   index="{{index}}"
   onClick="onItemClick"
   key="items-{{index}}"
+  multipleLine="{{true}}"
+  wrap="{{true}}"
 >
   {{item.title}}
   <view class="am-list-brief">{{item.brief}}</view>
