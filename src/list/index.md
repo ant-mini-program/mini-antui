@@ -53,6 +53,8 @@
 |onClick| 点击list-item时调用此函数 | function({index}) | |
 |last | 是否是列表的最后一项|boolean|false |
 |disabled| 不可点击，且无hover效果 | Boolean | `false` |
+|multipleLine | 多行 | Boolean | `false` |
+|wrap | 是否换行，默认情况下，文字超长会被隐藏 | Boolean | `false` |
 
 ### slots
 

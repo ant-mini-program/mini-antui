@@ -1,18 +1,13 @@
-.am-list {
-    box-sizing: border-box;
-    margin: 10px 0;
-}
-
 .am-list-header,
 .am-list-footer {
-    box-sizing: inherit;
-    font-size: 14px;
-    color: #888;
+  font-size: 14px;
+  color: #888;
 }
+
 .am-list-header {
-    padding: 15px 15px 9px;
+  padding: 16px 16px 8px;
 }
 
 .am-list-footer {
-    padding: 9px 15px 15px 15px;
+  padding: 8px 16px 16px 16px;
 }

@@ -1,18 +1,18 @@
 <view
-	class="am-list-item am-list-item-{{align}} {{last ? 'last': ''}} {{className}}"
+	class="am-list-item am-list-{{align}} {{multipleLine ? 'am-list-multiple' : ''}} {{last ? 'last': ''}} {{className}}"
 	hover-class="{{disabled ? '' : 'am-list-item-hover'}}"
 	onTap="onItemTap"
 	data-index="{{index}}"
 >
-	<view class="am-list-item-line {{textMode ? 'am-list-item-line-' + textMode : ''}}">
-		<image a:if={{thumb}} class="am-list-item-thumb" src="{{thumb}}" mode="scaleToFill" />
-		<view class="am-list-item-content">
+	<image a:if={{thumb}} class="am-list-thumb" src="{{thumb}}" mode="scaleToFill" />
+	<view class="am-list-line {{wrap ? 'am-list-wrap' : ''}}">
+		<view class="am-list-content">
 			<slot />
 		</view>
-		<view a:if={{$slots.extra}} class="am-list-item-extra" >
+		<view a:if={{$slots.extra}} class="am-list-extra" >
 			<slot name="extra" />
 		</view>
 		<view a:if={{arrow}} class="am-list-arrow am-list-arrow-{{arrow}}" />
-		<view class="am-list-item-bottom" />
+		<view class="am-list-line-bottom" />
 	</view>
 </view>

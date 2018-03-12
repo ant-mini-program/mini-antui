@@ -1,17 +1,11 @@
-<!--<card title="卡片标题22" subTitle="副标题非必填22" onCardClick="onCardClick" />-->
 <view>
 	<view style="width: 100%;">
 		<image src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png" mode="aspectFill" style="height:20vh;width: 100%;" />
 	</view>
 	<scroll-view style="height: 80vh;" scroll-y onScrollToLower="onScrollToLower">
 		<list>
-			<view slot="header" style="display: flex;">
-				<view style="flex:1;">
-					列表头部
-				</view>
-				<view style="flex:1; text-align: right;" onTap="onTapHeader">
-					<image style="width: 20px;height: 20px;" src="https://gw.alipayobjects.com/zos/rmsportal/KXDIRejMrRdKlSEcLseB.png" mode="scaleToFill" />
-				</view>
+			<view slot="header">
+				列表头部
 			</view>
 			<block a:for="{{items}}">
 				<list-item
@@ -35,6 +29,9 @@
 			</view>
 		</list>
 		<list>
+			<view slot="header">
+				列表头部
+			</view>
 			<block a:for="{{items2}}">
 				<list-item
 					thumb="{{item.thumb}}"
@@ -51,8 +48,14 @@
 					</view>
 				</list-item>
 			</block>
+			<view slot="footer">
+				列表尾部
+			</view>
 		</list>
 		<list>
+			<view slot="header">
+				列表头部
+			</view>
 			<block a:for="{{items3}}">
 				<list-item
 					thumb="{{item.thumb}}"
@@ -61,6 +64,7 @@
 					onClick="onItemClick"
 					key="items3-{{index}}"
 					last="{{index === (items3.length - 1)}}"
+					multipleLine="{{true}}"
 				>
 					{{item.title}}
 					<view class="am-list-brief">{{item.brief}}</view>
@@ -69,9 +73,14 @@
 					</view>
 				</list-item>
 			</block>
-
+			<view slot="footer">
+				列表尾部
+			</view>
 		</list>
 		<list>
+			<view slot="header">
+				列表头部
+			</view>
 			<block a:for="{{items4}}">
 				<list-item
 					thumb="{{item.thumb}}"
@@ -80,6 +89,53 @@
 					index="items4-{{index}}"
 					last="{{index === (items4.length - 1)}}"
 					key="items4-{{index}}"
+					multipleLine="{{true}}"
+				>
+					{{item.title}}
+					<view class="am-list-brief">{{item.brief}}</view>
+					<view a:if="{{item.extra}}" slot="extra">
+						{{item.extra}}
+					</view>
+				</list-item>
+			</block>
+			<view slot="footer">
+				列表尾部
+			</view>
+		</list>
+		<list>
+			<view slot="header">
+				小图文列表
+			</view>
+			<block a:for="{{itemsThumb}}">
+				<list-item
+					thumb="{{item.thumb}}"
+					arrow="{{item.arrow}}"
+					onClick="onItemClick"
+					index="itemsThumb-{{index}}"
+					last="{{index === (itemsThumb.length - 1)}}"
+					key="itemsThumb-{{index}}"
+				>
+					{{item.title}}
+					<view class="am-list-brief">{{item.brief}}</view>
+					<view a:if="{{item.extra}}" slot="extra">
+						{{item.extra}}
+					</view>
+				</list-item>
+			</block>
+		</list>
+		<list>
+			<view slot="header">
+				小图文双行列表
+			</view>
+			<block a:for="{{itemsThumbMultiple}}">
+				<list-item
+					thumb="{{item.thumb}}"
+					arrow="{{item.arrow}}"
+					onClick="onItemClick"
+					index="items-multiple-{{index}}"
+					last="{{index === (itemsThumbMultiple.length - 1)}}"
+					key="items-multiple-{{index}}"
+					multipleLine="{{true}}"
 				>
 					{{item.title}}
 					<view class="am-list-brief">{{item.brief}}</view>
@@ -90,16 +146,21 @@
 			</block>
 		</list>
 		<list >
+			<view slot="header">
+				无限滚动列表
+			</view>
 			<block a:for="{{items5}}">
 				<list-item
 					className="{{item.sticky ? 'am-list-sticky' : ''}}"
 					thumb="{{item.thumb}}"
 					arrow="{{item.arrow}}"
+					align="{{item.align}}"
 					last="{{index === (items5.length - 1)}}"
 					index="{{index}}"
 					key="items5-{{index}}"
 					onClick="onItemClick"
 					disabled="{{item.sticky}}"
+					wrap="{{true}}"
 				>
 					{{item.title}}{{index}}
 					<view a:if="{{item.extra}}" slot="extra">
@@ -107,6 +168,9 @@
 					</view>
 				</list-item>
 			</block>
+			<view slot="footer">
+				列表尾部
+			</view>
 		</list>
 	</scroll-view>
 </view>

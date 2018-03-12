@@ -3,6 +3,8 @@ Component({
     className: '',
     align: "middle",
     disabled: false,
+    multipleLine: false,
+    wrap: false,
   },
   methods: {
     onItemTap(ev) {
