@@ -1,0 +1,3 @@
+<swiper-item class="tabs-pane-wrap" key="{{key}}">
+  <slot></slot>
+</swiper-item>

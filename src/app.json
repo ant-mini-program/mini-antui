@@ -2,7 +2,8 @@
   "pages": [
     "list/demo/app",
     "list/demo/index",
-    "modal/demo/index"
+    "modal/demo/index",
+    "tabs/demo/index"
   ],
   "window": {
     "enableWK": "YES",
