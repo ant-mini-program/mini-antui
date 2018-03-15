@@ -1,6 +1,6 @@
 {
   "pages": [
-    "list/demo/index"
+    "modal/demo/index"
   ],
   "window": {
     "enableWK": "YES",

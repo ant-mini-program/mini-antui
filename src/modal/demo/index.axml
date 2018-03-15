@@ -1,0 +1,25 @@
+<view>
+	<button onTap="openModal">打开modal</button>
+	<button onTap="openModal2">打开modal2</button>
+	<input value="" />
+	<modal show="{{modalOpened}}" onModalClick="onModalClick" onModalClose="onModalClose" showClose="{{false}}">
+		<view style="text-align: center;">
+			<text>让员工用支付宝扫一扫，添加为店员</text>
+		</view>
+		<image src="https://tfsimg.alipay.com/images/mobilecodec/TB1JjWmXkyEDuNjme6tXXXIKXXa" mode="widthFix" style="width: 100%;" />
+		<view style="text-align: center;">
+			<text>二维码每分钟自动更新</text>
+		</view>
+		<view slot="footer">关闭</view>
+	</modal>
+	<modal show="{{modalOpened2}}" onModalClick="onModalClick2" onModalClose="onModalClose2" showClose="{{true}}">
+		<view slot="header" style="text-align: center;">标题单行</view>
+		<view style="text-align: center;">
+			<text>让员工用支付宝扫一扫，添加为店员</text>
+		</view>
+		<view style="text-align: center;">
+			<text>二维码每分钟自动更新</text>
+		</view>
+		<view slot="footer">关闭</view>
+	</modal>
+</view>

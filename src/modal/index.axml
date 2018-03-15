@@ -1,0 +1,17 @@
+<view class="am-modal-{{show ? 'show' : 'hide'}}" disable-scroll="{{true}}">
+	<view class="am-modal-mask" />
+	<view class="am-modal-document">
+		<view class="am-modal {{className}}">
+			<view class="am-modal-header" a:if="{{$slots.header}}">
+				<slot name="header" />
+			</view>
+			<view class="am-modal-body">
+				<slot />
+			</view>
+			<view class="am-modal-footer" hover-class="am-modal-footer-active" a:if="{{$slots.footer}}" onTap="onModalClick">
+				<slot name="footer" />
+			</view>
+			<view class="am-modal-close" hover-class="am-modal-close-active" a:if="{{showClose}}" onTap="onModalClose" />
+		</view>
+	</view>
+</view>
