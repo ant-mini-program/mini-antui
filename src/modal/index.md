@@ -11,7 +11,7 @@
 |slotName | 说明 |
 |----|----|
 |header | 可选，modal头部|
-|footer | 可选，modal尾部|
+|footer | 可选，modal尾部 |
 
 ### using
 
@@ -20,7 +20,7 @@
 {
   "defaultTitle": "小程序AntUI组件库",
   "usingComponents":{
-    "modal":"@alipay/mini-antui/modal/index"
+    "modal": "@alipay/mini-antui/modal/index"
   }
 }
 ```
@@ -45,6 +45,7 @@
 ```
 
 ```js
+// page.js
 Page({
   data: {
     modalOpened: false,
