@@ -1,8 +1,9 @@
 <view>
-	<button onTap="openModal">打开modal</button>
-	<button onTap="openModal2">打开modal2</button>
-	<input value="" />
-	<modal show="{{modalOpened}}" onModalClick="onModalClick" onModalClose="onModalClose" showClose="{{false}}">
+	<view style="margin-top: 10px;" />
+	<button onTap="openModal" style="margin: 0 10px;">打开modal</button>
+	<view style="margin-top: 10px;" />
+	<button onTap="openModal2" style="margin: 0 10px;">打开modal2</button>
+	<modal show="{{modalOpened}}" onModalClick="onModalClick" onModalClose="onModalClose">
 		<view style="text-align: center;">
 			<text>让员工用支付宝扫一扫，添加为店员</text>
 		</view>

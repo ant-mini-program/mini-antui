@@ -1,5 +1,7 @@
 {
   "pages": [
+    "list/demo/app",
+    "list/demo/index",
     "modal/demo/index"
   ],
   "window": {

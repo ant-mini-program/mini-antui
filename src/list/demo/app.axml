@@ -1,0 +1,22 @@
+<view>
+	<scroll-view style="height: 8100vh;" scroll-y>
+		<list>
+      <list-item
+        arrow="horizontal"
+        index="list"
+        onClick="onItemClick"
+        key="items-list"
+      >
+        <navigator url="/list/demo/index">List</navigator>
+      </list-item>
+      <list-item
+        arrow="horizontal"
+        index="modal"
+        onClick="onItemClick"
+        key="items-modal"
+        last="{{true}}"
+      >
+        <navigator url="/modal/demo/index">Modal</navigator>
+      </list-item>
+		</list>
+</view>

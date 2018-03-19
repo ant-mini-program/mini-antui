@@ -1,5 +1,5 @@
 {
-  "defaultTitle": "List",
+  "defaultTitle": "小程序AntUI组件库",
   "usingComponents":{
     "list":"../index",
     "list-item":"../list-item/index"
