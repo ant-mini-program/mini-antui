@@ -1,0 +1,29 @@
+<view>
+	<list>
+		<view slot="header">
+			列表头部
+		</view>
+		<swipe-action right="{{right1}}" onClickRightItem="onClickRightItem">
+			<list-item
+				arrow="horizontal"
+				index="1"
+				key="items-1"
+			>
+				单行列表
+			</list-item>
+		</swipe-action>
+		<swipe-action right="{{right2}}" onClickRightItem="onClickRightItem">
+			<list-item
+				arrow="horizontal"
+				index="2"
+				key="items-2"
+				last="{{true}}"
+			>
+				单行列表22
+			</list-item>
+		</swipe-action>
+		<view slot="footer">
+			列表尾部
+		</view>
+	</list>
+</view>
