@@ -2,8 +2,8 @@
 | 属性 | 说明 | 类型 | 默认值 |
 |----|----|----|----|
 |className| 自定义class | String| |
-|right| 滑动选项，最多两项 | Array[Object{type: `edit`/`delete`, trxt: string}]| `[]` |
-|onClickRightItem| 点击滑动选项 | function({index, detail, extra}) ]|  |
+|right| 滑动选项，最多两项 | Array[Object{type: `edit`/`delete`, text: string}]| `[]` |
+|onRightItemClick| 点击滑动选项 | function({index, detail, extra}) ]|  |
 
 
 ### using
@@ -23,7 +23,7 @@
 ```axml
 // page.axml
 <list>
-  <swipe-action right="{{right1}}" onClickRightItem="onClickRightItem" extra="item1">
+  <swipe-action right="{{right1}}" onRightItemClick="onRightItemClick" extra="item1">
     <list-item
       arrow="horizontal"
       index="1"
@@ -33,7 +33,7 @@
       只有删除
     </list-item>
   </swipe-action>
-  <swipe-action right="{{right2}}" data-some="ddd" onClickRightItem="onClickRightItem" extra="item2">
+  <swipe-action right="{{right2}}" data-some="ddd" onRightItemClick="onRightItemClick" extra="item2">
     <list-item
       arrow="horizontal"
       index="2"
@@ -53,7 +53,7 @@ Page({
     right1: [{'type': 'delete', 'text': '删除'}],
     right2: [{'type': 'edit', 'text': '修改'}, {'type': 'delete', 'text': '删除'}],
   },
-  onClickRightItem(e) {
+  onRightItemClick(e) {
     my.alert({
       content: e.index,
     });

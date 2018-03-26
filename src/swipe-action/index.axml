@@ -4,7 +4,7 @@
       <block a:for="{{right}}">
         <view
           class="am-swipe-btn am-swipe-btn-{{item.type}}"
-          onTap="onActionTap"
+          onTap="onItemClick"
           data-index="{{index}}"
           key="swipe-item-{{index}}"
         >

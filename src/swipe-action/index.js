@@ -57,8 +57,17 @@ Component({
         X: null,
       });
     },
-    onActionTap(e) {
-      const { onClickRightItem } = this.props;
+    onItemClick(e) {
+      const { onRightItemClick } = this.props;
+      if (onRightItemClick) {
+        const index = e.target.dataset.index;
+        onRightItemClick({
+          index,
+          extra: this.props.extra,
+          detail: this.props.right[index]
+        });
+      }
+
       if (!this.data.swiping) {
         setTimeout(() => {
           this.setData({
@@ -66,14 +75,6 @@ Component({
             swiping: false,
           });
         }, 300);
-      }
-      if (onClickRightItem) {
-        const index = e.target.dataset.index;
-        onClickRightItem({
-          index,
-          extra: this.props.extra,
-          detail: this.props.right[index]
-        });
       }
     }
   }
