@@ -6,12 +6,10 @@ Component({
   },
   props: {
     className: '',
-    right: []
+    right: [],
   },
   methods: {
     onSwipeTap(e) {
-      debugger;
-      console.log(e);
       if (!this.data.swiping) {
         this.setData({
           leftPos: 0,
@@ -20,7 +18,6 @@ Component({
       }
     },
     onSwipeStart(e) {
-      console.log(e.touches[0].pageX);
       this.setData({
         X: e.touches[0].pageX,
       });
@@ -29,18 +26,14 @@ Component({
       const { leftPos } = this.data;
       // 滑动距离
       const direction = e.touches[0].pageX - this.data.X;
-      console.log('direction', direction);
       let newLeftPos = leftPos;
       // 左划
       if (direction < 0) {
         newLeftPos = Math.max(direction, -this.props.right.length * 60);
-      }
       // 右划
-      if (direction > 0) {
+      } else {
         newLeftPos = 0;
       }
-
-      console.log('newLeftPos', newLeftPos);
 
       this.setData({
         leftPos: newLeftPos,
@@ -75,8 +68,11 @@ Component({
         }, 300);
       }
       if (onClickRightItem) {
+        const index = e.target.dataset.index;
         onClickRightItem({
-          index: e.target.dataset.index,
+          index,
+          extra: this.props.extra,
+          detail: this.props.right[index]
         });
       }
     }

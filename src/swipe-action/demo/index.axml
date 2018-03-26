@@ -1,29 +1,25 @@
 <view>
 	<list>
-		<view slot="header">
-			列表头部
-		</view>
-		<swipe-action right="{{right1}}" onClickRightItem="onClickRightItem">
+		<swipe-action right="{{right1}}" onClickRightItem="onClickRightItem" extra="item1">
 			<list-item
 				arrow="horizontal"
 				index="1"
 				key="items-1"
+				onClick="onItemClick"
 			>
-				单行列表
+				只有删除
 			</list-item>
 		</swipe-action>
-		<swipe-action right="{{right2}}" onClickRightItem="onClickRightItem">
+		<swipe-action right="{{right2}}" data-some="ddd" onClickRightItem="onClickRightItem" extra="item2">
 			<list-item
 				arrow="horizontal"
 				index="2"
 				key="items-2"
+				onClick="onItemClick"
 				last="{{true}}"
 			>
-				单行列表22
+				修改 + 删除
 			</list-item>
 		</swipe-action>
-		<view slot="footer">
-			列表尾部
-		</view>
 	</list>
 </view>

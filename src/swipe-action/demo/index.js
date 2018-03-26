@@ -7,7 +7,12 @@ Page({
   },
   onClickRightItem(e) {
     my.alert({
-      content: e.index,
+      content: `${e.index}-${e.extra}-${JSON.stringify(e.detail)}`,
+    });
+  },
+  onItemClick(e) {
+    my.alert({
+      content: `dada${e.index}`,
     });
   }
 });
