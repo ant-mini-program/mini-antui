@@ -55,7 +55,7 @@ Page({
   },
   onRightItemClick(e) {
     my.alert({
-      content: e.index,
+      content: `${e.index}-${e.extra}-${JSON.stringify(e.detail)}`,
     });
   },
   onItemClick(e) {
