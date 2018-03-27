@@ -1,0 +1,76 @@
+.am-tabs {
+  height: 42px;
+}
+
+.am-tabs-tab-bar-wrap {
+  width: 100%;
+}
+
+.am-tabs-default-bar {
+  background: #fff;
+  width: 100%;
+  overflow: hidden;
+  height: 42px;
+  position: relative;
+}
+
+.am-tabs-default-bar-content {
+  width: 100%;
+  height: 50px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  display: flex;
+  flex-direction: row;
+}
+
+.am-tabs-default-bar-tab {
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 25%;
+  flex-shrink: 0;
+  font-size: 16px;
+}
+
+.am-tabs-default-bar-tab text {
+  display: block;
+  height: 42px;
+  line-height: 38px;
+  box-sizing: border-box;
+  position: relative;
+  border-bottom-width: 2px;
+  border-bottom-style: solid;
+  border-bottom-color: transparent;
+}
+
+.am-tabs-default-bar-prevpage {
+  pointer-events: none;
+  position: absolute;
+  left: 0;
+  height: 100%;
+  width: 39px;
+  z-index: 999;
+  top: 0;
+  background: linear-gradient(to right,#fff,rgba(255,255,255,0)) left no-repeat;
+}
+
+.am-tabs-default-bar-nextpage {
+  pointer-events: none;
+  position: absolute;
+  right: 0;
+  height: 100%;
+  width: 39px;
+  z-index: 999;
+  top: 0;
+  background: linear-gradient(to left,#fff,rgba(255,255,255,0)) left no-repeat;
+}
+
+.am-tabs-content-wrap {
+  margin-top: 1px;
+  display: flex;
+  background: #fff;
+  flex-direction: row;
+  overflow: hidden;
+  height: auto !important;
+}

@@ -1,0 +1,37 @@
+<view class="am-tabs">
+  <view class="am-tabs-tab-bar-wrap">
+    <view class="am-tabs-default-bar">
+      <view class="am-tabs-default-bar-prevpage"></view>
+      <scroll-view
+        showsHorizontalScrollIndicator="{{false}}"
+        scroll-left="{{scroll_init}}"
+        scroll-x="{{true}}"
+        scroll-with-animation="{{true}}"
+        class="am-tabs-default-bar-content">
+        <block a:for="{{tabs}}">
+          <view
+            data-index="{{index}}"
+            key="tabs-item-{{index}}"
+            onTap="handleTabClick"
+            style="{{
+              backgroundColor: tabBarBackgroundColor,
+              color: index === current ? tabBarActiveTextColor: tabBarInactiveTextColor,
+              width: tabWidth * 100 + '%',
+            }}"
+            class="am-tabs-default-bar-tab">
+            <text style="{{ borderBottomColor: index === current ? tabBarUnderlineColor : '' }}">{{item.title}}</text>
+          </view>
+        </block>
+      </scroll-view>
+      <view class="am-tabs-default-bar-nextpage"></view>
+    </view>
+    <swiper
+      current="{{current}}"
+      interval="{{interval}}"
+      autoplay="{{autoplay}}"
+      onChange="handleSwiperChange"
+      class="am-tabs-content-wrap">
+      <slot></slot>
+    </swiper>
+  </view>
+</view>
