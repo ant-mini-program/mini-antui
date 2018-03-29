@@ -1,0 +1,13 @@
+<view>
+  <tabs
+    tabs="{{tabs}}"
+    onTabClick="handleTabClick"
+    onChange="handleTabChange"
+  >
+    <block a:for="{{tabs}}">
+      <tab-content key="{{index}}">
+        <view class="tab-content">content of {{item.title}}</view>
+      </tab-content>
+    </block>
+  </tabs>
+</view>

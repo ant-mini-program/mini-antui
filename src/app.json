@@ -3,7 +3,8 @@
     "list/demo/app",
     "list/demo/index",
     "modal/demo/index",
-    "swipe-action/demo/index"
+    "swipe-action/demo/index",
+    "tabs/demo/index"
   ],
   "window": {
     "enableWK": "YES",
