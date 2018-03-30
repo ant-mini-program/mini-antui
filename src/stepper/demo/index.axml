@@ -4,7 +4,7 @@
       >
       Show number value
     <view slot="extra">
-     <stepper onChange="callBackFn" step={{1}} showNumber readOnly={{false}} value={{9}} min={{2}} max={{12}} />
+     <stepper onChange="callBackFn" step={{1}} showNumber readOnly={{false}} value={{8}} min={{2}} max={{12}} />
     </view>
      
       </list-item>
