@@ -1,0 +1,32 @@
+.am-swipe {
+  position: relative;
+  overflow: hidden;
+}
+.am-swipe-content {
+  position: relative;
+  transition: all 250ms;
+}
+.am-swiping .am-swipe-content {
+  transition: none;
+}
+.am-swipe-right {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  right: 0;
+}
+.am-swipe-btn {
+  flex: 1;
+  width: 60px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  color: #fff;
+}
+.am-swipe-btn-delete {
+  background-color: rgb(244, 51, 60);
+}
+.am-swipe-btn-edit {
+  background-color: #108ee9;
+}

@@ -2,11 +2,11 @@
   height: 42px;
 }
 
-.tabs-tab-bar-wrap {
+.am-tabs-tab-bar-wrap {
   width: 100%;
 }
 
-.tabs-default-bar {
+.am-tabs-default-bar {
   background: #fff;
   width: 100%;
   overflow: hidden;
@@ -14,7 +14,7 @@
   position: relative;
 }
 
-.tabs-default-bar-content {
+.am-tabs-default-bar-content {
   width: 100%;
   height: 50px;
   overflow-x: auto;
@@ -23,7 +23,7 @@
   flex-direction: row;
 }
 
-.tabs-default-bar-tab {
+.am-tabs-default-bar-tab {
   height: 42px;
   display: flex;
   align-items: center;
@@ -33,7 +33,7 @@
   font-size: 16px;
 }
 
-.tabs-default-bar-tab text {
+.am-tabs-default-bar-tab text {
   display: block;
   height: 42px;
   line-height: 38px;
@@ -44,7 +44,8 @@
   border-bottom-color: transparent;
 }
 
-.tabs-default-bar-prevpage {
+.am-tabs-default-bar-prevpage {
+  pointer-events: none;
   position: absolute;
   left: 0;
   height: 100%;
@@ -54,7 +55,8 @@
   background: linear-gradient(to right,#fff,rgba(255,255,255,0)) left no-repeat;
 }
 
-.tabs-default-bar-nextpage {
+.am-tabs-default-bar-nextpage {
+  pointer-events: none;
   position: absolute;
   right: 0;
   height: 100%;
@@ -64,25 +66,11 @@
   background: linear-gradient(to left,#fff,rgba(255,255,255,0)) left no-repeat;
 }
 
-.tabs-content-wrap {
+.am-tabs-content-wrap {
   margin-top: 1px;
   display: flex;
   background: #fff;
   flex-direction: row;
   overflow: hidden;
   height: auto !important;
-}
-
-.tabs-pane-wrap {
-  width: 100%;
-  height: auto;
-  flex-shrink: 0;
-}
-
-.tabs {
-  width: 100%;
-  height: 75px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }

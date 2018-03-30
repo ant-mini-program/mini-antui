@@ -1,0 +1,27 @@
+<view class="am-swipe {{swiping ? 'am-swiping' : ''}} {{className}}">
+  <block a:if="{{right.length > 0}}">
+    <view class="am-swipe-right">
+      <block a:for="{{right}}">
+        <view
+          class="am-swipe-btn am-swipe-btn-{{item.type}}"
+          onTap="onItemClick"
+          data-index="{{index}}"
+          key="swipe-item-{{index}}"
+        >
+          {{item.text}}
+        </view>
+      </block>
+    </view>
+  </block>
+  <view
+    class="am-swipe-content"
+    onTap="onSwipeTap"
+    onTouchStart="onSwipeStart"
+    onTouchEnd="onSwipeEnd"
+    onTouchMove="onSwipeMove"
+    data-type="content"
+    style="left: {{leftPos}}px;"
+  >
+    <slot />
+  </view>
+</view>

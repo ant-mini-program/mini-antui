@@ -5,7 +5,7 @@
 ## API
 
 | 属性 | 说明 | 类型 | 默认值 | 必选 |
-|----|----|----|----|
+|----|----|----|----|----|
 | tabs | tab数据 | Array |  | true |
 | onTabClick | tab 被点击的回调 | (index: number) => void | | false |
 | onChange | tab变化时触发 | (index: number) => void | | false |
@@ -29,6 +29,10 @@
 ## tab-content
 
 视图内容
+
+| 属性 | 说明 | 类型 | 默认值 | 必选 |
+|----|----|----|----|----|
+| index | 列表项的唯一索引 | string | | | |
 
 ## examples
 
