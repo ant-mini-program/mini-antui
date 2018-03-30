@@ -5,7 +5,7 @@
     "modal/demo/index",
     "swipe-action/demo/index",
     "tabs/demo/index",
-    "stepper/demo/index"
+    "stepper/demo/index" 
   ],
   "window": {
     "enableWK": "YES",
