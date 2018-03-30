@@ -26,6 +26,16 @@
         last="{{true}}"
       >
         <navigator url="/tabs/demo/index">Tabs</navigator>
-      </list-item
+      </list-item>
+
+      	<list-item
+        arrow="horizontal"
+        index="modal"
+        onClick="onItemClick"
+        key="items-modal"
+        last="{{true}}"
+      >
+        <navigator url="/stepper/demo/index">Stepper</navigator>
+      </list-item>
 		</list>
 </view>

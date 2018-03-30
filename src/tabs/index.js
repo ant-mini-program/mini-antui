@@ -35,7 +35,6 @@ Component({
     },
     handleTabClick(e) {
       const { index } = e.target.dataset
-
       this.moveScrollBar(index)
       this.props.onTabClick && this.props.onTabClick({ index: index })
       this.setData({

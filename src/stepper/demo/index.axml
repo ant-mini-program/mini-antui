@@ -1,0 +1,20 @@
+	<list>
+      <list-item
+      disabled={{true}}
+      >
+      Show number value
+    <view slot="extra">
+     <stepper onChange="callBackFn" step={{1}} showNumber readOnly={{false}} value={{9}} min={{2}} max={{12}} />
+    </view>
+     
+      </list-item>
+       <list-item
+      disabled={{true}}
+      >
+     Disabled
+    <view slot="extra">
+     <stepper onChange="callBackFn" showNumber defaultValue={{11}} min={{2}} max={{12}} disabled />
+    </view>
+     
+      </list-item>
+  </list>
