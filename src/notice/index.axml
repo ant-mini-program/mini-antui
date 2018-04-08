@@ -1,0 +1,9 @@
+<view class="am-notice" a:if="{{show}}">
+  <view class="am-notice-content">
+    <slot></slot>
+  </view>
+  <view class="am-notice-operation" onTap="onTap">
+    <view a:if="{{action !== ''}}" class="am-notice-operation-text" >{{action}}</view>
+    <view a:else class="am-notice-{{mode}}"></view>
+  </view>
+</view>

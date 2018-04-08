@@ -4,7 +4,8 @@
     "list/demo/index",
     "modal/demo/index",
     "swipe-action/demo/index",
-    "tabs/demo/index"
+    "tabs/demo/index",
+    "notice/demo/index"
   ],
   "window": {
     "enableWK": "YES",

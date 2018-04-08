@@ -1,0 +1,7 @@
+{
+    "defaultTitle": "Notice",
+    "usingComponents":{
+      "notice": "../index"
+    }
+  }
+  
