@@ -1,0 +1,83 @@
+.am-notice {
+    position: relative;
+    background-color: #fefceb;
+    height: 36px;
+    overflow: hidden;
+    font-size: 13px;
+    color: #f76a24;
+    display: flex;
+    align-items: center
+}
+
+.am-notice-content {
+    flex: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin-left: 15px;
+    margin-right: 15px;
+    padding-left: 25px
+}
+
+.am-notice-content:before {
+    position: absolute;
+    top: 0;
+    left: 15px;
+    content: "";
+    display: inline-block;
+    width: 18px;
+    height: 36px;
+    background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAAAYFBMVEVMaXH4biD/dSn3biD2cib/dDj3biD3biD4biD4byP/lUD3biD4biH4biH3biD5byH4biD4cCH3biH3bST2byT4biH3biD3cSP3biD0bSH6cCL4biH3biL3biH4biL4biGKhhI5AAAAIHRSTlMA4A3wGAj3+rRQBJOsn+o/zUtcKBzH1TKILzZvU796aUQsa54AAAEeSURBVHgBfdNVlt0wFETRElhlZvaD+c+yta7SSYznewstY99aqwkPNYbMcd/XUTHGbTOZvTzQlcZFaUF+kHhQ0OUVjumYroWAZCQZ99hla5YVAgC6zLGcEEqtb1JUC/4CTwaqLpyspFT3+B8gyjla+EpKucYeIBrClZC7MwmYXimAznEVEJ3AyLcGULC4AUkpsy800TVAZ9gAUFxvAGaZPWZ7ByrWsontDjQcnkHG7HGJJFxByeUafCgTVCzTazAwSwHkwq6A7cJJXC/rOOdYZqePZRVn+FpHqbZ7YEfWYW7d972tjg+mUVS7R9fXNM0v0O2bHOz50X4D+DrSbOnp2WfkLGBm/bG4aCPzVpZ4+DWNBw9NiizwVF/kPXb9AFr1D7ArYO8yAAAAAElFTkSuQmCC") center no-repeat;
+    background-size: 18px auto
+}
+
+.am-notice-operation {
+    padding: 8px 0
+}
+
+.am-notice-link {
+    display: block;
+    height: 100%;
+    margin: auto 15px;
+    color: #f85800;
+}
+
+.am-notice-link:after {
+    content: "";
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    border: 1px solid #f76a24;
+    border-top: 0 none;
+    border-left: 0 none;
+    margin-left: 6px;
+    margin-right: 2px;
+    margin-bottom: 1px;
+    transform: rotate(315deg)
+}
+
+.am-notice-closable {
+    display: inline-block;
+    width: 12px;
+    height: 1px;
+    background: #f76a24;
+    transform: rotate(45deg);
+    display: block;
+    height: 100%;
+    margin: auto 15px
+}
+
+.am-notice-closable:after {
+    content: '';
+    display: block;
+    width: 12px;
+    height: 1px;
+    background: #f76a24;
+    transform: rotate(-90deg)
+}
+
+.am-notice-operation-text {
+    display: block;
+    height: 100%;
+    margin: auto 15px
+}
