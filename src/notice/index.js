@@ -9,7 +9,9 @@ Component({
   },
   methods: {
     onTap() {
-      this.props.onClick()
+      if(this.props.onClick){
+        this.props.onClick()
+      }
     }
   }
 });

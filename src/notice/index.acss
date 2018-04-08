@@ -5,15 +5,12 @@
     overflow: hidden;
     font-size: 13px;
     color: #f76a24;
-    display: -webkit-box;
-    display: -webkit-flex;
-    -webkit-box-align: center;
-    -webkit-align-items: center
+    display: flex;
+    align-items: center
 }
 
 .am-notice-content {
-    -webkit-box-flex: 1;
-    -webkit-flex: 1;
+    flex: 1;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
@@ -22,7 +19,7 @@
     padding-left: 25px
 }
 
-.am-notice .am-notice-content:before {
+.am-notice-content:before {
     position: absolute;
     top: 0;
     left: 15px;
@@ -34,18 +31,18 @@
     background-size: 18px auto
 }
 
-.am-notice .am-notice-operation {
+.am-notice-operation {
     padding: 8px 0
 }
 
-.am-notice .am-notice-operation .am-notice-link {
+.am-notice-link {
     display: block;
     height: 100%;
     margin: auto 15px;
     color: #f85800;
 }
 
-.am-notice .am-notice-operation .am-notice-link:after {
+.am-notice-link:after {
     content: "";
     display: inline-block;
     width: 6px;
@@ -56,28 +53,27 @@
     margin-left: 6px;
     margin-right: 2px;
     margin-bottom: 1px;
-    -webkit-transform: rotate(315deg)
+    transform: rotate(315deg)
 }
 
-.am-notice .am-notice-operation .am-notice-closable {
+.am-notice-closable {
     display: inline-block;
     width: 12px;
     height: 1px;
     background: #f76a24;
-    vertical-align: middle;
-    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
     display: block;
     height: 100%;
     margin: auto 15px
 }
 
-.am-notice .am-notice-operation .am-notice-closable:after {
+.am-notice-closable:after {
     content: '';
     display: block;
     width: 12px;
     height: 1px;
     background: #f76a24;
-    -webkit-transform: rotate(-90deg)
+    transform: rotate(-90deg)
 }
 
 .am-notice-operation-text {
