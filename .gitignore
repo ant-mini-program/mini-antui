@@ -23,6 +23,7 @@ node_modules
 *.xcworkspace
 yarn.lock
 .tea
+.entry
 /build/
 /lib/
 /es/
