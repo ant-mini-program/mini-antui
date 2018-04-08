@@ -4,7 +4,7 @@
 |mode| 提示类型,link,closable,'' | String|''|
 |action| 提示显示文本| String|''|
 |show| 是否显示通告栏| boolean|true|
-|onClick| 点击按钮回调，只有类型为link时有效| (): void| - |
+|onClick| 点击按钮回调 | (): void| - |
 
 ### using
 
