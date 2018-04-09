@@ -12,7 +12,9 @@
     "grid/demo/3/index",
     "grid/demo/4/index",
     "grid/demo/5/index",
-    "notice/demo/index"
+    "notice/demo/index",
+    "notice/demo/index",
+    "search-bar/demo/index"
   ],
   "window": {
     "enableWK": "YES",
