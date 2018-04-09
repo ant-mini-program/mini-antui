@@ -30,5 +30,8 @@
     <list-item arrow="horizontal" index="notice" key="items-notice" last="{{true}}">
       <navigator url="/notice/demo/index">Notice</navigator>
     </list-item>
+    <list-item arrow="horizontal" index="search-bar" key="items-notice" last="{{true}}">
+      <navigator url="/search-bar/demo/index">SearchBar</navigator>
+    </list-item>
   </list>
 </view>
