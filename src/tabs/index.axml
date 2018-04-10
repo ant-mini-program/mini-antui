@@ -1,13 +1,11 @@
 <view class="am-tabs">
   <view class="am-tabs-tab-bar-wrap">
-    <view class="am-tabs-default-bar">
-      <view class="am-tabs-default-bar-prevpage"></view>
+    <view class="am-tabs-bar">
       <scroll-view
-        showsHorizontalScrollIndicator="{{false}}"
         scroll-left="{{scroll_init}}"
         scroll-x="{{true}}"
         scroll-with-animation="{{true}}"
-        class="am-tabs-default-bar-content">
+        class="am-tabs-bar-content">
         <block a:for="{{tabs}}">
           <view
             data-index="{{index}}"
@@ -18,17 +16,16 @@
               color: index === current ? tabBarActiveTextColor: tabBarInactiveTextColor,
               width: tabWidth * 100 + '%',
             }}"
-            class="am-tabs-default-bar-tab">
+            class="am-tabs-bar-tab">
             <text style="{{ borderBottomColor: index === current ? tabBarUnderlineColor : '' }}">{{item.title}}</text>
           </view>
         </block>
       </scroll-view>
-      <view class="am-tabs-default-bar-nextpage"></view>
     </view>
     <swiper
       current="{{current}}"
-      interval="{{interval}}"
-      autoplay="{{autoplay}}"
+      interval="99999999"
+      autoplay="{{true}}"
       onChange="handleSwiperChange"
       class="am-tabs-content-wrap">
       <slot></slot>

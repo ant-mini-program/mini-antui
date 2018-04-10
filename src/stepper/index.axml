@@ -1,5 +1,5 @@
 <view 
-class="stepper-content {{className}}"
+class="am-stepper-content {{className}}"
 style="opacity:{{disabled ? '0.4' : '1'}}"
 max="{{max}}" 
 min="{{min}}"
@@ -9,7 +9,7 @@ readOnly="{{readOnly}}"
 step="{{step}}"
 >
 
-<view class="stepper-reduce" style="opacity:{{opaReduce}}" data-type="reduce" onTap="changeFn"/>
-<input disabled="{{stateDisabled}}" style="display:{{showNumber ? 'inline-block' : 'none'}}" class="stepper-input"  value={{value}} onBlur="resetFn" />
-<view class="stepper-add" style="opacity:{{opaAdd}}" data-type="add" onTap="changeFn"/>
+<view class="am-stepper-reduce" style="opacity:{{opaReduce}}" data-type="reduce" onTap="changeFn"/>
+<input disabled="{{stateDisabled}}" style="display:{{showNumber ? 'inline-block' : 'none'}}" class="am-stepper-input"  value={{value}} onBlur="resetFn" />
+<view class="am-stepper-add" style="opacity:{{opaAdd}}" data-type="add" onTap="changeFn"/>
 </view>

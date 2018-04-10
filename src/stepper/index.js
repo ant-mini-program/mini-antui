@@ -1,6 +1,4 @@
 Component({
-  opaReduce: 1,
-  opaAdd: 1,
   data: {
     opaReduce: 1,
     opaAdd: 1,

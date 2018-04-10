@@ -1,4 +1,4 @@
-.stepper-content{
+.am-stepper-content{
  padding:10rpx 0;
  overflow:hidden;
  text-align:center;
@@ -9,7 +9,7 @@
  color:#000;
 }
 
-.stepper-reduce{
+.am-stepper-reduce{
   border:#ddd solid 1px;
   border-radius:10rpx;
   width:70rpx;
@@ -21,7 +21,7 @@
 }
 
 
-.stepper-add{
+.am-stepper-add{
   border:#ddd solid 1px;
   border-radius:10rpx;
   width:70rpx;
@@ -34,7 +34,7 @@
    display:inline-block;
 }
 
-.stepper-input{
+.am-stepper-input{
    display:inline-block;
    width:70rpx;
    color:#000;

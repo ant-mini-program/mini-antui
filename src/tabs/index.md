@@ -21,7 +21,8 @@
 {
   "defaultTitle": "小程序AntUI组件库",
   "usingComponents":{
-    "tabs":"@alipay/mini-antui/tabs/index",
+    "tabs":"@alipay/mini-antui/es/tabs/index",
+    "tab-content": "@alipay/mini-antui/es/tab-content/index"
   }
 }
 ```

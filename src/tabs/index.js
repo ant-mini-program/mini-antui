@@ -10,9 +10,7 @@ Component({
     scroll_init: 0,
     current: 0,
     windowWidth: 0,
-    autoplay: true,
     tabWidth: 0.25,
-    interval: 99999999,
   },
   didMount() {
     const { tabs } = this.props;
@@ -31,7 +29,7 @@ Component({
 
       this.moveScrollBar(current);
       if (this.props.onChange) {
-        this.props.onChange({ index: current })
+        this.props.onChange({ index: current });
       }
       this.setData({
         current,
@@ -42,7 +40,7 @@ Component({
 
       this.moveScrollBar(index);
       if (this.props.onTabClick) {
-        this.props.onTabClick({ index: index });
+        this.props.onTabClick({ index, });
       }
       this.setData({
         current: index,

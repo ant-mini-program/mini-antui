@@ -1,44 +1,23 @@
 <view>
-	<scroll-view style="height: 8100vh;" scroll-y>
-		<list>
-      <list-item
-        arrow="horizontal"
-        index="list"
-        key="items-list"
-      >
+  <scroll-view style="height: 8100vh;" scroll-y>
+    <list>
+      <list-item arrow="horizontal" index="list" key="items-list">
         <navigator url="/list/demo/index">List</navigator>
       </list-item>
-      <list-item
-        arrow="horizontal"
-        index="modal"
-        key="items-modal"
-      >
+      <list-item arrow="horizontal" index="modal" key="items-modal">
         <navigator url="/modal/demo/index">Modal</navigator>
       </list-item>
-      <list-item
-        arrow="horizontal"
-        index="action"
-        key="items-swipe-action"
-        last="{{true}}"
-      >
+      <list-item arrow="horizontal" index="action" key="items-swipe-action">
         <navigator url="/swipe-action/demo/index">SwipeAction</navigator>
       </list-item>
-      <list-item
-        arrow="horizontal"
-        index="action"
-        key="items-swipe-action"
-        last="{{true}}"
-      >
+      <list-item arrow="horizontal" index="action" key="items-swipe-action">
         <navigator url="/tabs/demo/index">Tabs</navigator>
       </list-item>
-
-        <list-item
-        arrow="horizontal"
-        index="action"
-        key="items-swipe-action"
-        last="{{true}}"
-      >
+      <list-item arrow="horizontal" index="action" key="items-swipe-action" last="{{true}}">
         <navigator url="/stepper/demo/index">Stepper</navigator>
       </list-item>
-		</list>
-</view>
+      <list-item arrow="horizontal" index="action" key="items-swipe-action" last="{{true}}">
+        <navigator url="/notice/demo/index">Notice</navigator>
+      </list-item>
+    </list>
+  </view>

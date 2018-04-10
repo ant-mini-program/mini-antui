@@ -7,6 +7,17 @@ Component({
   props: {
     className: '',
     right: [],
+    restore: false,
+    index: null,
+  },
+  didUpdate(prevProps, prevData) {
+    const { restore } = this.props;
+    if (restore === true) {
+      this.setData({
+        leftPos: 0,
+        swiping: false,
+      });
+    }
   },
   methods: {
     onSwipeTap(e) {
@@ -21,6 +32,11 @@ Component({
       this.setData({
         X: e.touches[0].pageX,
       });
+
+      const { index, onSwipeStart } = this.props;
+      if (onSwipeStart) {
+        onSwipeStart({index});
+      }
     },
     onSwipeMove(e) {
       const { leftPos } = this.data;
