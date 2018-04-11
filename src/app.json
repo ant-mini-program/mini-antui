@@ -5,6 +5,7 @@
     "modal/demo/index",
     "swipe-action/demo/index",
     "tabs/demo/index",
+    "stepper/demo/index",
     "notice/demo/index"
   ],
   "window": {
