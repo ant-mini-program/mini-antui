@@ -8,12 +8,12 @@
 |----|----|----|----|---|
 | min | 最小值 | Number | 0 | true |
 | max | 最大值 | Number | 10000 | true |
-| value | 初始值 | Number | | true |
+| value | 初始值 | Number | 10 | true |
 | step | 每次改变步数，可以为小数	| Number | 1 | false |
-| onChange | 变化时回调函数 | (): void | | false |
-| disabled | 禁用 | Boolean | | false |
-| readOnly | input 只读 | Boolean | | false |
-| showNumber | 是否显示数值，默认不显示 | Boolean | | false |
+| onChange | 变化时回调函数 | Funtion(value) | ()=> {} | false |
+| disabled | 禁用 | Boolean | false | false |
+| readOnly | input 只读 | Boolean | false | false |
+| showNumber | 是否显示数值，默认不显示 | Boolean | false | false |
 
 
 
