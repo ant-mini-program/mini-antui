@@ -45,7 +45,7 @@ Component({
           if (value < max) {
             opaReduce = 1;
             value = Math.min(value + step, max);
-            opaAdd = value === max ? 0.4 : 1;       
+            opaAdd = value === max ? 0.4 : 1;
           }
         }
         this.setData({
