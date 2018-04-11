@@ -6,12 +6,12 @@
   onChange="{{callBackFn}}"
   readOnly="{{readOnly}}"
   step="{{step}}"
+  disabled="{{disabled || readOnly}}"
 >
   <view class="am-stepper-reduce" style="opacity:{{opaReduce}}" data-type="reduce" onTap="changeFn" />
   <input
     class="am-stepper-input"
     style="display:{{showNumber ? 'inline-block' : 'none'}}"
-    disabled="{{disabled || readOnly}}"
     value={{value}}
     onBlur="resetFn"
     type="number"

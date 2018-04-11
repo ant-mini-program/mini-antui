@@ -32,19 +32,20 @@ Component({
     changeFn(ev) {
       const { min, max, onChange, disabled, readOnly, step } = this.props;
       const evType = ev.target.dataset.type;
-      let { value } = this.data;
-      let opaAdd = 1;
-      let opaReduce = 1;
-      if (!disabled) {
+      let { opaReduce, opaAdd, value } =this.data;
+      let enable = disabled ? disabled : readOnly;
+      if (!enable) {
         if (evType === "reduce") {
           if (value > min) {
+            opaAdd = 1;
             value = Math.max(min, value - step);
             opaReduce = value === min ? 0.4 : 1;
           }
         } else {
           if (value < max) {
+            opaReduce = 1;
             value = Math.min(value + step, max);
-            opaAdd = value === max ? 0.4 : 1;
+            opaAdd = value === max ? 0.4 : 1;       
           }
         }
         this.setData({
