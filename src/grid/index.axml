@@ -1,4 +1,4 @@
-<view class="am-grid am-grid-{{columnNum}}" >
+<view class="am-grid am-grid-{{columnNum}} {{hasLine ? '' : 'am-grid-no-line'}}" >
 	<block a:for="{{list}}">
 		<view
 			style="width:{{100/(columnNum)}}%; padding-top:{{columnNum !== 2 ? 100/(columnNum) + '%' : '60px'}};"
@@ -8,7 +8,7 @@
 			key="grid-item-{{index}}"
 		>
 			<view class="am-grid-item-wrapper">
-				<view class="{{circular && columnNum === 4 ? 'circular' : ''}}">
+				<view class="am-grid-icon-container {{circular && columnNum === 4 ? 'circular' : ''}}">
 					<image src="{{item.icon}}" class="am-grid-icon" mode="aspectFit" />
 				</view>
 				<text class="am-grid-text">{{item.text}}</text>

@@ -6,7 +6,8 @@ Component({
     columnNum: 3,
     circular: false,
     list: [],
-    onGridItemClick: function() {},
+    onGridItemClick: () => {},
+    hasLine: true,
   },
   didMount() {
     const { list, columnNum } = this.props;
@@ -16,7 +17,7 @@ Component({
     });
   },
   methods:{
-    onGridItemClick(ev){
+    onGridItemClick(e){
       this.props.onGridItemClick({
         detail: {
           index: e.target.dataset.index

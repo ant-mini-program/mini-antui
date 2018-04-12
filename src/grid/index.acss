@@ -5,33 +5,18 @@
   background-color: white;
 }
 
-.am-grid-2 {
-  padding-left: 15px;
-  padding-right: 15px;
-}
-
-.am-grid-3 {
-  padding: 15px;
-}
-
 .am-grid-item {
   text-align: center;
   position: relative;
   border-bottom: 1rpx solid #eee;
-  /* border-bottom: 1rpx solid red; */
   border-right: 1rpx solid #eee;
-  /* border-right: 1rpx solid red; */
   box-sizing: border-box;
-}
-.am-grid-5 .am-grid-item,
-.am-grid-4 .am-grid-item {
-  border-right: none;
-  border-bottom: none;
 }
 
 .am-grid-right {
   border-right: none;
 }
+
 .am-grid-bottom {
   border-bottom: none;
 }
@@ -48,33 +33,16 @@
   flex-direction: column;
 }
 
-.am-grid-2 .am-grid-item-wrapper {
-  flex-direction: row;
-  justify-content: flex-start;
+.am-grid-icon-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .am-grid-icon {
+  flex: 1;
   width: 36px;
   height: 36px;
-}
-
-.am-grid-2 .am-grid-icon {
-  margin-left: 20px;
-}
-
-.am-grid-4 .circular {
-  padding: 9px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #D8D8D8;
-}
-.am-grid-4 .circular .am-grid-icon {
-  flex: 1;
-}
-.am-grid-5 .am-grid-icon {
-  border-radius: 50%;
 }
 
 .am-grid-text {
@@ -84,7 +52,53 @@
   margin-top: 14px;
 }
 
+.am-grid-2 {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.am-grid-3 {
+  padding: 15px;
+}
+.am-grid-no-line .am-grid-item,
+.am-grid-5 .am-grid-item,
+.am-grid-4 .am-grid-item {
+  border-right: none;
+  border-bottom: none;
+}
+.am-grid-2 .am-grid-item-wrapper {
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+.am-grid-4 .am-grid-icon-container.circular {
+  padding: 9px;
+  border-radius: 50%;
+  background-color: #D8D8D8;
+}
+
+.am-grid-2 .am-grid-icon {
+  margin-left: 20px;
+}
+
+.am-grid-4 .circular .am-grid-icon {
+  flex: 1;
+}
+
+.am-grid-5 .am-grid-icon {
+  border-radius: 50%;
+  width: 43px;
+  height: 43px;
+}
+
 .am-grid-2 .am-grid-text {
   margin-top: 0;
   margin-left: 20px;
+}
+.am-grid-4 .am-grid-text {
+  font-size: 13px;
+}
+.am-grid-5 .am-grid-text {
+  font-size: 12px;
+  margin-top: 6px;
 }
