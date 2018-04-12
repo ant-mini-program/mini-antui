@@ -1,6 +1,8 @@
 {
-  "defaultTitle": "3列宫格",
+  "defaultTitle": "宫格",
   "usingComponents":{
+    "list": "../../list/index",
+    "list-item": "../../list/list-item/index",
     "grid":"../index"
   }
 }

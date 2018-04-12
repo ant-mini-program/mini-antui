@@ -17,10 +17,10 @@
 .am-grid-item {
   text-align: center;
   position: relative;
-  /* border-bottom: 1rpx solid #eee; */
-  border-bottom: 1rpx solid red;
-  /* border-right: 1rpx solid #eee; */
-  border-right: 1rpx solid red;
+  border-bottom: 1rpx solid #eee;
+  /* border-bottom: 1rpx solid red; */
+  border-right: 1rpx solid #eee;
+  /* border-right: 1rpx solid red; */
   box-sizing: border-box;
 }
 .am-grid-5 .am-grid-item,
@@ -60,6 +60,18 @@
 
 .am-grid-2 .am-grid-icon {
   margin-left: 20px;
+}
+
+.am-grid-4 .circular {
+  padding: 9px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #D8D8D8;
+}
+.am-grid-4 .circular .am-grid-icon {
+  flex: 1;
 }
 .am-grid-5 .am-grid-icon {
   border-radius: 50%;

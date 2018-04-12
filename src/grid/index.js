@@ -4,6 +4,7 @@ Component({
   },
   props: {
     columnNum: 3,
+    circular: false,
     list: [],
     onGridItemClick: function() {},
   },

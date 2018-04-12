@@ -8,7 +8,9 @@
 			key="grid-item-{{index}}"
 		>
 			<view class="am-grid-item-wrapper">
-				<image src="{{item.icon}}" class="am-grid-icon" mode="aspectFit" />
+				<view class="{{circular && columnNum === 4 ? 'circular' : ''}}">
+					<image src="{{item.icon}}" class="am-grid-icon" mode="aspectFit" />
+				</view>
 				<text class="am-grid-text">{{item.text}}</text>
 			</view>
 		</view>
