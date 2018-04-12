@@ -1,5 +1,5 @@
 {
-  "defaultTitle": "小程序AntUI组件库",
+  "defaultTitle": "3列宫格",
   "usingComponents":{
     "grid":"../index"
   }

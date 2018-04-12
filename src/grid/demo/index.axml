@@ -1,5 +1,8 @@
-<view class="container" key="container">
-  <view class="slogon">
-    <grid onGridItemClick="onItemClick" columnNum="{{4}}" list="{{list}}" />
-  </view>
-</view>
+<grid onGridItemClick="onItemClick" columnNum="{{5}}" list="{{list5}}" />
+<view style="margin-top: 10px;" />
+<grid onGridItemClick="onItemClick" columnNum="{{4}}" list="{{list4}}" />
+<view style="margin-top: 10px;" />
+<grid onGridItemClick="onItemClick" columnNum="{{3}}" list="{{list3}}" />
+<view style="margin-top: 10px;" />
+<grid onGridItemClick="onItemClick" columnNum="{{2}}" list="{{list2}}" />
+<view style="margin-top: 10px;" />

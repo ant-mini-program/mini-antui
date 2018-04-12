@@ -1,19 +1,26 @@
 Component({
   data: {
-
+    bottomIndex: 0, 
   },
-  onReady() {
-
+  props: {
+    columnNum: 3,
+    list: [],
+    onGridItemClick: function() {},
   },
-  onUpdate(prevProps,prevData){
-
-  },
-  onUnload(){
-
+  didMount() {
+    const { list, columnNum } = this.props;
+    const rows = list.length / columnNum;
+    this.setData({
+      bottomIndex: Math.floor(rows) === rows ? (rows - 1) * columnNum : Math.floor(rows) * columnNum,
+    });
   },
   methods:{
     onGridItemClick(ev){
-      this.props.onGridItemClick(ev);
+      this.props.onGridItemClick({
+        detail: {
+          index: e.target.dataset.index
+        }
+      });
     },
   },
 })

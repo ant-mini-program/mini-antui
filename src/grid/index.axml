@@ -1,15 +1,15 @@
-<view class="grid">
+<view class="am-grid am-grid-{{columnNum}}" >
 	<block a:for="{{list}}">
 		<view
-			style="width:{{100/(columnNum || 4)}}%; padding-top:{{100/(columnNum || 4)}}%;"
-			class="grid-item"
+			style="width:{{100/(columnNum)}}%; padding-top:{{columnNum !== 2 ? 100/(columnNum) + '%' : '60px'}};"
+			class="am-grid-item {{index >= bottomIndex ? 'am-grid-bottom' : ''}} {{(index + 1) % columnNum === 0 ? 'am-grid-right' : ''}}"
 			onTap="onGridItemClick"
 			data-index={{index}}
 			key="grid-item-{{index}}"
 		>
-			<view class="grid-item-wrapper">
-				<image src="{{item.icon}}" class="grid-icon" mode="aspectFit" />
-				<text class="grid-text">{{item.text}}</text>
+			<view class="am-grid-item-wrapper">
+				<image src="{{item.icon}}" class="am-grid-icon" mode="aspectFit" />
+				<text class="am-grid-text">{{item.text}}</text>
 			</view>
 		</view>
 	</block>
