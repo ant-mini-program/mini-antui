@@ -6,6 +6,11 @@
     "swipe-action/demo/index",
     "tabs/demo/index",
     "stepper/demo/index",
+    "grid/demo/index",
+    "grid/demo/2/index",
+    "grid/demo/3/index",
+    "grid/demo/4/index",
+    "grid/demo/5/index",
     "notice/demo/index"
   ],
   "window": {
