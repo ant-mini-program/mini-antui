@@ -1,0 +1,3 @@
+<view>
+    <message-status title="{{title}}" type="info" mainButton="{{messageButton.mainButton}}" subButton="{{messageButton.subButton}}" onTapMain="goBack"></message-status>
+</view>
