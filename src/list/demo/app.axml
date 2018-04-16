@@ -3,6 +3,9 @@
     <list-item arrow="horizontal" index="list" key="items-list">
       <navigator url="/list/demo/index">List</navigator>
     </list-item>
+    <list-item arrow="horizontal" index="input-item" key="items-input-item">
+      <navigator url="/input-item/demo/index">InputItem</navigator>
+    </list-item>
     <list-item arrow="horizontal" index="modal" key="items-modal">
       <navigator url="/modal/demo/index">Modal</navigator>
     </list-item>

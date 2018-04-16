@@ -1,0 +1,7 @@
+{
+  "defaultTitle": "input-item",
+  "usingComponents":{
+    "list":"../../list/index",
+    "input-item":"../index"
+  }
+}
