@@ -1,0 +1,13 @@
+.am-input .am-list-content {
+  display: flex;
+  align-items: center;
+}
+.am-input-label {
+  min-width: 70px;
+  margin-right: 10px;
+}
+
+.am-input-content {
+  flex: 1;
+  height: 33px;
+}

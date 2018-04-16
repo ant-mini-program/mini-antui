@@ -1,0 +1,23 @@
+<view>
+  <view style="margin-top: 10px;" />
+  <list>
+    <input-item
+      placeholder="暗提示"
+      focus="{{true}}"
+    >
+      单项
+    </input-item>
+    <input-item
+      placeholder="暗提示"
+      type="number"
+    >
+      双行输入
+    </input-item>
+    <input-item
+      placeholder="暗提示"
+      last="{{true}}"
+    >
+      最长可六个字
+    </input-item>
+  </list>
+</view>
