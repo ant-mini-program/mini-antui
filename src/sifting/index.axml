@@ -1,0 +1,9 @@
+<view class="am-sifting-content" onChange="{{callBackFn}}" style="height:{{maxHeight}}" id="am-sifting-height">
+ <view class="am-sifting-list" style="padding-bottom:{{reBottom}}">
+  <slot/>
+ </view>
+<view class="am-sifting-btn" style="position:{{rePosition}}">
+    <button type="default" class="am-sifting-default {{className}}" onTap="resetFn">重置</button>
+    <button type="primary" class="am-sifting-primary {{className}}" onTap="confirmFn">确定</button>
+</view>
+</view>

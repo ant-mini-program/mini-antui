@@ -6,7 +6,8 @@
     "swipe-action/demo/index",
     "tabs/demo/index",
     "stepper/demo/index",
-    "notice/demo/index"
+    "notice/demo/index",
+    "sifting/demo/index"
   ],
   "window": {
     "enableWK": "YES",

@@ -1,0 +1,29 @@
+.am-sifting-default, .am-sifting-primary{
+  width:50%;
+  display:inline-block;
+  border-radius:0;
+}
+
+.am-sifting-default{
+   border:#fff solid 0rpx;
+   border-top:#e1e1e1 solid 1rpx;
+}
+
+.am-sifting-content{
+  background:#fff;
+  position: relative;
+ 
+  overflow:hidden;
+  overflow-y:scroll;
+}
+
+.am-sifting-list{
+  margin-right:-25rpx;
+  padding:15rpx 20rpx 40rpx 20rpx;
+  overflow:hidden;
+}
+
+.am-sifting-btn{
+  bottom:0rpx;
+  width:100%;
+}

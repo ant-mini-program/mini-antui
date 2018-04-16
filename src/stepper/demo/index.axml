@@ -20,7 +20,7 @@
     <list-item disabled="{{true}}">
       readOnly
       <view slot="extra">
-        <stepper onChange="callBackFn" showNumber  value="{{11}}" min="{{2}}" max="{{12}}" readOnly />
+        <stepper onChange="callBackFn" showNumber value="{{11}}" min="{{2}}" max="{{12}}" readOnly />
       </view>
     </list-item>
     <list-item>

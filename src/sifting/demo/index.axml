@@ -1,0 +1,14 @@
+<sifting 
+onChange="callBackFn"
+clickLength="{{5}}"
+>
+<block a:for="{{items}}">
+<sifting-item 
+value="{{item.value}}"
+id="{{item.id}}"
+selected="{{item.selected}}"
+>
+</sifting-item>
+</block>
+</sifting>
+
