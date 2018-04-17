@@ -1,3 +1,8 @@
 <view>
-    <message-status title="{{title}}" type="waiting" mainButton="{{messageButton.mainButton}}" subButton="{{messageButton.subButton}}" onTapMain="goBack"></message-status>
+  <message-status title="{{title}}" 
+    type="waiting" 
+    mainButton="{{messageButton.mainButton}}" 
+    subButton="{{messageButton.subButton}}" 
+    onTapMain="goBack">
+  </message-status>
 </view>

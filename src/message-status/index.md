@@ -28,7 +28,16 @@ onTapSub | 副按钮的点击函数 | Function  | ()=>{} | 否
 ```
 ## examples
 ```
-<message-status className="test" type="success" mainButton="{{messageButton.mainButton}}" onTapMain="goBack"></message-status>
+<message-status className="test" 
+  type="success" 
+  mainButton="{{messageButton.mainButton}}" 
+  onTapMain="goBack">
+</message-status>
 
-<message-status title="{{title}}" type="cancel" mainButton="{{messageButton.mainButton}}" subButton="{{messageButton.subButton}}" onTapMain="goBack" onTapSub="doNothing"></message-status>
+<message-status title="{{title}}" 
+  type="cancel" 
+  mainButton="{{messageButton.mainButton}}" 
+  subButton="{{messageButton.subButton}}" 
+  onTapMain="goBack" onTapSub="doNothing">
+</message-status>
 ``` 

@@ -1,33 +1,33 @@
 .am-message {
-    background: -webkit-linear-gradient(180deg, #ddd, #ddd) bottom left no-repeat, #fff;
-    background: linear-gradient(180deg, #ddd, #ddd) bottom left no-repeat, #fff;
-    background-size: 100% 1px;
-    margin-bottom: 30px;
-    padding: 30px 15px;
-    text-align: center;
+  background: -webkit-linear-gradient(180deg, #ddd, #ddd) bottom left no-repeat, #fff;
+  background: linear-gradient(180deg, #ddd, #ddd) bottom left no-repeat, #fff;
+  background-size: 100% 1px;
+  margin-bottom: 30px;
+  padding: 30px 15px;
+  text-align: center;
 }
 .am-message .am-icon {
-    font-size: 64px;
-    display: block;
+  font-size: 64px;
+  display: block;
 }
 .am-message .am-message-main {
-    font-size: 20px;
-    margin: 16px 0 9px;
-    line-height: 28px;
+  font-size: 20px;
+  margin: 16px 0 9px;
+  line-height: 28px;
 }
 .am-message .am-message-sub {
-    padding: 0 30px;
-    font-size: 14px;
-    line-height: 19px;
-    margin-top: 6px;
-    color: #999;
+  padding: 0 30px;
+  font-size: 14px;
+  line-height: 19px;
+  margin-top: 6px;
+  color: #999;
 }
 .am-button-wrap{
-    padding: 0 20px;
+  padding: 0 20px;
 }
 .am-button-wrap .a-button {
-    margin-bottom: 15px;
+  margin-bottom: 15px;
 }
 .am-button-wrap .a-button:last-child {
-    margin-bottom: 0;
+  margin-bottom: 0;
 }

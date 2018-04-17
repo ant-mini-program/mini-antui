@@ -1,7 +1,7 @@
 {
-    "defaultTitle": "message status",
-    "usingComponents": {
-        "list": "../../list/index",
-        "list-item": "../../list/list-item/index"
-    }
+  "defaultTitle": "message status",
+  "usingComponents": {
+    "list": "../../list/index",
+    "list-item": "../../list/list-item/index"
+  }
 }

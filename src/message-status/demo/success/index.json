@@ -1,6 +1,6 @@
 {
-    "defaultTitle": "message status success",
-    "usingComponents": {
-        "message-status": "../../index"
-    }
+  "defaultTitle": "message status success",
+  "usingComponents": {
+    "message-status": "../../index"
+  }
 }
