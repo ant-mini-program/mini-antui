@@ -10,24 +10,24 @@ Component({
     max: 10000
   },
   didMount() {
-    let { userProps } = this.data;
+    let { commonProps } = this.data;
     let { max } = this.props;
-    userProps.max = max;
+    commonProps.max = max;
   },
   methods: {
     resetFn() {
-      let { itemArry, confirmArry } = this.data;
-      itemArry.forEach(element => {
+      let { items, results } = this.data;
+      items.forEach(element => {
         element.setData({
           confirmStyle: ''
         })
       });
-      confirmArry.splice(0, confirmArry.length);
+      results.splice(0, results.length);
     },
     confirmFn() {
       const { onChange } = this.props;
-      let { confirmArry } = this.data;
-      onChange(confirmArry);
+      let { results } = this.data;
+      onChange(results);
     },
   }
 })

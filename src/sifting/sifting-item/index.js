@@ -15,12 +15,12 @@ Component({
   },
 
   didMount(){
-    let { confirmStyle, confirmArry, itemArry } = this.data;
+    let { confirmStyle, results, items } = this.data;
     let { selected, id, value } = this.props;
     if(selected){
       confirmStyle = 'am-sifting-cick';
-      confirmArry.push({ id, value });
-      itemArry.push(this);
+      results.push({ id, value });
+      items.push(this);
       this.setData({
         confirmStyle,
       });
@@ -30,17 +30,17 @@ Component({
   methods: {
     clickFn() {
       let { id, value } = this.props;
-      let { confirmStyle, confirmArry, itemArry, userProps } = this.data;
-        if (confirmStyle === '' && confirmArry.length < userProps.max) {
+      let { confirmStyle, results, items, commonProps } = this.data;
+        if (confirmStyle === '' && results.length < commonProps.max) {
           confirmStyle = 'am-sifting-cick';
-          confirmArry.push({ id, value });
-          itemArry.push(this);
+          results.push({ id, value });
+          items.push(this);
         }
         else {
           confirmStyle = '';
-          confirmArry.some(function (key, index) {
+          results.some(function (key, index) {
             if (JSON.stringify(key) === JSON.stringify({ id, value })) {
-              confirmArry.splice(index, 1);
+              results.splice(index, 1);
             }
           })
         }

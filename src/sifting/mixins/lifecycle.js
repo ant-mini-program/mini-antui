@@ -1,15 +1,15 @@
 export default {
   data: {
-    confirmArry:[],
-    itemArry:[],
-    userProps:{
+    results:[],
+    items:[],
+    commonProps:{
       max:10000,
     }
   },
 
   didUnmount(){
-    let { itemArry, confirmArry } = this.data;
-    confirmArry.splice(0, confirmArry.length);
-    itemArry.splice(0, itemArry.length);
+    let { items, results } = this.data;
+    results.splice(0, results.length);
+    items.splice(0, items.length);
   },
 };
