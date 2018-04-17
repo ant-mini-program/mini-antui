@@ -16,6 +16,7 @@
       onInput="handleInput"
       onFocus="handleFocus"
       onConfirm="handleConfirm"
+      sync-input="{{true}}"
       onBlur="handleBlur" />
     <view class="am-search-clear {{ _value.length > 0 && focus ? 'am-search-clear-show' : '' }}" onTap="handleClear"></view>
   </view>

@@ -7,15 +7,16 @@ Component({
     focus: false,
   },
   didMount() {
-    console.log('didMount');
     this.setData({
       _value: this.props.hasOwnProperty('value') ? this.props.value : '',
     });
   },
-  didUpdate(prevProps) {
-    this.setData({
-      _value: this.props.value,
-    });
+  didUpdate() {
+    if (this.props.hasOwnProperty('value') && this.props.value !== this.data._value) {
+      this.setData({
+        _value: this.props.value,
+      });
+    }
   },
   methods: {
     handleInput(e) {
