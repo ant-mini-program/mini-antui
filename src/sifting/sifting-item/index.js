@@ -31,7 +31,7 @@ Component({
     clickFn() {
       let { id, value } = this.props;
       let { confirmStyle, confirmArry, itemArry, userProps } = this.data;
-        if (confirmStyle === '' && confirmArry.length < userProps.clickLength) {
+        if (confirmStyle === '' && confirmArry.length < userProps.max) {
           confirmStyle = 'am-sifting-cick';
           confirmArry.push({ id, value });
           itemArry.push(this);

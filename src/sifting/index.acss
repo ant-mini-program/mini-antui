@@ -6,24 +6,25 @@
 
 .am-sifting-default{
    border:#fff solid 0rpx;
-   border-top:#e1e1e1 solid 1rpx;
+   border-top:#e1e1e1 solid 1px;
 }
 
 .am-sifting-content{
   background:#fff;
   position: relative;
- 
   overflow:hidden;
-  overflow-y:scroll;
 }
 
 .am-sifting-list{
-  margin-right:-25rpx;
-  padding:15rpx 20rpx 40rpx 20rpx;
+  margin-right:-10px;
+  padding:6px 9px 18px 9px;
   overflow:hidden;
+  overflow-y:scroll;
+  max-height:435px;
 }
 
 .am-sifting-btn{
-  bottom:0rpx;
+  bottom:0px;
   width:100%;
+ 
 }

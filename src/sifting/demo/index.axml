@@ -1,6 +1,6 @@
 <sifting 
 onChange="callBackFn"
-clickLength="{{5}}"
+max="{{5}}"
 >
 <block a:for="{{items}}">
 <sifting-item 

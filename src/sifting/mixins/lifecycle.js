@@ -3,12 +3,8 @@ export default {
     confirmArry:[],
     itemArry:[],
     userProps:{
-      clickLength:10000,
+      max:10000,
     }
-  },
-
-  didUpdate(prevProps,prevData){
-  //  console.log(prevData);
   },
 
   didUnmount(){
