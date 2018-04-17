@@ -2,8 +2,13 @@
   <view style="margin-top: 10px;" />
   <list>
     <input-item
+      className="dadada"
       placeholder="暗提示"
-      focus="{{true}}"
+      focus="{{inputFocus}}"
+      onInput="onItemInput"
+      onFocus="onItemFocus"
+      onBlur="onItemBlur"
+      onConfirm="onItemConfirm"
     >
       单项
     </input-item>
@@ -15,9 +20,18 @@
     </input-item>
     <input-item
       placeholder="暗提示"
-      last="{{true}}"
     >
       最长可六个字
     </input-item>
+    <input-item
+      placeholder="暗提示"
+      password
+      last="{{true}}"
+    >
+      密码
+    </input-item>
   </list>
+  <view style="margin: 10px;">
+    <button onTap="onAutoFocus">聚焦</button>
+  <view>
 </view>
