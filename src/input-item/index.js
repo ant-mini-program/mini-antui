@@ -31,6 +31,12 @@ Component({
     },
     onInput(e) {
       this.props.onInput(e);
+    },
+    onClear() {
+      console.log(222222);
+      my.alert({
+        content: 'onClear',
+      });
     }
   }
 });

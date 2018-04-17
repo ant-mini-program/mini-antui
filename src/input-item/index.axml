@@ -14,9 +14,12 @@
     disabled="{{disabled}}"
     maxlength="{{maxlength}}"
     focus="{{focus}}"
-    onInput="{{onInput}}"
-    onConfirm="{{onConfirm}}"
-    onFocus="{{onFocus}}"
-    onBlur="{{onBlur}}"
+    onInput="onInput"
+    onConfirm="onConfirm"
+    onFocus="onFocus"
+    onBlur="onBlur"
   />
+  <view onTap="onClear">
+    <icon type="clear" />
+  </view>
 </list-item>
