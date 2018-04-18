@@ -21,7 +21,7 @@
     <list-item arrow="horizontal" index="card" key="items-card">
       <navigator url="/card/demo/index">Card</navigator>
     </list-item>
-      <list-item arrow="horizontal" index="sifting" key="items-sifting-action">
+      <list-item arrow="horizontal" index="sifting" key="items-sifting">
         <navigator url="/sifting/demo/index">Sifting</navigator>
       </list-item>
     <list-item arrow="horizontal" index="notice" key="items-notice" last="{{true}}">

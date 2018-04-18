@@ -1,4 +1,4 @@
-<view class="am-sifting-content" onChange="{{callBackFn}}"  id="am-sifting-height">
+<view class="am-sifting-content {{className}}" onChange="{{callBackFn}}"  id="am-sifting-height">
  <view class="am-sifting-list" style="max-height:{{maxHeight}}px">
   <slot/>
  </view>
