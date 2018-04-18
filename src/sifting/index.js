@@ -3,6 +3,7 @@ import lifecycle from './mixins/lifecycle';
 Component({
   mixins: [lifecycle],
   data: {
+    maxHeight:435
   },
   props: {
     className:'',
@@ -13,6 +14,13 @@ Component({
     let { commonProps } = this.data;
     let { max } = this.props;
     commonProps.max = max;
+    my.getSystemInfo({
+      success: (res) => {
+        this.setData({
+          maxHeight: res.windowHeight-71
+        })
+      }
+    })
   },
   methods: {
     resetFn() {

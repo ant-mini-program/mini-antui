@@ -13,9 +13,9 @@ Page({
       { id: 10, value: '电子掌机' },
       { id: 0, value: 'switch' },
       { id: 2, value: 'PS4' },
-
     ]
   },
+
   callBackFn(data) {
     my.alert({
       content: data
