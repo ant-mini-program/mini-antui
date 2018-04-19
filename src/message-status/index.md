@@ -9,10 +9,11 @@
 
 属性 | 说明 | 类型 | 默认值 | 必选  
 ----- | ----- | ----- | ----|---- 
-title | 主标题 | String  | '操作成功' | 否
-subTitle | 副标题 | String  | '内容详情可折行，建议不超过两行' | 否
-mainButton | 主按钮的文本和可用性相关 | Object   | {buttonText: "确认",disabled: false} | 否 
-subButton | 副按钮的文本和可用性相关 | Object  | {buttonText: "取消",disabled: false} |  否 
+className| 自定义的class | String| 否 
+title | 主标题 | String  | '' | 是
+subTitle | 副标题 | String  | '' | 否
+mainButton | 主按钮的文本和可用性相关 | Object, 如{buttonText: "确认",disabled: false}   |  | 否 
+subButton | 副按钮的文本和可用性相关 | Object, {buttonText: "取消",disabled: false}  |  |  否 
 onTapMain | 主按钮的点击函数 | Function  | ()=>{} | 否
 onTapSub | 副按钮的点击函数 | Function  | ()=>{} | 否
 
@@ -28,16 +29,19 @@ onTapSub | 副按钮的点击函数 | Function  | ()=>{} | 否
 ```
 ## examples
 ```
-<message-status className="test" 
+<message-status
+  className="test" 
   type="success" 
   mainButton="{{messageButton.mainButton}}" 
   onTapMain="goBack">
 </message-status>
 
-<message-status title="{{title}}" 
+<message-status
+  title="{{title}}" 
   type="cancel" 
   mainButton="{{messageButton.mainButton}}" 
   subButton="{{messageButton.subButton}}" 
-  onTapMain="goBack" onTapSub="doNothing">
+  onTapMain="goBack"
+  onTapSub="doNothing">
 </message-status>
 ``` 

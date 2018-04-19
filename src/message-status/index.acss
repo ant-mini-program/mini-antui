@@ -1,21 +1,19 @@
 .am-message {
-  background: -webkit-linear-gradient(180deg, #ddd, #ddd) bottom left no-repeat, #fff;
-  background: linear-gradient(180deg, #ddd, #ddd) bottom left no-repeat, #fff;
-  background-size: 100% 1px;
-  margin-bottom: 30px;
+  background-color: #fff;
+  border-bottom: 1rpx solid #ddd;
+  margin-bottom: 15px;
   padding: 30px 15px;
   text-align: center;
 }
 .am-message .am-icon {
-  font-size: 64px;
   display: block;
 }
-.am-message .am-message-main {
+.am-message-main {
   font-size: 20px;
   margin: 16px 0 9px;
   line-height: 28px;
 }
-.am-message .am-message-sub {
+.am-message-sub {
   padding: 0 30px;
   font-size: 14px;
   line-height: 19px;
