@@ -1,6 +1,7 @@
 <view>
   <search-bar
     value="{{value}}"
+    focus="{{true}}"
     disabled="{{false}}"
     maxLength="{{20}}"
     placeholder="搜索"
