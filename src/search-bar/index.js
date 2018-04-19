@@ -1,6 +1,7 @@
 Component({
   props: {
     placeholder: '',
+    focus: false,
   },
   data: {
     _value: '',
@@ -9,6 +10,7 @@ Component({
   didMount() {
     this.setData({
       _value: this.props.hasOwnProperty('value') ? this.props.value : '',
+      focus: this.props.focus,
     });
   },
   didUpdate() {
