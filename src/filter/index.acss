@@ -21,3 +21,6 @@
   bottom: 0px;
   width: 100%;
 }
+.am-filter-default {
+  border-right: none;
+}
