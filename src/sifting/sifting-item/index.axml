@@ -1,1 +1,0 @@
-<view class="am-sifting-tag {{className}} {{confirmStyle}}" onTap="clickFn">{{value}}</view>

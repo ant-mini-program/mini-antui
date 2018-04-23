@@ -1,6 +1,6 @@
 {
   "component": true,
   "usingComponents":{
-    "sifting-item":"./sifting-item/index"
+    "filter-item":"./filter-item/index"
   }
 }

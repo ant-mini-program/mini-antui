@@ -1,24 +1,23 @@
-.am-sifting-default, .am-sifting-primary {
+.am-filter-default, .am-filter-primary {
   width: 50%;
   display: inline-block;
   border-radius: 0;
 }
 
-.am-sifting-content {
+.am-filter-content {
   background: #fff;
   position: relative;
   overflow: hidden;
 }
 
-.am-sifting-list {
-  margin:0 auto;
-  width:312px;
-  padding: 6px 0px 18px 10px;
+.am-filter-list {
+  padding: 10px 5px;
   overflow: hidden;
   overflow-y: scroll;
+  box-sizing: border-box;
 }
 
-.am-sifting-btn {
+.am-filter-btn {
   bottom: 0px;
   width: 100%;
 }

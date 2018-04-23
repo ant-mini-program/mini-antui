@@ -1,5 +1,0 @@
-<sifting onChange="callBackFn" max="{{5}}">
-  <block a:for="{{items}}">
-    <sifting-item value="{{item.value}}" id="{{item.id}}" selected="{{item.selected}}"/>
-  </block>
-</sifting>

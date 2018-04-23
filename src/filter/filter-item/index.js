@@ -18,7 +18,7 @@ Component({
     let { confirmStyle, results, items } = this.data;
     let { selected, id, value } = this.props;
     if(selected){
-      confirmStyle = 'am-sifting-cick';
+      confirmStyle = 'am-filter-cick';
       results.push({ id, value });
       items.push(this);
       this.setData({
@@ -28,11 +28,11 @@ Component({
   },
 
   methods: {
-    clickFn() {
+    handleClick() {
       let { id, value } = this.props;
       let { confirmStyle, results, items, commonProps } = this.data;
         if (confirmStyle === '' && results.length < commonProps.max) {
-          confirmStyle = 'am-sifting-cick';
+          confirmStyle = 'am-filter-cick';
           results.push({ id, value });
           items.push(this);
         }

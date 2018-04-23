@@ -1,7 +1,7 @@
 {
   "defaultTitle": "小程序AntUI组件库",
   "usingComponents":{
-    "sifting":"../index",
-    "sifting-item":"../sifting-item/index"
+    "filter":"../index",
+    "filter-item":"../filter-item/index"
   }
 }

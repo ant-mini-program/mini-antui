@@ -1,0 +1,9 @@
+<view class="am-filter-content {{className}}" onChange="{{callBackFn}}"  id="am-filter-height">
+ <view class="am-filter-list" style="max-height:{{maxHeight}}px">
+  <slot/>
+ </view>
+<view class="am-filter-btn">
+    <button type="default" class="am-filter-default" onTap="resetFn">重置</button>
+    <button type="primary" class="am-filter-primary" onTap="confirmFn">确定</button>
+</view>
+</view>

@@ -13,7 +13,7 @@
     "grid/demo/4/index",
     "grid/demo/5/index",
     "notice/demo/index",
-    "sifting/demo/index"
+    "filter/demo/index"
   ],
   "window": {
     "enableWK": "YES",

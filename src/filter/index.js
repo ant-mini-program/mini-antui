@@ -17,7 +17,7 @@ Component({
     my.getSystemInfo({
       success: (res) => {
         this.setData({
-          maxHeight: res.windowHeight-71
+          maxHeight: res.windowHeight-45
         })
       }
     })
