@@ -1,7 +1,7 @@
 .am-message {
   background-color: #fff;
   border-bottom: 1rpx solid #ddd;
-  margin-bottom: 15px;
+  margin-bottom: 30px;
   padding: 30px 15px;
   text-align: center;
 }
@@ -21,7 +21,7 @@
   color: #999;
 }
 .am-button-wrap{
-  padding: 0 20px;
+  padding: 0 15px;
 }
 .am-button-wrap .a-button {
   margin-bottom: 15px;

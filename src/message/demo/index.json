@@ -1,5 +1,5 @@
 {
-  "defaultTitle": "message status",
+  "defaultTitle": "信息状态-警告",
   "usingComponents": {
     "list": "../../list/index",
     "list-item": "../../list/list-item/index"

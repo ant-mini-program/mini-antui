@@ -1,7 +1,8 @@
 <view>
-  <message-status title="{{title}}" 
+  <message
+    title="{{title}}" 
     type="warn" 
     mainButton="{{messageButton.mainButton}}" 
     subButton="{{messageButton.subButton}}" onTapMain="goBack">
-  </message-status>
+  </message>
 </view>

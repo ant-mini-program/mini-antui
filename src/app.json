@@ -16,13 +16,12 @@
     "notice/demo/index",
     "filter/demo/index",
     "search-bar/demo/index",
-    "message-status/demo/index",
-    "message-status/demo/default/index",
-    "message-status/demo/success/index",
-    "message-status/demo/fail/index",
-    "message-status/demo/info/index",
-    "message-status/demo/waiting/index",
-    "message-status/demo/warn/index"
+    "message/demo/index",
+    "message/demo/success/index",
+    "message/demo/fail/index",
+    "message/demo/info/index",
+    "message/demo/waiting/index",
+    "message/demo/warn/index"
   ],
   "window": {
     "enableWK": "YES",

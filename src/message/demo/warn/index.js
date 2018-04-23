@@ -1,9 +1,12 @@
 Page({
   data: {
-    title: "操作成功",
+    title: "警告",
     messageButton: {
       mainButton: {
         buttonText: "返回首页"
+      },
+      subButton: {
+        buttonText: "DO NOTHING"
       }
     }
   },

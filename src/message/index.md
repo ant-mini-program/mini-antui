@@ -1,4 +1,4 @@
-## message-status组件
+## message组件
 
 1. 显示某个操作的结果
 2. 支持5种类型（success、cancel、info、waiting、warn）
@@ -23,25 +23,25 @@ onTapSub | 副按钮的点击函数 | Function  | ()=>{} | 否
 {
   "defaultTitle": "小程序AntUI组件库",
   "usingComponents":{
-    "message-status":"@alipay/mini-antui/es/message-status/index",
+    "message":"@alipay/mini-antui/es/message/index",
   }
 }
 ```
 ## examples
 ```
-<message-status
+<message
   className="test" 
   type="success" 
   mainButton="{{messageButton.mainButton}}" 
   onTapMain="goBack">
-</message-status>
+</message>
 
-<message-status
+<message
   title="{{title}}" 
   type="cancel" 
   mainButton="{{messageButton.mainButton}}" 
   subButton="{{messageButton.subButton}}" 
   onTapMain="goBack"
   onTapSub="doNothing">
-</message-status>
+</message>
 ``` 

@@ -1,6 +1,0 @@
-{
-  "defaultTitle": "message status",
-  "usingComponents": {
-    "message-status": "../../index"
-  }
-}

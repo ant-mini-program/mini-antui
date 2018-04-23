@@ -1,6 +1,6 @@
 Page({
   data: {
-    title: "提示信息",
+    title: "等待中",
     messageButton: {
       mainButton: {
         buttonText: "返回首页"
@@ -11,6 +11,6 @@ Page({
     }
   },
   goBack() {
-    my.navigateBack();
+      my.navigateBack();
   }
 });
