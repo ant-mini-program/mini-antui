@@ -7,7 +7,7 @@
 | 属性 | 说明 | 类型 | 默认值 | 必选 |
 |----|----|----|----|
 | max | 可选数量最大值 | Number | 10000 | false |
-| onChange | 提交选中回调 | function | (key: arry): void | false |
+| onChange | 提交选中回调 | function | (ev: arry): void | false |
 
 ## filter-item
 
