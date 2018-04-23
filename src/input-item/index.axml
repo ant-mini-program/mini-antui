@@ -22,9 +22,7 @@
       onFocus="onFocus"
       onBlur="onBlur"
     />
-		<view a:if="{{$slots.extra}}" class="am-input-extra">
-			<slot name="extra" />
-		</view>
+    <slot name="extra" />
 		<view class="am-input-line-bottom" />
 	</view>
 </view>
