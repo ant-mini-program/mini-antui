@@ -24,9 +24,9 @@
     <list-item arrow="horizontal" key="items-card">
       <navigator url="/card/demo/index">Card</navigator>
     </list-item>
-      <list-item arrow="horizontal" key="items-filter">
-        <navigator url="/filter/demo/index">Filter</navigator>
-      </list-item>
+    <list-item arrow="horizontal" key="items-filter">
+      <navigator url="/filter/demo/index">Filter</navigator>
+    </list-item>
     <list-item arrow="horizontal" key="items-notice">
       <navigator url="/notice/demo/index">Notice</navigator>
     </list-item>
