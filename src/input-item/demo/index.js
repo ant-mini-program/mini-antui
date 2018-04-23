@@ -7,6 +7,11 @@ Page({
       inputFocus: true,
     });
   },
+  onExtraTap(e) {
+    my.showToast({
+      content: 'dada',
+    });
+  },
   onItemInput(e) {
     console.log(e, 'onInput');
   },

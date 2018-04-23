@@ -11,6 +11,9 @@
       onConfirm="onItemConfirm"
     >
       单项
+      <view slot="extra" style="display:flex;" onTap="onExtraTap">
+        <icon size="18" type="clear" />
+      </view>
     </input-item>
     <input-item
       placeholder="暗提示"
@@ -26,10 +29,13 @@
     <input-item
       placeholder="暗提示"
       password
-      last="{{true}}"
     >
       密码
     </input-item>
+    <input-item
+      placeholder="暗提示"
+      last="{{true}}"
+    />
   </list>
   <view style="margin: 10px;">
     <button onTap="onAutoFocus">聚焦</button>

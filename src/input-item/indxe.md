@@ -21,25 +21,39 @@
 |onFocus | 聚焦时触发，event.detail = {value: value} | EventHandle |  |
 |onBlur | 失去焦点时触发，event.detail = {value: value} | EventHandle |  |
 
+### slots
+
+| slotname | 说明 |
+|----|----|
+|extra | 可选，用于渲染input-item项右边说明|
+
+### using
+
+```
+// page.json
+{
+  "defaultTitle": "小程序AntUI组件库",
+  "usingComponents":{
+    "input-item":"@alipay/mini-antui/es/input-item/index",
+  }
+}
+```
+
 ### examples
 
 ```axml
-<list-item
-  className="{{index === 0 ? 'am-list-sticky' : ''}}"
-  thumb="{{item.thumb}}"
-  arrow="{{item.arrow}}"
-  align="{{item.align}}"
-  index="{{index}}"
-  onClick="onItemClick"
-  key="items-{{index}}"
-  multipleLine="{{true}}"
-  wrap="{{true}}"
+<input-item
+  className="dadada"
+  placeholder="暗提示"
+  focus="{{inputFocus}}"
+  onInput="onItemInput"
+  onFocus="onItemFocus"
+  onBlur="onItemBlur"
+  onConfirm="onItemConfirm"
 >
-  {{item.title}}
-  <view class="am-list-brief">{{item.brief}}</view>
-  <view slot="extra">
-    {{item.extra}}
+  单项
+  <view slot="extra" style="display:flex;" onTap="onExtraTap">
+    <icon size="18" type="clear" />
   </view>
-</list-item>
-
+</input-item>
 ```

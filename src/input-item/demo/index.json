@@ -2,7 +2,6 @@
   "defaultTitle": "input-item",
   "usingComponents":{
     "list":"../../list/index",
-    "list-item":"../../list/list-item/index",
     "input-item":"../index"
   }
 }
