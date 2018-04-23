@@ -8,7 +8,7 @@ Page({
       { id: 4, value: '防盗门', selected: true},
       { id: 5, value: '椅子'},
       { id: 7, value: '显示器'},
-      { id: 6, value: '最新款电子产品'},
+      { id: 6, value: '某最新款电子产品'},
       { id: 8, value: '某某某某某牌电视游戏底座'},
     ]
   },
