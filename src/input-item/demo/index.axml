@@ -1,0 +1,43 @@
+<view>
+  <view style="margin-top: 10px;" />
+  <list>
+    <input-item
+      className="dadada"
+      placeholder="暗提示"
+      focus="{{inputFocus}}"
+      onInput="onItemInput"
+      onFocus="onItemFocus"
+      onBlur="onItemBlur"
+      onConfirm="onItemConfirm"
+    >
+      单项
+      <view slot="extra" style="display:flex;" onTap="onExtraTap">
+        <icon size="18" type="clear" />
+      </view>
+    </input-item>
+    <input-item
+      placeholder="暗提示"
+      type="number"
+    >
+      双行输入
+    </input-item>
+    <input-item
+      placeholder="暗提示"
+    >
+      最长可六个字
+    </input-item>
+    <input-item
+      placeholder="暗提示"
+      password
+    >
+      密码
+    </input-item>
+    <input-item
+      placeholder="暗提示"
+      last="{{true}}"
+    />
+  </list>
+  <view style="margin: 10px;">
+    <button onTap="onAutoFocus">聚焦</button>
+  <view>
+</view>
