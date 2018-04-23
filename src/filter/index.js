@@ -3,11 +3,11 @@ import lifecycle from './mixins/lifecycle';
 Component({
   mixins: [lifecycle],
   data: {
-    maxHeight:435
+    maxHeight: 0
   },
   props: {
-    className:'',
-    onChange: () => {},
+    className: '',
+    onChange: () => { },
     max: 10000
   },
   didMount() {
@@ -17,7 +17,7 @@ Component({
     my.getSystemInfo({
       success: (res) => {
         this.setData({
-          maxHeight: res.windowHeight-45
+          maxHeight: res.windowHeight - 45
         })
       }
     })
