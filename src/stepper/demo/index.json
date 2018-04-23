@@ -1,5 +1,5 @@
 {
-  "defaultTitle": "小程序AntUI组件库",
+  "defaultTitle": "Stepper",
   "usingComponents":{
     "stepper":"../index",
     "list":"../../list/index",
