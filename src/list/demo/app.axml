@@ -1,34 +1,37 @@
 <view>
   <list>
-    <list-item arrow="horizontal" index="list" key="items-list">
+    <list-item arrow="horizontal" key="items-list">
       <navigator url="/list/demo/index">List</navigator>
     </list-item>
-    <list-item arrow="horizontal" index="input-item" key="items-input-item">
+    <list-item arrow="horizontal" key="items-input-item">
       <navigator url="/input-item/demo/index">InputItem</navigator>
     </list-item>
-    <list-item arrow="horizontal" index="modal" key="items-modal">
+    <list-item arrow="horizontal" key="items-modal">
       <navigator url="/modal/demo/index">Modal</navigator>
     </list-item>
-    <list-item arrow="horizontal" index="swipe-action" key="items-swipe-action">
+    <list-item arrow="horizontal" key="items-swipe-action">
       <navigator url="/swipe-action/demo/index">SwipeAction</navigator>
     </list-item>
-    <list-item arrow="horizontal" index="tabs" key="items-tabs">
+    <list-item arrow="horizontal" key="items-tabs">
       <navigator url="/tabs/demo/index">Tabs</navigator>
     </list-item>
-    <list-item arrow="horizontal" index="stepper" key="items-stepper">
+    <list-item arrow="horizontal" key="items-stepper">
       <navigator url="/stepper/demo/index">Stepper</navigator>
     </list-item>
-    <list-item arrow="horizontal" index="grid" key="items-grid">
+    <list-item arrow="horizontal" key="items-grid">
       <navigator url="/grid/demo/index">Grid</navigator>
     </list-item>
-    <list-item arrow="horizontal" index="card" key="items-card">
+    <list-item arrow="horizontal" key="items-card">
       <navigator url="/card/demo/index">Card</navigator>
     </list-item>
-      <list-item arrow="horizontal" index="filter" key="items-filter">
-        <navigator url="/filter/demo/index">Filter</navigator>
-      </list-item>
-    <list-item arrow="horizontal" index="notice" key="items-notice" last="{{true}}">
+    <list-item arrow="horizontal" key="items-filter">
+      <navigator url="/filter/demo/index">Filter</navigator>
+    </list-item>
+    <list-item arrow="horizontal" key="items-notice">
       <navigator url="/notice/demo/index">Notice</navigator>
+    </list-item>
+    <list-item arrow="horizontal" key="search-bar" last="{{true}}">
+      <navigator url="/search-bar/demo/index">SearchBar</navigator>
     </list-item>
   </list>
 </view>
