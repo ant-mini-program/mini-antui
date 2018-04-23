@@ -30,8 +30,11 @@
     <list-item arrow="horizontal" key="items-notice">
       <navigator url="/notice/demo/index">Notice</navigator>
     </list-item>
-    <list-item arrow="horizontal" key="search-bar" last="{{true}}">
+    <list-item arrow="horizontal" key="search-bar">
       <navigator url="/search-bar/demo/index">SearchBar</navigator>
+    </list-item>
+    <list-item arrow="horizontal" key="items-message-status" last="{{true}}">
+      <navigator url="/message-status/demo/index">Message Status</navigator>
     </list-item>
   </list>
 </view>

@@ -15,11 +15,19 @@
     "grid/demo/5/index",
     "notice/demo/index",
     "filter/demo/index",
-    "search-bar/demo/index"
+    "search-bar/demo/index",
+    "message-status/demo/index",
+    "message-status/demo/default/index",
+    "message-status/demo/success/index",
+    "message-status/demo/fail/index",
+    "message-status/demo/info/index",
+    "message-status/demo/waiting/index",
+    "message-status/demo/warn/index"
   ],
   "window": {
     "enableWK": "YES",
-    "enableDSL": true,
+    "enableDSL": "YES",
+    "enableJSC": "YES",
     "defaultTitle": "小程序版AntUI",
     "backgroundColor": "#F5F5F9",
     "pullRefresh": false,

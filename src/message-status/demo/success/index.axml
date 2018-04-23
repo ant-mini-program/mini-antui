@@ -1,0 +1,7 @@
+<view>
+  <message-status title="{{title}}" 
+    type="success" 
+    mainButton="{{messageButton.mainButton}}" 
+    onTapMain="goBack">
+  </message-status>
+</view>
