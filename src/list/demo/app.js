@@ -61,6 +61,11 @@ Page({
         path: '/tips/demo/index',
       },
       {
+        name: 'PageResult',
+        nameZN: '结果页',
+        path: '/page-result/demo/index'
+      },
+      {
         name: 'Message',
         nameZN: '信息状态',
         path: '/message/demo/index',
