@@ -32,7 +32,7 @@
 ```
 ```axml
 <tips>
-  <tips-dialog>我知道了</tips-dialog>
+  <tips-plain>我知道了</tips-plain>
 </tips>
 ```
 
