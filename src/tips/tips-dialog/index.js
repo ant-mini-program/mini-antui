@@ -5,7 +5,6 @@ Component({
   props: {
     className: '',
     title: '',
-    content: '',
     onTipsDialogClose: () => {}
   },
   methods: {
