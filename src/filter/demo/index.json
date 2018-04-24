@@ -1,5 +1,5 @@
 {
-  "defaultTitle": "小程序AntUI组件库",
+  "defaultTitle": "筛选",
   "usingComponents": {
     "filter": "../index",
     "filter-item": "../filter-item/index"

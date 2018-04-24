@@ -19,7 +19,7 @@
 
 .am-tips-dialog-favorite-content {
   margin-top: 5px;
-  width: 75%;
+  width: 78%;
   line-height: 15px;
   overflow: hidden;
   height: 15px;

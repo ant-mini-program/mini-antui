@@ -2,6 +2,7 @@
   "pages": [
     "list/demo/app",
     "list/demo/index",
+    "input-item/demo/index",
     "card/demo/index",
     "modal/demo/index",
     "swipe-action/demo/index",
@@ -16,11 +17,19 @@
     "grid/demo/4/index",
     "grid/demo/5/index",
     "notice/demo/index",
-    "filter/demo/index"
+    "filter/demo/index",
+    "search-bar/demo/index",
+    "message/demo/index",
+    "message/demo/success/index",
+    "message/demo/fail/index",
+    "message/demo/info/index",
+    "message/demo/waiting/index",
+    "message/demo/warn/index"
   ],
   "window": {
     "enableWK": "YES",
-    "enableDSL": true,
+    "enableDSL": "YES",
+    "enableJSC": "YES",
     "defaultTitle": "小程序版AntUI",
     "backgroundColor": "#F5F5F9",
     "pullRefresh": false,

@@ -1,34 +1,10 @@
-<view>
-  <list>
-    <list-item arrow="horizontal" index="list" key="items-list">
-      <navigator url="/list/demo/index">List</navigator>
+<list>
+  <block a:for="{{components}}">
+    <list-item arrow="horizontal" multipleLine="{{true}}" key="items-{{item.name}}" last="{{index===components.length - 1}}">
+      <navigator url="{{item.path}}">
+        {{item.name}}
+        <view class="am-list-brief">{{item.nameZN}}</view>
+      </navigator>
     </list-item>
-    <list-item arrow="horizontal" index="modal" key="items-modal">
-      <navigator url="/modal/demo/index">Modal</navigator>
-    </list-item>
-    <list-item arrow="horizontal" index="swipe-action" key="items-swipe-action">
-      <navigator url="/swipe-action/demo/index">SwipeAction</navigator>
-    </list-item>
-    <list-item arrow="horizontal" index="tabs" key="items-tabs">
-      <navigator url="/tabs/demo/index">Tabs</navigator>
-    </list-item>
-    <list-item arrow="horizontal" index="stepper" key="items-stepper">
-      <navigator url="/stepper/demo/index">Stepper</navigator>
-    </list-item>
-    <list-item arrow="horizontal" index="grid" key="items-grid">
-      <navigator url="/grid/demo/index">Grid</navigator>
-    </list-item>
-    <list-item arrow="horizontal" index="card" key="items-card">
-      <navigator url="/card/demo/index">Card</navigator>
-    </list-item>
-    <list-item arrow="horizontal" index="filter" key="items-filter">
-      <navigator url="/filter/demo/index">Filter</navigator>
-    </list-item>
-    <list-item arrow="horizontal" index="tips" key="items-tips">
-      <navigator url="/tips/demo/index">Tips</navigator>
-    </list-item>
-    <list-item arrow="horizontal" index="notice" key="items-notice" last="{{true}}">
-      <navigator url="/notice/demo/index">Notice</navigator>
-    </list-item>
-  </list>
-</view>
+  </block>
+</list>
