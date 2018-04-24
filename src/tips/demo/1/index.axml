@@ -1,0 +1,3 @@
+<tips>
+  <tips-dialog onTipsDialogClose="onClick" title="{{title}}">{{content}}</tips-dialog>
+</tips>

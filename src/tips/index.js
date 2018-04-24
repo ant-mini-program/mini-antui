@@ -1,0 +1,8 @@
+Component({
+  data: {
+
+  },
+  props: {
+
+  },
+})
