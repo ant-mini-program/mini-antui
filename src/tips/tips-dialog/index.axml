@@ -1,5 +1,5 @@
-<view class="am-tips-dialog-favorite {{className}}" a:if="{{show}}">
-  <view class="am-tips-dialog-favorite-wrap">
+<view class="am-tips-dialog-favorite" a:if="{{show}}">
+  <view class="am-tips-dialog-favorite-wrap {{className}}">
     <view class="am-tips-dialog-favorite-title">{{title}}</view>
     <view class="am-tips-dialog-favorite-content">
       <slot />

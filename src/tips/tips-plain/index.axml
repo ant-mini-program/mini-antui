@@ -1,5 +1,5 @@
-<view class="am-tips-plain-favorite {{className}}">
-  <view class="am-tips-plain-favorite-wrap">
+<view class="am-tips-plain-favorite">
+  <view class="am-tips-plain-favorite-wrap {{className}}">
     <view class="am-tips-plain-favorite-content">
       <slot />
     </view>

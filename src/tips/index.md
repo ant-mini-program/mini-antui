@@ -6,9 +6,15 @@
 
 | 属性 | 说明 | 类型 | 默认值 | 必选 |
 |----|----|----|----|
+|className| 自定义class | String| | false |
 | title | 标题文本 | String | | false |
 | onTipsDialogClose | 关闭提示框并回调 | function | (): void | false |
 
+## tips-plain
+
+| 属性 | 说明 | 类型 | 默认值 | 必选 |
+|----|----|----|----|
+|className| 自定义class | String| | false |
 
 ## using
 
