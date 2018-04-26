@@ -3,7 +3,5 @@ Component({
     className: '',
     type: 'network',
     local: false,
-    title: '',
-    brief: '',
   }
 });

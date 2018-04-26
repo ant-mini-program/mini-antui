@@ -66,12 +66,12 @@
 
 .am-local-page .am-page-result-pic {
   width: 100px;
-  height: 100px;
+  height: 105px;
   margin: 0 auto;
 }
 
 .am-local-page  .am-page-result-brief {
-  margin: 16px auto 35px;
+  margin: 21px auto 30px;
   font-size: 14px;
   color: #999999;
   max-width: 266px;
@@ -100,8 +100,8 @@
 }
 
 .am-local-page .page-busy {
-  background-image: url("https://gw.alipayobjects.com/zos/rmsportal/wcbaeKkreBmqSBIHqbOW.png");
-  background-size: 48px 80px;
+  background-image: url("https://gw.alipayobjects.com/zos/rmsportal/vuIYcaowFdPnBVbqZHrn.png");
+  background-size: 57px 86px;
   background-position: center bottom;
   background-repeat: no-repeat;
 }

@@ -1,5 +1,5 @@
 <view class="am-page-result {{className}} {{local ? 'am-local-page': ''}}">
   <view class="am-page-result-pic page-{{type}}"></view>
-  <view class="am-page-result-title" a:if="{{!local}}">{{title}}</view>
-  <view class="am-page-result-brief">{{brief}}</view>
+  <view class="am-page-result-title" a:if="{{!local && title}}">{{title}}</view>
+  <view class="am-page-result-brief" a:if="{{brief}}">{{brief}}</view>
 </view>
