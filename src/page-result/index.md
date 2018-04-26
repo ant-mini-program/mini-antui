@@ -18,7 +18,7 @@
 {
   "defaultTitle": "异常反馈",
   "usingComponents":{
-    "page-result":"@alipay/mini-antui/page-result/index",
+    "page-result":"@alipay/mini-antui/es/page-result/index",
   }
 }
 ```
@@ -26,10 +26,9 @@
 ## examples
 
 ```axml
-<view>
-  <page-result
-    type="network"
-    title="网络不给力"
-    brief="事件上最遥远的距离莫过于此" />
-</view>
+<page-result
+  type="network"
+  title="网络不给力"
+  brief="事件上最遥远的距离莫过于此"
+/>
 ```
