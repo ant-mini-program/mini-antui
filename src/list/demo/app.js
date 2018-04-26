@@ -1,8 +1,6 @@
-
 Page({
   data: {
-    components: [
-      {
+    components: [{
         name: 'List',
         nameZN: '列表',
         path: '/list/demo/index',
@@ -56,6 +54,11 @@ Page({
         name: 'SearchBar',
         nameZN: '搜索框',
         path: '/search-bar/demo/index',
+      },
+      {
+        name: 'Tips',
+        nameZN: '小提示',
+        path: '/tips/demo/index',
       },
       {
         name: 'Message',
