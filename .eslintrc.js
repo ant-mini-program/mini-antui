@@ -23,6 +23,7 @@ module.exports = {
     Component: false,
     App: false,
     Page: false,
+    my: false,
   },
 
   // http://eslint.org/docs/rules/xxx, xxx代表rule名称, 0=off, 1=warning, 2=error
