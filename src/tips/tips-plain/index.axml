@@ -1,4 +1,4 @@
-<view class="am-tips-plain-favorite">
+<view time="{{time}}" onTap="onClose" class="am-tips-plain-favorite" a:if="{{show}}">
   <view class="am-tips-plain-favorite-wrap {{className}}">
     <view class="am-tips-plain-favorite-content">
       <slot />

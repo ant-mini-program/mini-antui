@@ -1,3 +1,1 @@
-<tips>
-  <tips-dialog onTipsDialogClose="onClick" title="{{title}}">{{content}}</tips-dialog>
-</tips>
+<tips-dialog onClose="onClose" title="{{title}}">{{content}}</tips-dialog>

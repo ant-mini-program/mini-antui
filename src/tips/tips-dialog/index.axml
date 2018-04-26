@@ -4,6 +4,6 @@
     <view class="am-tips-dialog-favorite-content">
       <slot />
     </view>
-    <view class="am-tips-dialog-favorite-action" onTap="onTipsDialogClose">知道了</view>
+    <view class="am-tips-dialog-favorite-action" onTap="onClose">知道了</view>
   </view>
 </view>

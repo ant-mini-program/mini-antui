@@ -5,14 +5,14 @@ Component({
   props: {
     className: '',
     title: '',
-    onTipsDialogClose: () => {}
+    onClose: () => {}
   },
   methods: {
-    onTipsDialogClose() {
+    onClose() {
       this.setData({
         show: false
       });
-      this.props.onTipsDialogClose();
+      this.props.onClose();
     }
   }
-})
+});

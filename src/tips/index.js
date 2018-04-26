@@ -1,8 +1,0 @@
-Component({
-  data: {
-
-  },
-  props: {
-
-  },
-})
