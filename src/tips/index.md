@@ -15,7 +15,7 @@
 | 属性 | 说明 | 类型 | 默认值 | 必选 |
 |----|----|----|----|
 |className| 自定义class | String| | false |
-| time | 自动关闭时间 | Number | 5000毫秒| false |
+| time | 自动关闭时间(单位毫秒) | Number | 5000毫秒| false |
 | onClose | 回调并关闭提示框 | function | (): void | false |
 
 ## using
