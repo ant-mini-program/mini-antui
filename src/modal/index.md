@@ -34,15 +34,15 @@
 // page.axml
 <view>
 	<button onTap="openModal">打开modal</button>
-	<modal show="{{modalOpened}}" onModalClick="onModalClick" onModalClose="onModalClose">
-		<view style="text-align: center;">
-			<text>让员工用支付宝扫一扫，添加为店员</text>
-		</view>
-		<image src="https://tfsimg.alipay.com/images/mobilecodec/TB1JjWmXkyEDuNjme6tXXXIKXXa" mode="widthFix" style="width: 100%;" />
-		<view style="text-align: center;">
-			<text>二维码每分钟自动更新</text>
-		</view>
-		<view slot="footer">关闭</view>
+	<modal
+		show="{{modalOpened}}"
+		onModalClick="onModalClick"
+		onModalClose="onModalClose"
+	>
+		<view style="margin: 20px 0 10px 0;">让员工用支付宝扫一扫，添加为店员</view>
+		<image mode="widthFix" style="width: 100%;" src="https://tfsimg.alipay.com/images/mobilecodec/TB1JjWmXkyEDuNjme6tXXXIKXXa" />
+		二维码每分钟自动更新
+		<view slot="footer">确定</view>
 	</modal>
 </view>
 ```
