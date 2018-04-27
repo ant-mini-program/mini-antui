@@ -38,10 +38,10 @@
 		show="{{modalOpened}}"
 		onModalClick="onModalClick"
 		onModalClose="onModalClose"
+		topImage="https://gw.alipayobjects.com/zos/rmsportal/yFeFExbGpDxvDYnKHcrs.png"
 	>
-		<view style="margin: 20px 0 10px 0;">让员工用支付宝扫一扫，添加为店员</view>
-		<image mode="widthFix" style="width: 100%;" src="https://tfsimg.alipay.com/images/mobilecodec/TB1JjWmXkyEDuNjme6tXXXIKXXa" />
-		二维码每分钟自动更新
+		<view slot="header">标题单行</view>
+		说明当前状态、提示用户解决方案，最好不要超过两行。
 		<view slot="footer">确定</view>
 	</modal>
 </view>
