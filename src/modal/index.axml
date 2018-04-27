@@ -1,7 +1,10 @@
 <view class="am-modal-{{show ? 'show' : 'hide'}}" disable-scroll="{{true}}">
 	<view class="am-modal-mask" />
-	<view class="am-modal-document">
+	<view class="am-modal-document {{advice === true ? 'am-modal-document-advice' : '' }}">
 		<view class="am-modal {{className}}">
+			<view a:if="{{topImage}}" class="am-modal-image am-modal-image-{{topImageSize}}">
+				<image src="{{topImage}}" />
+			</view>
 			<view class="am-modal-header" a:if="{{$slots.header}}">
 				<slot name="header" />
 			</view>

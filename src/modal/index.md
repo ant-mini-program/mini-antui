@@ -3,14 +3,17 @@
 |----|----|----|----|
 |className| 自定义class | String| |
 |show| 是否展示`modal` | Boolean| `false` |
-|showClose| 是否渲染`关闭` | Boolean| `false` |
+|showClose| 是否渲染`关闭` | Boolean| `true` |
 |onModalClick| 点击`footer`部分的回调 | function()|  |
 |onModalClose| 点击`关闭`的回调, `showClose`为false时无需设置  | function()|  |
+|topImage | 顶部图片 | imgSrc |  |
+|topImageSize | 顶部图片规则 | `lg`、`md`、`sm` | `md` |
+|advice| 是否是运营类弹窗 | Bollean | `false` |
 
 ### slots
 |slotName | 说明 |
 |----|----|
-|header | 可选，modal头部|
+|header | 可选，modal头部 |
 |footer | 可选，modal尾部 |
 
 ### using
@@ -31,15 +34,15 @@
 // page.axml
 <view>
 	<button onTap="openModal">打开modal</button>
-	<modal show="{{modalOpened}}" onModalClick="onModalClick" onModalClose="onModalClose">
-		<view style="text-align: center;">
-			<text>让员工用支付宝扫一扫，添加为店员</text>
-		</view>
-		<image src="https://tfsimg.alipay.com/images/mobilecodec/TB1JjWmXkyEDuNjme6tXXXIKXXa" mode="widthFix" style="width: 100%;" />
-		<view style="text-align: center;">
-			<text>二维码每分钟自动更新</text>
-		</view>
-		<view slot="footer">关闭</view>
+	<modal
+		show="{{modalOpened}}"
+		onModalClick="onModalClick"
+		onModalClose="onModalClose"
+		topImage="https://gw.alipayobjects.com/zos/rmsportal/yFeFExbGpDxvDYnKHcrs.png"
+	>
+		<view slot="header">标题单行</view>
+		说明当前状态、提示用户解决方案，最好不要超过两行。
+		<view slot="footer">确定</view>
 	</modal>
 </view>
 ```
