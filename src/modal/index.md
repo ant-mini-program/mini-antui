@@ -7,7 +7,7 @@
 |onModalClick| 点击`footer`部分的回调 | function()|  |
 |onModalClose| 点击`关闭`的回调, `showClose`为false时无需设置  | function()|  |
 |topImage | 顶部图片 | imgSrc |  |
-|topImageSize | 顶部图片规则 | 'lg'、'md'、'sm' | 'md' |
+|topImageSize | 顶部图片规则 | `lg`、`md`、`sm` | `md` |
 |advice| 是否是运营类弹窗 | Bollean | `false` |
 
 ### slots
