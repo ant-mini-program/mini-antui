@@ -17,6 +17,8 @@
     "mini-program"
   ],
   "devDependencies": {
+    "eslint": "^4.19.1",
+    "pre-commit-eslint": "^0.0.6",
     "rc-tools": "6.x"
   },
   "scripts": {
