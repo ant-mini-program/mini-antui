@@ -3,14 +3,17 @@
 |----|----|----|----|
 |className| 自定义class | String| |
 |show| 是否展示`modal` | Boolean| `false` |
-|showClose| 是否渲染`关闭` | Boolean| `false` |
+|showClose| 是否渲染`关闭` | Boolean| `true` |
 |onModalClick| 点击`footer`部分的回调 | function()|  |
 |onModalClose| 点击`关闭`的回调, `showClose`为false时无需设置  | function()|  |
+|topImage | 顶部图片 | imgSrc |  |
+|topImageSize | 顶部图片规则 | 'lg'、'md'、'sm' | 'md' |
+|advice| 是否是运营类弹窗 | Bollean | `false` |
 
 ### slots
 |slotName | 说明 |
 |----|----|
-|header | 可选，modal头部|
+|header | 可选，modal头部 |
 |footer | 可选，modal尾部 |
 
 ### using

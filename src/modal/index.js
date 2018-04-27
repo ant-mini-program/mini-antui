@@ -1,7 +1,8 @@
 Component({
   props: {
     className: '',
-    show: false, // 外部传入，同步到data
+    topImageSize: 'md',
+    showClose: true,
   },
   methods: {
     onModalClick() {
