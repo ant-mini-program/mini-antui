@@ -23,7 +23,7 @@
 {
   "defaultTitle": "小程序AntUI组件库",
   "usingComponents":{
-    "modal": "@alipay/mini-antui/es/modal/index"
+    "modal": "mini-antui/es/modal/index"
   }
 }
 ```

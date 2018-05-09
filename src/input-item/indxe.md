@@ -34,7 +34,7 @@
 {
   "defaultTitle": "小程序AntUI组件库",
   "usingComponents":{
-    "input-item":"@alipay/mini-antui/es/input-item/index",
+    "input-item":"mini-antui/es/input-item/index",
   }
 }
 ```

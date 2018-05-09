@@ -19,7 +19,7 @@
 {
   "defaultTitle": "小程序AntUI组件库",
   "usingComponents":{
-    "card":"@alipay/mini-antui/es/card/index"
+    "card":"mini-antui/es/card/index"
   }
 }
 ```

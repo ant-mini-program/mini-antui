@@ -25,8 +25,8 @@
 {
   "defaultTitle": "小程序AntUI组件库",
   "usingComponents":{
-    "tips-dialog":"@alipay/mini-antui/es/tips/tips-dialog/index",
-    "tips-plain":"@alipay/mini-antui/es/tips/tips-plain/index"
+    "tips-dialog":"mini-antui/es/tips/tips-dialog/index",
+    "tips-plain":"mini-antui/es/tips/tips-plain/index"
   }
 }
 ```

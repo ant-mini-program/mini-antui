@@ -17,7 +17,7 @@
 {
   "defaultTitle": "小程序AntUI组件库",
   "usingComponents":{
-    "grid":"@alipay/mini-antui/es/grid/index"
+    "grid":"mini-antui/es/grid/index"
   }
 }
 ```

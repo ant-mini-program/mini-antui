@@ -23,7 +23,7 @@ onTapSub | 副按钮的点击函数 | Function  | ()=>{} | 否
 {
   "defaultTitle": "小程序AntUI组件库",
   "usingComponents":{
-    "message":"@alipay/mini-antui/es/message/index",
+    "message":"mini-antui/es/message/index",
   }
 }
 ```

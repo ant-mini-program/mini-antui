@@ -24,7 +24,7 @@
 {
   "defaultTitle": "小程序AntUI组件库",
   "usingComponents":{
-    "stepper":"@alipay/mini-antui/es/stepper/index",
+    "stepper":"mini-antui/es/stepper/index",
   }
 }
 ```

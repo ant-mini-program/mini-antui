@@ -13,7 +13,7 @@
 {
   "defaultTitle": "SwipeAction",
   "usingComponents":{
-    "swipe-action":"@alipay/mini-antui/es/swipe-action/index"
+    "swipe-action":"mini-antui/es/swipe-action/index"
   }
 }
 ```

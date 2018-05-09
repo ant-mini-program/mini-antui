@@ -25,8 +25,8 @@
 {
   "defaultTitle": "小程序AntUI组件库",
   "usingComponents":{
-    "filter":"@alipay/mini-antui/es/filter/index",
-    "filter-item":"@alipay/mini-antui/es/filter/filter-item/index"
+    "filter":"mini-antui/es/filter/index",
+    "filter-item":"mini-antui/es/filter/filter-item/index"
   }
 }
 ```
