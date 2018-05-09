@@ -20,6 +20,6 @@
   },
   "scripts": {
     "build": "rc-tools run compile && node scripts/cp.js && node scripts/rm.js",
-    "pub": "git push origin && npm run build && tnpm publish"
+    "pub": "git push origin && npm run build && npm publish"
   }
 }
