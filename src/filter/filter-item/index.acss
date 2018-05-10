@@ -1,21 +1,21 @@
 .am-filter-item-wrap {
-  padding: 5px;
-  min-width:33.3%;
-  max-width:180px;
+  padding: 7px 6px;
+  min-width: 33.3%;
+  max-width: 180px;
   overflow: hidden;
   float: left;
   display: list-item;
   box-sizing: border-box;
 }
 
-.am-filter-item{
-  font-size: 12px;
-  height: 32px;
-  line-height: 32px;
+.am-filter-item {
+  font-size: 14px;
+  height: 36px;
+  line-height: 36px;
   background: #f5f5f5;
-  border-radius: 3px;
+  border-radius: 2px;
   text-align: center;
-  padding:0 20px;
+  padding: 0 20px;
   box-sizing: border-box;
 }
 

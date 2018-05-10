@@ -1,26 +1,38 @@
-<view class="am-tabs">
+<view class="am-tabs {{className}}">
   <view class="am-tabs-tab-bar-wrap">
     <view class="am-tabs-bar">
-      <scroll-view
-        scroll-left="{{scroll_init}}"
-        scroll-x="{{true}}"
-        scroll-with-animation="{{true}}"
-        class="am-tabs-bar-content">
-        <block a:for="{{tabs}}">
-          <view
-            data-index="{{index}}"
-            key="tabs-item-{{index}}"
-            onTap="handleTabClick"
-            style="{{
-              backgroundColor: tabBarBackgroundColor,
-              color: index === current ? tabBarActiveTextColor: tabBarInactiveTextColor,
-              width: tabWidth * 100 + '%',
-            }}"
-            class="am-tabs-bar-tab">
-            <text style="{{ borderBottomColor: index === current ? tabBarUnderlineColor : '' }}">{{item.title}}</text>
-          </view>
-        </block>
-      </scroll-view>
+      <view class="am-tabs-bar-content-wrap">
+        <view class="am-tabs-scroll-left"></view>
+        <view class="am-tabs-scroll-right"></view>
+        <scroll-view
+          scroll-left="{{scrollInit}}"
+          scroll-x="{{true}}"
+          scroll-with-animation="{{true}}"
+          class="am-tabs-bar-content">
+          <block a:for="{{tabs}}">
+            <view
+              data-index="{{index}}"
+              key="tabs-item-{{index}}"
+              onTap="handleTabClick"
+              style="{{
+                backgroundColor: tabBarBackgroundColor,
+                color: index === current ? tabBarActiveTextColor: tabBarInactiveTextColor,
+                width: tabWidth * 100 + '%',
+              }}"
+              class="am-tabs-bar-tab">
+              <view class="am-tabs-bar-title" style="{{ borderBottomColor: index === current ? tabBarUnderlineColor : '' }}">
+                {{item.title}}
+                <view a:if="{{item.badgeType}}" class="am-tabs-bar-badge {{item.badgeType}}">
+                  {{item.badgeType === 'text' && item.badgeText ? item.badgeText.substr(0, 1) : ''}}
+                </view>
+              </view>
+            </view>
+          </block>
+        </scroll-view>
+      </view>
+      <view class="am-tabs-plus-wrap {{showPlus ? 'show' : ''}}">
+        <view class="am-tabs-plus" onTap="handlePlusClick"></view>
+      </view>
     </view>
     <swiper
       current="{{current}}"

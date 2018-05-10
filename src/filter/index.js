@@ -3,24 +3,25 @@ import lifecycle from './mixins/lifecycle';
 Component({
   mixins: [lifecycle],
   data: {
-    maxHeight: 0
+    maxHeight: 0,
+    singleSelect: true
   },
   props: {
     className: '',
-    onChange: () => { },
+    onChange: () => {},
     max: 10000
   },
   didMount() {
-    let { commonProps } = this.data;
+    let { commonProps, singleSelect } = this.data;
     let { max } = this.props;
     commonProps.max = max;
-    my.getSystemInfo({
-      success: (res) => {
-        this.setData({
-          maxHeight: res.windowHeight - 45
-        })
-      }
-    })
+    if (commonProps.max === 1) {
+      singleSelect = false;
+      this.setData({
+        singleSelect
+      });
+    }
+
   },
   methods: {
     resetFn() {

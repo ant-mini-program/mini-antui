@@ -1,9 +1,11 @@
 .am-message {
   background-color: #fff;
-  border-bottom: 1rpx solid #ddd;
+  border-bottom: 1rpx solid #eeeeee;
   margin-bottom: 30px;
   padding: 30px 15px;
   text-align: center;
+  height: 199px;
+  box-sizing: border-box;
 }
 .am-message .am-icon {
   display: block;

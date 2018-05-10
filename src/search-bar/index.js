@@ -1,5 +1,6 @@
 Component({
   props: {
+    className: '',
     placeholder: '',
     focus: false,
   },

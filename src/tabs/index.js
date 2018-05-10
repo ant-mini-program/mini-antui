@@ -5,9 +5,10 @@ Component({
     tabBarActiveTextColor: '#108ee9', // 选中选项卡字体颜色
     tabBarInactiveTextColor: '#333333', // 未选中选项卡字体颜色
     tabBarBackgroundColor: '#ffffff', // 选项卡背景颜色
+    showPlus: false,
   },
   data: {
-    scroll_init: 0,
+    scrollInit: 0,
     current: 0,
     windowWidth: 0,
     tabWidth: 0.25,
@@ -40,25 +41,30 @@ Component({
 
       this.moveScrollBar(index);
       if (this.props.onTabClick) {
-        this.props.onTabClick({ index, });
+        this.props.onTabClick({ index });
       }
       this.setData({
         current: index,
       });
     },
+    handlePlusClick() {
+      if (this.props.onPlusClick) {
+        this.props.onPlusClick();
+      }
+    },
     moveScrollBar(current) {
-      const { windowWidth, tabWidth }  = this.data;
-      let scroll_init = current * windowWidth * tabWidth;
+      const { windowWidth, tabWidth } = this.data;
+      let scrollInit = current * windowWidth * tabWidth;
 
       if (current <= 2) {
-        scroll_init = 0;
+        scrollInit = 0;
       } else {
-        scroll_init = (current - 2) * windowWidth * tabWidth;
+        scrollInit = (current - 2) * windowWidth * tabWidth;
       }
 
       this.setData({
-        scroll_init,
-      })
+        scrollInit,
+      });
     },
   }
 });

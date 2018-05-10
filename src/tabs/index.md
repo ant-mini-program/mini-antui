@@ -6,7 +6,9 @@
 
 | 属性 | 说明 | 类型 | 默认值 | 必选 |
 |----|----|----|----|----|
-| tabs | tab数据 | Array |  | true |
+| tabs | tab数据，其中包括选项标题`title`，徽标类型`badgeType`分为圆点`dot`和文本`text`，徽标文本`badgeText`在`badgeType`为`text`时生效 | Array<title, badgeType, badgeText> |  | true |
+| showPlus | 是否显示‘+’icon | Boolean | false | false |
+| onPlusClick | ‘+’icon被点击时的回调 | () => {} |  | false |
 | onTabClick | tab 被点击的回调 | (index: number) => void | | false |
 | onChange | tab变化时触发 | (index: number) => void | | false |
 | tabBarBackgroundColor | tabBar背景色	| string | | false |

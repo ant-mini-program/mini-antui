@@ -1,4 +1,4 @@
-<view class="am-search">
+<view class="am-search {{className}}">
   <view class="am-search-input">
     <view class="am-search-synthetic">
       <view>

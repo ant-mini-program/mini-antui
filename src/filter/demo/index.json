@@ -1,7 +1,7 @@
 {
   "defaultTitle": "筛选",
   "usingComponents": {
-    "filter": "../index",
-    "filter-item": "../filter-item/index"
+    "list": "../../list/index",
+    "list-item": "../../list/list-item/index"
   }
 }

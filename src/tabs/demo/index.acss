@@ -4,3 +4,7 @@
   align-items: center;
   height: 150px;
 }
+
+.tabs-plus {
+  margin-top: 20px;
+}

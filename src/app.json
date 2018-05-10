@@ -18,6 +18,8 @@
     "grid/demo/5/index",
     "notice/demo/index",
     "filter/demo/index",
+    "filter/demo/single/index",
+    "filter/demo/alternative/index",
     "search-bar/demo/index",
     "page-result/demo/index",
     "page-result/demo/network/index",
