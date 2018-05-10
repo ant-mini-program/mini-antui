@@ -1,0 +1,10 @@
+{
+  "extends": "eslint-config-ali",
+  "globals": {
+    "my": true,
+    "App": true,
+    "Component": true,
+    "Page": true
+  },
+  "rules": {}
+}
