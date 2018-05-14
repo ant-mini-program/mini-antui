@@ -172,35 +172,22 @@ Page({
       {
         title: '标题文字不换行很长很长很长很长很长很长很长很长很长很长',
         arrow: true,
-        align: 'middle'
+        align: 'middle',
       },
       {
         title: '标题文字换行很长很长很长很长很长很长很长很长很长很长',
         arrow: true,
-        align: 'top'
+        align: 'top',
       },
       {
         title: '标题文字很长很长很长很长很长很长很长很长很长很长很长很长很长很长',
         extra: '没有箭头',
-        align: 'bottom'
+        align: 'bottom',
       },
       {
         title: '标题文字很长很长很长很长很长很长很长很长很长很长很长很长很长很长',
         extra: '子元素垂直对齐',
-        align: 'top'
-      },
-      {
-        title: '标题文字换行很长很长很长很长很长很长很长很长很长很长',
-        arrow: true,
-      },
-      {
-        title: '标题文字很长很长很长很长很长很长很长很长很长很长很长很长很长很长',
-        extra: '没有箭头',
-      },
-      {
-        title: '标题文字很长很长很长很长很长很长很长很长很长很长很长很长很长很长',
-        extra: '子元素垂直对齐',
-        align: 'top'
+        align: 'top',
       },
       {
         title: '标题文字换行很长很长很长很长很长很长很长很长很长很长',
@@ -213,7 +200,7 @@ Page({
       {
         title: '标题文字很长很长很长很长很长很长很长很长很长很长很长很长很长很长',
         extra: '子元素垂直对齐',
-        align: 'top'
+        align: 'top',
       },
       {
         title: '标题文字换行很长很长很长很长很长很长很长很长很长很长',
@@ -226,11 +213,24 @@ Page({
       {
         title: '标题文字很长很长很长很长很长很长很长很长很长很长很长很长很长很长',
         extra: '子元素垂直对齐',
-        align: 'middle'
+        align: 'top',
       },
-    ]
+      {
+        title: '标题文字换行很长很长很长很长很长很长很长很长很长很长',
+        arrow: true,
+      },
+      {
+        title: '标题文字很长很长很长很长很长很长很长很长很长很长很长很长很长很长',
+        extra: '没有箭头',
+      },
+      {
+        title: '标题文字很长很长很长很长很长很长很长很长很长很长很长很长很长很长',
+        extra: '子元素垂直对齐',
+        align: 'middle',
+      },
+    ],
   },
-  onItemClick: function(ev) {
+  onItemClick(ev) {
     my.alert({
       content: `点击了第${ev.index}行`,
     });
@@ -242,5 +242,5 @@ Page({
     this.setData({
       items5: newItems,
     });
-  }
+  },
 });
