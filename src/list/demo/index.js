@@ -3,76 +3,76 @@ const newitems = [
   {
     thumb: 'https://gw.alipayobjects.com/zos/rmsportal/KXDIRejMrRdKlSEcLseB.png',
     title: '固定到头部',
-    arrow: 'horizontal',
+    arrow: true,
     sticky: true,
   },
   {
     title: '标题文字不换行很长很长很长很长很长很长很长很长很长很长',
-    arrow: 'horizontal',
+    arrow: true,
   },
   {
     title: '标题文字换行很长很长很长很长很长很长很长很长很长很长',
-    arrow: 'horizontal',
-    textMode: 'wrap'
+    arrow: true,
+    textMode: 'wrap',
   },
   {
     title: '标题文字很长很长很长很长很长很长很长很长很长很长很长很长很长很长',
     extra: '没有箭头',
-    textMode: 'wrap'
+    textMode: 'wrap',
   },
   {
     title: '标题文字很长很长很长很长很长很长很长很长很长很长很长很长很长很长',
     extra: '子元素垂直对齐',
     textMode: 'wrap',
-    align: 'top'
+    align: 'top',
   },
   {
     title: '标题文字换行很长很长很长很长很长很长很长很长很长很长',
-    arrow: 'horizontal',
-    textMode: 'wrap'
+    arrow: true,
+    textMode: 'wrap',
   },
   {
     title: '标题文字很长很长很长很长很长很长很长很长很长很长很长很长很长很长',
     extra: '没有箭头',
-    textMode: 'wrap'
+    textMode: 'wrap',
   },
   {
     title: '标题文字很长很长很长很长很长很长很长很长很长很长很长很长很长很长',
     extra: '子元素垂直对齐',
     textMode: 'wrap',
-    align: 'top'
+    align: 'top',
   },
   {
     title: '标题文字换行很长很长很长很长很长很长很长很长很长很长',
-    arrow: 'horizontal',
-    textMode: 'wrap'
+    arrow: true,
+    textMode: 'wrap',
   },
   {
     title: '标题文字很长很长很长很长很长很长很长很长很长很长很长很长很长很长',
     extra: '没有箭头',
-    textMode: 'wrap'
+    textMode: 'wrap',
   },
   {
     title: '标题文字很长很长很长很长很长很长很长很长很长很长很长很长很长很长',
     extra: '子元素垂直对齐',
     textMode: 'wrap',
-    align: 'top'
+    align: 'top',
   },
   {
     title: '标题文字换行很长很长很长很长很长很长很长很长很长很长',
-    arrow: 'horizontal',
-    textMode: 'wrap'
+    arrow: true,
+    textMode: 'wrap',
   },
   {
     title: '标题文字很长很长很长很长很长很长很长很长很长很长很长很长很长很长',
     extra: '没有箭头',
-    textMode: 'wrap'
+    textMode: 'wrap',
   },
   {
     title: '标题文字很长很长很长很长很长很长很长很长很长很长很长很长很长很长',
     extra: '子元素垂直对齐',
     textMode: 'wrap',
-    align: 'top'
+    align: 'top',
   },
 ];
 Page({
@@ -80,13 +80,13 @@ Page({
     items: [
       {
         title: '单行列表',
-        extra: '详细信息'
+        extra: '详细信息',
       },
     ],
     items2: [
       {
         title: '多行列表',
-        arrow: 'horizontal',
+        arrow: true,
       },
       {
         title: '多行列表',
@@ -108,24 +108,24 @@ Page({
       {
         title: '双行列表',
         brief: '描述信息',
-        arrow: 'horizontal',
+        arrow: true,
       },
     ],
     items4: [
       {
         title: '双行列表',
         brief: '描述信息',
-        arrow: 'horizontal',
+        arrow: true,
       },
       {
         title: '双行列表',
         brief: '描述信息',
-        arrow: 'horizontal',
+        arrow: true,
       },
       {
         title: '双行列表',
         brief: '描述信息',
-        arrow: 'horizontal',
+        arrow: true,
       },
     ],
     itemsThumb: [
@@ -133,17 +133,17 @@ Page({
         thumb: 'https://tfsimg.alipay.com/images/partner/T12rhxXkxcXXXXXXXX',
         title: '标题文字',
         extra: '描述文字',
-        arrow: 'horizontal',
+        arrow: true,
       },
       {
         thumb: 'https://tfsimg.alipay.com/images/partner/T12rhxXkxcXXXXXXXX',
         title: '标题文字',
-        arrow: 'horizontal',
+        arrow: true,
       },
       {
         thumb: 'https://tfsimg.alipay.com/images/partner/T12rhxXkxcXXXXXXXX',
         title: '标题文字',
-        arrow: 'horizontal',
+        arrow: true,
       },
     ],
     itemsThumbMultiple: [
@@ -166,17 +166,17 @@ Page({
         thumb: 'https://gw.alipayobjects.com/zos/rmsportal/KXDIRejMrRdKlSEcLseB.png',
         title: '固定到头部',
         brief: '描述信息',
-        arrow: 'horizontal',
+        arrow: true,
         sticky: true,
       },
       {
         title: '标题文字不换行很长很长很长很长很长很长很长很长很长很长',
-        arrow: 'horizontal',
+        arrow: true,
         align: 'middle'
       },
       {
         title: '标题文字换行很长很长很长很长很长很长很长很长很长很长',
-        arrow: 'horizontal',
+        arrow: true,
         align: 'top'
       },
       {
@@ -191,7 +191,7 @@ Page({
       },
       {
         title: '标题文字换行很长很长很长很长很长很长很长很长很长很长',
-        arrow: 'horizontal',
+        arrow: true,
       },
       {
         title: '标题文字很长很长很长很长很长很长很长很长很长很长很长很长很长很长',
@@ -204,7 +204,7 @@ Page({
       },
       {
         title: '标题文字换行很长很长很长很长很长很长很长很长很长很长',
-        arrow: 'horizontal',
+        arrow: true,
       },
       {
         title: '标题文字很长很长很长很长很长很长很长很长很长很长很长很长很长很长',
@@ -217,7 +217,7 @@ Page({
       },
       {
         title: '标题文字换行很长很长很长很长很长很长很长很长很长很长',
-        arrow: 'horizontal',
+        arrow: true,
       },
       {
         title: '标题文字很长很长很长很长很长很长很长很长很长很长很长很长很长很长',

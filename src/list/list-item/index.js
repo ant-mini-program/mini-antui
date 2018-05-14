@@ -1,7 +1,7 @@
 Component({
   props: {
     className: '',
-    align: "middle",
+    align: false,
     disabled: false,
     multipleLine: false,
     wrap: false,
