@@ -38,6 +38,6 @@
     />
   </list>
   <view style="margin: 10px;">
-    <button onTap="onAutoFocus">聚焦</button>
+    <button type="primary" onTap="onAutoFocus">聚焦</button>
   <view>
 </view>

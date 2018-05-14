@@ -12,7 +12,7 @@
 		<view a:if={{$slots.extra}} class="am-list-extra" >
 			<slot name="extra" />
 		</view>
-		<view a:if={{arrow}} class="am-list-arrow am-list-arrow-{{arrow}}" />
+		<view a:if={{arrow}} class="am-list-arrow" />
 		<view class="am-list-line-bottom" />
 	</view>
 </view>

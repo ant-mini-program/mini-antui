@@ -37,7 +37,7 @@
   display: block;
   position: absolute;
   width: 100%;
-  border-bottom: 1rpx solid #ddd;
+  border-bottom: 1rpx solid #eee;
   left: 0;
   bottom: 0;
   right: auto;

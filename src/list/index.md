@@ -47,7 +47,7 @@
 |----|----|----|----|
 |className| 自定义的class | String| |
 |thumb| 缩略图 | 图片地址 |  |
-|arrow| 箭头方向(右,上,下), 可选，`horizontal`,`up`,`down`,`empty`，如果是empty则存在对应的dom,但是不显示 | String | |
+|arrow| 是否带剪头 | Boolean | `false` |
 |align| 子元素垂直对齐，可选`top`,`middle`,`bottom` | String | `middle` |
 |index| 列表项的唯一索引| string | |
 |onClick| 点击list-item时调用此函数 | function({index}) | |

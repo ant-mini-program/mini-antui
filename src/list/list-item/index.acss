@@ -76,14 +76,6 @@
   background-position: 50% 50%;
 }
 
-.am-list-arrow-down {
-  transform: rotate(90deg);
-}
-
-.am-list-arrow-up {
-  transform: rotate(270deg);
-}
-
 .am-list-arrow-empty {
   visibility: hidden;
 }
@@ -92,7 +84,7 @@
   display: block;
   position: absolute;
   width: 100%;
-  border-bottom: 1rpx solid #ddd;
+  border-bottom: 1rpx solid #eee;
   left: 0;
   bottom: 0;
   right: auto;
