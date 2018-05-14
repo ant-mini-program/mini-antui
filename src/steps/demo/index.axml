@@ -1,0 +1,23 @@
+
+<steps 
+  className="demo-steps-class"
+  activeIndex="{{activeIndex}}"
+  items="{{items}}"
+></steps>
+<steps 
+  className="demo-steps-class"
+  activeIndex="{{activeIndex}}"
+  items="{{items2}}"
+>
+</steps>
+<steps 
+  className="demo-steps-class"
+  direction="vertical"
+  activeIndex="{{activeIndex}}"
+  items="{{items2}}"
+>
+</steps>
+<view class="demo-btn-container">
+  <button class="demo-btn" onTap="preStep">上一步</button>
+  <button class="demo-btn" onTap="nextStep">下一步</button>
+</view>
