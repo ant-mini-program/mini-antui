@@ -18,7 +18,7 @@
 // page.json
 {
   "usingComponents":{
-    "steps":"@alipay/mini-antui/es/steps/index"
+    "steps":"mini-antui/es/steps/index"
   }
 }
 ```
