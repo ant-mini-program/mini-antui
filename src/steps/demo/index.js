@@ -1,6 +1,7 @@
 Page({
   data: {
     activeIndex: 1,
+    failIndex: 0,
     items: [{
       title: '步骤1',
     }, {
@@ -30,6 +31,16 @@ Page({
   preStep() {
     this.setData({
       activeIndex: this.data.activeIndex - 1,
+    });
+  },
+  setFailIndex() {
+    this.setData({
+      failIndex: 3,
+    });
+  },
+  cancelFailIndex() {
+    this.setData({
+      failIndex: 0,
     });
   },
 });
