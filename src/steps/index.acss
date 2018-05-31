@@ -39,6 +39,7 @@
 .am-hor-step-text {
   margin-top: 20px;
   padding: 0 5px;
+  max-width: 90px;
   transform: translateX(-50%);
 }
 .am-hor-step-title {
