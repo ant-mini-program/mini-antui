@@ -2,6 +2,7 @@
   "pages": [
     "list/demo/app",
     "list/demo/index",
+    "amount-input/demo/index",
     "input-item/demo/index",
     "card/demo/index",
     "modal/demo/index",
