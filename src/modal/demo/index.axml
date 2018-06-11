@@ -27,6 +27,7 @@
 		onModalClose="onModalClose2"
 		topImage="https://gw.alipayobjects.com/zos/rmsportal/yFeFExbGpDxvDYnKHcrs.png"
 		topImageSize="lg"
+		closeType="1"
 	>
 		<view slot="header">标题单行</view>
 		说明当前状态、提示用户解决方案，最好不要超过两行。

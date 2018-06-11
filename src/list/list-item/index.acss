@@ -2,7 +2,7 @@
   display: flex;
   align-items: center;
   background: #fff;
-  padding-left: 15px;
+  padding-left: 16px;
   font-size: 15px;
   line-height: 1.4;
   color: #333;
@@ -16,7 +16,7 @@
 .am-list-thumb {
   width: 30px;
   height: 30px;
-  margin-right: 15px;
+  margin-right: 16px;
 }
 
 .am-list-line {
@@ -57,7 +57,7 @@
 
 .am-list-brief {
   color: #888;
-  font-size: 15px;
+  font-size: 14px;
 }
 
 .am-list-wrap .am-list-content,
