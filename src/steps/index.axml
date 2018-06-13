@@ -25,10 +25,10 @@
         a:if="{{index < items.length - 1}}"
       ></view>
       <view class="am-vertical-step-icon is-fail" a:if="{{index == failIndex - 1}}">
-        <icon type="cancel" size="20"/>
+        <icon type="cancel" size="24"/>
       </view>
       <view class="am-vertical-step-icon is-active" a:elif="{{index <= activeIndex - 1}}">
-        <icon type="success" size="20"/>
+        <icon type="success" size="24"/>
       </view>
       <view class="am-vertical-step-icon is-normal" a:else></view>
     </view>

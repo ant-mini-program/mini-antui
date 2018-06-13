@@ -12,5 +12,5 @@
   text-align: center;
 }
 .popover-item:not(:last-child) {
-  border-bottom: 1px solid #dddddd;
+  border-bottom: 1px solid #eeeeee;
 }
