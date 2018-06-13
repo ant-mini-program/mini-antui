@@ -103,13 +103,14 @@
 
 .am-calendar-tag {
   position: absolute;
-  top: 23px;
+  top: 21px;
   width: 42px;
   overflow: hidden;
   text-overflow: hidden;
   white-space: nowrap;
   color: #f5a623;
   font-size: 10px;
+  font-weight: 500;
 }
 
 .am-calendar-today {
