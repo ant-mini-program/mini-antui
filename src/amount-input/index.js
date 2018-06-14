@@ -35,9 +35,9 @@ Component({
         this.props.onInput(value);
       }
     },
-    onSubmitTap() {
-      if (this.props.onSubmit) {
-        this.props.onSubmit();
+    onConfirmTap() {
+      if (this.props.onConfirm) {
+        this.props.onConfirm();
       }
     },
     onClearTap() {

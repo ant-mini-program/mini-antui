@@ -9,5 +9,5 @@
     btnText="全部提现"
     onClear="onInputClear"
     onInput="onInput"
-    onSubmit="onInputSubmit" />
+    onConfirm="onInputConfirm" />
 </view>

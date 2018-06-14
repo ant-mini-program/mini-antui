@@ -18,6 +18,6 @@
   </view>
   <view class="am-amount-footer">
     <text class="am-amount-extra">{{extra}}</text>
-    <view class="am-amount-btn" onTap="onSubmitTap">{{btnText}}</view>
+    <view class="am-amount-btn" onTap="onConfirmTap">{{btnText}}</view>
   </view>
 </view>

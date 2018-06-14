@@ -7,9 +7,9 @@ Page({
       value: '',
     });
   },
-  onInputSubmit() {
+  onInputConfirm() {
     my.alert({
-      content: 'submit',
+      content: 'confirmed',
     });
   },
   onInput(value) {
