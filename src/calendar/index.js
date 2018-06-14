@@ -31,7 +31,7 @@ Component({
   props: {
     className: '',
     tagData: [],
-    type: 'one',
+    type: 'single',
   },
   didUpdate() {
     const { dates } = this.data;
