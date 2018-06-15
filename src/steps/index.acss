@@ -39,6 +39,7 @@
 .am-hor-step-text {
   margin-top: 20px;
   padding: 0 5px;
+  max-width: 90px;
   transform: translateX(-50%);
 }
 .am-hor-step-title {
@@ -65,7 +66,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 20px;
+  width: 24px;
   margin-right: 20px;
 }
 /* line 包含 top 和 bottom 两块， 整体下移20px, 保证和原点无缝衔接 */
@@ -102,8 +103,8 @@
 }
 .am-vertical-step-icon.is-active,
 .am-vertical-step-icon.is-fail {
-  width: 20px;
-  height: 20px;
+  width: 24px;
+  height: 24px;
   background-color: #fff;
 }
 .am-vertical-step-right {

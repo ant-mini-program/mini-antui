@@ -36,6 +36,11 @@ Page({
       path: '/steps/demo/index',
     },
     {
+      name: 'Popover',
+      nameZN: '气泡',
+      path: '/popover/demo/index',
+    },
+    {
       name: 'Grid',
       nameZN: '宫格',
       path: '/grid/demo/index',
