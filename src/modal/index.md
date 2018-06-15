@@ -4,6 +4,7 @@
 |className| 自定义class | String| |
 |show| 是否展示`modal` | Boolean| `false` |
 |showClose| 是否渲染`关闭` | Boolean| `true` |
+|closeType| 关闭图表类型 0：灰色图标 1：白色图标 | String | 0 |
 |onModalClick| 点击`footer`部分的回调 | function()|  |
 |onModalClose| 点击`关闭`的回调, `showClose`为false时无需设置  | function()|  |
 |topImage | 顶部图片 | imgSrc |  |

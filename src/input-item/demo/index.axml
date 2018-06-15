@@ -23,8 +23,9 @@
     </input-item>
     <input-item
       placeholder="暗提示"
+      type="number"
     >
-      最长可六个字
+      五个字长度
     </input-item>
     <input-item
       placeholder="暗提示"

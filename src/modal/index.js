@@ -3,6 +3,7 @@ Component({
     className: '',
     topImageSize: 'md',
     showClose: true,
+    closeType: '0',
   },
   methods: {
     onModalClick() {
@@ -16,6 +17,6 @@ Component({
       if (onModalClose) {
         onModalClose();
       }
-    }
-  }
+    },
+  },
 });

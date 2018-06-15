@@ -14,7 +14,7 @@
 			<view class="am-modal-footer" hover-class="am-modal-footer-active" a:if="{{$slots.footer}}" onTap="onModalClick">
 				<slot name="footer" />
 			</view>
-			<view class="am-modal-close" hover-class="am-modal-close-active" a:if="{{showClose}}" onTap="onModalClose" />
+			<view class="am-modal-close {{closeType === '1' ? 'am-close-white' : ''}}" hover-class="am-modal-close-active" a:if="{{showClose}}" onTap="onModalClose" />
 		</view>
 	</view>
 </view>

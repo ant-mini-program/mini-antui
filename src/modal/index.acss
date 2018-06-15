@@ -57,11 +57,10 @@
   text-align: center;
   color: #333;
   font-weight: 600;
-  padding: 15px 0 0;
-  margin-bottom: 12px;
+  padding-top: 22px;
 }
 .am-modal-body {
-  margin-top: 12px;
+  margin-top: 8px;
   overflow: hidden;
   max-width: 270px;
   padding: 0 16px;
@@ -88,6 +87,11 @@
   height: 48px;
   width: 48px;
   background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAMAAAAM7l6QAAAANlBMVEVMaXGIiIiJiYmJiYn///+IiIiIiIiRkZGJiYmJiYmIiIiZmZmIiIiIiIiLi4uJiYmIiIiIiIif033nAAAAEXRSTlMA3vWjAZv1FdRBcAq0vhZmK7msGmgAAABnSURBVHhe7dEpFoAwEATRTliysIS5/2VReS16xiEp+2XhuQqC2nngshp4262j1Omq2wq6q3Rf6arionRVdaq4qjpVneo71fOUqerJbAkVLRv/eBcW/nEvfPD3/4szPHhXGzj6VPWBF66vCbNK4YfYAAAAAElFTkSuQmCC") center no-repeat;
+  background-size: 16px 16px;
+}
+
+.am-close-white {
+  background: url("https://gw.alipayobjects.com/zos/rmsportal/fdmdsySxNBrpcVBVGEUM.png") center no-repeat;;
   background-size: 16px 16px;
 }
 
