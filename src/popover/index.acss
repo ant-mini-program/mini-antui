@@ -16,10 +16,10 @@
   z-index: 100;
   border-radius: 4px;
   font-size: 14px;
-  color: #333333;
+  color: #333;
 }
 .border-true {
-  border: 1px solid #dddddd;
+  border: 1px solid #ddd;
 }
 .am-popover-inner {
   position: relative;

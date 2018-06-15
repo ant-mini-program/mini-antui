@@ -1,4 +1,4 @@
-.popover-item {
+.am-popover-item {
   min-width: 80px;
   max-width: 170px;
   height: 39px;
@@ -8,9 +8,9 @@
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  color: #333333;
+  color: #333;
   text-align: center;
 }
-.popover-item:not(:last-child) {
-  border-bottom: 1px solid #eeeeee;
+.am-popover-item:not(:last-child) {
+  border-bottom: 1px solid #eee;
 }
