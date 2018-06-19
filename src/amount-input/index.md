@@ -14,7 +14,8 @@
 | focus | 自动获取光标 | Boolean | false | false |
 | onInput | 键盘输入时触发 | (value: string) => void | | false |
 | onClear | 点击 clear 图标触发 | (val: string) => void | | false |
-| onConfirm | 击右下角按钮时触发 | (val: string) => void | | false |
+| onButtonClick | 击右下角按钮时触发 | (val: string) => void | | false |
+| onConfirm | 点击键盘确认按钮时触发 | (val: string) => void | | false |
 | maxLength | 最多允许输入的字符个数 | Number | | false |
 
 ## using

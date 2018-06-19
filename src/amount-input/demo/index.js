@@ -17,4 +17,9 @@ Page({
       value,
     });
   },
+  onButtonClick() {
+    my.alert({
+      content: 'button clicked',
+    });
+  },
 });

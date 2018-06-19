@@ -11,13 +11,14 @@
       class="am-amount-value"
       value="{{_value}}"
       focus="{{focus}}"
-      onInput="onInput" />
+      onInput="onInput"
+      onConfirm="onConfirm" />
     <view class="am-amount-clear {{ _value.length > 0 && focus ? 'am-amount-clear-show' : '' }}" onTap="onClearTap">
       <icon type="clear" size="22" />
     </view>
   </view>
   <view class="am-amount-footer">
     <text class="am-amount-extra">{{extra}}</text>
-    <view class="am-amount-btn" onTap="onConfirmTap">{{btnText}}</view>
+    <view class="am-amount-btn" onTap="onButtonClick">{{btnText}}</view>
   </view>
 </view>
