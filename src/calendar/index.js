@@ -37,26 +37,17 @@ function prefixNum(num) {
 }
 
 Component({
+  data: {
+    selectedYear: 0,
+    selectedMonth: 0,
+    currentDate: null,
+    dates: [],
+    blockType: 1, // 1.没有待办纯数字 2.有待办 用于区分不同类型日期块的样式。
+  },
   props: {
     className: '',
     tagData: [],
     type: 'single',
-  },
-  didUpdate() {
-    const { dates } = this.data;
-    let blockType = 1;
-    for (let i = 0; i < dates.length; i++) {
-      for (let j = 0; j < dates[i].length; j++) {
-        if (this.hasTag(dates[i][j])) {
-          blockType = 2;
-        }
-      }
-    }
-
-    this.setData({
-      dates,
-      blockType,
-    });
   },
   didMount() {
     this.tapTimes = 0;
@@ -75,12 +66,21 @@ Component({
     });
     this.refreshdates(month, year);
   },
-  data: {
-    selectedYear: 0,
-    selectedMonth: 0,
-    currentDate: null,
-    dates: [],
-    blockType: 1, // 1.没有代办纯数字 2.有代办 用于区分不同类型日期块的样式。
+  didUpdate() {
+    const { dates } = this.data;
+    let blockType = 1;
+    for (let i = 0; i < dates.length; i++) {
+      for (let j = 0; j < dates[i].length; j++) {
+        if (this.hasTag(dates[i][j])) {
+          blockType = 2;
+        }
+      }
+    }
+
+    this.setData({
+      dates,
+      blockType,
+    });
   },
   methods: {
     onPrevMonthTap() {
