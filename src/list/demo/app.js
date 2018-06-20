@@ -56,6 +56,11 @@ Page({
       path: '/card/demo/index',
     },
     {
+      name: 'Calendar',
+      nameZN: '日历',
+      path: '/calendar/demo/index',
+    },
+    {
       name: 'Filter',
       nameZN: '筛选',
       path: '/filter/demo/index',

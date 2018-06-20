@@ -5,6 +5,7 @@
     "amount-input/demo/index",
     "input-item/demo/index",
     "card/demo/index",
+    "calendar/demo/index",
     "modal/demo/index",
     "swipe-action/demo/index",
     "tabs/demo/index",
