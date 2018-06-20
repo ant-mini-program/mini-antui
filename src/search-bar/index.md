@@ -26,7 +26,7 @@
 {
   "defaultTitle": "小程序AntUI组件库",
   "usingComponents":{
-    "search-bar":"mini-antui/search-bar/index",
+    "search-bar":"mini-antui/es/search-bar/index",
   }
 }
 ```

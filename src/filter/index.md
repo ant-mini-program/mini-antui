@@ -5,7 +5,7 @@
 ## filter
 
 | 属性 | 说明 | 类型 | 默认值 | 必选 |
-|----|----|----|----|
+|----|----|----|----|----|
 | show | 是否显示 可选值 show or hide | String | hide | false |
 | max | 可选数量最大值，1为单选 | Number | 10000 | false |
 | onChange | 多选时提交选中回调 | function | (ev: arry): void | false |

@@ -1,0 +1,14 @@
+<view>
+  <amount-input
+    title="转入金额"
+    extra="建议转入¥100以上金额"
+    placeholder="输入转入金额"
+    value="{{value}}"
+    maxLength="5"
+    focus="{{true}}"
+    btnText="全部提现"
+    onClear="onInputClear"
+    onInput="onInput"
+    onButtonClick="onButtonClick"
+    onConfirm="onInputConfirm" />
+</view>

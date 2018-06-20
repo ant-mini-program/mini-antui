@@ -6,6 +6,11 @@ Page({
       path: '/list/demo/index',
     },
     {
+      name: 'AmountInput',
+      nameZN: '金额输入',
+      path: '/amount-input/demo/index',
+    },
+    {
       name: 'InputItem',
       nameZN: '列表输入项',
       path: '/input-item/demo/index',
