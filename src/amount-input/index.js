@@ -45,6 +45,24 @@ Component({
         this.props.onButtonClick();
       }
     },
+    onFocus() {
+      this.setData({
+        focus: true,
+      });
+
+      if (this.props.onFocus) {
+        this.props.onFocus();
+      }
+    },
+    onBlur() {
+      this.setData({
+        focus: false,
+      });
+
+      if (this.props.onBlur) {
+        this.props.onBlur();
+      }
+    },
     onClearTap() {
       this.setData({
         focus: true,

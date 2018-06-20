@@ -12,7 +12,9 @@
       value="{{_value}}"
       focus="{{focus}}"
       onInput="onInput"
-      onConfirm="onConfirm" />
+      onConfirm="onConfirm"
+      onFocus="onFocus"
+      onBlur="onBlur" />
     <view class="am-amount-clear {{ _value.length > 0 && focus ? 'am-amount-clear-show' : '' }}" onTap="onClearTap">
       <icon type="clear" size="22" />
     </view>
