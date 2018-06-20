@@ -27,6 +27,15 @@ function getMonthLength(month, year) {
   }
 }
 
+// 数字补位 1 -> 01
+function prefixNum(num) {
+  if (num < 10) {
+    return `0${num}`;
+  } else {
+    return `${num}`;
+  }
+}
+
 Component({
   props: {
     className: '',
@@ -71,7 +80,7 @@ Component({
     selectedMonth: 0,
     currentDate: null,
     dates: [],
-    blockType: 1, // 1.没有代办纯数字 2.有代办
+    blockType: 1, // 1.没有代办纯数字 2.有代办 用于区分不同类型日期块的样式。
   },
   methods: {
     onPrevMonthTap() {
@@ -244,20 +253,13 @@ Component({
         }
       });
     },
-    prefixNum(num) {
-      if (num < 10) {
-        return `0${num}`;
-      } else {
-        return `${num}`;
-      }
-    },
     getDateGap(day1, day2) {
-      const date1 = +new Date(day1.year, this.prefixNum(day1.month), this.prefixNum(day1.date));
-      const date2 = +new Date(day2.year, this.prefixNum(day2.month), this.prefixNum(day2.date));
+      const date1 = +new Date(day1.year, prefixNum(day1.month), prefixNum(day1.date));
+      const date2 = +new Date(day2.year, prefixNum(day2.month), prefixNum(day2.date));
       return (date1 - date2) / (24 * 3600 * 1000);
     },
     makeDate(dateObj) {
-      return new Date(`${dateObj.year}-${this.prefixNum(dateObj.month + 1)}-${this.prefixNum(dateObj.date)}`);
+      return new Date(`${dateObj.year}-${prefixNum(dateObj.month + 1)}-${prefixNum(dateObj.date)}`);
     },
     onDateTap(event) {
       const { dates } = this.data;

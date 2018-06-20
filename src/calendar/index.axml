@@ -2,11 +2,9 @@
   <view class="am-calendar-months">
     <view class="am-calendar-prev-month" onTap="onPrevMonthTap">
       <view class="am-calendar-arrow"></view>
-      <slot name="prev-month"></slot>
     </view>
     <view class="am-calendar-selected-month">{{selectedYear}}年{{selectedMonth + 1}}月</view>
     <view class="am-calendar-next-month" onTap="onNextMonthTap">
-      <slot name="next-month"></slot>
       <view class="am-calendar-arrow next"></view>
     </view>
   </view>
