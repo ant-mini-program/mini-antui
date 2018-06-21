@@ -10,5 +10,7 @@
     onClear="onInputClear"
     onInput="onInput"
     onButtonClick="onButtonClick"
-    onConfirm="onInputConfirm" />
+    onConfirm="onInputConfirm"
+    onBlur="onInputBlur"
+    onFocus="onInputFocus" />
 </view>

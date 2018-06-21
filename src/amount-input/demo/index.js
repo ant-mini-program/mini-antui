@@ -22,4 +22,6 @@ Page({
       content: 'button clicked',
     });
   },
+  onInputFocus() {},
+  onInputBlur() {},
 });
