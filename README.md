@@ -1,14 +1,12 @@
 <p align="center">
-  <a href="http://alipaydesign.com">
-    <img width="320" src="https://gw.alipayobjects.com/zos/rmsportal/CsCzHzlOkLDKyyRadsdD.png">
-  </a>
+  <img width="320" src="https://gw.alipayobjects.com/zos/rmsportal/CsCzHzlOkLDKyyRadsdD.png">
 </p>
 
 # mini-antui
 
 ## 特性
 
-- 基于[Advance Design](http://alipaydesign.com)设计规范
+- 基于`Advance Design`设计规范
 - 使用[支付宝小程序](https://mini.open.alipay.com/channel/miniIndex.htm)开发
 
 ## 预览
@@ -48,7 +46,6 @@ $ npm install mini-antui --save
 
 - [支付宝小程序](https://mini.open.alipay.com/channel/miniIndex.htm)
 - [开发工具](https://docs.alipay.com/mini/ide/overview)
-- [Advance Design](http://alipaydesign.com)
 
 ## 贡献
 
