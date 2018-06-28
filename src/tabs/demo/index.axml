@@ -5,6 +5,7 @@
     onTabClick="handleTabClick"
     onChange="handleTabChange"
     onPlusClick="handlePlusClick"
+    swipeable="{{false}}"
   >
     <block a:for="{{tabs}}">
       <tab-content key="{{index}}">

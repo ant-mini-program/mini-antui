@@ -128,3 +128,8 @@
   overflow: hidden;
   height: auto !important;
 }
+
+.am-tabs-slides {
+  display: flex;
+  transition-duration: 500ms;
+}

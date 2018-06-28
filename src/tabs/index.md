@@ -11,6 +11,7 @@
 | onPlusClick | ‘+’icon被点击时的回调 | () => {} |  | false |
 | onTabClick | tab 被点击的回调 | (index: number) => void | | false |
 | onChange | tab变化时触发 | (index: number) => void | | false |
+| swipeable | 是否可以滑动内容切换 | boolean | true | false |
 | tabBarBackgroundColor | tabBar背景色	| string | | false |
 | tabBarActiveTextColor | tabBar激活Tab文字颜色	| string | | false |
 | tabBarInactiveTextColor | tabBar非激活Tab文字颜色 | string | | false |
