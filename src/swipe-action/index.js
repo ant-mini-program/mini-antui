@@ -9,10 +9,11 @@ Component({
     right: [],
     restore: false,
     index: null,
+    holdSwipe: false,
   },
-  didUpdate(prevProps, prevData) {
-    const { restore } = this.props;
-    if (restore === true) {
+  didUpdate(prevProps) {
+    const { restore, holdSwipe } = this.props;
+    if (restore === true || (prevProps.holdSwipe === true && holdSwipe === false)) {
       this.setData({
         leftPos: 0,
         swiping: false,
@@ -20,7 +21,7 @@ Component({
     }
   },
   methods: {
-    onSwipeTap(e) {
+    onSwipeTap() {
       if (!this.data.swiping) {
         this.setData({
           leftPos: 0,
@@ -35,7 +36,7 @@ Component({
 
       const { index, onSwipeStart } = this.props;
       if (onSwipeStart) {
-        onSwipeStart({index});
+        onSwipeStart({ index });
       }
     },
     onSwipeMove(e) {
@@ -74,17 +75,17 @@ Component({
       });
     },
     onItemClick(e) {
-      const { onRightItemClick } = this.props;
+      const { onRightItemClick, holdSwipe } = this.props;
       if (onRightItemClick) {
-        const index = e.target.dataset.index;
+        const { index } = e.target.dataset;
         onRightItemClick({
           index,
           extra: this.props.extra,
-          detail: this.props.right[index]
+          detail: this.props.right[index],
         });
       }
 
-      if (!this.data.swiping) {
+      if (!this.data.swiping && holdSwipe === false) {
         setTimeout(() => {
           this.setData({
             leftPos: 0,
@@ -92,6 +93,6 @@ Component({
           });
         }, 300);
       }
-    }
-  }
+    },
+  },
 });

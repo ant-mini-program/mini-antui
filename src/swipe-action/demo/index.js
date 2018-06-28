@@ -3,12 +3,30 @@
 Page({
   data: {
     swipeIndex: null,
-    right1: [{'type': 'delete', 'text': '删除'}],
-    right2: [{'type': 'edit', 'text': '修改'}, {'type': 'delete', 'text': '删除'}],
+    holdSwipe: true,
+    right1: [{ type: 'delete', text: '删除' }],
+    right2: [{ type: 'edit', text: '修改' }, { type: 'delete', text: '删除' }],
   },
   onRightItemClick(e) {
-    my.alert({
+    my.confirm({
+      title: '温馨提示',
       content: `${e.index}-${e.extra}-${JSON.stringify(e.detail)}`,
+      confirmButtonText: '确定',
+      cancelButtonText: '取消',
+      success: (result) => {
+        if (result.confirm) {
+          my.showToast({
+            content: '确定 => 执行滑动删除还原',
+          });
+          this.setData({
+            holdSwipe: false,
+          });
+        } else {
+          my.showToast({
+            content: '取消 => 滑动删除状态保持不变',
+          });
+        }
+      },
     });
   },
   onItemClick(e) {
@@ -20,5 +38,5 @@ Page({
     this.setData({
       swipeIndex: e.index || null,
     });
-  }
+  },
 });

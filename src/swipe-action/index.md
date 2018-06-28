@@ -4,6 +4,8 @@
 |className| 自定义class | String| |
 |right| 滑动选项，最多两项 | Array[Object{type: `edit`/`delete`, text: string}]| `[]` |
 |onRightItemClick| 点击滑动选项 | function({index, detail, extra}) ]|  |
+| restore | 还原组件到初始状态，当有多个swipe-action组件时，当滑动其中一个时，需要将其他的组件的`restore`属性设置为`true`，避免一个页面同时存在多个swipeAction处于活动状态。 | Bollean | `false` |
+| holdSwipe | 当执行完onRightItemClick回调时，是否不同时隐藏选项，如果设置为`true`，需要用户在合适的时机再将值设置为`false`，这时会自动隐藏选项。 | Bollean | `false` |
 
 
 ### using
