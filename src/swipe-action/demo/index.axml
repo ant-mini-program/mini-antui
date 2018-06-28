@@ -1,6 +1,14 @@
 <view>
 	<list>
-		<swipe-action index="{{1}}" restore="{{swipeIndex !== null && swipeIndex !== 1}}" right="{{right1}}" onRightItemClick="onRightItemClick" onSwipeStart="onSwipeStart" extra="item1">
+		<swipe-action
+			index="{{1}}"
+			restore="{{swipeIndex !== null && swipeIndex !== 1}}"
+			right="{{right1}}"
+			onRightItemClick="onRightItemClick"
+			onSwipeStart="onSwipeStart"
+			extra="item1"
+			holdSwipe="{{holdSwipe}}"
+		>
 			<list-item
 				arrow="horizontal"
 				index="1"
