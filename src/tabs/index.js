@@ -6,6 +6,7 @@ Component({
     tabBarInactiveTextColor: '#333333', // 未选中选项卡字体颜色
     tabBarBackgroundColor: '#ffffff', // 选项卡背景颜色
     showPlus: false,
+    swipeable: true,
   },
   data: {
     scrollInit: 0,
@@ -21,12 +22,12 @@ Component({
           windowWidth: res.windowWidth,
           tabWidth: tabs.length > 3 ? 0.25 : 1 / tabs.length,
         });
-      }
+      },
     });
   },
   methods: {
     handleSwiperChange(e) {
-      const current = e.detail.current;
+      const { current } = e.detail;
 
       this.moveScrollBar(current);
       if (this.props.onChange) {
@@ -66,5 +67,5 @@ Component({
         scrollInit,
       });
     },
-  }
+  },
 });

@@ -34,13 +34,22 @@
         <view class="am-tabs-plus" onTap="handlePlusClick"></view>
       </view>
     </view>
-    <swiper
-      current="{{current}}"
-      interval="99999999"
-      autoplay="{{true}}"
-      onChange="handleSwiperChange"
-      class="am-tabs-content-wrap">
-      <slot></slot>
-    </swiper>
-  </view>
+    <block a:if="{{swipeable}}">
+      <swiper
+        current="{{current}}"
+        interval="99999999"
+        autoplay="{{true}}"
+        onChange="handleSwiperChange"
+        class="am-tabs-content-wrap">
+        <slot></slot>
+      </swiper>
+    </block>
+    <block a:else>
+      <view class="am-tabs-content-wrap">
+        <view class="am-tabs-slides" style="{{ transform: 'translate3d(' +(-current * 100) + '%, 0, 0)' }}">
+          <slot></slot>
+        </view>
+      </view>
+    </view>
+  </block>
 </view>
