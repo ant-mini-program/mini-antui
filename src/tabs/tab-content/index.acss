@@ -1,5 +1,5 @@
 .am-tabs-pane-wrap {
-  width: 100%;
+  width: 100vw;
   height: auto;
   flex-shrink: 0;
 }
