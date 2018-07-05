@@ -20,7 +20,7 @@
     onTouchEnd="onSwipeEnd"
     onTouchMove="onSwipeMove"
     data-type="content"
-    style="left: {{leftPos}}px;"
+    style="-webkit-transform: translateX({{leftPos}}px); transform: translateX({{leftPos}}px);"
   >
     <slot />
   </view>
