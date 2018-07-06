@@ -46,7 +46,7 @@
     </block>
     <block a:else>
       <view class="am-tabs-content-wrap">
-        <view class="am-tabs-slides" style="{{ transform: 'translate3d(' +(-current * 100) + '%, 0, 0)' }}">
+        <view class="am-tabs-slides" style="{{ transform: 'translate3d(' +(-current * 100) + 'vw, 0, 0)' }}">
           <slot></slot>
         </view>
       </view>
