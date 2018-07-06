@@ -9,6 +9,7 @@
     "modal/demo/index",
     "swipe-action/demo/index",
     "tabs/demo/index",
+    "vtabs/demo/index",
     "stepper/demo/index",
     "steps/demo/index",
     "popover/demo/index",
