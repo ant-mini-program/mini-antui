@@ -3,17 +3,18 @@ Component({
     X: null,
     leftPos: 0,
     swiping: false,
+    holdSwipe: true
   },
   props: {
     className: '',
     right: [],
     restore: false,
-    index: null,
-    holdSwipe: false,
+    index: null
   },
-  didUpdate(prevProps) {
-    const { restore, holdSwipe } = this.props;
-    if (restore === true || (prevProps.holdSwipe === true && holdSwipe === false)) {
+  didUpdate(prevProps, prevData) {
+    const { restore } = this.props;
+    const { holdSwipe } = this.data;
+    if (restore === true || (prevData.holdSwipe === true && holdSwipe === false)) {
       this.setData({
         leftPos: 0,
         swiping: false,
@@ -74,14 +75,25 @@ Component({
         X: null,
       });
     },
+    done() {
+      this.setData({
+        holdSwipe: false
+      }, () => {
+        this.setData({
+          holdSwipe: true
+        });
+      });
+    },
     onItemClick(e) {
-      const { onRightItemClick, holdSwipe } = this.props;
+      const { onRightItemClick } = this.props;
+      const { holdSwipe } = this.data;
       if (onRightItemClick) {
         const { index } = e.target.dataset;
         onRightItemClick({
           index,
           extra: this.props.extra,
           detail: this.props.right[index],
+          done: this.done.bind(this)
         });
       }
 
