@@ -3,7 +3,6 @@
 Page({
   data: {
     swipeIndex: null,
-    holdSwipe: true,
     right1: [{ type: 'delete', text: '删除' }],
     right2: [{ type: 'edit', text: '修改' }, { type: 'delete', text: '删除' }],
   },
@@ -18,9 +17,7 @@ Page({
           my.showToast({
             content: '确定 => 执行滑动删除还原',
           });
-          this.setData({
-            holdSwipe: false,
-          });
+          e.done();
         } else {
           my.showToast({
             content: '取消 => 滑动删除状态保持不变',

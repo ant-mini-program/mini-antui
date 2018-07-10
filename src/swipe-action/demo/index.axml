@@ -7,7 +7,6 @@
 			onRightItemClick="onRightItemClick"
 			onSwipeStart="onSwipeStart"
 			extra="item1"
-			holdSwipe="{{holdSwipe}}"
 		>
 			<list-item
 				arrow="horizontal"
