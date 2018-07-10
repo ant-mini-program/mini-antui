@@ -21,6 +21,7 @@
     onTouchMove="onSwipeMove"
     data-type="content"
     style="-webkit-transform: translateX({{leftPos}}px); transform: translateX({{leftPos}}px);"
+    disableScroll="{{true}}"
   >
     <slot />
   </view>
