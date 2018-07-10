@@ -9,6 +9,7 @@
 }
 
 .am-list-body {
+  border-top: 1rpx solid #eee;
   border-bottom: 1rpx solid #eee;
 }
 
