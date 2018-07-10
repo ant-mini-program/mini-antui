@@ -1,6 +1,6 @@
 <view class="am-swipe {{swiping ? 'am-swiping' : ''}} {{className}}">
   <block a:if="{{right.length > 0}}">
-    <view class="am-swipe-right">
+    <view class="am-swipe-right" disableScroll="{{true}}">
       <block a:for="{{right}}">
         <view
           class="am-swipe-btn am-swipe-btn-{{item.type}}"
@@ -21,6 +21,7 @@
     onTouchMove="onSwipeMove"
     data-type="content"
     style="-webkit-transform: translateX({{leftPos}}px); transform: translateX({{leftPos}}px);"
+    disableScroll="{{true}}"
   >
     <slot />
   </view>
