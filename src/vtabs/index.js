@@ -44,6 +44,9 @@ Component({
         });
     }
   },
+  didUnmount() {
+    clearTimeout(this.timerId);
+  },
   methods: {
     handleTabClick(e) {
       const { anchor, index } = e.target.dataset;
@@ -80,8 +83,9 @@ Component({
         this.isScrolling = false;
       }, 300);
 
-      for (let i = 0; i < keys.length; i++) {
-        if (i === keys.length - 1) {
+      const anchorLength = keys.length;
+      for (let i = 0; i < anchorLength; i++) {
+        if (i === anchorLength - 1) {
           // 如果是最后一个只需满足scrollTop高于当前vtab-content的高度
           if (scrollTop >= this.anchorMap[keys[i]]) {
             this.moveScrollBar(i);
