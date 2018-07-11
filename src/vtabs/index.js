@@ -19,7 +19,7 @@ Component({
     const { tabs } = this.props;
     this.isScrolling = false;
     this.anchorMap = {};
-    this.timerId = 0;
+    this.timerId = null;
     this.wrapHeight = 0;
     this.scrollWrapHeight = 0;
 
@@ -45,7 +45,10 @@ Component({
     }
   },
   didUnmount() {
-    clearTimeout(this.timerId);
+    if (this.timerId) {
+      clearTimeout(this.timerId);
+      this.timerId = null;
+    }
   },
   methods: {
     handleTabClick(e) {
@@ -77,7 +80,9 @@ Component({
       const { scrollTop } = e.detail;
       const keys = Object.keys(this.anchorMap);
 
-      clearTimeout(this.timerId);
+      if (this.timerId) {
+        clearTimeout(this.timerId);
+      }
 
       this.timerId = setTimeout(() => {
         this.isScrolling = false;
