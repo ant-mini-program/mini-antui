@@ -41,16 +41,17 @@ Component({
     },
     onSwipeMove(e) {
       const { touchObject } = this;
-      const { leftPos } = this.data;
       const touchePoint = e.touches[0];
-
-      const xDist = touchObject.startX - touchePoint.pageX || 0;
-      const yDist = touchObject.startY - touchePoint.pageY || 0;
+      const { leftPos } = this.data;
 
       touchObject.endX = touchePoint.pageX;
 
+      // 首次触发时，计算滑动角度
       if (touchObject.direction === undefined) {
         let direction = 0;
+
+        const xDist = touchObject.startX - touchePoint.pageX || 0;
+        const yDist = touchObject.startY - touchePoint.pageY || 0;
 
         const r = Math.atan2(yDist, xDist);
         let swipeAngle = Math.round((r * 180) / Math.PI);
@@ -95,6 +96,7 @@ Component({
       const { touchObject } = this;
       if (touchObject.direction !== 0) {
         const touchePoint = e.changedTouches[0];
+
         touchObject.endX = touchePoint.pageX;
 
         const { leftPos } = this.data;
