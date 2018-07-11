@@ -31,4 +31,11 @@
   title="网络不给力"
   brief="事件上最遥远的距离莫过于此"
 />
+<page-result
+  type="network"
+  title="网络不给力"
+  brief="事件上最遥远的距离莫过于此"
+>
+  <view onTap="onBtnTap">重新加载</view>
+</page-result>
 ```

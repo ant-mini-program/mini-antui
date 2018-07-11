@@ -2,5 +2,9 @@
   <page-result
     type="network"
     title="网络不给力"
-    brief="事件上最遥远的距离莫过于此" />
+    brief="事件上最遥远的距离莫过于此"
+  >
+    <view onTap="backHome">回到首页</view>
+    <view>示例按钮</view>
+  </page-result>
 </view>
