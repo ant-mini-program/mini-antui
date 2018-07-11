@@ -31,6 +31,11 @@ Page({
       path: '/tabs/demo/index',
     },
     {
+      name: 'VTabs',
+      nameZN: 'VTabs',
+      path: '/vtabs/demo/index',
+    },
+    {
       name: 'Stepper',
       nameZN: 'Stepper',
       path: '/stepper/demo/index',
