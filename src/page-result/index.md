@@ -36,6 +36,9 @@
   title="网络不给力"
   brief="事件上最遥远的距离莫过于此"
 >
-  <view onTap="onBtnTap">重新加载</view>
+  <view class="am-page-result-btns">
+    <view onTap="backHome">回到首页</view>
+    <view>示例按钮</view>
+  </view>
 </page-result>
 ```
