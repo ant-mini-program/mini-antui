@@ -1,4 +1,4 @@
-<view class="am-tabs {{className}}">
+<view class="am-tabs {{className}}" a:if="{{windowWidth}}">
   <view class="am-tabs-tab-bar-wrap">
     <view class="am-tabs-bar">
       <view class="am-tabs-bar-content-wrap">
