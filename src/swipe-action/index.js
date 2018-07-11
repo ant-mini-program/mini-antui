@@ -1,17 +1,16 @@
 Component({
   data: {
-    X: null,
     leftPos: 0,
     swiping: false,
-    holdSwipe: true
+    holdSwipe: true,
   },
   props: {
     className: '',
     right: [],
     restore: false,
-    index: null
+    index: null,
   },
-  didUpdate(prevProps, prevData) {
+  didUpdate(_prevProps, prevData) {
     const { restore } = this.props;
     const { holdSwipe } = this.data;
     if (restore === true || (prevData.holdSwipe === true && holdSwipe === false)) {
@@ -31,56 +30,95 @@ Component({
       }
     },
     onSwipeStart(e) {
-      this.setData({
-        X: e.touches[0].pageX,
-      });
-
+      this.touchObject = {
+        startX: e.touches[0].pageX,
+        startY: e.touches[0].pageY,
+      };
       const { index, onSwipeStart } = this.props;
       if (onSwipeStart) {
         onSwipeStart({ index });
       }
     },
     onSwipeMove(e) {
+      const { touchObject } = this;
       const { leftPos } = this.data;
-      // 滑动距离
-      const direction = e.touches[0].pageX - this.data.X;
-      let newLeftPos = leftPos;
-      // 左划
-      if (direction < 0) {
-        newLeftPos = Math.max(direction, -this.props.right.length * 60);
-      // 右划
-      } else {
-        newLeftPos = 0;
+      const touchePoint = e.touches[0];
+
+      const xDist = touchObject.startX - touchePoint.pageX || 0;
+      const yDist = touchObject.startY - touchePoint.pageY || 0;
+
+      touchObject.endX = touchePoint.pageX;
+
+      if (touchObject.direction === undefined) {
+        let direction = 0;
+
+        const r = Math.atan2(yDist, xDist);
+        let swipeAngle = Math.round((r * 180) / Math.PI);
+
+        if (swipeAngle < 0) {
+          swipeAngle = 360 - Math.abs(swipeAngle);
+        }
+        if (swipeAngle <= 45 && swipeAngle >= 0) {
+          direction = 1;
+        }
+        if (swipeAngle <= 360 && swipeAngle >= 315) {
+          direction = 1;
+        }
+        if (swipeAngle >= 135 && swipeAngle <= 225) {
+          direction = -1;
+        }
+
+        touchObject.direction = direction;
       }
 
-      this.setData({
-        leftPos: newLeftPos,
-        swiping: direction < 0,
-      });
-    },
-    onSwipeEnd(e) {
-      const { leftPos } = this.data;
-      const direction = e.changedTouches[0].pageX - this.data.X;
-      let newLeftPos = leftPos;
-      if (direction < 0) {
-        if (Math.abs(direction + leftPos) > this.props.right.length * 60 * 0.7) {
-          newLeftPos = (-this.props.right.length * 60);
+      // 通过角度判断是左右方向
+      if (touchObject.direction !== 0) {
+        let newLeftPos = leftPos;
+        // 滑动距离
+        const distance = touchObject.endX - touchObject.startX;
+        // 左划
+        if (distance < 0) {
+          newLeftPos = Math.max(distance, -this.props.right.length * 60);
+        // 右划
         } else {
           newLeftPos = 0;
         }
+        if (Math.abs(distance) > 10) {
+          this.setData({
+            leftPos: newLeftPos,
+            swiping: distance < 0,
+          });
+        }
       }
-      this.setData({
-        leftPos: newLeftPos,
-        swiping: false,
-        X: null,
-      });
+    },
+    onSwipeEnd(e) {
+      const { touchObject } = this;
+      if (touchObject.direction !== 0) {
+        const touchePoint = e.changedTouches[0];
+        touchObject.endX = touchePoint.pageX;
+
+        const { leftPos } = this.data;
+        const distance = touchObject.endX - touchObject.startX;
+        let newLeftPos = leftPos;
+        if (distance < 0) {
+          if (Math.abs(distance + leftPos) > this.props.right.length * 60 * 0.7) {
+            newLeftPos = (-this.props.right.length * 60);
+          } else {
+            newLeftPos = 0;
+          }
+        }
+        this.setData({
+          leftPos: newLeftPos,
+          swiping: false,
+        });
+      }
     },
     done() {
       this.setData({
-        holdSwipe: false
+        holdSwipe: false,
       }, () => {
         this.setData({
-          holdSwipe: true
+          holdSwipe: true,
         });
       });
     },
@@ -93,7 +131,7 @@ Component({
           index,
           extra: this.props.extra,
           detail: this.props.right[index],
-          done: this.done.bind(this)
+          done: this.done.bind(this),
         });
       }
 
