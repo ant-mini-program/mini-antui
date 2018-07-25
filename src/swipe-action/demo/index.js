@@ -4,7 +4,7 @@ Page({
   data: {
     swipeIndex: null,
     right1: [{ type: 'delete', text: '删除' }],
-    right2: [{ type: 'edit', text: '修改' }, { type: 'delete', text: '删除' }],
+    right2: [{ type: 'edit', text: '取消收藏' }, { type: 'delete', text: '删除' }],
   },
   onRightItemClick(e) {
     my.confirm({

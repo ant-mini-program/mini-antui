@@ -10,6 +10,10 @@ Component({
     restore: false,
     index: null,
   },
+  didMount() {
+    this.btnWidth = 0;
+    this.setBtnWidth();
+  },
   didUpdate(_prevProps, prevData) {
     const { restore } = this.props;
     const { holdSwipe } = this.data;
@@ -19,8 +23,18 @@ Component({
         swiping: false,
       });
     }
+
+    this.setBtnWidth();
   },
   methods: {
+    setBtnWidth() {
+      my.createSelectorQuery()
+        .select(`.am-swipe-right-${this.$id}`)
+        .boundingClientRect()
+        .exec((ret) => {
+          this.btnWidth = ret[0].width;
+        });
+    },
     onSwipeTap() {
       if (!this.data.swiping) {
         this.setData({
@@ -79,7 +93,7 @@ Component({
         const distance = touchObject.endX - touchObject.startX;
         // 左划
         if (distance < 0) {
-          newLeftPos = Math.max(distance, -this.props.right.length * 60);
+          newLeftPos = Math.max(distance, -this.btnWidth);
         // 右划
         } else {
           newLeftPos = 0;
@@ -103,8 +117,8 @@ Component({
         const distance = touchObject.endX - touchObject.startX;
         let newLeftPos = leftPos;
         if (distance < 0) {
-          if (Math.abs(distance + leftPos) > this.props.right.length * 60 * 0.7) {
-            newLeftPos = (-this.props.right.length * 60);
+          if (Math.abs(distance + leftPos) > this.btnWidth * 0.7) {
+            newLeftPos = (-this.btnWidth);
           } else {
             newLeftPos = 0;
           }
