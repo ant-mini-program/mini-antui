@@ -1,0 +1,6 @@
+<view>
+  <face-detection
+    onImageData="onImageData"
+    onFail="onFail"
+  />
+</view>

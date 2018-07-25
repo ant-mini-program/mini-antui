@@ -11,6 +11,11 @@ Page({
       path: '/amount-input/demo/index',
     },
     {
+      name: 'FaceDetection',
+      nameZN: '人脸检测',
+      path: '/face-detection/demo/index',
+    },
+    {
       name: 'InputItem',
       nameZN: '列表输入项',
       path: '/input-item/demo/index',
