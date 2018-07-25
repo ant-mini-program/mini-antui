@@ -17,8 +17,7 @@
   right: 0;
 }
 .am-swipe-btn {
-  flex: 1;
-  width: 60px;
+  padding: 0 14px;
   justify-content: center;
   align-items: center;
   display: flex;
