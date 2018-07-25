@@ -1,0 +1,8 @@
+{
+  "defaultTitle": "徽标",
+  "usingComponents": {
+    "list": "../../list/index",
+    "list-item": "../../list/list-item/index",
+    "badge": "../index"
+  }
+}
