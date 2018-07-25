@@ -1,0 +1,5 @@
+<web-view 
+  src="https://render.alipay.com/p/s/tiny-webar-online/www/faceDetect.html?facing={{facing}}"
+  id="am-face-detection"
+  onMessage="onMessage"
+/>
