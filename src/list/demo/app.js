@@ -21,6 +21,11 @@ Page({
       path: '/input-item/demo/index',
     },
     {
+      name: 'Footer',
+      nameZN: '页脚',
+      path: '/footer/demo/index',
+    },
+    {
       name: 'Modal',
       nameZN: 'Modal',
       path: '/modal/demo/index',
