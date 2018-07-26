@@ -1,4 +1,4 @@
-<view class="am-calendar {{className}}">
+<view class="am-calendar {{className}}" a:if="{{dates.length > 0}}">
   <view class="am-calendar-months">
     <view class="am-calendar-prev-month" onTap="onPrevMonthTap">
       <view class="am-calendar-arrow"></view>
