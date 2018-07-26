@@ -1,5 +1,5 @@
 Page({
-  onImageData(data) {
+  onFaceStatusChange(data) {
     return new Promise((resolve) => {
       // do something
       console.log(data);

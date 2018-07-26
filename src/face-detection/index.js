@@ -10,12 +10,12 @@ Component({
   },
   methods: {
     onMessage(e) {
-      const { onImageData, onFail } = this.props;
+      const { onFaceStatusChange, onFail } = this.props;
       const { action, data } = e.detail;
 
       if (action === 'captureImage') {
-        if (onImageData) {
-          const promise = onImageData({ imageBase64: data.imageBase64, faceRect: data.faceRect });
+        if (onFaceStatusChange) {
+          const promise = onFaceStatusChange({ imageBase64: data.imageBase64, faceRect: data.faceRect });
 
           if (promise instanceof Promise) {
             promise.then(() => {
