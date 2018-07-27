@@ -1,6 +1,8 @@
 Component({
   props: {
     facing: 'front',
+    appName: '',
+    serviceName: '',
   },
   didMount() {
     this.webViewContext = my.createWebViewContext('am-face-detection');

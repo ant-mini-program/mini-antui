@@ -1,5 +1,7 @@
 <view>
   <face-detection
+    appName="demo小程序"
+    serviceName="身份录入"
     onFaceStatusChange="onFaceStatusChange"
     onFail="onFail"
   />
