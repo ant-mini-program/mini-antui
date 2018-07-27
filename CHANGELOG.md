@@ -1,3 +1,10 @@
+# 0.3.1
+
+`2018-07-27`
+
+- **Feature**
+  - `face-detection`组件新增`appName`和`serviceName`字段
+
 ## 0.3.0
 
 `2018-07-26`
