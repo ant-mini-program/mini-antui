@@ -4,5 +4,6 @@
     serviceName="身份录入"
     onFaceStatusChange="onFaceStatusChange"
     onFail="onFail"
+    useLiveFaceCheck="{{true}}"
   />
 </view>
