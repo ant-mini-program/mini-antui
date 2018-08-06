@@ -39,6 +39,7 @@
     "page-result/demo/local-logoff/index",
     "page-result/demo/empty/index",
     "page-result/demo/local-empty/index",
+    "popup/demo/index",
     "message/demo/index",
     "message/demo/success/index",
     "message/demo/fail/index",

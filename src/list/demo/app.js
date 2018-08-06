@@ -101,6 +101,11 @@ Page({
       path: '/page-result/demo/index',
     },
     {
+      name: 'PopUp',
+      nameZN: '弹出菜单',
+      path: '/popup/demo/index',
+    },
+    {
       name: 'Message',
       nameZN: '信息状态',
       path: '/message/demo/index',
