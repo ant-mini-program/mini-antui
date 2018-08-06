@@ -72,22 +72,18 @@
 ```javascript
 Page({
   onFaceStatusChange(data, context) {
-    return new Promise(async (resolve) => {
-      try {
-        const leftResult = await context.doLeftFaceCheck();
-        const rightResult = await context.doRightFaceCheck();
-        // 左右脸都检测一遍
-        if (leftResult && rightResult) {
+    return new Promise((resolve, reject) => {
+      context.doLeftFaceCheck().then(() => {
+        context.doRightFaceCheck().then(() => {
           resolve();
-        }
-      } catch (e) {
-        // 人脸转动检测超时
-        console.error(e.message)
-      }
-
+        }).catch(() => {
+          reject();
+        });
+      }).catch(() => {
+        reject();
+      });
     });
   },
-
   onFail(error) {
     console.log('error', error);
   },

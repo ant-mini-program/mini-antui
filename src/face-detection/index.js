@@ -16,7 +16,7 @@ Component({
     this.webViewContext.postMessage({ action: 'releaseCamera' });
   },
   methods: {
-    async doLeftFaceCheck() {
+    doLeftFaceCheck() {
       return new Promise((resolve, reject) => {
         this.isDidFaceLeftResolve = false;
         this.webViewContext.postMessage({ action: 'doFaceLeft' });
@@ -28,7 +28,7 @@ Component({
         }, 30000);
       });
     },
-    async doRightFaceCheck() {
+    doRightFaceCheck() {
       return new Promise((resolve, reject) => {
         this.isDidFaceRightResolve = false;
         this.webViewContext.postMessage({ action: 'doFaceRight' });
