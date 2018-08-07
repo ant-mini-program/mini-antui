@@ -1,5 +1,6 @@
 {
   "pages": [
+    "tabs/demo/index",
     "list/demo/app",
     "list/demo/index",
     "amount-input/demo/index",
@@ -10,7 +11,6 @@
     "footer/demo/index",
     "modal/demo/index",
     "swipe-action/demo/index",
-    "tabs/demo/index",
     "vtabs/demo/index",
     "stepper/demo/index",
     "steps/demo/index",
