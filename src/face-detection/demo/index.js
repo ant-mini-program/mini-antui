@@ -16,4 +16,9 @@ Page({
   onFail(error) {
     console.log('error', error);
   },
+  onSuccessBtnTap() {
+    my.alert({
+      content: 'success',
+    });
+  },
 });

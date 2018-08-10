@@ -41,8 +41,14 @@ Component({
       });
     },
     onMessage(e) {
-      const { onFaceStatusChange, onFail } = this.props;
+      const { onFaceStatusChange, onFail, onSuccessBtnTap } = this.props;
       const { action, data } = e.detail;
+
+      if (action === 'resignSuccessBtnClick') {
+        if (onSuccessBtnTap) {
+          onSuccessBtnTap();
+        }
+      }
 
       if (action === 'faceRotated' && data.forward === 'left') {
         this.isDidFaceLeftResolve = true;
