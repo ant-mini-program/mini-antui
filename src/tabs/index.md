@@ -7,6 +7,7 @@
 | 属性 | 说明 | 类型 | 默认值 | 必选 |
 |----|----|----|----|----|
 | tabs | tab数据，其中包括选项标题`title`，徽标类型`badgeType`分为圆点`dot`和文本`text`，徽标文本`badgeText`在`badgeType`为`text`时生效 | Array<title, badgeType, badgeText> |  | true |
+| activeTab | 当前激活Tab索引	| number |  | true |
 | showPlus | 是否显示‘+’icon | Boolean | false | false |
 | onPlusClick | ‘+’icon被点击时的回调 | () => {} |  | false |
 | onTabClick | tab 被点击的回调 | (index: number) => void | | false |
@@ -44,8 +45,11 @@
 <view>
   <tabs
     tabs="{{tabs}}"
+    showPlus="{{true}}"
     onTabClick="handleTabClick"
     onChange="handleTabChange"
+    onPlusClick="handlePlusClick"
+    activeTab="{{activeTab}}"
   >
     <block a:for="{{tabs}}">
       <tab-content key="{{index}}">
@@ -54,4 +58,41 @@
     </block>
   </tabs>
 </view>
+```
+
+```javascript
+Page({
+  data: {
+    tabs: [
+      {
+        title: '选项',
+        badgeType: 'text',
+        badgeText: '6',
+      },
+      {
+        title: '选项二',
+        badgeType: 'dot',
+      },
+      { title: '3 Tab' },
+      { title: '4 Tab' },
+      { title: '5 Tab' },
+    ],
+    activeTab: 2,
+  },
+  handleTabClick({ index }) {
+    this.setData({
+      activeTab: index,
+    });
+  },
+  handleTabChange({ index }) {
+    this.setData({
+      activeTab: index,
+    });
+  },
+  handlePlusClick() {
+    my.alert({
+      content: 'plus clicked',
+    });
+  },
+});
 ```
