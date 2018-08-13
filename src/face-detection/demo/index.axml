@@ -5,5 +5,7 @@
     onFaceStatusChange="onFaceStatusChange"
     onFail="onFail"
     useLiveFaceCheck="{{true}}"
+    btnText="成功了"
+    onSuccessBtnTap="onSuccessBtnTap"
   />
 </view>

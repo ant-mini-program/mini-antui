@@ -1,6 +1,6 @@
 <web-view 
   a:if="{{appName && serviceName}}"
-  src="https://render.alipay.com/p/s/tiny-webar-online/www/faceDetect.html?facing={{facing}}&appName={{appName}}&serviceName={{serviceName}}&useLiveFaceCheck={{useLiveFaceCheck}}"
+  src="https://render.alipay.com/p/s/tiny-webar-online/www/faceDetect.html?facing={{facing}}&appName={{appName}}&serviceName={{serviceName}}&useLiveFaceCheck={{useLiveFaceCheck}}&resignSuccessBtnText={{btnText}}"
   id="am-face-detection"
   onMessage="onMessage"
   enableWK="{{false}}"

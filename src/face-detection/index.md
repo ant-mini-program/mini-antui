@@ -15,6 +15,8 @@
 | onFaceStatusChange | 人脸图片数据返回，该方法返回值必须为promise，imageBase64表示图片内容，faceRect表示人脸范围 | (FaceDetectionData, FaceDetectionContext) => void | | false |
 | useLiveFaceCheck | 是否开启活体检测 | boolean | false | false |
 | onFail | 人脸识别失败，code表示错误码，message表示错误信息 | ({ code: number, message: string }) => void |  | false |
+| onSuccessBtnTap | 成功后点击按钮的回调 | function | | false |
+| btnText | 成功按钮的显示文案 | string | | false |
 
 **说明：useLiveFaceCheck为是否开启活体检测属性，支持检测左脸和右脸，如果开启可以在onFaceStatusChange中进行左右脸的检测**
 ### FaceDetectionData
@@ -49,7 +51,7 @@
 {
   "defaultTitle": "小程序AntUI组件库",
   "usingComponents":{
-    "face-detection": "mini-antui/es/face-detection/index",
+    "face-detection": "mini-antui/es/face-detection/index"
   }
 }
 ```
@@ -65,6 +67,8 @@
     onFaceStatusChange="onFaceStatusChange"
     onFail="onFail"
     useLiveFaceCheck="{{true}}"
+    btnText="成功了"
+    onSuccessBtnTap="onSuccessBtnTap"
   />
 </view>
 ```
@@ -86,6 +90,11 @@ Page({
   },
   onFail(error) {
     console.log('error', error);
+  },
+  onSuccessBtnTap() {
+    my.alert({
+      content: 'success',
+    });
   },
 });
 ```

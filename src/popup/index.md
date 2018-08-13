@@ -23,7 +23,7 @@
 {
   "defaultTitle": "小程序AntUI组件库",
   "usingComponents":{
-    "vtabs": "mini-antui/es/popup/index",
+    "popup": "mini-antui/es/popup/index"
   }
 }
 ```
