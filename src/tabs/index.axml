@@ -42,12 +42,12 @@
         interval="99999999"
         autoplay="{{autoplay}}"
         onChange="handleSwiperChange"
-        class="am-tabs-content-wrap">
+        class="am-tabs-content-wrap {{util.compareVersion(version) < 0 ? 'fix' : ''}}">
         <slot></slot>
       </swiper>
     </block>
     <block a:else>
-      <view class="am-tabs-content-wrap">
+      <view class="am-tabs-content-wrap {{util.compareVersion(version) >= 0 ? 'fix' : ''}}">
         <view class="am-tabs-slides" style="{{ transform: 'translate3d(' +(-activeTab * 100) + 'vw, 0, 0)' }}">
           <slot></slot>
         </view>
