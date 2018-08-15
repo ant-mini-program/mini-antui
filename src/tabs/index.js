@@ -16,6 +16,7 @@ Component({
     tabWidth: 0.25,
     autoplay: false,
     animation: false,
+    version: my.SDKVersion,
   },
   didMount() {
     const { tabs } = this.props;

@@ -126,6 +126,9 @@
   background: #fff;
   flex-direction: row;
   overflow: hidden;
+}
+
+.am-tabs-content-wrap.fix {
   height: auto !important;
 }
 
