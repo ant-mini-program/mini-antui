@@ -4,6 +4,7 @@ Component({
     appName: '',
     serviceName: '',
     useLiveFaceCheck: false,
+    minRotate: -1,
   },
   didMount() {
     this.webViewContext = my.createWebViewContext('am-face-detection');
@@ -19,7 +20,7 @@ Component({
     doLeftFaceCheck() {
       return new Promise((resolve, reject) => {
         this.isDidFaceLeftResolve = false;
-        this.webViewContext.postMessage({ action: 'doFaceLeft' });
+        this.webViewContext.postMessage({ action: 'doFaceLeft', data: { minRotate: this.props.minRotate } });
         this.doFaceLeftResolve = resolve;
         setTimeout(() => {
           if (!this.isDidFaceLeftResolve) {
@@ -31,7 +32,7 @@ Component({
     doRightFaceCheck() {
       return new Promise((resolve, reject) => {
         this.isDidFaceRightResolve = false;
-        this.webViewContext.postMessage({ action: 'doFaceRight' });
+        this.webViewContext.postMessage({ action: 'doFaceRight', data: { minRotate: this.props.minRotate } });
         this.doFaceRightResolve = resolve;
         setTimeout(() => {
           if (!this.isDidFaceRightResolve) {
@@ -52,13 +53,13 @@ Component({
 
       if (action === 'faceRotated' && data.forward === 'left') {
         this.isDidFaceLeftResolve = true;
-        this.doFaceLeftResolve(true);
+        this.doFaceLeftResolve(data.imageBase64);
         return;
       }
 
       if (action === 'faceRotated' && data.forward === 'right') {
         this.isDidFaceRightResolve = true;
-        this.doFaceRightResolve(true);
+        this.doFaceRightResolve(data.imageBase64);
         return;
       }
 

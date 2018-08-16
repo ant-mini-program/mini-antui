@@ -7,5 +7,6 @@
     useLiveFaceCheck="{{true}}"
     btnText="成功了"
     onSuccessBtnTap="onSuccessBtnTap"
+    minRotate="{{10}}"
   />
 </view>

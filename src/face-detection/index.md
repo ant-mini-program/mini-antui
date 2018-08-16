@@ -17,6 +17,7 @@
 | onFail | 人脸识别失败，code表示错误码，message表示错误信息 | ({ code: number, message: string }) => void |  | false |
 | onSuccessBtnTap | 成功后点击按钮的回调 | function | | false |
 | btnText | 成功按钮的显示文案 | string | | false |
+| minRotate | 最小旋转角度，必须大于0，只在做左右脸检测时需要 | number |  | false |
 
 **说明：useLiveFaceCheck为是否开启活体检测属性，支持检测左脸和右脸，如果开启可以在onFaceStatusChange中进行左右脸的检测**
 ### FaceDetectionData
@@ -77,8 +78,8 @@
 Page({
   onFaceStatusChange(data, context) {
     return new Promise((resolve, reject) => {
-      context.doLeftFaceCheck().then(() => {
-        context.doRightFaceCheck().then(() => {
+      context.doLeftFaceCheck().then((leftImageBase64) => {
+        context.doRightFaceCheck().then((rightImageBase64) => {
           resolve();
         }).catch(() => {
           reject();
