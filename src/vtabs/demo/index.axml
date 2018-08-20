@@ -3,7 +3,7 @@
     tabs="{{tabs}}">
     <block a:for="{{tabs}}">
       <vtab-content anchor="{{item.anchor}}">
-        <view style="1px solid #eee; height: 800px; box-sizing: border-box">
+        <view style="border: 1px solid #eee; height: 800px; box-sizing: border-box">
           <text>content of {{item.title}}</text>
         </view>
       </vtab-content>
