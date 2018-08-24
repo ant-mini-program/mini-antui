@@ -3,7 +3,7 @@
     <view class="am-search-synthetic">
       <view>
         <view class="am-search-synthetic-icon"></view>
-        <text class="am-search-synthetic-placeholder" style="{{ visibility: _value.length == 0  ? 'visible': 'hidden'}}">{{placeholder}}</text>
+        <text class="am-search-synthetic-placeholder" style="{{ visibility: !focus && _value.length === 0 ? 'visible': 'hidden'}}">{{placeholder}}</text>
       </view>
     </view>
     <input
