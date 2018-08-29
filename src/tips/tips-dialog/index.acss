@@ -1,58 +1,61 @@
-.am-tips-dialog-favorite {
-  position: fixed;
-  bottom: 10px;
+.am-tips-dialog {
+  position: relative;
+  height: 55px;
   width: 100%;
-  padding: 7px 5px;
+  padding: 0 6px;
   box-sizing: border-box;
-  font-size: 12px;
 }
 
-.am-tips-dialog-favorite-wrap {
-  position: relative;
+.am-tips-dialog-wrap {
+  display: flex;
+  align-items: center;
   background: #2093E7;
   box-shadow: 0 3px 3px rgba(0, 127, 255, .24);
   border-radius: 2px;
-  color: #fff;
-  padding: 10px;
-  min-height: 25px;
+  padding: 0 24px 0 12px;
+  height: 100%;
 }
 
-.am-tips-dialog-favorite-content {
-  margin-top: 5px;
-  width: 78%;
-  line-height: 15px;
-  overflow: hidden;
-  height: 15px;
+.am-tips-dialog-rectangle .am-tips-dialog-wrap {
+  padding: 0 16px 0 6px;
 }
 
-.am-tips-dialog-favorite-title {
-  width: 75%;
-  overflow: hidden;
+.am-tips-dialog-close {
+  margin-left: 5px;
+  margin-right: 11px;
+  height: 20px;
+  width: 20px;
+  background-image: url(https://gw.alipayobjects.com/zos/rmsportal/yIhgeiRsGHxWWrCKNfhc.png);
+  background-size: 50%;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
-.am-tips-dialog-favorite-action {
-  position: absolute;
-  right: 10px;
-  top: 50%;
-  width: 50px;
-  height: 26px;
-  line-height: 26px;
-  text-align: center;
-  font-weight: 500;
-  margin-top: -13px;
-  border: #68BAF7 solid 1rpx;
+.am-tips-dialog-icon {
+  height: 35px;
+  width: 35px;
+  margin-right: 9px;
 }
 
-.am-tips-dialog-favorite-action:active {
-  background: #0B71BA
+.am-tips-dialog-icon image {
+  width: 35px;
+  height: 35px;
 }
 
-.am-tips-dialog-favorite-wrap::before {
+.am-tips-dialog-content {
+  flex: 1;
+}
+
+.am-tips-dialog-wrap::before {
   content: '';
   position: absolute;
   bottom: -5px;
-  left: 30px;
+  left: 40px;
   border-left: 10px solid transparent;
   border-right: 10px solid transparent;
   border-top: 10px solid #2093E7;
+}
+
+.am-tips-dialog-rectangle .am-tips-dialog-wrap::before {
+  display: none;
 }
