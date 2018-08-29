@@ -7,6 +7,7 @@
       </view>
     </view>
     <input
+      enableNative="{{false}}"
       class="am-search-value"
       confirm-type="search"
       value="{{_value}}"
