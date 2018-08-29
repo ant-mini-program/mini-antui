@@ -1,3 +1,14 @@
+## 0.3.5
+
+`2018-08-29`
+
+- **Bug Fix**
+  - 修复`search-bar`点击icon无效的bug
+  - 修复`search-bar`苹果输入法中间态无法清除placeholder的bug
+
+- **Enhancement**
+  - 优化`list`组件样式
+
 ## 0.3.4
 
 `2018-08-16`
