@@ -10,7 +10,7 @@
 
 /* hover 样式 */
 .am-list-item-hover {
-  background-color: #ddd;
+  background-color: #f8f8f8;
 }
 
 .am-list-thumb {
@@ -26,7 +26,7 @@
   align-items: center;
   align-self: stretch;
   padding-right: 15px;
-  min-height: 47px;
+  min-height: 52px;
   overflow: hidden;
 }
 
@@ -70,7 +70,7 @@
   width: 15px;
   height: 15px;
   margin-left: 8px;
-  background-image: url('data:image/svg+xml;charset=utf-8,<svg width="16" height="26" viewBox="0 0 16 26" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g id="UI-KIT_基础元件" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g id="9.9基础元件" transform="translate(-5809.000000, -8482.000000)" fill="#C7C7CC"><polygon id="Disclosure-Indicator" points="5811 8482 5809 8484 5820.5 8495 5809 8506 5811 8508 5825 8495"></polygon></g></g></svg>');
+  background-image: url('https://gw.alipayobjects.com/zos/rmsportal/nGMpTwTjtKMbOeeQIucS.png');
   background-size: contain;
   background-repeat: no-repeat;
   background-position: 50% 50%;
