@@ -10,12 +10,12 @@ Component({
   },
   didMount() {
     this.setData({
-      _value: this.props.hasOwnProperty('value') ? this.props.value : '',
+      _value: ('value' in this.props) ? this.props.value : '',
       focus: this.props.focus,
     });
   },
   didUpdate() {
-    if (this.props.hasOwnProperty('value') && this.props.value !== this.data._value) {
+    if (('value' in this.props) && this.props.value !== this.data._value) {
       this.setData({
         _value: this.props.value,
       });
@@ -25,7 +25,7 @@ Component({
     handleInput(e) {
       const { value } = e.detail;
 
-      if (!this.props.hasOwnProperty('value')) {
+      if (!('value' in this.props)) {
         this.setData({
           _value: value,
         });
@@ -36,11 +36,11 @@ Component({
       }
     },
     handleClear() {
-      this.setData({
-        focus: true,
-      });
+      // this.setData({
+      //   focus: true,
+      // });
 
-      if (!this.props.hasOwnProperty('value')) {
+      if (!('value' in this.props)) {
         this.setData({
           _value: '',
         });
@@ -76,7 +76,7 @@ Component({
       }
     },
     handleCancel() {
-      if (!this.props.hasOwnProperty('value')) {
+      if (!('value' in this.props)) {
         this.setData({
           _value: '',
         });
@@ -94,6 +94,6 @@ Component({
       if (this.props.onSubmit) {
         this.props.onSubmit(value);
       }
-    }
-  }
+    },
+  },
 });
