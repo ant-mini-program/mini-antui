@@ -9,4 +9,7 @@ Page({
       { title: '选项六', anchor: 'f' },
     ],
   },
+  handleChange(index) {
+    console.log(index);
+  }
 });
