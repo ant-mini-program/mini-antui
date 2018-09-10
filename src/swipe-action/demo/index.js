@@ -33,7 +33,7 @@ Page({
   },
   onSwipeStart(e) {
     this.setData({
-      swipeIndex: e.index || null,
+      swipeIndex: e.index !== void 0 && e.index !== null ? e.index : null,
     });
   },
 });
