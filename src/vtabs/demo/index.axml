@@ -1,6 +1,9 @@
 <view>
   <vtabs
-    tabs="{{tabs}}">
+    tabs="{{tabs}}"
+    onTabClick="handleChange"
+    onScrollBar="handleChange"
+  >
     <block a:for="{{tabs}}">
       <vtab-content anchor="{{item.anchor}}">
         <view style="border: 1px solid #eee; height: 800px; box-sizing: border-box">
