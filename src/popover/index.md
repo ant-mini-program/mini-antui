@@ -1,25 +1,31 @@
-# popover 气泡
+# Popover 气泡
 
-气泡通用组件
+气泡。
+
+扫码体验：
+
+<img src="https://gw.alipayobjects.com/zos/rmsportal/fiqtYDYDruVwbWnspKwQ.jpeg" width="154" height="190" />
+
 
 ## popover
-| 属性 | 说明 | 类型 | 可选 | 默认值 | 必选 |
+
+| 属性名 | 描述 | 类型 | 可选 | 默认值 | 必选 |
 |----|----|----|----|----|----|
 | show | 气泡是否展示 | boolean | - | false | true |
 | showMask | 蒙层是否展示 | boolean | - | true | false |
 | position | 气泡位置 | string | top / topRight / topLeft / bottom / bottomLeft / bottomRight / right / rightTop / rightBottom / left / leftBottom / leftTop | bottomRight | false |
-| className | 最外层覆盖样式 | string | - | ' ' | false |
+| className | 最外层覆盖样式 | string | - | ' ' | false |
 
 ## popover-item
-| 属性 | 说明 | 类型 | 可选 | 默认值 | 必选 |
+
+| 属性名 | 描述 | 类型 | 可选 | 默认值 | 必选 |
 |----|----|----|----|----|----|
 | onItemClick | 单项点击事件 | function | - | null | false |
 | className | 单项样式 | string | - | ' ' | false |
 
-## using
+## 示例
 
-```
-// page.json
+```json
 {  
   "usingComponents": {
     "popover": "mini-antui/es/popover/index",
@@ -28,9 +34,7 @@
 }
 ```
 
-## examples
-
-```axml
+```html
 <popover
   position="{{position}}"
   show="{{show}}"
@@ -48,6 +52,7 @@
   </view>
 </popover>
 ```
+
 ```javascript
 Page({
   data: {

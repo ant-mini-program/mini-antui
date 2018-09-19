@@ -1,45 +1,23 @@
+## List 列表
+
+列表。
+
+扫码体验：
+
+<img src="https://gw.alipayobjects.com/zos/rmsportal/tAvsiCUfvPlAYSRQLHOs.jpeg" width="154" height="190" />
+
 ## list
-| 属性 | 说明 | 类型 | 默认值 |
+
+| 属性名 | 描述 | 类型 | 默认值 |
 |----|----|----|----|
 |className| 自定义class | String| |
 
 ### slots
+
 |slotName | 说明 |
 |----|----|
 |header | 可选，列表头部|
 |footer | 可选，用于渲染列表尾部|
-
-### using
-
-```
-// page.json
-{
-  "defaultTitle": "小程序AntUI组件库",
-  "usingComponents":{
-    "list":"mini-antui/es/list/index",
-    "list-item":"mini-antui/es/list/list-item/index"
-  }
-}
-```
-
-### examples
-
-```axml
-// page.axml
-<list>
-  <view slot="header">列表头部</view>
-  <block a:for="{{items}}">
-    <list-item
-      key="item-{{index}}"
-      last="{{index === (items.length - 1)}}"
-    >
-      {{item.title}}
-      <view class="am-list-brief">{{item.brief}}</view>
-    </list-item>
-  </block>
-  <view slot="footer">列表尾部</view>
-</list>
-```
 
 ## list-item
 
@@ -62,25 +40,106 @@
 |----|----|
 |extra | 可选，用于渲染列表项右边说明|
 
-### examples
+## 示例
 
-```axml
-<list-item
-  className="{{index === 0 ? 'am-list-sticky' : ''}}"
-  thumb="{{item.thumb}}"
-  arrow="{{item.arrow}}"
-  align="{{item.align}}"
-  index="{{index}}"
-  onClick="onItemClick"
-  key="items-{{index}}"
-  multipleLine="{{true}}"
-  wrap="{{true}}"
->
-  {{item.title}}
-  <view class="am-list-brief">{{item.brief}}</view>
-  <view slot="extra">
-    {{item.extra}}
-  </view>
-</list-item>
+```json
+{
+  "defaultTitle": "小程序AntUI组件库",
+  "usingComponents": {
+    "input-item": "mini-antui/es/list/index",
+  }
+}
+```
 
+```html
+<view>
+  <list>
+    <view slot="header">
+      列表头部
+    </view>
+    <block a:for="{{items}}">
+      <list-item
+        thumb="{{item.thumb}}"
+        arrow="{{item.arrow}}"
+        align="{{item.align}}"
+        index="{{index}}"
+        onClick="onItemClick"
+        key="items-{{index}}"
+        last="{{index === (items.length - 1)}}"
+      >
+      {{item.title}}
+        <view class="am-list-brief">{{item.brief}}</view>
+        <view slot="extra">
+          {{item.extra}}
+        </view>
+      </list-item>
+    </block>
+    <view slot="footer">
+      列表尾部
+    </view>
+  </list>
+  <list>
+    <view slot="header">
+      列表头部
+    </view>
+    <block a:for="{{items2}}">
+      <list-item
+        thumb="{{item.thumb}}"
+        arrow="{{item.arrow}}"
+        onClick="onItemClick"
+        index="items2-{{index}}"
+        key="items2-{{index}}"
+        last="{{index === (items2.length - 1)}}"
+      >
+       {{item.title}}
+        <view class="am-list-brief">{{item.brief}}</view>
+        <view a:if="{{item.extra}}" slot="extra">
+          {{item.extra}}
+        </view>
+      </list-item>
+    </block>
+    <view slot="footer">
+      列表尾部
+    </view>
+  </list>
+</view>
+````
+
+```javascript
+Page({
+  data: {
+    items: [
+      {
+        title: '单行列表',
+        extra: '详细信息',
+      },
+    ],
+    items2: [
+      {
+        title: '多行列表',
+        arrow: true,
+      },
+      {
+        title: '多行列表',
+        arrow: 'up',
+      },
+      {
+        title: '多行列表',
+        arrow: 'down',
+      },
+      {
+        title: '多行列表',
+        arrow: 'empty',
+      },
+      {
+        title: '多行列表',
+      },
+    ],
+  },
+  onItemClick(ev) {
+    my.alert({
+      content: `点击了第${ev.index}行`,
+    });
+  },
+});
 ```

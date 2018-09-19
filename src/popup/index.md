@@ -1,10 +1,13 @@
-# popup 弹出菜单
+# Popup 弹出菜单
 
 弹出菜单。
 
-## API
+扫码体验：
 
-| 属性 | 说明 | 类型 | 默认值 | 必选 |
+<img src="https://gw.alipayobjects.com/zos/rmsportal/JcqZNhoOVOHVrdDqQevk.jpeg" width="154" height="190" />
+
+
+| 属性名 | 描述 | 类型 | 默认值 | 必选 |
 |----|----|----|----|----|
 | className | 自定义class | string | | false |
 | show | 是否显示菜单 | boolean | false | false |
@@ -12,26 +15,22 @@
 | mask | 是否显示mask，不显示时点击外部不会触发onClose | boolean| true | true |
 | position | 控制从什么方向弹出菜单，bottom表示底部，left表示左侧，top表示顶部，right表示右侧 | string | 'bottom' | false |
 
-## slot
+## slots
 
-可以在popup组件中定义要展示部分，具体可参看下面例子。
+可以在popup组件中定义要展示部分，具体可参看下面示例。
 
-## using
+## 示例
 
-```
-// page.json
+```json
 {
   "defaultTitle": "小程序AntUI组件库",
-  "usingComponents":{
+  "usingComponents": {
     "popup": "mini-antui/es/popup/index"
   }
 }
 ```
 
-
-## examples
-
-```axml
+```html
 <view>
   <view class="btn-container">
     <button onTap="onTopBtnTap">弹出popup</button>

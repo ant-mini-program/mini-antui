@@ -1,20 +1,22 @@
-# Calendar日历
+# Calendar 日历
 
-日历
+日历。
 
-## API
+扫码体验：
 
-| 属性 | 说明 | 类型 | 默认值 | 必选 |
+<img src="https://gw.alipayobjects.com/zos/rmsportal/DFLnQbhXIrEgpCAIIBOv.jpeg" width="154" height="190" />
+
+
+| 属性名 | 描述 | 类型 | 默认值 | 必选 |
 |----|----|----|----|----|
 | type | 选择类型 single: 单日 range: 日期区间 | 'single'/'range' | 'single'| false
 | tagData | 标记数据，其中包括日期`date`，标记`tag`，标记颜色`tagColor`，tagColor有4个可选值，1.#f5a911，2.#e8541e 3.#07a89b 4.#108ee9，5.#b5b5b5 | Array<date, tag, tagColor> | | false
 | onSelect | 选择区间回调 | ([startDate, endDate]) => void | | false
 | onMonthChange | 点击切换月份时回调，带两个参数currentMonth切换后月份和prevMonth切换前月份 | (currentMonth, prevMonth) => void | | false |
 
-## using
+## 示例
 
-```
-// page.json
+```json
 {
   "defaultTitle": "小程序AntUI组件库",
   "usingComponents":{
@@ -23,13 +25,24 @@
 }
 ```
 
-## examples
-
-```axml
+```html
 <view>
   <calendar
     type="single"
     tagData="{{tagData}}"
     onSelect="handleSelect" />
 </view>
+```
+
+```javascript
+Page({
+  data: {
+    tagData: [
+      { date: '2018-05-14', tag: '还房贷', tagColor: 5 },
+      { date: '2018-05-28', tag: '公积金', tagColor: 2 },
+    ],
+  },
+  handleSelect() {},
+  onMonthChange() {},
+});
 ```

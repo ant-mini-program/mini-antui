@@ -1,10 +1,14 @@
-# Tabs标签页
+# Tabs 标签页
 
-用于让用户在不同的视图中进行切换
+用于让用户在不同的视图中进行切换。
 
-## API
+扫码体验：
 
-| 属性 | 说明 | 类型 | 默认值 | 必选 |
+<img src="https://gw.alipayobjects.com/zos/rmsportal/QrAcpDwscNMUBvtQtVEm.jpeg" width="154" height="190" />
+
+## tabs
+
+| 属性名 | 描述 | 类型 | 默认值 | 必选 |
 |----|----|----|----|----|
 | tabs | tab数据，其中包括选项标题`title`，徽标类型`badgeType`分为圆点`dot`和文本`text`，徽标文本`badgeText`在`badgeType`为`text`时生效 | Array<title, badgeType, badgeText> |  | true |
 | activeTab | 当前激活Tab索引	| number |  | true |
@@ -18,30 +22,28 @@
 | tabBarInactiveTextColor | tabBar非激活Tab文字颜色 | string | | false |
 | tabBarUnderlineColor | tabBar下划线颜色 | string | | false |
 
-## using
-
-```
-// page.json
-{
-  "defaultTitle": "小程序AntUI组件库",
-  "usingComponents":{
-    "tabs":"mini-antui/es/tabs/index",
-    "tab-content": "mini-antui/es/tabs/tab-content/index"
-  }
-}
-```
 
 ## tab-content
 
 视图内容
 
-| 属性 | 说明 | 类型 | 默认值 | 必选 |
+| 属性名 | 描述 | 类型 | 默认值 | 必选 |
 |----|----|----|----|----|
 | index | 列表项的唯一索引 | string | | | |
 
-## examples
+## 示例
 
-```axml
+```json
+{
+  "defaultTitle": "小程序AntUI组件库",
+  "usingComponents": {
+    "tabs": "mini-antui/es/tabs/index",
+    "tab-content": "mini-antui/es/tabs/tab-content/index"
+  }
+}
+```
+
+```html
 <view>
   <tabs
     tabs="{{tabs}}"

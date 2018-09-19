@@ -1,6 +1,12 @@
-## input-item
+## InputItem 文本输入
 
-| 属性 | 说明 | 类型 | 默认值 |
+文本输入。
+
+扫码体验：
+
+<img src="https://gw.alipayobjects.com/zos/rmsportal/HoUOLnPEOaymuHlbeyqR.jpeg" width="154" height="190" />
+
+| 属性名 | 描述 | 类型 | 默认值 |
 |----|----|----|----|
 |className| 自定义的class | String| '' |
 |labelCls| 自定义label的class | String | '' |
@@ -21,25 +27,22 @@
 |onFocus | 聚焦时触发，event.detail = {value: value} | EventHandle |  |
 |onBlur | 失去焦点时触发，event.detail = {value: value} | EventHandle |  |
 
-### slots
+## slots
 
 | slotname | 说明 |
 |----|----|
 |extra | 可选，用于渲染input-item项右边说明|
 
-### using
+## 示例
 
-```
-// page.json
+```json
 {
   "defaultTitle": "小程序AntUI组件库",
-  "usingComponents":{
-    "input-item":"mini-antui/es/input-item/index",
+  "usingComponents": {
+    "input-item": "mini-antui/es/input-item/index",
   }
 }
 ```
-
-### examples
 
 ```axml
 <input-item
@@ -56,4 +59,37 @@
     <icon size="18" type="clear" />
   </view>
 </input-item>
+```
+
+```javascript
+Page({
+  data: {
+    inputFocus: true,
+  },
+  onAutoFocus() {
+    this.setData({
+      inputFocus: true,
+    });
+  },
+  onExtraTap(e) {
+    my.showToast({
+      content: 'dada',
+    });
+  },
+  onItemInput(e) {
+    console.log(e, 'onInput');
+  },
+  onItemFocus(e) {
+    console.log(e, 'onFocus');
+    this.setData({
+      inputFocus: false,
+    });
+  },
+  onItemBlur(e) {
+    console.log(e, 'onBlur');
+  },
+  onItemConfirm(e) {
+    console.log(e, 'onConfirm');
+  },
+});
 ```
