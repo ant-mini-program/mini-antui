@@ -1,10 +1,14 @@
 # vtabs 纵向选项卡
 
-用于让用户在不同的视图中进行切换
+用于让用户在不同的视图中进行切换。
 
-## API
+扫码体验：
 
-| 属性 | 说明 | 类型 | 默认值 | 必选 |
+<img src="https://gw.alipayobjects.com/zos/rmsportal/iYBdHWcyPaNUDTQaNznG.jpeg" width="154" height="190" />
+
+## vtabs
+
+| 属性名 | 描述 | 类型 | 默认值 | 必选 |
 |----|----|----|----|----|
 | tabs | tab数据，其中包括选项标题`title`，列表唯一锚点值 | Array<title, anchor> |  | true |
 | animated | 是否开启动画 | boolean| | false |
@@ -15,30 +19,27 @@
 | tabBarInactiveTextColor | tabBar非激活Tab文字颜色 | string | | false |
 | tabBarlineColor | tabBar侧划线颜色 | string | | false |
 
-## using
+## vtab-content
 
-```
-// page.json
+视图内容
+
+| 属性名 | 描述 | 类型 | 默认值 | 必选 |
+|----|----|----|----|----|
+| anchor | 列表唯一锚点值 | string | | | |
+
+## 示例
+
+```json
 {
   "defaultTitle": "小程序AntUI组件库",
-  "usingComponents":{
+  "usingComponents": {
     "vtabs": "mini-antui/es/vtabs/index",
     "vtab-content": "mini-antui/es/vtabs/vtab-content/index"
   }
 }
 ```
 
-## vtab-content
-
-视图内容
-
-| 属性 | 说明 | 类型 | 默认值 | 必选 |
-|----|----|----|----|----|
-| anchor | 列表唯一锚点值 | string | | | |
-
-## examples
-
-```axml
+```html
 <view>
   <vtabs
     tabs="{{tabs}}">

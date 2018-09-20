@@ -1,18 +1,20 @@
-# footer 页脚
+# Footer 页脚
 
 显示页面页脚。
 
-## API
+扫码体验：
 
-| 属性 | 说明 | 类型 | 默认值 | 必选 |
+<img src="https://gw.alipayobjects.com/zos/rmsportal/EdfgZYAQrrlpnqQKGMqa.jpeg" width="154" height="190" />
+
+
+| 属性名 | 描述 | 类型 | 默认值 | 必选 |
 |----|----|----|----|----|
 | copyright | 版权信息 | string |  | false |
 | links | 页脚链接 | Array<text, url> |  | false |
 
-## using
+## 示例
 
-```
-// page.json
+```json
 {
   "defaultTitle": "小程序AntUI组件库",
   "usingComponents":{
@@ -21,10 +23,7 @@
 }
 ```
 
-
-## examples
-
-```axml
+```html
 <view>
   <footer
     copyright="{{copyright}}"

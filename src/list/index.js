@@ -1,5 +1,5 @@
 Component({
   props: {
     className: '',
-  }
+  },
 });

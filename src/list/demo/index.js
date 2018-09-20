@@ -1,4 +1,3 @@
-
 const newitems = [
   {
     thumb: 'https://gw.alipayobjects.com/zos/rmsportal/KXDIRejMrRdKlSEcLseB.png',
@@ -238,7 +237,6 @@ Page({
   onScrollToLower() {
     const { items5 } = this.data;
     const newItems = items5.concat(newitems);
-    console.log(newItems.length);
     this.setData({
       items5: newItems,
     });

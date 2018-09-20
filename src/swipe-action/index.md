@@ -1,5 +1,12 @@
-## swipe-action
-| 属性 | 说明 | 类型 | 默认值 |
+## SwipeAction 可滑动单元格
+
+可滑动单元格
+
+扫码体验：
+
+<img src="https://gw.alipayobjects.com/zos/rmsportal/AJKkYtCpuwuoaKTQijUB.jpeg" width="154" height="190" />
+
+| 属性名 | 描述 | 类型 | 默认值 |
 |----|----|----|----|
 |className| 自定义class | String| |
 |right| 滑动选项，最多两项 | Array[Object{type: `edit`/`delete`, text: string}]| `[]` |
@@ -7,22 +14,20 @@
 | restore | 还原组件到初始状态，当有多个swipe-action组件时，当滑动其中一个时，需要将其他的组件的`restore`属性设置为`true`，避免一个页面同时存在多个swipeAction处于活动状态。 | Bollean | `false` |
 
 
-### using
+## 示例
 
-```
-// page.json
+```json
 {
   "defaultTitle": "SwipeAction",
-  "usingComponents":{
-    "swipe-action":"mini-antui/es/swipe-action/index"
+  "usingComponents": {
+    "list": "mini-antui/es/list/index",
+    "list-item": "mini-antui/es/list/list-item/index",
+    "swipe-action": "mini-antui/es/swipe-action/index"
   }
 }
 ```
 
-### examples
-
-```axml
-// page.axml
+```html
 <list>
   <swipe-action right="{{right1}}" onRightItemClick="onRightItemClick" extra="item1">
     <list-item
@@ -48,7 +53,7 @@
 </list>
 ```
 
-```js
+```javascript
 Page({
   data: {
     right1: [{'type': 'delete', 'text': '删除'}],

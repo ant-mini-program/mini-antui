@@ -1,6 +1,10 @@
-# tips 
+# Tips 小提示
 
-小提示
+小提示。分`tips-dialog`和`tips-plain`两种类型。
+
+扫码体验：
+
+<img src="https://gw.alipayobjects.com/zos/rmsportal/DjQXcSygEImQjMOnlJqV.jpeg" width="154" height="190" />
 
 ## tips-dialog
 
@@ -27,20 +31,17 @@
 | time | 自动关闭时间(单位毫秒) | Number | 5000毫秒| false |
 | onClose | 回调并关闭提示框 | function | (): void | false |
 
-## using
+## 示例
 
-```
-// page.json
+```json
 {
   "defaultTitle": "小程序AntUI组件库",
-  "usingComponents":{
-    "tips-dialog":"mini-antui/es/tips/tips-dialog/index",
-    "tips-plain":"mini-antui/es/tips/tips-plain/index"
+  "usingComponents": {
+    "tips-dialog": "mini-antui/es/tips/tips-dialog/index",
+    "tips-plain": "mini-antui/es/tips/tips-plain/index"
   }
 }
 ```
-
-## examples
 
 ### tips-dialog
 
@@ -63,9 +64,3 @@
 ```axml
 <tips-plain onClose="onClose" time="{{time}}">我知道了</tips-plain>
 ```
-
-
-
-
-
-
