@@ -5,6 +5,7 @@ Component({
     position: 'bottom',
     mask: true,
     animation: true,
+    disableScroll: true,
   },
   methods: {
     onMaskTap() {
