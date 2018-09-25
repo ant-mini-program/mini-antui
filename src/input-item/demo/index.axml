@@ -2,6 +2,9 @@
   <view style="margin-top: 10px;" />
   <list>
     <input-item
+      data-field="abc"
+      data-type="def"
+      data-data="bbb"
       className="dadada"
       placeholder="暗提示"
       focus="{{inputFocus}}"
