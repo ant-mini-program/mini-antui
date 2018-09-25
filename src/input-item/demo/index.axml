@@ -5,6 +5,7 @@
       data-field="abc"
       data-type="def"
       data-data="bbb"
+      value="{{value}}"
       className="dadada"
       placeholder="暗提示"
       focus="{{inputFocus}}"
