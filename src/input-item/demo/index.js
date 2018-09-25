@@ -1,5 +1,6 @@
 Page({
   data: {
+    value: 'hello world',
     inputFocus: true,
   },
   onAutoFocus() {
@@ -7,13 +8,15 @@ Page({
       inputFocus: true,
     });
   },
-  onExtraTap(e) {
-    my.showToast({
-      content: 'dada',
+  onExtraTap() {
+    this.setData({
+      value: '',
     });
   },
   onItemInput(e) {
-    console.log(e, 'onInput');
+    this.setData({
+      value: e.detail.value,
+    });
   },
   onItemFocus(e) {
     console.log(e, 'onFocus');

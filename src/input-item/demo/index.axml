@@ -2,6 +2,7 @@
   <view style="margin-top: 10px;" />
   <list>
     <input-item
+      value="{{value}}"
       className="dadada"
       placeholder="暗提示"
       focus="{{inputFocus}}"
