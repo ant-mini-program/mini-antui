@@ -5,6 +5,10 @@
   padding-left: 15px;
 }
 
+.am-input-item .a-input-content {
+  padding-left: 2px;
+}
+
 .am-input-line {
   position: relative;
   flex: 1;
@@ -31,6 +35,34 @@
 
 .am-input-content .a-input-wrap {
   flex: 1;
+}
+
+.am-input-clear {
+  display: flex;
+}
+
+.am-input-text {
+  line-height: 33px;
+  padding-left: 8px;
+}
+
+.am-input-content-placeholder {
+  color: #ccc;
+}
+
+.am-input-content-value {
+  color: #333;
+}
+
+.am-input-arrow {
+  display: block;
+  width: 13px;
+  height: 13px;
+  margin-left: 8px;
+  background-image: url('https://gw.alipayobjects.com/zos/rmsportal/nGMpTwTjtKMbOeeQIucS.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
 }
 
 .am-input-line-bottom {
