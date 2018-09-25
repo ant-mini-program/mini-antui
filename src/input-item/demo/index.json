@@ -1,7 +1,8 @@
 {
   "defaultTitle": "input-item",
   "usingComponents":{
-    "list":"../../list/index",
-    "input-item":"../index"
+    "list": "../../list/index",
+    "input-item": "../index",
+    "picker-item": "../../picker-item/index"
   }
 }

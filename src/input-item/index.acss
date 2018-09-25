@@ -5,6 +5,10 @@
   padding-left: 15px;
 }
 
+.am-input-item .a-input-content {
+  padding-left: 2px;
+}
+
 .am-input-line {
   position: relative;
   flex: 1;
@@ -31,6 +35,10 @@
 
 .am-input-content .a-input-wrap {
   flex: 1;
+}
+
+.am-input-clear {
+  display: flex;
 }
 
 .am-input-line-bottom {
