@@ -50,10 +50,5 @@ Component({
       const event = this.fmtEvent(e);
       this.props.onInput(event);
     },
-    onClear() {
-      my.alert({
-        content: 'onClear',
-      });
-    },
   },
 });
