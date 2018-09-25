@@ -98,3 +98,12 @@ Page({
   },
 });
 ```
+
+```css
+.tab-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 300px;
+}
+```

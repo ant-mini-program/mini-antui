@@ -47,6 +47,7 @@
   "defaultTitle": "小程序AntUI组件库",
   "usingComponents": {
     "list": "mini-antui/es/list/index",
+    "list-item": "mini-antui/es/list/list-item/index"
   }
 }
 ```

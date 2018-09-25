@@ -1,3 +1,16 @@
+## 0.3.7
+
+`2018-09-25`
+
+- **Bug Fix**
+  - 修复了input-item组件在失去焦点等事件中无dataset的问题([#66](https://github.com/ant-mini-program/mini-antui/issues/66))
+  - 修复popup组件mask定位为absolut导致的页面滚动时mask跟着滚动的bug
+
+- **Enhancement**
+  - popup新增disableScroll属性以适应不同业务场景
+  - 完善swipe-action的示例代码
+  - 文档更新，添加体验二维码
+
 ## 0.3.6
 
 `2018-09-13`
