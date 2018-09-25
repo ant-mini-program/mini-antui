@@ -21,6 +21,11 @@ Page({
       path: '/input-item/demo/index',
     },
     {
+      name: 'PickerItem',
+      nameZN: '选择输入项',
+      path: '/picker-item/demo/index',
+    },
+    {
       name: 'Footer',
       nameZN: '页脚',
       path: '/footer/demo/index',
