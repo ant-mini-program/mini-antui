@@ -5,23 +5,38 @@
     <view a:if="{{$slots.$default}}" class="am-input-label {{labelCls}}">
       <slot />
     </view>
-    <input
-      class="am-input-content {{inputCls}}"
-      value="{{value}}"
-      name="{{name}}"
-      type="{{type}}"
-      password="{{password}}"
-      placeholder="{{placeholder}}"
-      placeholderClass="{{placeholderClass}}"
-      placeholderStyle="{{placeholderStyle}}"
-      disabled="{{disabled}}"
-      maxlength="{{maxlength}}"
-      focus="{{focus}}"
-      onInput="onInput"
-      onConfirm="onConfirm"
-      onFocus="onFocus"
-      onBlur="onBlur"
-    />
+    <block a:if="{{ mode === 'input' }}">
+      <input
+        sync-input="{{true}}"
+        class="am-input-content {{inputCls}}"
+        value="{{value}}"
+        name="{{name}}"
+        type="{{type}}"
+        password="{{password}}"
+        placeholder="{{placeholder}}"
+        placeholderClass="{{placeholderClass}}"
+        placeholderStyle="{{placeholderStyle}}"
+        disabled="{{disabled}}"
+        maxlength="{{maxlength}}"
+        focus="{{focus}}"
+        onInput="onInput"
+        onConfirm="onConfirm"
+        onFocus="onFocus"
+        onBlur="onBlur"
+      />
+      <view a:if="{{clear && value.length > 0 && disabled === false}}" class="am-input-clear" onTap="onClear">
+        <icon size="18" type="clear" />
+      </view>
+    </block>
+    <block a:else>
+      <view style="display: flex; flex: 1; height: 33px; align-items: center" onTap="onSelect">
+        <input type="text" name="{{name}}" value="{{value}}" style="display: none" />
+        <text class="am-input-content am-input-text {{inputCls}} {{ value.length > 0 ? 'am-input-content-value': 'am-input-content-placeholder' }}">
+          {{value.length > 0 ? value : placeholder}}
+        </text>
+        <view class="am-input-arrow"></view>
+      </view>
+    </block>
     <slot name="extra" />
 		<view class="am-input-line-bottom" />
 	</view>
