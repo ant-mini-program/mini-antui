@@ -36,6 +36,7 @@
 					onClick="onItemClick"
 					index="items2-{{index}}"
 					key="items2-{{index}}"
+					data-filed="aaa"
 					last="{{index === (items2.length - 1)}}"
 				>
 					{{item.title}}
