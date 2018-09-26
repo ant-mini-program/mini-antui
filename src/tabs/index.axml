@@ -21,7 +21,7 @@
                 width: (tabs.length > 3 ? 0.25 : 1 / tabs.length) * 100 + '%',
               }}"
               class="am-tabs-bar-tab">
-              <view class="am-tabs-bar-title" style="{{ borderBottomColor: index === activeTab ? tabBarUnderlineColor : '' }}">
+              <view class="am-tabs-bar-title {{ index === activeTab ? activeCls : '' }}" style="{{ borderBottomColor: index === activeTab ? tabBarUnderlineColor : '' }}">
                 {{item.title}}
                 <view a:if="{{item.badgeType}}" class="am-tabs-bar-badge {{item.badgeType}}">
                   {{item.badgeType === 'text' && item.badgeText ? item.badgeText.substr(0, 1) : ''}}

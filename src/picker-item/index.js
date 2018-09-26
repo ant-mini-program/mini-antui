@@ -1,5 +1,6 @@
 Component({
   props: {
+    className: '',
     value: '',
     placeholder: '',
     onSelect: () => {},
