@@ -3,6 +3,7 @@ const { windowWidth } = my.getSystemInfoSync();
 Component({
   props: {
     className: '',
+    activeCls: '',
     tabBarUnderlineColor: '#108ee9', // 选中选项卡下划线颜色
     tabBarActiveTextColor: '#108ee9', // 选中选项卡字体颜色
     tabBarInactiveTextColor: '#333333', // 未选中选项卡字体颜色

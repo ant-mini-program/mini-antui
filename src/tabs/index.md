@@ -10,6 +10,8 @@
 
 | 属性名 | 描述 | 类型 | 默认值 | 必选 |
 |----|----|----|----|----|
+| className | 自定义class | string | | false |
+| activeCls | 自定义激活tabbar的class | string | | |
 | tabs | tab数据，其中包括选项标题`title`，徽标类型`badgeType`分为圆点`dot`和文本`text`，徽标文本`badgeText`在`badgeType`为`text`时生效 | Array<title, badgeType, badgeText> |  | true |
 | activeTab | 当前激活Tab索引	| number |  | true |
 | showPlus | 是否显示‘+’icon | Boolean | false | false |
