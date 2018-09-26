@@ -6,6 +6,7 @@
       <slot />
     </view>
     <input
+      sync-input="{{true}}"
       class="am-input-content {{inputCls}}"
       value="{{value}}"
       name="{{name}}"
@@ -22,6 +23,9 @@
       onFocus="onFocus"
       onBlur="onBlur"
     />
+    <view a:if="{{clear && value.length > 0 && disabled === false}}" class="am-input-clear" onTap="onClear">
+      <icon size="18" type="clear" />
+    </view>
     <slot name="extra" />
 		<view class="am-input-line-bottom" />
 	</view>

@@ -14,10 +14,12 @@ Component({
     disabled: false,
     maxlength: 140,
     focus: false,
+    clear: false, // 是否带清除功能
     onInput: () => {},
     onConfirm: () => {},
     onFocus: () => {},
     onBlur: () => {},
+    onClear: () => {},
   },
   didMount() {
     this.dataset = {};
@@ -49,6 +51,10 @@ Component({
     onInput(e) {
       const event = this.fmtEvent(e);
       this.props.onInput(event);
+    },
+    onClear(e) {
+      const event = this.fmtEvent(e);
+      this.props.onClear(event);
     },
   },
 });
