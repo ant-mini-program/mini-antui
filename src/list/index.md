@@ -28,7 +28,7 @@
 |arrow| 是否带剪头 | Boolean | `false` |
 |align| 子元素垂直对齐，可选`top`,`middle`,`bottom` | String | `middle` |
 |index| 列表项的唯一索引| string | |
-|onClick| 点击list-item时调用此函数 | function({index}) | |
+|onClick| 点击list-item时调用此函数 | function({index, target}) | |
 |last | 是否是列表的最后一项|boolean|false |
 |disabled| 不可点击，且无hover效果 | Boolean | `false` |
 |multipleLine | 多行 | Boolean | `false` |
