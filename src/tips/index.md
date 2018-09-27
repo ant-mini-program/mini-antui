@@ -45,22 +45,112 @@
 
 ### tips-dialog
 
-```axml
-<tips-dialog
+```html
+<view>
+  <tips-dialog
     show="{{showDialog}}"
     className="dialog"
     type="dialog"
   >
-  <view class="content" slot="content">
-    <view>hello,</view>
-    <view>欢迎使用小程序扩展组件库mini-antui</view>
-  </view>
-  <view slot="operation" class="opt-button" onTap="onDialogTap">知道了</view> 
-</tips-dialog>
+    <view class="content" slot="content">
+      <view>hello,</view>
+      <view>欢迎使用小程序扩展组件库mini-antui</view>
+    </view>
+    <view slot="operation" class="opt-button" onTap="onDialogTap">知道了</view> 
+  </tips-dialog>
+  <tips-dialog
+    iconUrl="https://gw.alipayobjects.com/zos/rmsportal/AzRAgQXlnNbEwQRvEwiu.png"
+    type="rectangle"
+    className="rectangle"
+    onCloseTap="onCloseTap"
+    show="{{showRectangle}}">
+    <view class="content" slot="content">
+      把“城市服务”添加到首页
+    </view>
+    <view slot="operation" class="add-home" onTap="onRectangleTap">立即添加</view>
+  </tips-dialog>
+</view>
+```
+
+```javascript
+Page({
+  data: {
+    showRectangle: true,
+    showDialog: true,
+  },
+  onCloseTap() {
+    this.setData({
+      showRectangle: false,
+    });
+  },
+  onRectangleTap() {
+    my.alert({
+      content: 'do something',
+    });
+  },
+  onDialogTap() {
+    this.setData({
+      showDialog: false,
+    });
+  },
+});
+```
+
+```css
+.rectangle {
+  position: fixed;
+  bottom: 100px;
+}
+
+.dialog {
+  position: fixed;
+  bottom: 10px;
+}
+
+.content {
+  font-size: 14px;
+  color: #fff;
+}
+
+.opt-button {
+  width: 51px;
+  height: 27px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-size: 12px;
+  border: #68BAF7 solid 1rpx;
+}
+
+.add-home {
+  width: 72px;
+  height: 27px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #56ADEB;
+  color: #fff;
+  font-size: 14px;
+}
 ```
 
 ### tips-plain
 
-```axml
-<tips-plain onClose="onClose" time="{{time}}">我知道了</tips-plain>
+```html
+<tips-plain onClose="onClose" time="{{time}}">{{content}}</tips-plain>
+```
+
+```javascript
+Page({
+  data: {
+    content: '我知道了',
+    time: 2000,
+  },
+  onClose() {
+    my.alert({
+      title: '12321'
+    });
+  }
+});
 ```

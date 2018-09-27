@@ -23,7 +23,7 @@
 {
   "defaultTitle": "小程序AntUI组件库",
   "usingComponents": {
-    "message": "mini-antui/es/message/index",
+    "message": "mini-antui/es/message/index"
   }
 }
 ```
