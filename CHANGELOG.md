@@ -1,14 +1,29 @@
+## 0.3.8
+
+`2018-09-26`
+
+- **Bug Fix**
+  - 修复`filter`组件单选时需要反选取消选择的问题
+
+- **Feature**
+  - 新增`picker-item`组件
+
+- **Enhancement**
+  - `tabs`新增`activeCls`属性，用来表示激活tabbar的自定义class([#87](https://github.com/ant-mini-program/mini-antui/issues/87))
+  - `input-item`新增`clear`、`onClear`属性，组件内支持清除输入功能([#84](https://github.com/ant-mini-program/mini-antui/issues/84))
+  - `list-item` onClick回调新增target参数，用来支持自定义dataset([#85](https://github.com/ant-mini-program/mini-antui/issues/85))
+
 ## 0.3.7
 
 `2018-09-25`
 
 - **Bug Fix**
-  - 修复了input-item组件在失去焦点等事件中无dataset的问题([#66](https://github.com/ant-mini-program/mini-antui/issues/66))
-  - 修复popup组件mask定位为absolut导致的页面滚动时mask跟着滚动的bug
+  - 修复了`input-item`组件在失去焦点等事件中无dataset的问题([#66](https://github.com/ant-mini-program/mini-antui/issues/66))
+  - 修复`popup`组件mask定位为absolut导致的页面滚动时mask跟着滚动的bug
 
 - **Enhancement**
-  - popup新增disableScroll属性以适应不同业务场景
-  - 完善swipe-action的示例代码
+  - `popup`新增disableScroll属性以适应不同业务场景
+  - 完善`swipe-action`的示例代码
   - 文档更新，添加体验二维码
 
 ## 0.3.6
