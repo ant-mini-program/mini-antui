@@ -20,7 +20,7 @@
 {
   "defaultTitle": "异常反馈",
   "usingComponents": {
-    "page-result": "mini-antui/es/page-result/index",
+    "page-result": "mini-antui/es/page-result/index"
   }
 }
 ```

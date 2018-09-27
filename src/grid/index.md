@@ -27,24 +27,64 @@
 ```
 
 ```html
-<grid onGridItemClick="onItemClick" columnNum="{{5}}" list="{{list5}}" />
+<grid onGridItemClick="onItemClick" columnNum="{{3}}" list="{{list3}}" />
 ```
 
 ```javascript
 Page({
   data: {
-    list5: [
+    list3: [
       {
-        "icon": "https://gw.alipayobjects.com/zos/rmsportal/VBqNBOiGYkCjqocXjdUj.png",
-        "text": "标题文字"
+        icon: 'https://gw.alipayobjects.com/zos/rmsportal/VBqNBOiGYkCjqocXjdUj.png',
+        text: '标题文字',
+        desc: '描述信息',
       },
-      ...
+      {
+        icon: 'https://gw.alipayobjects.com/zos/rmsportal/VBqNBOiGYkCjqocXjdUj.png',
+        text: '标题文字',
+        desc: '描述信息',
+      },
+      {
+        icon: 'https://gw.alipayobjects.com/zos/rmsportal/VBqNBOiGYkCjqocXjdUj.png',
+        text: '标题文字',
+        desc: '描述信息',
+      },
+      {
+        icon: 'https://gw.alipayobjects.com/zos/rmsportal/VBqNBOiGYkCjqocXjdUj.png',
+        text: '标题文字',
+        desc: '描述信息',
+      },
+      {
+        icon: 'https://gw.alipayobjects.com/zos/rmsportal/VBqNBOiGYkCjqocXjdUj.png',
+        text: '标题文字',
+        desc: '描述信息',
+      },
+      {
+        icon: 'https://gw.alipayobjects.com/zos/rmsportal/VBqNBOiGYkCjqocXjdUj.png',
+        text: '标题文字',
+        desc: '描述信息',
+      },
+      {
+        icon: 'https://gw.alipayobjects.com/zos/rmsportal/VBqNBOiGYkCjqocXjdUj.png',
+        text: '标题文字',
+        desc: '描述信息',
+      },
+      {
+        icon: 'https://gw.alipayobjects.com/zos/rmsportal/VBqNBOiGYkCjqocXjdUj.png',
+        text: '标题文字',
+        desc: '描述信息',
+      },
+      {
+        icon: 'https://gw.alipayobjects.com/zos/rmsportal/VBqNBOiGYkCjqocXjdUj.png',
+        text: '标题文字',
+        desc: '描述信息',
+      },
     ],
   },
-  onItemClick: function(ev) {
+  onItemClick(ev) {
     my.alert({
       content: ev.detail.index,
     });
-  }
-}
+  },
+});
 ```

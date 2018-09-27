@@ -18,7 +18,7 @@
 {
   "defaultTitle": "小程序AntUI组件库",
   "usingComponents":{
-    "footer": "mini-antui/es/footer/index",
+    "footer": "mini-antui/es/footer/index"
   }
 }
 ```
