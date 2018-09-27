@@ -21,6 +21,9 @@ Component({
     onBlur: () => {},
     onClear: () => {},
   },
+  data: {
+    _focus: false,
+  },
   didMount() {
     this.dataset = {};
     for (const key in this.props) {
@@ -37,6 +40,9 @@ Component({
       });
     },
     onBlur(e) {
+      this.setData({
+        _focus: false,
+      });
       const event = this.fmtEvent(e);
       this.props.onBlur(event);
     },
@@ -45,6 +51,9 @@ Component({
       this.props.onConfirm(event);
     },
     onFocus(e) {
+      this.setData({
+        _focus: true,
+      });
       const event = this.fmtEvent(e);
       this.props.onFocus(event);
     },
