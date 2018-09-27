@@ -23,7 +23,7 @@
       onFocus="onFocus"
       onBlur="onBlur"
     />
-    <view a:if="{{clear && value.length > 0 && disabled === false}}" class="am-input-clear" onTap="onClear">
+    <view a:if="{{clear && value.length > 0 && !disabled && _focus}}" class="am-input-clear" onTap="onClear">
       <icon size="18" type="clear" />
     </view>
     <slot name="extra" />
