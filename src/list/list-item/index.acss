@@ -80,11 +80,14 @@
   visibility: hidden;
 }
 
-.am-list-line-bottom {
+.am-list-line-bottom::after {
+  content: '';
   display: block;
   position: absolute;
   width: 100%;
-  border-bottom: 1rpx solid #eee;
+  height: 1px;
+  background: #eee;
+  transform: scaleY(0.5);
   left: 0;
   bottom: 0;
   right: auto;
