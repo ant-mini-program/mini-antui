@@ -41,15 +41,18 @@
   display: flex;
 }
 
-.am-picker-line-bottom {
+.am-picker-line-bottom::after {
+  content: '';
   display: block;
   position: absolute;
   width: 100%;
-  border-bottom: 1rpx solid #eee;
+  height: 1px;
+  transform: scaleY(0.5);
   left: 0;
   bottom: 0;
   right: auto;
   top: auto;
+  background-color: #eee;
 }
 
 /* 最后一行 */
