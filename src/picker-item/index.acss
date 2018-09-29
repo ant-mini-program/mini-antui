@@ -56,8 +56,8 @@
 }
 
 /* 最后一行 */
-.am-picker-item.last .am-picker-line-bottom{
-  border-bottom: none;
+.am-picker-item.last .am-picker-line-bottom::after {
+  display: none;
 }
 
 .am-picker-text {

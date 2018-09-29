@@ -56,6 +56,6 @@
 }
 
 /* 最后一行 */
-.am-input-item.last .am-input-line-bottom{
-  border-bottom: none;
+.am-input-item.last .am-input-line-bottom::after {
+  display: none;
 }
