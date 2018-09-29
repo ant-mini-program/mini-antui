@@ -118,6 +118,6 @@
 }
 
 /* 最后一行 */
-.am-list-item.last .am-list-line-bottom{
-  border-bottom: none;
+.am-list-item.last .am-list-line-bottom::after {
+  display: none;
 }
