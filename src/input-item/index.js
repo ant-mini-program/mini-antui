@@ -15,6 +15,7 @@ Component({
     maxlength: 140,
     focus: false,
     clear: false, // 是否带清除功能
+    syncInput: true,
     onInput: () => {},
     onConfirm: () => {},
     onFocus: () => {},
