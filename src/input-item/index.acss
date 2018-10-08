@@ -39,6 +39,19 @@
 
 .am-input-clear {
   display: flex;
+  height: 33px;
+  width: 33px;
+  justify-content: center;
+  align-items: center;
+}
+
+.am-input-clear.show {
+  visibility: visible;
+}
+
+.am-input-clear.hidden {
+  visibility: hidden;
+  pointer-events: none;
 }
 
 .am-input-line-bottom::after {
