@@ -63,8 +63,10 @@ Component({
       this.props.onInput(event);
     },
     onClear(e) {
-      const event = this.fmtEvent(e);
-      this.props.onClear(event);
+      if (this.props.clear) {
+        const event = this.fmtEvent(e);
+        this.props.onClear(event);
+      }
     },
   },
 });
