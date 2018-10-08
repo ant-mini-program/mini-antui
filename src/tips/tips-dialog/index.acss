@@ -34,6 +34,8 @@
 .am-tips-dialog-icon {
   height: 35px;
   width: 35px;
+  background-color: #fff;
+  border-radius: 2px;
   margin-right: 9px;
 }
 
