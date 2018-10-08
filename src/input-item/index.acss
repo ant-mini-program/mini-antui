@@ -51,6 +51,7 @@
 
 .am-input-clear.hidden {
   visibility: hidden;
+  pointer-events: none;
 }
 
 .am-input-line-bottom::after {
