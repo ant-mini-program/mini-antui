@@ -1,0 +1,10 @@
+<view class="am-checkbox">
+  <checkbox
+    class="am-checkbox-value"
+    value="{{value}}"
+    checked="{{checked}}"
+    disabled="{{disabled}}"
+    onChange="onChange"
+    />
+  <view class="am-checkbox-synthetic"></view>
+</view>

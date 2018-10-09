@@ -13,6 +13,10 @@
   background-color: #f8f8f8;
 }
 
+.am-list-prefix {
+  margin-right: 16px;
+}
+
 .am-list-thumb {
   width: 30px;
   height: 30px;

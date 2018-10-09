@@ -7,6 +7,7 @@
     "input-item/demo/index",
     "card/demo/index",
     "calendar/demo/index",
+    "check-box/demo/index",
     "face-detection/demo/index",
     "footer/demo/index",
     "modal/demo/index",
