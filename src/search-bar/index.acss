@@ -4,6 +4,7 @@
   align-items: center;
   padding: 0 0 0 12px;
   background: #ffffff;
+  overflow: hidden;
 }
 
 .am-search-input {
