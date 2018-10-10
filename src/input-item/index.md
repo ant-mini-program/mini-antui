@@ -70,7 +70,7 @@
       data-field="bank"
       placeholder="选择发卡银行"
       value="{{bank}}"
-      onSelect="onSelect"
+      onPickerTap="onPickerTap"
     >
       发卡银行
     </picker-item>
@@ -141,7 +141,7 @@ Page({
       [e.target.dataset.field]: '',
     });
   },
-  onSelect() {
+  onPickerTap() {
     my.showActionSheet({
       title: '选择发卡银行',
       items: banks,
