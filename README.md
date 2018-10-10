@@ -4,6 +4,11 @@
 
 # mini-antui
 
+## 链接
+- [mini-antui官网文档](https://docs.alipay.com/mini/component-ext/overview)
+- [支付宝小程序](https://mini.open.alipay.com/channel/miniIndex.htm)
+- [开发工具](https://docs.alipay.com/mini/ide/overview)
+
 ## 特性
 
 - 基于`Advance Design`设计规范
@@ -41,11 +46,6 @@ $ npm install mini-antui --save
   info="点击了第二个card"
 />
 ```
-
-## 链接
-
-- [支付宝小程序](https://mini.open.alipay.com/channel/miniIndex.htm)
-- [开发工具](https://docs.alipay.com/mini/ide/overview)
 
 ## 贡献
 
