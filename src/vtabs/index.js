@@ -15,7 +15,7 @@ Component({
     tabBarInactiveBgColor: '#f8f8f8',
     tabBarlineColor: '#108ee9',
     onTabClick: () => {},
-    onScrollBar: () => {}
+    onScrollBar: () => {},
   },
   didMount() {
     const { tabs } = this.props;
@@ -57,7 +57,7 @@ Component({
       const { anchor, index } = e.target.dataset;
 
       if (!this.isScrolling || !this.props.swipeable) {
-        if(this.data.current !== index) {
+        if (this.data.current !== index) {
           this.props.onTabClick(index);
         }
         this.setData({
@@ -76,7 +76,7 @@ Component({
         tabTop = (current - 5) * 55;
       }
       if (this.data.current !== current) {
-        this.props.onScrollBar(current)
+        this.props.onScrollBar(current);
       }
       this.setData({
         tabTop,
