@@ -1,3 +1,15 @@
+## 0.3.11
+
+`2018-10-10`
+
+- **Bug Fix**
+  - 修复`search-bar`在IPhone X下面出现滚动的问题([#113](https://github.com/ant-mini-program/mini-antui/issues/113))
+  - 修复`stepper`在重置初始值时操作按钮状态不改变的bug([#111](https://github.com/ant-mini-program/mini-antui/issues/111))
+
+- **Enhancement**
+  - `page-result`图标升级到最新版本
+  - `input-item`增大清除icon点击响应范围
+
 ## 0.3.10
 
 `2018-10-08`
