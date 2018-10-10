@@ -20,28 +20,31 @@ Component({
       value: Math.min(Math.max(min, value), max),
     });
   },
-  didUpdate(preProps, preData) {
+  didUpdate(preProps) {
     const { value, min, max } = this.props;
-    if (preProps.value !== this.props.value) {
+    if (preProps.value !== value) {
+      const newValue = Math.min(Math.max(min, value), max);
       this.setData({
-        value: Math.min(Math.max(min, value), max),
+        value: newValue,
       });
+      this.resetFn(newValue);
     }
   },
   methods: {
     changeFn(ev) {
       const { min, max, onChange, disabled, readOnly, step } = this.props;
       const evType = ev.target.dataset.type;
-      let { opaReduce, opaAdd, value } =this.data;
-      let enable = disabled ? disabled : readOnly;
+      let { opaReduce, opaAdd, value } = this.data;
+      const enable = disabled || readOnly;
       if (!enable) {
-        if (evType === "reduce") {
+        if (evType === 'reduce') {
           if (value > min) {
             opaAdd = 1;
             value = Math.max(min, value - step);
             opaReduce = value === min ? 0.4 : 1;
           }
         } else {
+          /* eslint-disable no-lonely-if */
           if (value < max) {
             opaReduce = 1;
             value = Math.min(value + step, max);
@@ -56,16 +59,19 @@ Component({
         onChange(value);
       }
     },
-    resetFn(ev) {
+    onBlur(event) {
+      const { value } = event.detail;
+      this.resetFn(value);
+    },
+    resetFn(value) {
       const { max, min, onChange } = this.props;
-      const value = ev.detail.value;
       let calculatedVal = value;
       let opaAdd = 1;
       let opaReduce = 1;
-      if (value > max) {
+      if (value >= max) {
         calculatedVal = max;
         opaAdd = 0.4;
-      } else if (value < min) {
+      } else if (value <= min) {
         calculatedVal = min;
         opaReduce = 0.4;
       }
@@ -76,5 +82,5 @@ Component({
       });
       onChange(calculatedVal);
     },
-  }
-})
+  },
+});
