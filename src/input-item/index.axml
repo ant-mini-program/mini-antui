@@ -6,6 +6,7 @@
       <slot />
     </view>
     <input
+      enableNative="{{enableNative}}"
       sync-input="{{syncInput}}"
       class="am-input-content {{inputCls}}"
       value="{{value}}"

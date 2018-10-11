@@ -16,6 +16,7 @@ Component({
     focus: false,
     clear: false, // 是否带清除功能
     syncInput: false,
+    enableNative: true, // 兼容安卓input的输入bug
     onInput: () => {},
     onConfirm: () => {},
     onFocus: () => {},
