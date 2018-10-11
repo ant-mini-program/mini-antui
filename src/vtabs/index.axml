@@ -20,7 +20,12 @@
           backgroundColor: current == index ? tabBarActiveBgColor : tabBarInactiveBgColor
         }}"
         >
-        {{item.title}}
+        <view class="am-vtabs-bar-title">
+          {{item.title}}
+          <view class="am-vtabs-bar-badge {{item.badgeType}}">
+            {{item.badgeType === 'text' && item.badgeText ? item.badgeText.substr(0, 1) : ''}}
+          </view>
+        </view>
        </view>
       </block>
     </scroll-view>

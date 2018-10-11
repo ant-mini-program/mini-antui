@@ -10,7 +10,7 @@
 
 | 属性名 | 描述 | 类型 | 默认值 | 必选 |
 |----|----|----|----|----|
-| tabs | tab数据，其中包括选项标题`title`，列表唯一锚点值 | Array<title, anchor> |  | true |
+| tabs | tab数据，其中包括选项标题`title`，列表唯一锚点值，以及徽标类型`badgeType`，分为圆点`dot`和文本`text`，徽标文本`badgeText`在`badgeType`为`text`时生效 | Array<title, anchor> |  | true |
 | animated | 是否开启动画 | boolean| | false |
 | swipeable | 是否可滑动切换 | boolean| | true |
 | tabBarActiveBgColor | tabBar激活状态背景色	| string | | false |
@@ -58,11 +58,12 @@
 Page({
   data: {
     tabs: [
-      { title: '选项一', anchor: 'a' },
-      { title: '选项二', anchor: 'b' },
+      { title: '选项二', anchor: 'a', badgeType: 'dot' },
+      { title: '选项', anchor: 'b', badgeType: 'text', badgeText: '6' },
       { title: '不超过五字', anchor: 'c' },
       { title: '选项四', anchor: 'd' },
       { title: '选项五', anchor: 'e' },
+      { title: '选项六', anchor: 'f' },
     ],
   },
 });
