@@ -3,7 +3,7 @@
 		<view a:for="{{list}}" key="{{item.content}}">
 			<swipe-action
 				index="{{index}}"
-				restore="{{swipeIndex !== null && swipeIndex !== index}}"
+				restore="{{swipeIndex == null || swipeIndex !== index}}"
 				right="{{item.right}}"
 				onRightItemClick="onRightItemClick"
 				onSwipeStart="onSwipeStart"
