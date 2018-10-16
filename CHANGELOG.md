@@ -1,3 +1,10 @@
+## 0.3.12
+
+`2018-10-12`
+
+- **Enhancement**
+  - `vtabs`新增`badgeType`和`badgeText`属性([#92](https://github.com/ant-mini-program/mini-antui/issues/92))
+
 ## 0.3.11
 
 `2018-10-10`
