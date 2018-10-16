@@ -17,7 +17,8 @@ Component({
   didUpdate(_prevProps, prevData) {
     const { restore } = this.props;
     const { holdSwipe } = this.data;
-    if (restore === true || (prevData.holdSwipe === true && holdSwipe === false)) {
+    if ((restore === true && _prevProps.restore !== restore) ||
+      (prevData.holdSwipe === true && holdSwipe === false)) {
       this.setData({
         leftPos: 0,
         swiping: false,
@@ -32,7 +33,7 @@ Component({
         .select(`.am-swipe-right-${this.$id}`)
         .boundingClientRect()
         .exec((ret) => {
-          this.btnWidth = ret[0].width;
+          this.btnWidth = (ret && ret[0] && ret[0].width) || 60;
         });
     },
     onSwipeTap() {
