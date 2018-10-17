@@ -33,7 +33,7 @@ Component({
         .select(`.am-swipe-right-${this.$id}`)
         .boundingClientRect()
         .exec((ret) => {
-          this.btnWidth = (ret && ret[0] && ret[0].width) || 60;
+          this.btnWidth = (ret && ret[0] && ret[0].width) || 0;
         });
     },
     onSwipeTap() {
