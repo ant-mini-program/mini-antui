@@ -18,33 +18,11 @@ Component({
     onScrollBar: () => {},
   },
   didMount() {
-    const { tabs } = this.props;
     this.isScrolling = false;
-    this.anchorMap = {};
-    this.timerId = null;
-    this.wrapHeight = 0;
-    this.scrollWrapHeight = 0;
-
-    my.createSelectorQuery()
-      .select('.am-vtabs-slides')
-      .boundingClientRect()
-      .exec((ret) => {
-        this.wrapHeight = ret[0].height;
-      });
-
-    let cacheHeight = 0;
-    for (let i = 0; i < tabs.length; i++) {
-      const { anchor } = tabs[i];
-      /* eslint-disable no-loop-func */
-      my.createSelectorQuery()
-        .select(`#am-vtab-slide-${anchor}`)
-        .boundingClientRect()
-        .exec((ret) => {
-          this.anchorMap[anchor] = cacheHeight;
-          cacheHeight += ret[0].height;
-          this.scrollWrapHeight = cacheHeight;
-        });
-    }
+    this.calcHeight();
+  },
+  didUpdate() {
+    this.calcHeight();
   },
   didUnmount() {
     if (this.timerId) {
@@ -53,6 +31,34 @@ Component({
     }
   },
   methods: {
+    calcHeight() {
+      const { tabs } = this.props;
+      this.anchorMap = {};
+      this.timerId = null;
+      this.wrapHeight = 0;
+      this.scrollWrapHeight = 0;
+
+      my.createSelectorQuery()
+        .select('.am-vtabs-slides')
+        .boundingClientRect()
+        .exec((ret) => {
+          this.wrapHeight = ret[0].height;
+        });
+
+      let cacheHeight = 0;
+      for (let i = 0; i < tabs.length; i++) {
+        const { anchor } = tabs[i];
+        /* eslint-disable no-loop-func */
+        my.createSelectorQuery()
+          .select(`#am-vtab-slide-${anchor}`)
+          .boundingClientRect()
+          .exec((ret) => {
+            this.anchorMap[anchor] = cacheHeight;
+            cacheHeight += ret[0].height;
+            this.scrollWrapHeight = cacheHeight;
+          });
+      }
+    },
     handleTabClick(e) {
       const { anchor, index } = e.target.dataset;
 
@@ -89,6 +95,7 @@ Component({
 
       if (this.timerId) {
         clearTimeout(this.timerId);
+        this.timerId = null;
       }
 
       this.timerId = setTimeout(() => {
