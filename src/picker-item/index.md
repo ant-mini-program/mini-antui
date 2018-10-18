@@ -25,6 +25,8 @@
 {
   "defaultTitle": "小程序AntUI组件库",
   "usingComponents": {
+    "list": "mini-antui/es/list/index",
+    "list-item": "mini-antui/es/list/list-item/index",
     "picker-item": "mini-antui/es/picker-item/index",
   }
 }
