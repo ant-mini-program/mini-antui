@@ -19,5 +19,5 @@ Page({
     });
   },
   onReset() {},
-  onChange() {},
+  onChange(e) { console.log(e); },
 });

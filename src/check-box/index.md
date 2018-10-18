@@ -1,3 +1,28 @@
+# CheckBox 复选框
+
+复选框。
+
+| 属性名 | 描述 | 类型 | 默认值 | 必选 |
+|----|----|----|----|----|
+| value | 组件值，选中时 change 事件会携带的 value | String |  | false |
+| checked | 当前是否选中，可用来设置默认选中 | Boolean | false | false |
+| disabled | 是否禁用 | Boolean | false | false |
+| onChange | 组件发生改变时触发，detail = {value: 该 checkbox 是否 checked} | EventHandle |  | false |
+
+## 示例
+
+```json
+{
+  "defaultTitle": "小程序AntUI组件库",
+  "usingComponents": {
+    "list": "mini-antui/es/list/index",
+    "list-item": "mini-antui/es/list/list-item/index",
+    "checkbox": "mini-antui/es/check-box/index"
+  }
+}
+```
+
+```html
 <list>
   <view slot="header">
     列表+复选框
@@ -48,3 +73,30 @@
     </view>
   </form>
 </view>
+```
+
+```javascript
+Page({
+  data: {
+    items: [
+      { checked: true, disabled: false, value: 'a', title: '复选框-默认选中' },
+      { checked: false, disabled: false, value: 'b', title: '复选框-默认未选中' },
+      { checked: true, disabled: true, value: 'c', title: '复选框-默认选中disabled' },
+      { checked: false, disabled: true, value: 'd', title: '复选框-默认未选中disabled' },
+    ],
+    items2: [
+      { name: 'react', value: 'React', checked: true },
+      { name: 'vue', value: 'Vue.js' },
+      { name: 'ember', value: 'Ember.js' },
+      { name: 'backbone', value: 'Backbone.js', disabled: true },
+    ],
+  },
+  onSubmit(e) {
+    my.alert({
+      content: `你选择的框架是 ${e.detail.value.libs.join(', ')}`,
+    });
+  },
+  onReset() {},
+  onChange(e) { console.log(e); },
+});
+```
