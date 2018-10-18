@@ -19,6 +19,7 @@ Component({
   },
   didMount() {
     this.isScrolling = false;
+    this.timerId = null;
     this.calcHeight();
   },
   didUpdate() {
@@ -34,7 +35,6 @@ Component({
     calcHeight() {
       const { tabs } = this.props;
       this.anchorMap = {};
-      this.timerId = null;
       this.wrapHeight = 0;
       this.scrollWrapHeight = 0;
 
