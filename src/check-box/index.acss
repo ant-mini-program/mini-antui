@@ -48,7 +48,7 @@
   position: absolute;
   display: block;
   z-index: 999;
-  content: "\0020";
+  content: '';
   top: 4px;
   right: 8px;
   width: 5px;
