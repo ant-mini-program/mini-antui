@@ -27,6 +27,14 @@ Component({
       autoplay: true,
     });
   },
+  didUpdate(prevProps) {
+    const { tabs } = this.props;
+    if (prevProps.tabs.length !== tabs.length) {
+      this.setData({
+        tabWidth: tabs.length > 3 ? 0.25 : 1 / tabs.length,
+      });
+    }
+  },
   methods: {
     handleSwiperChange(e) {
       const { current } = e.detail;
