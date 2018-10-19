@@ -8,6 +8,7 @@
 				onRightItemClick="onRightItemClick"
 				onSwipeStart="onSwipeStart"
 				extra="item{{index}}"
+				enableNew="{{true}}"
 			>
 				<list-item
 					arrow="horizontal"

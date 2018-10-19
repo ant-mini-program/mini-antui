@@ -1,31 +1,55 @@
+const windowWidth = my.getSystemInfoSync().windowWidth;
+const isV2 = +(my.SDKVersion.split('.').join('')) > 1112;
+
 Component({
   data: {
     leftPos: 0,
     swiping: false,
     holdSwipe: true,
+    viewWidth: windowWidth,
+    x: 0,
+    actionWidth: 0,
+    transitionVal: 'none',
   },
   props: {
     className: '',
     right: [],
     restore: false,
     index: null,
+    height: 52,
+    enableNew: false,
   },
   didMount() {
+    const { enableNew } = this.props;
+    const useV2 = isV2 && enableNew;
     this.btnWidth = 0;
+    this.setData({
+      useV2,
+    });
     this.setBtnWidth();
+    if (useV2) {
+      setTimeout(() => {
+        this.setData({
+          transitionVal: 'transform 100ms',
+        });
+      }, 500);
+    }
   },
   didUpdate(_prevProps, prevData) {
     const { restore } = this.props;
-    const { holdSwipe } = this.data;
+    const { holdSwipe, useV2 } = this.data;
     if ((restore === true && _prevProps.restore !== restore) ||
       (prevData.holdSwipe === true && holdSwipe === false)) {
       this.setData({
         leftPos: 0,
         swiping: false,
+        x: this.btnWidth, // V2
       });
     }
 
-    this.setBtnWidth();
+    if (!useV2) {
+      this.setBtnWidth();
+    }
   },
   methods: {
     setBtnWidth() {
@@ -34,6 +58,12 @@ Component({
         .boundingClientRect()
         .exec((ret) => {
           this.btnWidth = (ret && ret[0] && ret[0].width) || 0;
+          if (isV2 && this.props.enableNew) {
+            this.setData({
+              actionWidth: this.btnWidth,
+              x: this.btnWidth,
+            });
+          }
         });
     },
     onSwipeTap() {
@@ -41,6 +71,7 @@ Component({
         this.setData({
           leftPos: 0,
           swiping: false,
+          x: 0,
         });
       }
     },
@@ -130,12 +161,31 @@ Component({
         });
       }
     },
-    done() {
+    onChange() {
+      if (!this.data.swiping) {
+        this.setData({
+          swiping: true,
+        });
+      }
+    },
+    onChangeEnd(e) {
+      const { actionWidth } = this.data;
+      const { x } = e.detail;
       this.setData({
-        holdSwipe: false,
+        x: x < actionWidth / 2 ? -1 : actionWidth - 1,
+        swiping: false,
       }, () => {
         this.setData({
-          holdSwipe: true,
+          x: this.data.x === -1 ? 0 : actionWidth,
+        });
+      });
+    },
+    done() {
+      this.setData({
+        holdSwipe: true,
+      }, () => {
+        this.setData({
+          holdSwipe: false,
         });
       });
     },
@@ -157,6 +207,7 @@ Component({
           this.setData({
             leftPos: 0,
             swiping: false,
+            x: 0,
           });
         }, 300);
       }
