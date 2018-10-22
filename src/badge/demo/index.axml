@@ -14,7 +14,7 @@
           <text style="margin-left: {{ item.isWrap ? '12px' : '0' }}">{{item.intro}}</text>
         </view>
         <view slot="extra">
-          <badge a:if="{{!item.isWrap}}" text="{{item.text}}" dot="{{item.dot}}" overflowCount="{{item.overflowCount}}"> 
+          <badge a:if="{{!item.isWrap}}" text="{{item.text}}" dot="{{item.dot}}" overflowCount="{{item.overflowCount}}" /> 
         </view>
       </list-item>
     </block>

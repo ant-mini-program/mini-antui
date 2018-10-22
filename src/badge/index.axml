@@ -5,6 +5,6 @@
     a:if="{{!dot}}">
     <text>{{typeof text === 'number' && text > overflowCount ? overflowCount + '+' : text }}</text>
   </view>
-  <view class="am-badge-text is-dot" a:else></view>
+  <view class="am-badge-text is-dot" a:if="{{dot}}"></view>
   <slot name="extra" />
 </view>
