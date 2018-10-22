@@ -5,6 +5,7 @@
     checked="{{checked}}"
     disabled="{{disabled}}"
     onChange="onChange"
+    id="{{id}}"
     />
   <view class="am-checkbox-synthetic"></view>
 </view>

@@ -6,6 +6,7 @@ Component({
     checked: false,
     disabled: false,
     onChange: () => {},
+    id: '',
   },
   methods: {
     onChange(e) {

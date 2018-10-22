@@ -3,20 +3,18 @@
     列表+复选框
   </view>
   <block a:for="{{items}}">
-    <label style="width: 100%">
-      <list-item
-        thumb=""
-        arrow="{{false}}"
-        index="{{index}}"
-        key="items-{{index}}"
-        last="{{index === (items.length - 1)}}"
-      >
-        <view slot="prefix" style="display: flex; align-items: center;">
-          <check-box data-name="{{item.value}}" disabled="{{item.disabled}}" checked="{{item.checked}}" onChange="onChange" />
-        </view>
-        {{item.title}}
-      </list-item>
-    </label>
+    <list-item
+      thumb=""
+      arrow="{{false}}"
+      index="{{index}}"
+      key="items-{{index}}"
+      last="{{index === (items.length - 1)}}"
+    >
+      <view slot="prefix" style="display: flex; align-items: center;">
+        <check-box id="{{item.id}}" data-name="{{item.value}}" disabled="{{item.disabled}}" checked="{{item.checked}}" onChange="onChange" />
+      </view>
+      <label for="{{item.id}}">{{item.title}}</label>
+    </list-item>
   </block>
 </list>
 <view style="padding: 16px;">
