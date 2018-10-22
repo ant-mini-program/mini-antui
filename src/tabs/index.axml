@@ -21,10 +21,12 @@
               }}"
               class="am-tabs-bar-tab">
               <view class="am-tabs-bar-title" style="{{ borderBottomColor: index === current ? tabBarUnderlineColor : '' }}">
-                {{item.title}}
-                <view a:if="{{item.badgeType}}" class="am-tabs-bar-badge {{item.badgeType}}">
-                  {{item.badgeType === 'text' && item.badgeText ? item.badgeText.substr(0, 1) : ''}}
-                </view>
+                <text>{{item.title}}</text>
+                <badge
+                  className="am-tabs-bar-badge {{item.badgeType ? item.badgeType : ''}}"
+                  a:if="{{item.badgeType}}"
+                  dot="{{item.badgeType == 'dot'}}"
+                  text="{{item.badgeText}}" />
               </view>
             </view>
           </block>

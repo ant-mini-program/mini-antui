@@ -11,6 +11,11 @@ Page({
       path: '/amount-input/demo/index',
     },
     {
+      name: 'Badge',
+      nameZN: '徽标',
+      path: '/badge/demo/index',
+    },
+    {
       name: 'FaceDetection',
       nameZN: '人脸检测',
       path: '/face-detection/demo/index',
