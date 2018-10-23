@@ -21,10 +21,12 @@
         }}"
         >
         <view class="am-vtabs-bar-title">
-          {{item.title}}
-          <view class="am-vtabs-bar-badge {{item.badgeType}}">
-            {{item.badgeType === 'text' && item.badgeText ? item.badgeText.substr(0, 1) : ''}}
-          </view>
+          <text>{{item.title}}</text>
+          <badge
+            className="am-vtabs-bar-badge {{item.badgeType ? item.badgeType : ''}}"
+            a:if="{{item.badgeType}}"
+            dot="{{item.badgeType == 'dot'}}"
+            text="{{item.badgeText}}" />
         </view>
        </view>
       </block>
