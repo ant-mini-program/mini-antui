@@ -1,3 +1,5 @@
+import fmtEvent from '../_util/fmtEvent';
+
 Component({
   props: {
     className: '',
@@ -26,45 +28,31 @@ Component({
   data: {
     _focus: false,
   },
-  didMount() {
-    this.dataset = {};
-    for (const key in this.props) {
-      if ((/data-/gi).test(key)) {
-        this.dataset[key.replace(/data-/gi, '')] = this.props[key];
-      }
-    }
-  },
   methods: {
-    fmtEvent(e) {
-      return Object.assign({}, e, {
-        currentTarget: { dataset: this.dataset },
-        target: { dataset: this.dataset, targetDataset: this.dataset },
-      });
-    },
     onBlur(e) {
       this.setData({
         _focus: false,
       });
-      const event = this.fmtEvent(e);
+      const event = fmtEvent(this.props, e);
       this.props.onBlur(event);
     },
     onConfirm(e) {
-      const event = this.fmtEvent(e);
+      const event = fmtEvent(this.props, e);
       this.props.onConfirm(event);
     },
     onFocus(e) {
       this.setData({
         _focus: true,
       });
-      const event = this.fmtEvent(e);
+      const event = fmtEvent(this.props, e);
       this.props.onFocus(event);
     },
     onInput(e) {
-      const event = this.fmtEvent(e);
+      const event = fmtEvent(this.props, e);
       this.props.onInput(event);
     },
     onClear(e) {
-      const event = this.fmtEvent(e);
+      const event = fmtEvent(this.props, e);
       this.props.onClear(event);
     },
   },

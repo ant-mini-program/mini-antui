@@ -2,15 +2,16 @@ import fmtEvent from '../_util/fmtEvent';
 
 Component({
   props: {
-    className: '',
     value: '',
-    placeholder: '',
-    onSelect: () => {},
+    checked: false,
+    disabled: false,
+    onChange: () => {},
+    id: '',
   },
   methods: {
-    onPickerTap(e) {
+    onChange(e) {
       const event = fmtEvent(this.props, e);
-      this.props.onPickerTap(event);
+      this.props.onChange(event);
     },
   },
 });
