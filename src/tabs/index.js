@@ -11,6 +11,7 @@ Component({
     showPlus: false,
     swipeable: true,
     activeTab: 0, // 当前激活tab
+    animation: true,
   },
   data: {
     windowWidth,
@@ -20,10 +21,10 @@ Component({
     version: my.SDKVersion,
   },
   didMount() {
-    const { tabs } = this.props;
+    const { tabs, animation } = this.props;
     this.setData({
       tabWidth: tabs.length > 3 ? 0.25 : 1 / tabs.length,
-      animation: true,
+      animation,
       autoplay: true,
     });
   },
