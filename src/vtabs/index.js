@@ -111,7 +111,7 @@ Component({
             break;
           }
         }
-        if (scrollTop >= this.anchorMap[keys[i]] && scrollTop < this.anchorMap[keys[i + 1]]) {
+        if (scrollTop >= Math.floor(this.anchorMap[keys[i]]) && scrollTop < Math.floor(this.anchorMap[keys[i + 1]])) {
           // 如果没个vtab-content高度小于scroll-view高度，到达底部后就不需要根据scrollTop再去判断左侧的选择项
           if (scrollTop + this.wrapHeight < this.scrollWrapHeight) {
             this.moveScrollBar(i);
