@@ -23,6 +23,7 @@
               {{ item.isStart ? 'am-calendar-start': '' }}
               {{ item.isMiddle ? 'am-calendar-middle': '' }}
               {{ item.isEnd ? 'am-calendar-end': '' }}
+              {{ item.disable ? 'am-calendar-disable': '' }}
               {{ type === 'range' ? 'is-range' : '' }}"
             data-year="{{item.year}}"
             data-month="{{item.month}}"
@@ -36,8 +37,8 @@
               class="am-calendar-date {{ item.isGray ? 'am-calendar-gray': '' }} {{ item.isToday ? 'am-calendar-today': ''}}"
             >{{item.date}}</view>
             <view class="am-calendar-tag" style="{{
-              color: item.isSelected || item.isMiddle || item.isStart || item.isEnd ? '#fff' : item.color
-            }}">{{item.tag}}</view>
+              color: item.isSelected || item.isMiddle || item.isStart || item.isEnd ? '#fff' : (item.disable ? '#999' : item.color)
+            }}">{{item.disable ? 'disable' : item.tag}}</view>
           </view>
         </block>
       </view>
