@@ -5,6 +5,7 @@
     "amount-input/demo/index",
     "picker-item/demo/index",
     "input-item/demo/index",
+    "badge/demo/index",
     "card/demo/index",
     "calendar/demo/index",
     "am-checkbox/demo/index",
