@@ -3,5 +3,6 @@
     type="range"
     tagData="{{tagData}}"
     onSelect="handleSelect"
-    onMonthChange="onMonthChange" />
+    onMonthChange="onMonthChange"
+    onSelectHasDisableDate="onSelectHasDisableDate" />
 </view>

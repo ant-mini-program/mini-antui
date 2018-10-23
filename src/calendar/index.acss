@@ -182,3 +182,7 @@
 .am-calendar-end .am-calendar-tag {
   color: #fff;
 }
+
+.am-calendar-disable .am-calendar-date {
+  color: #999;
+}

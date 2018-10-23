@@ -50,7 +50,7 @@ Component({
     type: 'single',
   },
   didMount() {
-    this.tapTimes = 0;
+    this.tapTimes = 1;
     const date = new Date();
     date.setHours(0);
     date.setMinutes(0);
@@ -130,7 +130,7 @@ Component({
       this.refreshdates(month, year);
     },
     refreshdates(month, year) {
-      this.tapTimes = 0;
+      this.tapTimes = 1;
       const { selectedYear, selectedMonth, currentDate } = this.data;
       const firstDay = getDay(month, year, 1);
       const days = getMonthLength(month, year);
@@ -246,6 +246,7 @@ Component({
             dateObj.date === date.getDate()) {
           dateObj.tag = item.tag;
           dateObj.color = COLOR_MAP[item.tagColor];
+          dateObj.disable = item.disable;
           return true;
         } else {
           dateObj.tag = '';
@@ -267,9 +268,8 @@ Component({
       const { type } = this.props;
 
       if (type === 'range') {
-        this.tapTimes += 1;
-
         if (this.tapTimes % 2 === 0) {
+          this.tapTimes += 1;
           this.endDate = { year, month, date };
           const dateGap = this.getDateGap(this.startDate, this.endDate);
 
@@ -277,6 +277,7 @@ Component({
             [this.startDate, this.endDate] = [this.endDate, this.startDate];
           }
 
+          let hasDisable = false;
           for (let i = 0; i < dates.length; i++) {
             for (let j = 0; j < dates[i].length; j++) {
               const dateObj = dates[i][j];
@@ -286,7 +287,15 @@ Component({
 
               const startDateGap = this.getDateGap(dateObj, this.startDate);
               const endDateGap = this.getDateGap(dateObj, this.endDate);
+
+              if (dateObj.year === year && dateObj.month === month && dateObj.date === date && dateObj.disable) {
+                hasDisable = true;
+              }
               if (startDateGap > 0 && endDateGap < 0) {
+                if (dateObj.disable) {
+                  hasDisable = true;
+                }
+
                 if (dateGap !== 0) {
                   if (j === 0) {
                     dateObj.isStart = true;
@@ -321,15 +330,27 @@ Component({
               }
             }
           }
+          if (hasDisable) {
+            this.props.onSelectHasDisableDate([this.makeDate(this.startDate), this.makeDate(this.endDate)]);
+            return;
+          }
+
           if (this.props.onSelect) {
             this.props.onSelect([this.makeDate(this.startDate), this.makeDate(this.endDate)]);
           }
         } else {
+          let isDisable = false;
           for (let i = 0; i < dates.length; i++) {
             for (let j = 0; j < dates[i].length; j++) {
               const dateObj = dates[i][j];
               if (dateObj.year === year && dateObj.month === month && dateObj.date === date) {
-                dateObj.isSelected = true;
+                if (dateObj.disable) {
+                  console.log(1111);
+                  isDisable = true;
+                  dateObj.isSelected = false;
+                } else {
+                  dateObj.isSelected = true;
+                }
                 dateObj.isStart = false;
                 dateObj.isMiddle = false;
                 dateObj.isEnd = false;
@@ -341,6 +362,9 @@ Component({
               }
             }
           }
+          if (!isDisable) {
+            this.tapTimes += 1;
+          }
           this.startDate = { year, month, date };
         }
 
@@ -348,15 +372,23 @@ Component({
           dates,
         });
       } else {
+        let isDisable = false;
         for (let i = 0; i < dates.length; i++) {
           for (let j = 0; j < dates[i].length; j++) {
             const dateObj = dates[i][j];
             if (dateObj.year === year && dateObj.month === month && dateObj.date === date) {
               dateObj.isSelected = true;
+              if (dateObj.disable) {
+                isDisable = true;
+              }
             } else {
               dateObj.isSelected = false;
             }
           }
+        }
+
+        if (isDisable) {
+          return;
         }
 
         this.setData({
