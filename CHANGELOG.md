@@ -1,3 +1,18 @@
+## 0.4.0
+
+`2018-10-23`
+
+- **Feature**
+  - 新增`am-checkbox`组件
+  - 新增`badge`组件
+
+- **Enhancement**
+  - `calendar`组件`tabs`属性新增`disable`字段，新增`onSelectHasDisableDat`属性([#108](https://github.com/ant-mini-program/mini-antui/issues/108))
+
+- **Bug Fix**
+  - 修复`vtabs`在安卓下出现滚动误差的问题
+  - 修复`tabs`在`tabs`属性变化时没有重新计算宽度导致的滚动不正常问题
+
 ## 0.3.13
 
 `2018-10-18`
