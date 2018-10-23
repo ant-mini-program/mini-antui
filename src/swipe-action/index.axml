@@ -1,4 +1,5 @@
-<view class="am-swipe {{swiping ? 'am-swiping' : ''}} {{className}}">
+
+<view a:if={{!useV2}} class="am-swipe {{swiping ? 'am-swiping' : ''}} {{className}}">
   <block a:if="{{right.length > 0}}">
     <view class="am-swipe-right am-swipe-right-{{$id}}">
       <block a:for="{{right}}">
@@ -24,4 +25,43 @@
   >
     <slot />
   </view>
+</view>
+<view
+  class="am-swipe {{className}}"
+  style="width: {{viewWidth}}px; height: {{height}}px;"
+  key="{{key}}"
+  a:else
+>
+  <movable-area
+    class="am-swipe-movable-area"
+    style="width: {{ viewWidth + actionWidth}}px;height: {{height}}px;left: -{{actionWidth}}px;"
+  >
+    <block a:if="{{right.length > 0}}">
+      <view class="am-swipe-right am-swipe-right-{{$id}}" style="right: 0;">
+        <block a:for="{{right}}">
+          <view
+            class="am-swipe-btn am-swipe-btn-{{item.type}}"
+            onTap="onItemClick"
+            data-index="{{index}}"
+            key="swipe-item-{{index}}"
+          >
+            {{item.text}}
+          </view>
+        </block>
+      </view>
+    </block>
+    <movable-view
+      class="am-swipe-content"
+      onTap="onSwipeTap"
+      onTouchStart="onSwipeStart"
+      direction="horizontal"
+      data-type="content"
+      style="width: {{viewWidth}}px;height:{{height}}px; transition: {{transitionVal}};"
+      x="{{x}}"
+      onChange="onChange"
+      onChangeEnd="onChangeEnd"
+    >
+      <slot />
+    </movable-view>
+  </movable-area>
 </view>
