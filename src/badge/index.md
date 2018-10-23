@@ -8,6 +8,12 @@
 | dot | 不展示数字，只有一个小红点 | boolean |  | false |
 | overflowCount | 展示封顶的数字值，超出部分用“+”号表示 | number | 99 | false |
 
+## slots
+
+|slotName | 说明 |
+|----|----|
+|inner | 可选，badge作为wrapper时，用于渲染内部的区域 |
+
 ## 示例
 
 ```json
@@ -16,7 +22,7 @@
   "usingComponents": {
     "list": "mini-antui/es/list/index",
     "list-item": "mini-antui/es/list/list-item/index",
-    "card": "mini-antui/es/badge/index"
+    "badge": "mini-antui/es/badge/index"
   }
 }
 ```
@@ -33,7 +39,7 @@
       >
         <view>
           <badge a:if="{{item.isWrap}}" text="{{item.text}}" dot="{{item.dot}}">
-            <view slot="extra" style="height: 26px; width: 26px; background-color: #ddd;"></view>
+            <view slot="inner" style="height: 26px; width: 26px; background-color: #ddd;"></view>
           </badge>
           <text style="margin-left: {{ item.isWrap ? '12px' : '0' }}">{{item.intro}}</text>
         </view>
