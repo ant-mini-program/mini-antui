@@ -81,9 +81,9 @@ Page({
       path: '/calendar/demo/index',
     },
     {
-      name: 'CheckBox',
+      name: 'AMCheckBox',
       nameZN: '复选框',
-      path: '/check-box/demo/index',
+      path: '/am-checkbox/demo/index',
     },
     {
       name: 'Filter',
