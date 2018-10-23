@@ -18,7 +18,7 @@
   "usingComponents": {
     "list": "mini-antui/es/list/index",
     "list-item": "mini-antui/es/list/list-item/index",
-    "checkbox": "mini-antui/es/check-box/index"
+    "am-checkbox": "mini-antui/es/am-checkbox/index"
   }
 }
 ```
@@ -37,7 +37,7 @@
       last="{{index === (items.length - 1)}}"
     >
       <view slot="prefix" style="display: flex; align-items: center;">
-        <check-box id="{{item.id}}" data-name="{{item.value}}" disabled="{{item.disabled}}" checked="{{item.checked}}" onChange="onChange" />
+        <am-checkbox id="{{item.id}}" data-name="{{item.value}}" disabled="{{item.disabled}}" checked="{{item.checked}}" onChange="onChange" />
       </view>
       <label for="{{item.id}}">{{item.title}}</label>
     </list-item>
@@ -49,7 +49,7 @@
   </view>
   <view style="margin-top: 10px;">
     <label style="display: flex; line-height: 24px;">
-      <check-box />
+      <am-checkbox />
       <text style="text-indent: 8px; color: #888">同意 《信用支付服务合同》</text>
     </label>
   </view>
@@ -61,7 +61,7 @@
       <view>
         <checkbox-group name="libs">
           <label a:for="{{items2}}" style="display: flex; align-items: center; height: 30px;">
-            <check-box value="{{item.name}}" checked="{{item.checked}}" disabled="{{item.disabled}}" />
+            <am-checkbox value="{{item.name}}" checked="{{item.checked}}" disabled="{{item.disabled}}" />
             <text style="color: #888; font-size: 14px; margin-left: 8px;">{{item.value}}</text>
           </label>
         </checkbox-group>
