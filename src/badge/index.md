@@ -2,6 +2,10 @@
 
 红点、数字或文字。用于告诉用户待处理的事物或者更新数。
 
+扫码体验：
+
+<img src="https://gw.alipayobjects.com/zos/rmsportal/NQlAfTbzwLneEYbNYNht.jpeg" width="154" height="190" />
+
 | 属性名 | 描述 | 类型 | 默认值 | 必选 |
 |----|----|----|----|----|
 | text | 展示的数字或文案 | string/number |  | false |
