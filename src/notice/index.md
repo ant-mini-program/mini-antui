@@ -6,6 +6,10 @@
 
 <img src="https://gw.alipayobjects.com/zos/rmsportal/DJfecsuPIyuOUHZtVFxG.jpeg" width="154" height="190" />
 
+## Screenshot
+
+<img src="https://gw.alipayobjects.com/zos/rmsportal/BunLlelWGUkvnqoyrxac.PNG" width="375" height="225" />
+
 | 属性名 | 描述 | 类型 | 默认值 |
 |----|----|----|----|
 |mode| 提示类型,link,closable,'' | String|''|

@@ -6,6 +6,10 @@
 
 <img src="https://gw.alipayobjects.com/zos/rmsportal/AJKkYtCpuwuoaKTQijUB.jpeg" width="154" height="190" />
 
+## Screenshot
+
+<img src="https://gw.alipayobjects.com/zos/rmsportal/ADRHtoubiLHdZEWLEeOw.PNG" width="375" height="135" />
+
 | 属性名 | 描述 | 类型 | 默认值 |
 |----|----|----|----|
 |className| 自定义class | String| |

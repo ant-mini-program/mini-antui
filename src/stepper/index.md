@@ -7,6 +7,11 @@
 <img src="https://gw.alipayobjects.com/zos/rmsportal/TGdJemwrVBJGZgCvUzJF.jpeg" width="154" height="190" />
 
 
+## Screenshot
+
+<img src="https://gw.alipayobjects.com/zos/rmsportal/aquuNWHtkxjqTsvpTLip.PNG" width="375" height="258" />
+
+
 | 属性名 | 描述 | 类型 | 默认值 | 必选 |
 |----|----|----|----|---|
 | min | 最小值 | Number | 0 | true |

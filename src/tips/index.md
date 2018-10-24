@@ -6,6 +6,10 @@
 
 <img src="https://gw.alipayobjects.com/zos/rmsportal/DjQXcSygEImQjMOnlJqV.jpeg" width="154" height="190" />
 
+## Screenshot
+
+<img src="https://gw.alipayobjects.com/zos/rmsportal/JqNTsriWJnyggOJztCLE.PNG" width="375" height="174" />
+
 ## tips-dialog
 
 | 属性 | 说明 | 类型 | 默认值 | 必选 |

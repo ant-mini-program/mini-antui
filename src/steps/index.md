@@ -7,6 +7,10 @@
 <img src="https://gw.alipayobjects.com/zos/rmsportal/yTQSJcsYUNRmaVAqbwkM.jpeg" width="154" height="190" />
 
 
+## Screenshot
+
+<img src="https://gw.alipayobjects.com/zos/rmsportal/UWnjFUpeVeiCjOmtwoJK.png" width="375" height="324.5">
+
 | 属性名 | 描述 | 类型 | 可选 | 默认值 | 必选 |
 |----|----|----|----|----|----|
 | activeIndex | 当前激活步骤 | number | - | 1 | true |
