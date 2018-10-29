@@ -1,3 +1,13 @@
+## 0.4.1
+
+`2018-10-29`
+
+- **Enhancement**
+  - `notice`新增`enableMarquee`和`marqueeProps`属性([#140](https://github.com/ant-mini-program/mini-antui/issues/140))
+
+- **Bug Fix**
+  - 修复`message`type为`fail`时的白屏问题([#152](https://github.com/ant-mini-program/mini-antui/issues/152))
+
 ## 0.4.0
 
 `2018-10-23`
