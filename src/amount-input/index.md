@@ -39,6 +39,7 @@
 ```html
 <view>
   <amount-input
+    type="digit"
     title="转入金额"
     extra="建议转入¥100以上金额"
     placeholder="输入转入金额"
@@ -55,7 +56,7 @@
 ```javascript
 Page({
   data: {
-    value: '200',
+    value: 200,
   },
   onInputClear() {
     this.setData({
@@ -67,7 +68,8 @@ Page({
       content: 'confirmed',
     });
   },
-  onInput(value) {
+  onInput(e) {
+    const { value } = e.detail;
     this.setData({
       value,
     });
