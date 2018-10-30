@@ -1,43 +1,27 @@
+import fmtEvent from '../_util/fmtEvent';
+
 Component({
-  data: {
-    _value: '',
-    focus: false,
-  },
   props: {
+    type: 'number',
     className: '',
     focus: false,
     placeholder: '',
+    value: '',
   },
-  didMount() {
-    this.setData({
-      _value: 'value' in this.props ? this.props.value : '',
-      focus: this.props.focus,
-    });
-  },
-  didUpdate() {
-    if ((('value' in this.props)) && this.props.value !== this.data._value) {
-      this.setData({
-        _value: this.props.value,
-      });
-    }
+  data: {
+    _focus: false,
   },
   methods: {
     onInput(e) {
-      const { value } = e.detail;
-
-      if (!('value' in this.props)) {
-        this.setData({
-          _value: value,
-        });
-      }
-
+      const event = fmtEvent(this.props, e);
       if (this.props.onInput) {
-        this.props.onInput(value);
+        this.props.onInput(event);
       }
     },
-    onConfirm() {
+    onConfirm(e) {
+      const event = fmtEvent(this.props, e);
       if (this.props.onConfirm) {
-        this.props.onConfirm();
+        this.props.onConfirm(event);
       }
     },
     onButtonClick() {
@@ -45,35 +29,25 @@ Component({
         this.props.onButtonClick();
       }
     },
-    onFocus() {
+    onFocus(e) {
       this.setData({
-        focus: true,
+        _focus: true,
       });
-
+      const event = fmtEvent(this.props, e);
       if (this.props.onFocus) {
-        this.props.onFocus();
+        this.props.onFocus(event);
       }
     },
-    onBlur() {
+    onBlur(e) {
       this.setData({
-        focus: false,
+        _focus: false,
       });
-
+      const event = fmtEvent(this.props, e);
       if (this.props.onBlur) {
-        this.props.onBlur();
+        this.props.onBlur(event);
       }
     },
     onClearTap() {
-      this.setData({
-        focus: true,
-      });
-
-      if (!('value' in this.props)) {
-        this.setData({
-          _value: '',
-        });
-      }
-
       if (this.props.onClear) {
         this.props.onClear('');
       }
