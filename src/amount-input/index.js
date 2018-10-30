@@ -2,7 +2,7 @@ import fmtEvent from '../_util/fmtEvent';
 
 Component({
   props: {
-    props: 'number',
+    type: 'number',
     className: '',
     focus: false,
     placeholder: '',
