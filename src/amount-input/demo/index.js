@@ -1,18 +1,21 @@
 Page({
   data: {
-    value: '200',
+    value: 200,
   },
   onInputClear() {
     this.setData({
       value: '',
     });
   },
-  onInputConfirm() {
+  onInputConfirm(e) {
+    console.log(e);
     my.alert({
       content: 'confirmed',
     });
   },
-  onInput(value) {
+  onInput(e) {
+    console.log(e);
+    const { value } = e.detail;
     this.setData({
       value,
     });
@@ -22,6 +25,10 @@ Page({
       content: 'button clicked',
     });
   },
-  onInputFocus() {},
-  onInputBlur() {},
+  onInputFocus(e) {
+    console.log(e);
+  },
+  onInputBlur(e) {
+    console.log(e);
+  },
 });

@@ -9,16 +9,19 @@
 
 | 属性名 | 描述 | 类型 | 默认值 | 必选 |
 |----|----|----|----|----|
+| type | input 的类型，有效值：digit、number | String | number | false |
 | title | 左上角标题 | String |  | false |
 | extra | 左下角说明 | String |  | false |
 | value | 输入框当前值 | String |  | false |
 | btnText | 右下角按钮文案 | String |  | false |
 | placeholder | placeholder | String | | false |
 | focus | 自动获取光标 | Boolean | false | false |
-| onInput | 键盘输入时触发 | (value: string) => void | | false |
-| onClear | 点击 clear 图标触发 | (val: string) => void | | false |
-| onButtonClick | 点击右下角按钮时触发 | (val: string) => void | | false |
-| onConfirm | 点击键盘确认按钮时触发 | (val: string) => void | | false |
+| onInput | 键盘输入时触发， event.detail = {value: value} | EventHandle | | false |
+| onFocus | 获取焦点时触发， event.detail = {value: value} | EventHandle | | false |
+| onBlur | 失去焦点时触发， event.detail = {value: value} | EventHandle | | false |
+| onConfirm | 点击键盘完成时触发，event.detail = {value: value} | EventHandle | | false |
+| onClear | 点击 clear 图标触发 | EventHandle | | false |
+| onButtonClick | 点击右下角按钮时触发 | EventHandle | | false |
 | maxLength | 最多允许输入的字符个数 | Number | | false |
 
 
