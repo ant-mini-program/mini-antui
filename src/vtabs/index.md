@@ -10,6 +10,7 @@
 
 | 属性名 | 描述 | 类型 | 默认值 | 必选 |
 |----|----|----|----|----|
+| activeTab | 当前激活Tab索引	| number |  | true |
 | tabs | tab数据，其中包括选项标题`title`，列表唯一锚点值，以及徽标类型`badgeType`，分为圆点`dot`和文本`text`，徽标文本`badgeText`在`badgeType`为`text`时生效 | Array<title, anchor> |  | true |
 | animated | 是否开启动画 | boolean| | false |
 | swipeable | 是否可滑动切换 | boolean| | true |
@@ -18,6 +19,8 @@
 | tabBarActiveTextColor | tabBar激活Tab文字颜色	| string | | false |
 | tabBarInactiveTextColor | tabBar非激活Tab文字颜色 | string | | false |
 | tabBarlineColor | tabBar侧划线颜色 | string | | false |
+| onTabClick | tab 被点击的回调 | (index: number) => void | | false |
+| onChange | vtab-content变化时触发 | (index: number) => void | | false |
 
 ## vtab-content
 
@@ -42,11 +45,15 @@
 ```html
 <view>
   <vtabs
-    tabs="{{tabs}}">
+    tabs="{{tabs}}"
+    onTabClick="handleChange"
+    onChange="onChange"
+    activeTab="{{activeTab}}"
+  >
     <block a:for="{{tabs}}">
       <vtab-content anchor="{{item.anchor}}">
-        <view style="height: 300px; border-bottom: 1px solid #000; box-sizing: border-box">
-          <text class="sticky-title">content of {{item.title}}</text>
+        <view style="border: 1px solid #eee; height: 800px; box-sizing: border-box">
+          <text>content of {{item.title}}</text>
         </view>
       </vtab-content>
     </block>
@@ -57,14 +64,26 @@
 ```javascript
 Page({
   data: {
+    activeTab: 2,
     tabs: [
       { title: '选项二', anchor: 'a', badgeType: 'dot' },
-      { title: '选项', anchor: 'b', badgeType: 'text', badgeText: '6' },
+      { title: '选项', anchor: 'b', badgeType: 'text', badgeText: '新' },
       { title: '不超过五字', anchor: 'c' },
       { title: '选项四', anchor: 'd' },
       { title: '选项五', anchor: 'e' },
       { title: '选项六', anchor: 'f' },
     ],
+  },
+  handleChange(index) {
+    this.setData({
+      activeTab: index,
+    });
+  },
+  onChange(index) {
+    console.log('onChange', index);
+    this.setData({
+      activeTab: index,
+    });
   },
 });
 ```

@@ -1,5 +1,6 @@
 Page({
   data: {
+    activeTab: 2,
     tabs: [
       { title: '选项二', anchor: 'a', badgeType: 'dot' },
       { title: '选项', anchor: 'b', badgeType: 'text', badgeText: '新' },
@@ -10,6 +11,13 @@ Page({
     ],
   },
   handleChange(index) {
-    console.log(index);
+    this.setData({
+      activeTab: index,
+    });
+  },
+  onChange(index) {
+    this.setData({
+      activeTab: index,
+    });
   },
 });

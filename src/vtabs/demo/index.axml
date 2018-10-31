@@ -2,7 +2,8 @@
   <vtabs
     tabs="{{tabs}}"
     onTabClick="handleChange"
-    onScrollBar="handleChange"
+    onChange="onChange"
+    activeTab="{{activeTab}}"
   >
     <block a:for="{{tabs}}">
       <vtab-content anchor="{{item.anchor}}">
