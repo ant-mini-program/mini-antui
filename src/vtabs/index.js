@@ -1,10 +1,10 @@
 Component({
   data: {
     tabTop: 0,
-    current: 0,
     wrapScrollTop: 0,
   },
   props: {
+    activeTab: 0,
     className: '',
     tabs: [],
     animated: false,
@@ -22,8 +22,10 @@ Component({
     this.timerId = null;
     this.calcHeight();
   },
-  didUpdate() {
-    this.calcHeight();
+  didUpdate(prevProps) {
+    if (this.props.tabs.length !== prevProps.tabs.length) {
+      this.calcHeight();
+    }
   },
   didUnmount() {
     if (this.timerId) {
@@ -33,8 +35,9 @@ Component({
   },
   methods: {
     calcHeight() {
-      const { tabs } = this.props;
+      const { tabs, activeTab } = this.props;
       this.anchorMap = {};
+      this.indexMap = {};
       this.wrapHeight = 0;
       this.scrollWrapHeight = 0;
 
@@ -54,6 +57,12 @@ Component({
           .boundingClientRect()
           .exec((ret) => {
             this.anchorMap[anchor] = cacheHeight;
+            this.indexMap[i] = cacheHeight;
+            if (activeTab === i) {
+              this.setData({
+                wrapScrollTop: this.indexMap[i],
+              });
+            }
             cacheHeight += ret[0].height;
             this.scrollWrapHeight = cacheHeight;
           });
@@ -63,12 +72,11 @@ Component({
       const { anchor, index } = e.target.dataset;
 
       if (!this.isScrolling || !this.props.swipeable) {
-        if (this.data.current !== index) {
+        if (this.props.activeTab !== index) {
           this.props.onTabClick(index);
         }
         this.setData({
           wrapScrollTop: this.anchorMap[anchor],
-          current: index,
         });
         this.moveScrollBar(index);
       }
@@ -81,8 +89,12 @@ Component({
       } else {
         tabTop = (current - 5) * 55;
       }
-      if (this.data.current !== current) {
-        this.props.onScrollBar(current);
+      if (this.props.activeTab !== current) {
+        if (this.props.onChange) {
+          this.props.onChange(current);
+        } else {
+          this.props.onScrollBar(current);
+        }
       }
       this.setData({
         tabTop,

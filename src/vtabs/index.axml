@@ -14,10 +14,10 @@
         onTap="handleTabClick"
         class="am-vtabs-bar-tab"
         style="{{
-          color: current == index ? tabBarActiveTextColor : tabBarInactiveTextColor,
-          borderLeftColor: current == index ? tabBarlineColor : tabBarInactiveBgColor,
-          borderRightColor: current == index ? tabBarActiveBgColor : tabBarInactiveBgColor,
-          backgroundColor: current == index ? tabBarActiveBgColor : tabBarInactiveBgColor
+          color: activeTab == index ? tabBarActiveTextColor : tabBarInactiveTextColor,
+          borderLeftColor: activeTab == index ? tabBarlineColor : tabBarInactiveBgColor,
+          borderRightColor: activeTab == index ? tabBarActiveBgColor : tabBarInactiveBgColor,
+          backgroundColor: activeTab == index ? tabBarActiveBgColor : tabBarInactiveBgColor
         }}"
         >
         <view class="am-vtabs-bar-title">
