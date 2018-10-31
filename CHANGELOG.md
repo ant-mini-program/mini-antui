@@ -1,3 +1,11 @@
+## 0.4.2
+
+`2018-10-31`
+
+- **Enhancement**
+  - `amount-input`组件type属性新增`digit`类型
+  - `vtabs`新增`activeTab`，`onTabClick`和`onChange`属性([#125](https://github.com/ant-mini-program/mini-antui/issues/125))
+
 ## 0.4.1
 
 `2018-10-29`
