@@ -23,6 +23,7 @@
 | tabBarActiveTextColor | tabBar激活Tab文字颜色	| string | | false |
 | tabBarInactiveTextColor | tabBar非激活Tab文字颜色 | string | | false |
 | tabBarUnderlineColor | tabBar下划线颜色 | string | | false |
+| tabBarCls | tabBar自定义样式class | string | | false |
 
 
 ## tab-content
