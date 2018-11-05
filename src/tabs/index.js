@@ -12,6 +12,7 @@ Component({
     swipeable: true,
     activeTab: 0, // 当前激活tab
     animation: true,
+    tabBarCls: '', // tabbar的自定义样式class
   },
   data: {
     windowWidth,

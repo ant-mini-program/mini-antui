@@ -20,7 +20,7 @@
                 color: index === activeTab ? tabBarActiveTextColor: tabBarInactiveTextColor,
                 width: (tabs.length > 3 ? 0.25 : 1 / tabs.length) * 100 + '%',
               }}"
-              class="am-tabs-bar-tab">
+              class="am-tabs-bar-tab {{tabBarCls}}">
               <view class="am-tabs-bar-title {{ index === activeTab ? activeCls : '' }}" style="{{ borderBottomColor: index === activeTab ? tabBarUnderlineColor : '' }}">
                 <text>{{item.title}}</text>
                 <badge
