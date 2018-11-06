@@ -43,6 +43,7 @@
         current="{{activeTab}}"
         interval="99999999"
         autoplay="{{autoplay}}"
+        duration="{{duration}}"
         onChange="handleSwiperChange"
         class="am-tabs-content-wrap {{util.compareVersion(version) < 0 ? 'fix' : ''}}">
         <slot></slot>

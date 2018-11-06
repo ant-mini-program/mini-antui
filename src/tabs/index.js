@@ -13,6 +13,7 @@ Component({
     activeTab: 0, // 当前激活tab
     animation: true,
     tabBarCls: '', // tabbar的自定义样式class
+    duration: 500,
   },
   data: {
     windowWidth,
