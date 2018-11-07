@@ -240,7 +240,14 @@ Component({
         return false;
       }
       return tagData.some((item) => {
-        const date = new Date(item.date);
+        const dateArr = item.date.split('-');
+        const dateStr = [];
+        // 兼容ios下new Date('2018-1-1')格式返回invalid Date的问题
+        for (let i = 0; i < dateArr.length; i++) {
+          dateStr.push(dateArr[i].length > 1 ? dateArr[i] : `0${dateArr[i]}`);
+        }
+
+        const date = new Date(dateStr.join('-'));
         if (dateObj.year === date.getFullYear() &&
             dateObj.month === date.getMonth() &&
             dateObj.date === date.getDate()) {
