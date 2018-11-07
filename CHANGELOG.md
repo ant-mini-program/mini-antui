@@ -1,3 +1,12 @@
+## 0.4.3
+
+`2018-11-07`
+
+- **Enhancement**
+  - `tabs`新增`tabBarCls`tabBar自定义样式class
+  - `tabs`新增`duration`控制滑动动画时长
+  - `calendar`date参数兼容IOS格式要求
+
 ## 0.4.2
 
 `2018-10-31`
