@@ -3,7 +3,7 @@
 `2018-11-15`
 
 - **Enhancement**
-  - `notice`的mode参数为`closable`时，onClick回调的触发区域为完整组件。
+  - `notice`的mode参数为`link`时，onClick回调的触发区域为完整组件。
 
 ## 0.4.3
 
