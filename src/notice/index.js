@@ -5,6 +5,7 @@ Component({
     action: '', // 文本按钮
     show: true, // 是否显示
     enableMarquee: false, // 是否开启marquee
+    onClick: () => {},
     marqueeProps: {
       loop: false,
       leading: 500,
@@ -94,9 +95,18 @@ Component({
         this._marqueeTimer = setTimeout(animate, timeout);
       }
     },
-    onTap() {
-      if (this.props.onClick) {
-        this.props.onClick();
+    
+    onNoticeTap() {
+      const { mode, onClick } = this.props;
+      if (mode === 'link' && typeof onClick === 'function') {
+        onClick();
+      }
+    },
+
+    onOperationTap() {
+      const { mode, onClick } = this.props;
+      if (mode === 'closable' && typeof onClick === 'function') {
+        onClick();
       }
     },
   },
