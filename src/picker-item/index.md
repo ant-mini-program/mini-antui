@@ -1,5 +1,11 @@
 ## PickerItem 选择输入
 
+文本输入。
+
+扫码体验：
+
+<img src="https://gw.alipayobjects.com/zos/rmsportal/HoUOLnPEOaymuHlbeyqR.jpeg" width="154" height="190" />
+
 选择输入。
 
 | 属性名 | 描述 | 类型 | 默认值 |
@@ -28,6 +34,7 @@
     "list": "mini-antui/es/list/index",
     "list-item": "mini-antui/es/list/list-item/index",
     "picker-item": "mini-antui/es/picker-item/index",
+    "input-item": "mini-antui/es/input-item/index"
   }
 }
 ```
@@ -46,7 +53,7 @@
       data-field="bank"
       placeholder="选择发卡银行"
       value="{{bank}}"
-      onSelect="onSelect"
+      onPickerTap="onSelect"
     >
       发卡银行
     </picker-item>
