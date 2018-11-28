@@ -1,5 +1,5 @@
 <filter show="{{show}}" max="{{1}}">
   <block a:for="{{items}}">
-    <filter-item value="{{item.value}}" id="{{item.id}}" onChange="handleCallBack" selected="{{item.selected}}"/>
+    <filter-item value="{{item.value}}" id="{{item.id}}" onChange="handleCallBack" selected="{{item.selected}}" key="filter-item-{{key}}" />
   </block>
 </filter>
