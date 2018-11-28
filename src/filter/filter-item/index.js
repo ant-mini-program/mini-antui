@@ -20,7 +20,7 @@ Component({
     const { selected, id, value } = this.props;
     if (selected) {
       results.push({ id, value });
-      items.push(this);
+      items.push({ id, value, setData: this.setData });
       this.setData({
         confirmStyle: true,
       });
@@ -42,7 +42,7 @@ Component({
           results.splice(0, results.length);
           confirmStyle = true;
           results.push({ id, value });
-          items.push(this);
+          items.push({ id, value, setData: this.setData });
           onChange(results);
         }
         this.setData({
@@ -53,7 +53,7 @@ Component({
       if (confirmStyle === '' && results.length < commonProps.max) {
         confirmStyle = true;
         results.push({ id, value });
-        items.push(this);
+        items.push({ id, value, setData: this.setData });
       } else {
         confirmStyle = '';
         results.some((key, index) => {
