@@ -7,6 +7,7 @@ Component({
     disabled: false,
     onChange: () => {},
     id: '',
+    size: 22,
   },
   methods: {
     onChange(e) {
