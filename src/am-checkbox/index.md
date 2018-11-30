@@ -8,6 +8,7 @@
 
 | 属性名 | 描述 | 类型 | 默认值 | 必选 |
 |----|----|----|----|----|
+|className| 自定义的class | String | | false |
 | value | 组件值，选中时 change 事件会携带的 value | String |  | false |
 | checked | 当前是否选中，可用来设置默认选中 | Boolean | false | false |
 | disabled | 是否禁用 | Boolean | false | false |

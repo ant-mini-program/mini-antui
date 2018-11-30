@@ -1,4 +1,4 @@
-<view class="am-checkbox" style="height:{{size}}px; width: {{size}}px;">
+<view class="am-checkbox {{className}}" style="height:{{size}}px; width: {{size}}px;">
   <checkbox
     class="am-checkbox-value"
     value="{{value}}"
