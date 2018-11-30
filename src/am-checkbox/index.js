@@ -7,6 +7,8 @@ Component({
     disabled: false,
     onChange: () => {},
     id: '',
+    size: 22,
+    className: '',
   },
   methods: {
     onChange(e) {
