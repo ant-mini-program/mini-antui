@@ -22,6 +22,6 @@
   },
   "scripts": {
     "build": "rc-tools run compile && node scripts/cp.js && node scripts/rm.js",
-    "pub": "git push origin && npm run build && npm publish"
+    "pub": "npm run build && node scripts/pub.js"
   }
 }
