@@ -1,5 +1,5 @@
-const windowWidth = my.getSystemInfoSync().windowWidth;
-const isV2 = +(my.SDKVersion.split('.').join('')) > 1112;
+const { windowWidth } = my.getSystemInfoSync();
+const isV2 = my.canIUse('movable-view.onTouchStart');
 
 Component({
   data: {
