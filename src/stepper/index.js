@@ -40,14 +40,14 @@ Component({
         if (evType === 'reduce') {
           if (value > min) {
             opaAdd = 1;
-            value = Math.max(min, value - step);
+            value = Math.max(min, (+value) - (+step));
             opaReduce = value === min ? 0.4 : 1;
           }
         } else {
           /* eslint-disable no-lonely-if */
           if (value < max) {
             opaReduce = 1;
-            value = Math.min(value + step, max);
+            value = Math.min((+value) + (+step), max);
             opaAdd = value === max ? 0.4 : 1;
           }
         }
