@@ -29,12 +29,12 @@
 <page-result
   type="network"
   title="网络不给力"
-  brief="事件上最遥远的距离莫过于此"
+  brief="世界上最遥远的距离莫过于此"
 />
 <page-result
   type="network"
   title="网络不给力"
-  brief="事件上最遥远的距离莫过于此"
+  brief="世界上最遥远的距离莫过于此"
 >
   <view class="am-page-result-btns">
     <view onTap="backHome">回到首页</view>
