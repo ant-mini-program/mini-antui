@@ -96,6 +96,11 @@ Page({
       path: '/filter/demo/index',
     },
     {
+      name: 'Flex',
+      nameZN: 'Flex 布局',
+      path: '/flex/demo/index',
+    },
+    {
       name: 'Notice',
       nameZN: '公告',
       path: '/notice/demo/index',
