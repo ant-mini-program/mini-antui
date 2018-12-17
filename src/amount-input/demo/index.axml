@@ -1,5 +1,6 @@
 <view>
   <amount-input
+    controlled="{{true}}"
     type="digit"
     title="转入金额"
     extra="建议转入¥100以上金额"

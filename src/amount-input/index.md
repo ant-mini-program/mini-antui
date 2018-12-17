@@ -23,6 +23,7 @@
 | onClear | 点击 clear 图标触发 | EventHandle | | false |
 | onButtonClick | 点击右下角按钮时触发 | EventHandle | | false |
 | maxLength | 最多允许输入的字符个数 | Number | | false |
+| controlled | 是否为受控组件。为 true时，value内容会完全受setData控制 | Boolean | false | false |
 
 
 ## 示例
