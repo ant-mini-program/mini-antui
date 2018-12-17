@@ -7,6 +7,7 @@ Component({
     focus: false,
     placeholder: '',
     value: '',
+    controlled: false,
   },
   data: {
     _focus: false,
