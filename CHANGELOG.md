@@ -1,3 +1,14 @@
+## 0.4.8
+
+`2018-12-19`
+
+- **Feature**
+  - 新增`flex`、`flex-item`布局组件
+
+- **Enhancement**
+  - `steps`支持自定义icon
+  - `amount-input`支持`controlled`属性
+
 ## 0.4.7
 
 `2018-12-07`
