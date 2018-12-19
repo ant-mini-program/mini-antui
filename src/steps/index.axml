@@ -1,3 +1,4 @@
+<!-- 横向 -->
 <view class="am-hor-steps {{className}}" a:if="{{direction == 'horizontal'}}">
   <view class="am-hor-step" a:for="{{items}}" style="{{width: 100 / (items.length - 1) + '%'}}">
     <view class="am-hor-step-line {{index < activeIndex - 1 ? 'is-active' : ''}} {{index >= items.length - 1 ? 'is-last' : ''}}">
@@ -13,6 +14,8 @@
     </view>
   </view>
 </view>
+
+<!-- 纵向 -->
 <view class="am-vertical-steps {{className}}" a:if="{{direction == 'vertical'}}">
   <view class="am-vertical-step" a:for="{{items}}">
     <view class="am-vertical-step-left">
@@ -25,12 +28,16 @@
         a:if="{{index < items.length - 1}}"
       ></view>
       <view class="am-vertical-step-icon is-fail" a:if="{{index == failIndex - 1}}">
-        <icon type="cancel" size="24"/>
+        <icon type="cancel" size="{{item.size || size || 24}}"/>
       </view>
       <view class="am-vertical-step-icon is-active" a:elif="{{index <= activeIndex - 1}}">
-        <icon type="success" size="24"/>
+        <image mode="widthFix" class="am-vertical-step-active-image" a:if="{{item.activeIcon}}" src="{{item.activeIcon}}" style="width: {{item.size || size || 24}}px;"/>
+        <icon a:else type="success" size="{{item.size || size || 24}}"/>
       </view>
-      <view class="am-vertical-step-icon is-normal" a:else></view>
+      <view a:else>
+        <image mode="widthFix" class="am-vertical-step-icon am-vertical-step-image" a:if="{{item.icon}}" src="{{item.icon}}" style="width: {{item.size || size || 24}}px;"/>
+        <view class="am-vertical-step-icon is-normal" a:else style="width: {{item.size || size || 10}}px; height: {{item.size || size || 10}}px;"></view>
+      </view>
     </view>
     <view class="am-vertical-step-right">
       <view class="am-vertical-step-title {{index <= activeIndex - 1 ? 'is-active' : ''}} {{index == failIndex - 1 ? 'is-fail' : ''}}">

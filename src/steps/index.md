@@ -11,8 +11,14 @@
 |----|----|----|----|----|----|
 | activeIndex | 当前激活步骤 | number | - | 1 | true |
 | failIndex | 当前失败步骤(只在vertical模式下生效) | number | - | 0 | false |
-| items | 步骤详情 | array[{title, description}] | - | [] | true |
 | direction | 显示方向 | string | vertical/horizontal | horizontal | false |
+| size | 统一的icon大小，单位为px | number | - | 0 | false |
+| items | 步骤详情 | array[{title, description, icon, activeIcon, size}] | - | [] | true |
+| items.title | 步骤详情标题 | string | - |  | true |
+| items.description | 步骤详情描述 | string | - |  | true |
+| items.icon | 尚未到达步骤的icon(只在vertical模式下生效) | string | - |  | true |
+| items.activeIcon | 已到达步骤的icon(只在vertical模式下生效) | string | - |  | true |
+| items.size | 已到达步骤icon的图标大小，单位为px(只在vertical模式下生效) | number | - |  | true |
 | className | 最外层覆盖样式 | string | - | '' | false |
 
 
