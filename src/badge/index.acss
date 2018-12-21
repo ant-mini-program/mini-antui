@@ -20,6 +20,11 @@
   color: #fff;
 }
 
+.am-badge-text-padding {
+  font-size: 10px;
+  opacity: 0;
+}
+
 .am-badge-text-inner {
   position: absolute;
   top: 50%;
