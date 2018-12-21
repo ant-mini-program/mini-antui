@@ -28,7 +28,7 @@ Page({
       },
       {
         dot: false,
-        text: 'newnewnewnewnew',
+        text: 'new',
         isWrap: false,
         intro: '文字',
       },
