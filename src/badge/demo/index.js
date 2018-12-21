@@ -32,6 +32,12 @@ Page({
         isWrap: false,
         intro: '文字',
       },
+      {
+        dot: false,
+        text: '新',
+        isWrap: false,
+        intro: '中文',
+      },
     ],
   },
 });
