@@ -6,7 +6,6 @@
   display: flex;
   background-color: #fefceb;
   overflow: hidden;
-  font-size: 13px;
   color: #f76a24;
 }
 
@@ -33,6 +32,7 @@
   text-overflow: ellipsis;
   white-space: nowrap;
   display: inline-block;
+  font-size: 14px;
 }
 
 .am-notice-operation {
