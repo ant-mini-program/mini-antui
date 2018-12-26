@@ -61,7 +61,7 @@
 
 .am-notice-closable {
   width: 10px;
-  height: 100%;
+  height: 36px;
   background-image: url('https://gw.alipayobjects.com/zos/rmsportal/mLiemrUlPGVwIGXQdWDx.png');
   background-size: contain;
   background-position: center;
