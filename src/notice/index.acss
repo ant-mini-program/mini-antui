@@ -36,6 +36,7 @@
 }
 
 .am-notice-operation {
+  height: 100%;
   padding-right: 16px;
 }
 
@@ -61,7 +62,7 @@
 
 .am-notice-closable {
   width: 10px;
-  height: 36px;
+  height: 100%;
   background-image: url('https://gw.alipayobjects.com/zos/rmsportal/mLiemrUlPGVwIGXQdWDx.png');
   background-size: contain;
   background-position: center;
