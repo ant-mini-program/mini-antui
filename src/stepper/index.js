@@ -20,7 +20,7 @@ Component({
       value: Math.min(Math.max(min, value), max),
     });
   },
-  didUpdate(preProps, preData) {
+  didUpdate(preProps) {
     const { value, min, max } = this.props;
     if (preProps.value !== this.props.value) {
       this.setData({
@@ -32,21 +32,19 @@ Component({
     changeFn(ev) {
       const { min, max, onChange, disabled, readOnly, step } = this.props;
       const evType = ev.target.dataset.type;
-      let { opaReduce, opaAdd, value } =this.data;
-      let enable = disabled ? disabled : readOnly;
+      let { opaReduce, opaAdd, value } = this.data;
+      const enable = disabled || readOnly;
       if (!enable) {
-        if (evType === "reduce") {
+        if (evType === 'reduce') {
           if (value > min) {
             opaAdd = 1;
-            value = Math.max(min, value - step);
+            value = Math.max(min, this.calculateValue('reduce', (+value), (+step)));
             opaReduce = value === min ? 0.4 : 1;
           }
-        } else {
-          if (value < max) {
-            opaReduce = 1;
-            value = Math.min(value + step, max);
-            opaAdd = value === max ? 0.4 : 1;
-          }
+        } else if (value < max) {
+          opaReduce = 1;
+          value = Math.min(this.calculateValue('add', (+value), (+step)), max);
+          opaAdd = value === max ? 0.4 : 1;
         }
         this.setData({
           value,
@@ -58,7 +56,7 @@ Component({
     },
     resetFn(ev) {
       const { max, min, onChange } = this.props;
-      const value = ev.detail.value;
+      const { value } = ev.detail;
       let calculatedVal = value;
       let opaAdd = 1;
       let opaReduce = 1;
@@ -76,5 +74,12 @@ Component({
       });
       onChange(calculatedVal);
     },
-  }
-})
+    calculateValue(type, arg1, arg2) {
+      const numFloat = arg1.toString().split('.')[1] || '';
+      const num2Float = arg2.toString().split('.')[1] || '';
+      const length = Math.max(numFloat.length, num2Float.length);
+      const times = 10 ** length;
+      return type === 'reduce' ? (((+arg1) * times - (+arg2) * times) / times).toFixed(length) : (((+arg1) * times + (+arg2) * times) / times).toFixed(length);
+    },
+  },
+});

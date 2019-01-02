@@ -6,6 +6,12 @@
       </view>
     </list-item>
     <list-item disabled="{{true}}">
+      step : 0.01
+      <view slot="extra">
+        <stepper onChange="callBackFn" step="{{0.01}}" showNumber readOnly="{{false}}" value="{{3}}" min="{{2}}" max="{{20}}" />
+      </view>
+    </list-item>
+    <list-item disabled="{{true}}">
       Do not show number value
       <view slot="extra">
         <stepper onChange="callBackFn" step="{{1}}" readOnly="{{false}}" value="{{value}}" min="{{2}}" max="{{12}}" />
