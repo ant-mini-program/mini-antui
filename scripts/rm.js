@@ -5,12 +5,14 @@ const path = require('path');
 const dirs = fs.readdirSync(path.join(__dirname, '../es'));
 
 dirs.forEach((item) => {
-  if (item.includes('app.') || item.includes('DS_Store') || item.includes('demo')) {
+  if (
+item.startsWith('.') ||
+    item.includes('app.') || item.includes('DS_Store') || item.includes('demo')) {
     fs.removeSync(path.join(__dirname, '../es/', item));
   } else {
     const moduleDirs = fs.readdirSync(path.join(__dirname, '../es/', item));
     moduleDirs.forEach((item2) => {
-      if (item2.includes('demo')) {
+      if (item2.startsWith('.') ||item2.includes('demo')) {
         fs.removeSync(path.join(__dirname, '../es/', item, item2));
       }
     });

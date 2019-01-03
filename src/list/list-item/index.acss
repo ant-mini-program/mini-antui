@@ -2,7 +2,7 @@
   display: flex;
   align-items: center;
   background: #fff;
-  padding-left: 15px;
+  padding-left: 16px;
   font-size: 15px;
   line-height: 1.4;
   color: #333;
@@ -10,13 +10,17 @@
 
 /* hover 样式 */
 .am-list-item-hover {
-  background-color: #ddd;
+  background-color: #f8f8f8;
+}
+
+.am-list-prefix {
+  margin-right: 16px;
 }
 
 .am-list-thumb {
   width: 30px;
   height: 30px;
-  margin-right: 15px;
+  margin-right: 16px;
 }
 
 .am-list-line {
@@ -26,7 +30,7 @@
   align-items: center;
   align-self: stretch;
   padding-right: 15px;
-  min-height: 47px;
+  min-height: 52px;
   overflow: hidden;
 }
 
@@ -57,7 +61,7 @@
 
 .am-list-brief {
   color: #888;
-  font-size: 15px;
+  font-size: 14px;
 }
 
 .am-list-wrap .am-list-content,
@@ -70,7 +74,7 @@
   width: 15px;
   height: 15px;
   margin-left: 8px;
-  background-image: url('data:image/svg+xml;charset=utf-8,<svg width="16" height="26" viewBox="0 0 16 26" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g id="UI-KIT_基础元件" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g id="9.9基础元件" transform="translate(-5809.000000, -8482.000000)" fill="#C7C7CC"><polygon id="Disclosure-Indicator" points="5811 8482 5809 8484 5820.5 8495 5809 8506 5811 8508 5825 8495"></polygon></g></g></svg>');
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAaCAYAAAC+aNwHAAAAAXNSR0IArs4c6QAAAdxJREFUOBGlVT1Lw1AUbSSBdMnQf9ChU6GFtr9AEMFBiouDuOikoGixiGgRSi2i1KJTR0fHbuLi5mRbcO7QnyAIQjCSek7ghtc0DQm+5d537z0n97yvpFIYg8GgMxqNavSTjqXhcNgCqOa6bgf+eWICABwBTafTFkiuZB7HaiyChAZMUwCapnXL5XIsSR4BgWyfHQgJbA8k+yCbKrE51ydgBp2cwbSlCuDHUqm0C+tKLGhnCJjEbpxiQa+lEOAnkGzD/kpMtXMETEJOHXJulMJ+Op3ezOfzP0rMc5eCAc6h/RamruSqtm33J5OJqcQ8N7QDKeLh4vmQOWS86rq+XiwWvyUW2oEkof0OoGOZQ9ay4zgv4/HYklhkB1KE3TmEfy9zkL4bhrFaKBQ+YxEQCDkHkPOgkHyAaCVSghRH2VgdREnQo9iZw5k4wuJ1lbo3y7LWcrncF2OREriNKpjbyMUTMAkWSkDbJ8jzQHkD4OdMJrORzWZtidGGdsCjjJwPht83TbMaBJNgroOkl2mmA17nwE3kdd5C+6E3kR34BHxQMPffAvg9gHcAXvgW+AT4cgOr7b9GAHUrlcoebORr5BHgy5dwmpxwANSO+x6ynhIMOhwAXwCc+Gn/14/lDyH1t+arhvp8AAAAAElFTkSuQmCC);
   background-size: contain;
   background-repeat: no-repeat;
   background-position: 50% 50%;
@@ -80,11 +84,14 @@
   visibility: hidden;
 }
 
-.am-list-line-bottom {
+.am-list-line-bottom::after {
+  content: '';
   display: block;
   position: absolute;
   width: 100%;
-  border-bottom: 1rpx solid #eee;
+  height: 1px;
+  background: #eee;
+  transform: scaleY(0.5);
   left: 0;
   bottom: 0;
   right: auto;
@@ -115,6 +122,6 @@
 }
 
 /* 最后一行 */
-.am-list-item.last .am-list-line-bottom{
-  border-bottom: none;
+.am-list-item.last .am-list-line-bottom::after {
+  display: none;
 }

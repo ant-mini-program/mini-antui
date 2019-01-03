@@ -1,3 +1,4 @@
+<import-sjs name="util" from="./util.sjs"/>
 <view class="am-tabs {{className}}">
   <view class="am-tabs-tab-bar-wrap">
     <view class="am-tabs-bar">
@@ -5,9 +6,9 @@
         <view class="am-tabs-scroll-left"></view>
         <view class="am-tabs-scroll-right"></view>
         <scroll-view
-          scroll-left="{{scrollInit}}"
+          scroll-left="{{util.calcScrollLeft(windowWidth, tabWidth, activeTab)}}"
           scroll-x="{{true}}"
-          scroll-with-animation="{{true}}"
+          scroll-with-animation="{{animation}}"
           class="am-tabs-bar-content">
           <block a:for="{{tabs}}">
             <view
@@ -16,15 +17,17 @@
               onTap="handleTabClick"
               style="{{
                 backgroundColor: tabBarBackgroundColor,
-                color: index === current ? tabBarActiveTextColor: tabBarInactiveTextColor,
-                width: tabWidth * 100 + '%',
+                color: index === activeTab ? tabBarActiveTextColor: tabBarInactiveTextColor,
+                width: (tabs.length > 3 ? 0.25 : 1 / tabs.length) * 100 + '%',
               }}"
-              class="am-tabs-bar-tab">
-              <view class="am-tabs-bar-title" style="{{ borderBottomColor: index === current ? tabBarUnderlineColor : '' }}">
-                {{item.title}}
-                <view a:if="{{item.badgeType}}" class="am-tabs-bar-badge {{item.badgeType}}">
-                  {{item.badgeType === 'text' && item.badgeText ? item.badgeText.substr(0, 1) : ''}}
-                </view>
+              class="am-tabs-bar-tab {{tabBarCls}}">
+              <view class="am-tabs-bar-title {{ index === activeTab ? activeCls : '' }}" style="{{ borderBottomColor: index === activeTab ? tabBarUnderlineColor : '' }}">
+                <text>{{item.title}}</text>
+                <badge
+                  className="am-tabs-bar-badge {{item.badgeType ? item.badgeType : ''}}"
+                  a:if="{{item.badgeType}}"
+                  dot="{{item.badgeType == 'dot'}}"
+                  text="{{item.badgeText}}" />
               </view>
             </view>
           </block>
@@ -34,13 +37,24 @@
         <view class="am-tabs-plus" onTap="handlePlusClick"></view>
       </view>
     </view>
-    <swiper
-      current="{{current}}"
-      interval="99999999"
-      autoplay="{{true}}"
-      onChange="handleSwiperChange"
-      class="am-tabs-content-wrap">
-      <slot></slot>
-    </swiper>
+    <block a:if="{{swipeable}}">
+      <swiper
+        circular="{{false}}"
+        current="{{activeTab}}"
+        interval="99999999"
+        autoplay="{{autoplay}}"
+        duration="{{duration}}"
+        onChange="handleSwiperChange"
+        class="am-tabs-content-wrap {{util.compareVersion(version) < 0 ? 'fix' : ''}}">
+        <slot></slot>
+      </swiper>
+    </block>
+    <block a:else>
+      <view class="am-tabs-content-wrap {{util.compareVersion(version) >= 0 ? 'fix' : ''}}">
+        <view class="am-tabs-slides" style="{{ transform: 'translate3d(' +(-activeTab * 100) + 'vw, 0, 0)' }}">
+          <slot></slot>
+        </view>
+      </view>
+    </block>
   </view>
 </view>

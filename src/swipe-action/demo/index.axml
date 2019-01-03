@@ -1,25 +1,25 @@
 <view>
 	<list>
-		<swipe-action index="{{1}}" restore="{{swipeIndex !== null && swipeIndex !== 1}}" right="{{right1}}" onRightItemClick="onRightItemClick" onSwipeStart="onSwipeStart" extra="item1">
-			<list-item
-				arrow="horizontal"
-				index="1"
-				key="items-1"
-				onClick="onItemClick"
+		<view a:for="{{list}}" key="{{item.content}}">
+			<swipe-action
+				index="{{index}}"
+				restore="{{swipeIndex === null || swipeIndex !== index}}"
+				right="{{item.right}}"
+				onRightItemClick="onRightItemClick"
+				onSwipeStart="onSwipeStart"
+				extra="item{{index}}"
+				enableNew="{{true}}"
 			>
-				只有删除
-			</list-item>
-		</swipe-action>
-		<swipe-action index="{{2}}" restore="{{swipeIndex !== null && swipeIndex !== 2}}" right="{{right2}}" data-some="ddd" onRightItemClick="onRightItemClick" onSwipeStart="onSwipeStart" extra="item2">
-			<list-item
-				arrow="horizontal"
-				index="2"
-				key="items-2"
-				onClick="onItemClick"
-				last="{{true}}"
-			>
-				修改 + 删除
-			</list-item>
-		</swipe-action>
+				<list-item
+					arrow="horizontal"
+					index="{{index}}"
+					key="items-{{index}}"
+					onClick="onItemClick"
+					last="{{index === list.length - 1}}"
+				>
+					{{item.content}}
+				</list-item>
+			</swipe-action>
+		</view>
 	</list>
 </view>

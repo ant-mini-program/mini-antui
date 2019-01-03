@@ -1,10 +1,13 @@
-# SearchBar搜索栏
+# SearchBar 搜索栏
 
-搜索栏
+搜索栏。
 
-## API
+扫码体验：
 
-| 属性 | 说明 | 类型 | 默认值 | 必选 |
+<img src="https://gw.alipayobjects.com/zos/rmsportal/VtRSLehBBvvrKgQSjOvZ.jpeg" width="154" height="190" />
+
+
+| 属性名 | 描述 | 类型 | 默认值 | 必选 |
 |----|----|----|----|----|
 | value | 搜索框的当前值 | String |  | false |
 | placeholder | placeholder | String | | false |
@@ -19,21 +22,18 @@
 | maxLength | 最多允许输入的字符个数 | Number | | false |
 | showCancelButton | 是否一直显示取消按钮 | Boolean | | false |
 
-## using
+## 示例
 
-```
-// page.json
+```json
 {
   "defaultTitle": "小程序AntUI组件库",
-  "usingComponents":{
-    "search-bar":"mini-antui/search-bar/index",
+  "usingComponents": {
+    "search-bar": "mini-antui/es/search-bar/index"
   }
 }
 ```
 
-## examples
-
-```axml
+```html
 <view>
   <search-bar
     value="{{value}}"
@@ -46,4 +46,34 @@
     onSubmit="handleSubmit"
     showCancelButton="{{false}}" />
 </view>
+```
+
+```javascript
+Page({
+  data: {
+    value: '美食',
+  },
+  handleInput(value) {
+    this.setData({
+      value,
+    });
+  },
+  handleClear(value) {
+    this.setData({
+      value: '',
+    });
+  },
+  handleFocus() {},
+  handleBlur() {},
+  handleCancel() {
+    this.setData({
+      value: '',
+    });
+  },
+  handleSubmit(value) {
+    my.alert({
+      content: value,
+    });
+  },
+});
 ```

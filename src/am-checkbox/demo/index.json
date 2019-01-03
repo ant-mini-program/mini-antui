@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "am-checkbox": "../index",
+    "list": "../../list/index",
+    "list-item": "../../list/list-item/index"
+  }
+}

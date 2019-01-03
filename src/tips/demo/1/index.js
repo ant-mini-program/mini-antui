@@ -1,11 +1,21 @@
 Page({
   data: {
-    title: 'Hi Eagle!',
-    content: '以后你的服务提醒来播报文案文案文案以后你的服务提醒来播报文案文案文案以后你的服务提醒来播报文案文案文案以后你的服务提醒来播报文案文案文案'
+    showRectangle: true,
+    showDialog: true,
   },
-  onClose() {
-    my.alert({
-      title: '12321'
+  onCloseTap() {
+    this.setData({
+      showRectangle: false,
     });
-  }
+  },
+  onRectangleTap() {
+    my.alert({
+      content: 'do something',
+    });
+  },
+  onDialogTap() {
+    this.setData({
+      showDialog: false,
+    });
+  },
 });

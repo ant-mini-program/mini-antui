@@ -4,6 +4,7 @@
   align-items: center;
   padding: 0 0 0 12px;
   background: #ffffff;
+  overflow: hidden;
 }
 
 .am-search-input {
@@ -21,7 +22,6 @@
   position: absolute;
   left: 0;
   top: 0;
-  z-index: 1;
   height: 28px;
   line-height: 28px;
   padding-left: 14px;

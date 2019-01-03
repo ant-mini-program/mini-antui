@@ -93,31 +93,17 @@
 
 .am-tabs-bar-badge.dot {
   position: absolute;
-  top: 6px;
+  top: 3px;
   right: 0px;
   transform: translateX(8px);
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background: #FF3B30;
 }
 
 .am-tabs-bar-badge.text {
   position: absolute;
-  top: 4px;
+  top: 0px;
   right: 2px;
   transform: translateX(100%);
   height: 16px;
-  width: 16px;
-  line-height: 16px;
-  text-align: center;
-  min-width: 16px;
-  border-radius: 50%;
-  background: #FF3B30;
-  color: #ffffff;
-  font-size: 12px;
-  font-family: PingFang SC;
-  font-weight: 500;
 }
 
 .am-tabs-content-wrap {
@@ -126,5 +112,14 @@
   background: #fff;
   flex-direction: row;
   overflow: hidden;
+  height: auto;
+}
+
+.am-tabs-content-wrap.fix {
   height: auto !important;
+}
+
+.am-tabs-slides {
+  display: flex;
+  transition-duration: 500ms;
 }

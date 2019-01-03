@@ -1,7 +1,4 @@
 <view>
-	<view style="width: 100%;">
-		<image src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png" mode="aspectFill" style="height:20vh;width: 100%;" />
-	</view>
 	<scroll-view style="height: 80vh;" scroll-y onScrollToLower="onScrollToLower">
 		<list>
 			<view slot="header">
@@ -39,6 +36,7 @@
 					onClick="onItemClick"
 					index="items2-{{index}}"
 					key="items2-{{index}}"
+					data-filed="aaa"
 					last="{{index === (items2.length - 1)}}"
 				>
 					{{item.title}}
@@ -174,5 +172,3 @@
 		</list>
 	</scroll-view>
 </view>
-
-

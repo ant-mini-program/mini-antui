@@ -6,9 +6,34 @@ Page({
       path: '/list/demo/index',
     },
     {
+      name: 'AmountInput',
+      nameZN: '金额输入',
+      path: '/amount-input/demo/index',
+    },
+    {
+      name: 'Badge',
+      nameZN: '徽标',
+      path: '/badge/demo/index',
+    },
+    {
+      name: 'FaceDetection',
+      nameZN: '人脸检测',
+      path: '/face-detection/demo/index',
+    },
+    {
       name: 'InputItem',
       nameZN: '列表输入项',
       path: '/input-item/demo/index',
+    },
+    {
+      name: 'PickerItem',
+      nameZN: '选择输入项',
+      path: '/picker-item/demo/index',
+    },
+    {
+      name: 'Footer',
+      nameZN: '页脚',
+      path: '/footer/demo/index',
     },
     {
       name: 'Modal',
@@ -24,6 +49,11 @@ Page({
       name: 'Tabs',
       nameZN: 'Tabs',
       path: '/tabs/demo/index',
+    },
+    {
+      name: 'VTabs',
+      nameZN: 'VTabs',
+      path: '/vtabs/demo/index',
     },
     {
       name: 'Stepper',
@@ -51,9 +81,24 @@ Page({
       path: '/card/demo/index',
     },
     {
+      name: 'Calendar',
+      nameZN: '日历',
+      path: '/calendar/demo/index',
+    },
+    {
+      name: 'AMCheckBox',
+      nameZN: '复选框',
+      path: '/am-checkbox/demo/index',
+    },
+    {
       name: 'Filter',
       nameZN: '筛选',
       path: '/filter/demo/index',
+    },
+    {
+      name: 'Flex',
+      nameZN: 'Flex 布局',
+      path: '/flex/demo/index',
     },
     {
       name: 'Notice',
@@ -74,6 +119,11 @@ Page({
       name: 'PageResult',
       nameZN: '结果页',
       path: '/page-result/demo/index',
+    },
+    {
+      name: 'PopUp',
+      nameZN: '弹出菜单',
+      path: '/popup/demo/index',
     },
     {
       name: 'Message',

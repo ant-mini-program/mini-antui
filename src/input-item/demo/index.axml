@@ -2,38 +2,50 @@
   <view style="margin-top: 10px;" />
   <list>
     <input-item
+      data-field="cardNo"
+      clear="{{true}}"
+      value="{{cardNo}}"
       className="dadada"
-      placeholder="暗提示"
+      placeholder="银行卡号"
       focus="{{inputFocus}}"
       onInput="onItemInput"
       onFocus="onItemFocus"
       onBlur="onItemBlur"
       onConfirm="onItemConfirm"
+      onClear="onClear"
     >
-      单项
-      <view slot="extra" style="display:flex;" onTap="onExtraTap">
-        <icon size="18" type="clear" />
-      </view>
+      卡号
+      <view slot="extra" class="extra" onTap="onExtraTap"></view>
+    </input-item>
+    <picker-item
+      data-field="bank"
+      placeholder="选择发卡银行"
+      value="{{bank}}"
+      onPickerTap="onPickerTap"
+    >
+      发卡银行
+    </picker-item>
+    <input-item
+      data-field="name"
+      placeholder="姓名"
+      type="text"
+      value="{{name}}"
+      clear="{{true}}"
+      onInput="onItemInput"
+      onClear="onClear"
+    >
+      姓名
     </input-item>
     <input-item
-      placeholder="暗提示"
-      type="number"
-    >
-      双行输入
-    </input-item>
-    <input-item
-      placeholder="暗提示"
-    >
-      最长可六个字
-    </input-item>
-    <input-item
-      placeholder="暗提示"
+      data-field="password"
+      placeholder="密码"
       password
     >
       密码
     </input-item>
     <input-item
-      placeholder="暗提示"
+      data-field="remark"
+      placeholder="备注"
       last="{{true}}"
     />
   </list>

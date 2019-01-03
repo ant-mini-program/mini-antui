@@ -4,7 +4,6 @@
   max="{{max}}"
   min="{{min}}"
   onChange="{{callBackFn}}"
-  readOnly="{{readOnly}}"
   step="{{step}}"
   disabled="{{disabled || readOnly}}"
 >
@@ -12,8 +11,9 @@
   <input
     class="am-stepper-input"
     style="display:{{showNumber ? 'inline-block' : 'none'}}"
-    value={{value}}
-    onBlur="resetFn"
+    value="{{value}}"
+    onBlur="onBlur"
+    disabled="{{disabled || readOnly}}"
     type="number"
   />
   <view class="am-stepper-add" style="opacity:{{opaAdd}}" data-type="add" onTap="changeFn" />

@@ -1,70 +1,62 @@
+const { windowWidth } = my.getSystemInfoSync();
+
 Component({
   props: {
     className: '',
+    activeCls: '',
     tabBarUnderlineColor: '#108ee9', // 选中选项卡下划线颜色
     tabBarActiveTextColor: '#108ee9', // 选中选项卡字体颜色
     tabBarInactiveTextColor: '#333333', // 未选中选项卡字体颜色
     tabBarBackgroundColor: '#ffffff', // 选项卡背景颜色
     showPlus: false,
+    swipeable: true,
+    activeTab: 0, // 当前激活tab
+    animation: true,
+    tabBarCls: '', // tabbar的自定义样式class
+    duration: 500,
   },
   data: {
-    scrollInit: 0,
-    current: 0,
-    windowWidth: 0,
+    windowWidth,
     tabWidth: 0.25,
+    autoplay: false,
+    animation: false,
+    version: my.SDKVersion,
   },
   didMount() {
-    const { tabs } = this.props;
-    my.getSystemInfo({
-      success: (res) => {
-        this.setData({
-          windowWidth: res.windowWidth,
-          tabWidth: tabs.length > 3 ? 0.25 : 1 / tabs.length,
-        });
-      }
+    const { tabs, animation } = this.props;
+    this.setData({
+      tabWidth: tabs.length > 3 ? 0.25 : 1 / tabs.length,
+      animation,
+      autoplay: true,
     });
+  },
+  didUpdate(prevProps) {
+    const { tabs } = this.props;
+    if (prevProps.tabs.length !== tabs.length) {
+      this.setData({
+        tabWidth: tabs.length > 3 ? 0.25 : 1 / tabs.length,
+      });
+    }
   },
   methods: {
     handleSwiperChange(e) {
-      const current = e.detail.current;
+      const { current } = e.detail;
 
-      this.moveScrollBar(current);
       if (this.props.onChange) {
         this.props.onChange({ index: current });
       }
-      this.setData({
-        current,
-      });
     },
     handleTabClick(e) {
       const { index } = e.target.dataset;
 
-      this.moveScrollBar(index);
       if (this.props.onTabClick) {
         this.props.onTabClick({ index });
       }
-      this.setData({
-        current: index,
-      });
     },
     handlePlusClick() {
       if (this.props.onPlusClick) {
         this.props.onPlusClick();
       }
     },
-    moveScrollBar(current) {
-      const { windowWidth, tabWidth } = this.data;
-      let scrollInit = current * windowWidth * tabWidth;
-
-      if (current <= 2) {
-        scrollInit = 0;
-      } else {
-        scrollInit = (current - 2) * windowWidth * tabWidth;
-      }
-
-      this.setData({
-        scrollInit,
-      });
-    },
-  }
+  },
 });

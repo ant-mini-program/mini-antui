@@ -5,7 +5,7 @@
       <view class="am-filter-list">
         <slot/>
       </view>
-      <view class="am-filter-btn" a:if="{{singleSelect}}">
+      <view class="am-filter-btn" a:if="{{max !== 1}}">
         <button type="default" class="am-filter-default" onTap="resetFn">重置</button>
         <button type="primary" class="am-filter-primary" onTap="confirmFn">确定</button>
       </view>

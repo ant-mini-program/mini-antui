@@ -1,47 +1,63 @@
-## message组件
+## Message 结果页
 
-1. 显示某个操作的结果
-2. 支持5种类型（success、cancel、info、waiting、warn）
-3. 最多显示两个按钮，可以分别设置文本、是否可点击、及绑定tap函数
+结果页。
 
-## API
+扫码体验：
+
+<img src="https://gw.alipayobjects.com/zos/rmsportal/RpfwagXuCiVLrUgVGSUK.jpeg" width="154" height="190" />
 
 
-属性 | 说明 | 类型 | 默认值 | 必选  
------ | ----- | ----- | ----|---- 
-className| 自定义的class | String| 否 
-title | 主标题 | String  | '' | 是
-subTitle | 副标题 | String  | '' | 否
-mainButton | 主按钮的文本和可用性相关 | Object, 如{buttonText: "确认",disabled: false}   |  | 否 
-subButton | 副按钮的文本和可用性相关 | Object, {buttonText: "取消",disabled: false}  |  |  否 
-onTapMain | 主按钮的点击函数 | Function  | ()=>{} | 否
-onTapSub | 副按钮的点击函数 | Function  | ()=>{} | 否
+| 属性名 | 描述 | 类型 | 默认值 | 必选 |
+|----- | ----- | ----- | ---- | ---- |
+| className| 自定义的class | String| false |
+| type | 有success、fail、info、warn、waiting、info五种状态类型，默认为success | String | success | false |
+| title | 主标题 | String  | '' | true |
+| subTitle | 副标题 | String  | '' | false |
+| mainButton | 主按钮的文本和可用性相关 | Object, 如{buttonText: "确认",disabled: false}   |  | false |
+| subButton | 副按钮的文本和可用性相关 | Object, {buttonText: "取消",disabled: false}  |  | false | 
+| onTapMain | 主按钮的点击函数 | Function  | ()=>{} | false |
+| onTapSub | 副按钮的点击函数 | Function  | ()=>{} | false |
 
-## using
-``` js
-// page.json
+## 示例
+
+```json
 {
   "defaultTitle": "小程序AntUI组件库",
-  "usingComponents":{
-    "message":"mini-antui/es/message/index",
+  "usingComponents": {
+    "message": "mini-antui/es/message/index"
   }
 }
 ```
-## examples
-```
-<message
-  className="test" 
-  type="success" 
-  mainButton="{{messageButton.mainButton}}" 
-  onTapMain="goBack">
-</message>
 
-<message
-  title="{{title}}" 
-  type="cancel" 
-  mainButton="{{messageButton.mainButton}}" 
-  subButton="{{messageButton.subButton}}" 
-  onTapMain="goBack"
-  onTapSub="doNothing">
-</message>
+```html
+<view>
+  <message
+    title="{{title}}"
+    subTitle="{{subTitle}}"
+    type="success" 
+    mainButton="{{messageButton.mainButton}}" 
+    subButton="{{messageButton.subButton}}" 
+    onTapMain="goBack">
+  </message>
+</view>
 ``` 
+
+```javascript
+Page({
+  data: {
+    title: "操作成功",
+    subTitle: "内容详情可折行，建议不超过两行",
+    messageButton: {
+      mainButton: {
+        buttonText: "主要操作"
+      },
+      subButton: {
+        buttonText: "辅助操作"
+      }
+    }
+  },
+  goBack() {
+    my.navigateBack();
+  }
+});
+```

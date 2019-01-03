@@ -1,9 +1,9 @@
 <view>
   <list>
-    <list-item arrow="horizontal" index="filter" key="items-filter">
+    <list-item arrow="horizontal" index="filter" key="items-filter1">
       <navigator url="/filter/demo/single/index">单选</navigator>
     </list-item>
-    <list-item arrow="horizontal" index="filter" key="items-filter">
+    <list-item arrow="horizontal" index="filter" key="items-filter2">
       <navigator url="/filter/demo/alternative/index">多选</navigator>
     </list-item>
   </list>

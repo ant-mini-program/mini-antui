@@ -9,7 +9,29 @@
 }
 
 .am-list-body {
-  border-bottom: 1rpx solid #ddd;
+  position: relative;
+}
+
+.am-list-body::before {
+  position: absolute;
+  content: '';
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  transform: scaleY(0.5);
+  background-color: #eee;
+}
+
+.am-list-body::after {
+  position: absolute;
+  content: '';
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  transform: scaleY(0.5);
+  background-color: #eee;
 }
 
 .am-list-footer {

@@ -1,18 +1,16 @@
 Component({
-  data: {
-    show: true
-  },
   props: {
+    show: true,
     className: '',
-    title: '',
-    onClose: () => {}
+    type: 'dialog',
   },
   methods: {
-    onClose() {
-      this.setData({
-        show: false
-      });
-      this.props.onClose();
-    }
-  }
+    onCloseTap() {
+      const { onCloseTap } = this.props;
+
+      if (onCloseTap) {
+        onCloseTap();
+      }
+    },
+  },
 });
