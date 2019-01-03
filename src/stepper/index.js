@@ -40,14 +40,14 @@ Component({
         if (evType === 'reduce') {
           if (value > min) {
             opaAdd = 1;
-            value = Math.max(min, (+value) - (+step));
+            value = Math.max(min, this.getCalculateValue('reduce', (+value), (+step)));
             opaReduce = value === min ? 0.4 : 1;
           }
         } else {
           /* eslint-disable no-lonely-if */
           if (value < max) {
             opaReduce = 1;
-            value = Math.min((+value) + (+step), max);
+            value = Math.min(this.getCalculateValue('add', (+value), (+step)), max);
             opaAdd = value === max ? 0.4 : 1;
           }
         }
@@ -81,6 +81,13 @@ Component({
         opaReduce,
       });
       onChange(calculatedVal);
+    },
+    getCalculateValue(type, arg1, arg2) {
+      const numFloat = arg1.toString().split('.')[1] || '';
+      const num2Float = arg2.toString().split('.')[1] || '';
+      const length = Math.max(numFloat.length, num2Float.length);
+      const times = 10 ** length;
+      return type === 'reduce' ? (((+arg1) * times - (+arg2) * times) / times).toFixed(length) : (((+arg1) * times + (+arg2) * times) / times).toFixed(length);
     },
   },
 });
