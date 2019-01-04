@@ -1,3 +1,10 @@
+## 0.4.12
+
+`2019-01-04`
+
+- **Bug Fix**
+  - 修复`stepper`step属性设置小数时精度问题([#196](https://github.com/ant-mini-program/mini-antui/issues/196))
+
 ## 0.4.11
 
 `2018-12-30`
