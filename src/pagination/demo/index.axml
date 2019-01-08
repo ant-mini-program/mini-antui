@@ -1,0 +1,16 @@
+<view>
+  <view class="demo-title">基础用法</view>
+  <pagination total="{{20}}" current="{{1}}"/>
+  <view class="demo-title">图标按钮</view>
+  <pagination arrow total="{{20}}" current="{{1}}"/>
+  <view class="demo-title">翻页说明</view>
+  <pagination arrow prevText="左侧说明" nextText="右侧说明" showPage="{{false}}" total="{{20}}" current="{{1}}"/>  
+  <view class="demo-title">隐藏页数</view>
+  <pagination arrow showPage="{{false}}" total="{{20}}" current="{{1}}"/>
+  <view class="demo-title">自定义文字按钮样式</view>
+  <pagination showPage="{{false}}" total="{{20}}" current="{{1}}" btnClass="pagination-btn--disabled"/>
+  <pagination className="pagination--actived" showPage="{{false}}" total="{{20}}" current="{{1}}" btnClass="pagination-btn--actived"/>
+  <view class="demo-title">完整用法</view>
+  <pagination arrow prevText="左侧说明" nextText="右侧说明文字过长测试" total="{{20}}" current="{{1}}"/>
+  <pagination className="pagination--complete-usage" prevText="左侧说明文字过长测试" nextText="右侧说明文字过长测试" total="{{200}}" current="{{100}}"/>
+</view>

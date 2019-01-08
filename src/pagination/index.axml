@@ -1,0 +1,27 @@
+<view class="am-pagination-container {{className}}">
+  <view class="am-pagination-prev">
+    <view
+      class="am-pagination-button--left"
+      onTap="onTapPrev">
+      <view a:if="{{arrow}}" class="am-pagination-arrow arrow--left" />
+      <view a:else class="{{btnClass}}" style="width: 45px;">上一页</view>
+    </view>
+    <view class="am-pagination-text--left text-ellipsis">
+      {{prevText}}
+    </view>
+  </view>
+  <view a:if="{{showPage}}" class="am-pagination-page">
+    {{current}}/{{total}}
+  </view>
+  <view class="am-pagination-next">
+    <view class="am-pagination-text-right text-ellipsis">
+      {{nextText}}
+    </view>
+    <view
+      class="am-pagination-button--right"
+      onTap="onTapNext">
+      <view a:if="{{arrow}}" class="am-pagination-arrow arrow--right" />
+      <view a:else class="{{btnClass}}" style="width: 45px;">下一页</view>
+    </view>
+  </view>
+</view>
