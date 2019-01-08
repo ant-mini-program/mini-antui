@@ -1,0 +1,93 @@
+.am-pagination-container {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  font-size: 14px;
+  line-height: 50px;
+  padding: 0px 20px;
+  align-items: center;
+  box-sizing: border-box;
+  background-color: #fff;
+  justify-content: space-between;
+}
+
+.am-pagination-prev,
+.am-pagination-next {
+  width: 40%;
+  display: flex;
+  box-sizing: border-box;
+  align-items: center;
+}
+
+.am-pagination-prev {
+  justify-content: flex-start;
+}
+
+.am-pagination-next {
+  justify-content: flex-end;
+}
+
+.am-pagination-button--left {
+  padding-right: 7px;
+}
+
+.am-pagination-button--right {
+  padding-left: 7px;
+}
+
+.am-pagination-page {
+  width: 20%;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.am-pagination-arrow {
+  width: 7px;
+  height: 7px;
+  flex-basis: 10px;
+  position: relative;
+  display: inline-block;
+  border: 1px solid #444;
+  border-color: transparent #444 #444 transparent;
+}
+
+.am-pagination-text-left {
+  text-align: left;
+}
+
+.am-pagination-text-right {
+  text-align: right;
+}
+
+.arrow--left {
+  left: 5px;
+  transform: rotate(135deg);
+}
+
+.arrow--right {
+  right: 5px;
+  transform: rotate(-45deg);
+}
+
+.text-ellipsis {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.border--top {
+  position: relative;
+  border: none;
+}
+.border--top:before {
+  top: 0;
+  left: 0;
+  right: 0;
+  content: '';
+  width: 100%;
+  height: 1px;
+  position: absolute;
+  background-color: #eee;
+  transform-origin: 0 0;
+  transform: scaleY(0.5);
+}
