@@ -1,7 +1,0 @@
-{
-  "defaultTitle": "异常反馈",
-  "usingComponents":{
-    "list": "../../list/index",
-    "list-item": "../../list/list-item/index"
-  }
-}

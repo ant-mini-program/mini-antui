@@ -1,7 +1,0 @@
-{
-    "defaultTitle": "Notice-公告",
-    "usingComponents":{
-      "notice": "../index"
-    }
-  }
-  
