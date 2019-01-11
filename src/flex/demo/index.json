@@ -1,6 +1,0 @@
-{
-  "usingComponents": {
-    "flex": "../index",
-    "flex-item": "../flex-item/index"
-  }
-}

@@ -1,7 +1,0 @@
-{
-  "defaultTitle": "小程序AntUI组件库",
-  "usingComponents":{
-    "tabs":"../index",
-    "tab-content": "../tab-content/index"
-  }
-}
