@@ -130,6 +130,11 @@ Page({
       nameZN: '信息状态',
       path: '/pages/message/index',
     },
+    {
+      name: 'Pagination',
+      nameZN: '分页',
+      path: '/pages/pagination/index',
+    },
     ],
   },
 });
