@@ -1,7 +1,0 @@
-{
-  "defaultTitle": "筛选",
-  "usingComponents": {
-    "list": "../../list/index",
-    "list-item": "../../list/list-item/index"
-  }
-}

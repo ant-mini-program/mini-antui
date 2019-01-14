@@ -1,6 +1,0 @@
-{
-  "defaultTitle": "5列宫格",
-  "usingComponents":{
-    "grid":"../../index"
-  }
-}
