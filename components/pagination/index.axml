@@ -1,0 +1,27 @@
+<view class="am-pagination-container border--top {{className}}">
+  <view class="am-pagination-content am-pagination-prev">
+    <view
+      class="am-pagination-button--left"
+      onTap="onTapPrev">
+      <view
+        a:if="{{mode === 'text'}}"
+        class="{{btnClass}} {{disabled ? 'button-text--disabled' : ''}} text-ellipsis"
+      >{{prevText}}</view>
+      <view a:else class="am-pagination-arrow arrow--left" />
+    </view>
+  </view>
+  <view a:if="{{!simple}}" class="am-pagination-page">
+    <text class="text-current">{{current}}</text>/<text class="text-total">{{total}}</text>
+  </view>
+  <view class="am-pagination-content am-pagination-next">
+    <view
+      class="am-pagination-button--right"
+      onTap="onTapNext">
+      <view
+        a:if="{{mode === 'text'}}"
+        class="{{btnClass}} {{disabled ? 'button-text--disabled' : ''}} text-ellipsis"
+      >{{nextText}}</view>
+      <view a:else class="am-pagination-arrow arrow--right" />
+    </view>
+  </view>
+</view>

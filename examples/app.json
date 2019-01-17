@@ -49,7 +49,8 @@
     "pages/message/fail/index",
     "pages/message/info/index",
     "pages/message/waiting/index",
-    "pages/message/warn/index"
+    "pages/message/warn/index",
+    "pages/pagination/index"
   ],
   "window": {
     "enableWK": "YES",
