@@ -5,7 +5,7 @@
       onTap="onTapPrev">
       <view
         a:if="{{mode === 'text'}}"
-        class="{{btnClass}} {{disabled ? 'button-text-disabled' : ''}} am-pagination-text-ellipsis"
+        class="{{btnClass}} {{disabled || current === 1 ? 'button-text-disabled' : ''}} am-pagination-text-ellipsis"
       >{{prevText}}</view>
       <view a:else class="am-pagination-arrow arrow-left" />
     </view>
@@ -19,7 +19,7 @@
       onTap="onTapNext">
       <view
         a:if="{{mode === 'text'}}"
-        class="{{btnClass}} {{disabled ? 'button-text-disabled' : ''}} am-pagination-text-ellipsis"
+        class="{{btnClass}} {{disabled || current === total ? 'button-text-disabled' : ''}} am-pagination-text-ellipsis"
       >{{nextText}}</view>
       <view a:else class="am-pagination-arrow arrow-right" />
     </view>
