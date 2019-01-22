@@ -8,6 +8,7 @@
 - [mini-antui官网文档](https://docs.alipay.com/mini/component-ext/overview-ext-common)
 - [支付宝小程序](https://mini.open.alipay.com/channel/miniIndex.htm)
 - [开发工具](https://docs.alipay.com/mini/ide/overview)
+- [开发规范](https://github.com/ant-mini-program/mini-antui/wiki/%E5%BC%80%E5%8F%91%E8%A7%84%E8%8C%83)
 
 ## 特性
 
