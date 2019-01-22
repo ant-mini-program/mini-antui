@@ -1,8 +1,21 @@
 <p align="center">
-  <img width="320" src="https://gw.alipayobjects.com/zos/rmsportal/CsCzHzlOkLDKyyRadsdD.png">
+  <img width="320" src="https://gw.alipayobjects.com/mdn/miniProgram_mendian/afts/img/A*wiFYTo5I0m8AAAAAAAAAAABjAQAAAQ/original">
 </p>
 
-# mini-antui
+# Mini AntUI
+
+[![npm package](https://img.shields.io/npm/v/mini-antui.svg?style=flat-square)](https://www.npmjs.com/package/mini-antui)
+[![GitHub stars](https://img.shields.io/github/stars/ant-mini-program/mini-antui.svg)](https://github.com/ant-mini-program/mini-antui/stargazers)
+[![GitHub forks](https://img.shields.io/github/forks/ant-mini-program/mini-antui.svg)](https://github.com/ant-mini-program/mini-antui/network/members)
+[![NPM downloads](https://img.shields.io/npm/dm/mini-antui.svg?style=flat-square)](https://www.npmjs.com/package/mini-antui)
+[![GitHub issues](https://img.shields.io/github/issues/ant-mini-program/mini-antui.svg)](https://github.com/ant-mini-program/mini-antui/issues)
+[![GitHub license](https://img.shields.io/github/license/ant-mini-program/mini-antui.svg)](https://github.com/ant-mini-program/mini-antui/blob/master/LICENSE)
+
+## 示例
+
+<p align="left">
+  <img width="250" src="https://gw.alipayobjects.com/mdn/miniProgram_mendian/afts/img/A*xXX3TqsZimMwfA5KoKInYQBjAQAAAQ/original">
+</p>
 
 ## 链接
 - [mini-antui官网文档](https://docs.alipay.com/mini/component-ext/overview-ext-common)
