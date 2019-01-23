@@ -1,5 +1,5 @@
 <p align="center">
-  <img width="320" src="https://gw.alipayobjects.com/mdn/miniProgram_mendian/afts/img/A*wiFYTo5I0m8AAAAAAAAAAABjAQAAAQ/original">
+  <img width="300" src="https://gw.alipayobjects.com/mdn/miniProgram_mendian/afts/img/A*wiFYTo5I0m8AAAAAAAAAAABjAQAAAQ/original">
 </p>
 
 # Mini AntUI
@@ -27,10 +27,6 @@
 
 - 基于`Advance Design`设计规范
 - 使用[支付宝小程序](https://mini.open.alipay.com/channel/miniIndex.htm)开发
-
-## 预览
-
-用[小程序开发者工具](https://docs.alipay.com/mini/ide/overview)打开项目
 
 ## 安装
 
@@ -60,6 +56,8 @@ $ npm install mini-antui --save
   info="点击了第二个card"
 />
 ```
+
+详细使用说明请参照官方文档[使用自定义组件](https://docs.alipay.com/mini/framework/use-custom-component)
 
 ## 贡献
 
