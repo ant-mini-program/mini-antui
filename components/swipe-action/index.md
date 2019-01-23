@@ -7,11 +7,11 @@
 <img src="https://gw.alipayobjects.com/zos/rmsportal/AJKkYtCpuwuoaKTQijUB.jpeg" width="154" height="190" />
 
 | 属性名 | 描述 | 类型 | 默认值 |
-|----|----|----|----|
-|className| 自定义class | String| |
-|right| 滑动选项，最多两项 | Array[Object{type: `edit`/`delete`, text: string}]| `[]` |
-|onRightItemClick| 点击滑动选项 | function({index, detail, extra, done}) ]| 调用done从而使swipe-action合上 |
-| restore | 还原组件到初始状态，当有多个swipe-action组件时，当滑动其中一个时，需要将其他的组件的`restore`属性设置为`true`，避免一个页面同时存在多个swipeAction处于活动状态。 | Boolean | `false` |
+| ---- | ---- | ---- | ---- |
+| className | 自定义class | String| |
+| right | 滑动选项，最多两项 | Array[Object{type: `edit`/`delete`, text: string}]| [] |
+| onRightItemClick | 点击滑动选项 | ({index, detail, extra, done}) => void | 调用done从而使swipe-action合上 |
+| restore | 还原组件到初始状态，当有多个swipe-action组件时，当滑动其中一个时，需要将其他的组件的`restore`属性设置为`true`，避免一个页面同时存在多个swipeAction处于活动状态。 | Boolean | false |
 
 
 ## 示例

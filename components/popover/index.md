@@ -9,19 +9,19 @@
 
 ## popover
 
-| 属性名 | 描述 | 类型 | 可选 | 默认值 | 必选 |
-|----|----|----|----|----|----|
-| show | 气泡是否展示 | boolean | - | false | true |
-| showMask | 蒙层是否展示 | boolean | - | true | false |
-| position | 气泡位置 | string | top / topRight / topLeft / bottom / bottomLeft / bottomRight / right / rightTop / rightBottom / left / leftBottom / leftTop | bottomRight | false |
-| className | 最外层覆盖样式 | string | - | ' ' | false |
+| 属性名 | 描述 | 类型 | 默认值 | 必选 |
+| ---- | ---- | ---- | ---- | ---- |
+| className | 最外层覆盖样式 | String | | false |
+| show | 气泡是否展示 | Boolean | false | true |
+| showMask | 蒙层是否展示 | Boolean | true | false |
+| position | 气泡位置可选值：`top`、`topRight`、`topLeft`、`bottom`、`bottomLeft`、`bottomRight`、`right`、`rightTop`、`rightBottom`、`left`、`leftBottom`、 `leftTop`  | String | bottomRight | false |
 
 ## popover-item
 
-| 属性名 | 描述 | 类型 | 可选 | 默认值 | 必选 |
-|----|----|----|----|----|----|
-| onItemClick | 单项点击事件 | function | - | null | false |
-| className | 单项样式 | string | - | ' ' | false |
+| 属性名 | 描述 | 类型 | 默认值 | 必选 |
+| ---- | ---- | ---- | ---- | ----|
+| className | 单项样式 | String | | false |
+| onItemClick | 单项点击事件 | () => void | | false |
 
 ## 示例
 

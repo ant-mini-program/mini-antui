@@ -7,12 +7,12 @@
 <img src="https://gw.alipayobjects.com/zos/rmsportal/ttsOmZZOgOesoeoxJZgw.jpeg" width="154" height="190" />
 
 | 属性名 | 描述 | 类型 | 默认值 | 必选 |
-|----|----|----|----|----|
+| ---- | ---- | ---- | ---- | ---- |
 | value | 组件值，选中时 change 事件会携带的 value | String |  | false |
 | checked | 当前是否选中，可用来设置默认选中 | Boolean | false | false |
 | disabled | 是否禁用 | Boolean | false | false |
-| onChange | 组件发生改变时触发，detail = {value: 该 checkbox 是否 checked} | EventHandle |  | false |
-| id | 与label组件的for属性组合使用 | string | | false |
+| onChange | change 事件触发的回调函数 | (e: Object) => void |  | false |
+| id | 与label组件的for属性组合使用 | String | | false |
 
 ## 示例
 

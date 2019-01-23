@@ -8,8 +8,8 @@
 
 
 | 属性名 | 描述 | 类型 | 默认值 | 必选 |
-|----|----|----|----|----|
-| copyright | 版权信息 | string |  | false |
+| ---- | ---- | ---- | ---- | ---- |
+| copyright | 版权信息 | String |  | false |
 | links | 页脚链接 | Array<text, url> |  | false |
 
 ## 示例

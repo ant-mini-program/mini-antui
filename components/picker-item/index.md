@@ -9,21 +9,21 @@
 选择输入。
 
 | 属性名 | 描述 | 类型 | 默认值 |
-|----|----|----|----|
-|className| 自定义的class | String| '' |
-|labelCls| 自定义label的class | String | '' |
-|pickerCls| 自定义选择区域的class | String | '' |
-|last| 是否最后一行 | Boolean | `false` |
-|value| 初始内容 | string | '' |
-|name| 组件名字，用于表单提交获取数据	| String | '' |
-|placeholder | 占位符	| String | '' |
-|onPickerTap | 点击pickeritem时触发 | function | (event) => void |
+| ---- | ---- | ---- | ---- |
+| className | 自定义的class | String|  |
+| labelCls | 自定义label的class | String | |
+| pickerCls | 自定义选择区域的class | String | |
+| last| 是否最后一行 | Boolean | false |
+| value| 初始内容 | String | |
+| name| 组件名字，用于表单提交获取数据 | String | |
+| placeholder | 占位符 | String | |
+| onPickerTap | 点击pickeritem时触发 | (e: Object) => void | |
 
 ## slots
 
 | slotname | 说明 |
-|----|----|
-|extra | 可选，用于渲染picker-item项右边说明|
+| ---- | ---- |
+| extra | 可选，用于渲染picker-item项右边说明 |
 
 ## 示例
 

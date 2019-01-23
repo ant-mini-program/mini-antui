@@ -7,14 +7,14 @@
 <img src="https://gw.alipayobjects.com/zos/rmsportal/XptnMtDkEbMxinQIPGwL.jpeg" width="154" height="190" />
 
 | 属性名 | 描述 | 类型 | 默认值 | 必选 |
-|----|----|----|----|----|
-| thumb | Card缩略图地址 | imgUrl |  | false |
-| title | Card标题 | String | '' | true |
+| ---- | ---- | ---- | ---- | ---- |
+| thumb | Card缩略图地址 | String |  | false |
+| title | Card标题 | String | | true |
 | subTitle | Card副标题 | String |  | false |
 | footer | footer文字 | String |  | false |
-| footerImg | footer图片地址 | imgUrl | | false |
-| onCardClick | Card点击的回调 | Function({info}) | () => {} | false |
-| info | 用于点击卡片时往外传递数据	| String | '' | false |
+| footerImg | footer图片地址 | String | | false |
+| onCardClick | Card点击的回调 | (info: Object) => void | | false |
+| info | 用于点击卡片时往外传递数据 | String | | false |
 
 ## 示例
 

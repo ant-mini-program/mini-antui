@@ -9,26 +9,26 @@
 ## vtabs
 
 | 属性名 | 描述 | 类型 | 默认值 | 必选 |
-|----|----|----|----|----|
-| activeTab | 当前激活Tab索引	| number |  | true |
-| tabs | tab数据，其中包括选项标题`title`，列表唯一锚点值，以及徽标类型`badgeType`，分为圆点`dot`和文本`text`，徽标文本`badgeText`在`badgeType`为`text`时生效 | Array<title, anchor> |  | true |
-| animated | 是否开启动画 | boolean| | false |
-| swipeable | 是否可滑动切换 | boolean| | true |
-| tabBarActiveBgColor | tabBar激活状态背景色	| string | | false |
-| tabBarInactiveBgColor | tabBar非激活状态背景色	| string | | false |
-| tabBarActiveTextColor | tabBar激活Tab文字颜色	| string | | false |
-| tabBarInactiveTextColor | tabBar非激活Tab文字颜色 | string | | false |
-| tabBarlineColor | tabBar侧划线颜色 | string | | false |
-| onTabClick | tab 被点击的回调 | (index: number) => void | | false |
-| onChange | vtab-content变化时触发 | (index: number) => void | | false |
+| ---- | ---- | ---- | ---- | ---- |
+| activeTab | 当前激活Tab索引 | number |  | true |
+| tabs | tab数据，其中包括选项标题`title`，列表唯一锚点值，以及徽标类型`badgeType`，分为圆点`dot`和文本`text`，不设置`badgeType`则不显示徽标。徽标文本`badgeText`在`badgeType`为`text`时生效 | Array<title, anchor> |  | true |
+| animated | 是否开启动画 | Boolean| | false |
+| swipeable | 是否可滑动切换 | Boolean| | true |
+| tabBarActiveBgColor | tabBar激活状态背景色 | String | | false |
+| tabBarInactiveBgColor | tabBar非激活状态背景色 | String | | false |
+| tabBarActiveTextColor | tabBar激活Tab文字颜色 | String | | false |
+| tabBarInactiveTextColor | tabBar非激活Tab文字颜色 | String | | false |
+| tabBarlineColor | tabBar侧划线颜色 | String | | false |
+| onTabClick | tab 被点击的回调 | (index: Number) => void | | false |
+| onChange | vtab-content变化时触发 | (index: Number) => void | | false |
 
 ## vtab-content
 
 视图内容
 
 | 属性名 | 描述 | 类型 | 默认值 | 必选 |
-|----|----|----|----|----|
-| anchor | 列表唯一锚点值 | string | | | |
+| ---- | ---- | ---- | ---- | ---- |
+| anchor | 列表唯一锚点值 | String | | true|
 
 ## 示例
 
