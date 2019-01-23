@@ -7,14 +7,14 @@
 <img src="https://gw.alipayobjects.com/zos/rmsportal/DJfecsuPIyuOUHZtVFxG.jpeg" width="154" height="190" />
 
 | 属性名 | 描述 | 类型 | 默认值 |
-|----|----|----|----|
-| mode | 提示类型,link,closable,'' | String|''|
+| ---- | ---- | ---- | ---- |
+| mode | 提示可选类型：`link`、`closable` | String | '' |
 | action | 提示显示文本 | String | '' |
-| actionCls | 提示显示文本自定义class | string | '' |
-| show | 是否显示通告栏 | boolean| true |
-| onClick | 点击按钮回调 | (): void | - |
-| enableMarquee | 是否开启动画 | boolean | false |
-| marqueeProps | marquee 参数，其中`loop`表示是否循环，`leading`表示动画开启前停顿，`training`表示`loop`为true时时，动画间停顿，`fps`表示动画帧率 | Object | {loop: false, leading: 500, trailing: 800, fps: 40 } |
+| actionCls | 提示显示文本自定义class | String | '' |
+| show | 是否显示通告栏 | Boolean| true |
+| onClick | 点击按钮回调 | () => void | |
+| enableMarquee | 是否开启动画 | Boolean | false |
+| marqueeProps | marquee 参数，其中`loop`表示是否循环，`leading`表示动画开启前停顿，`training`表示`loop`为true时时，动画间停顿，`fps`表示动画帧率 | Object<loop, leading, trailing, fps> | {loop: false, leading: 500, trailing: 800, fps: 40 } |
 
 ## 示例
 

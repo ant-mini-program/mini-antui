@@ -8,12 +8,12 @@
 
 
 | 属性名 | 描述 | 类型 | 默认值 | 必选 |
-|----|----|----|----|----|
-| list | 宫格数据,[{'icon': 'imgUrl', 'text': '标题'}]	| Array | [] | true |
-| onGridItemClick | 点击宫格项回调 | (index: number) => void | () => {} | false |
+| ---- | ---- | ---- | ---- | ---- |
+| list | 宫格数据 | Array<icon, text> | [] | true |
+| onGridItemClick | 点击宫格项回调 | (index: Number) => void | | false |
 | columnNum | 每行显示几列 | `2`、`3`、`4`、`5` | `3` | false |
 | circular | 是否圆角 | Boolean | `false` | false |
-| hasLine | 是否有边框	| Boolean | `true` | false |
+| hasLine | 是否有边框 | Boolean | `true` | false |
 
 ## 示例
 

@@ -9,22 +9,22 @@
 ## tabs
 
 | 属性名 | 描述 | 类型 | 默认值 | 必选 |
-|----|----|----|----|----|
-| className | 自定义class | string | | false |
-| activeCls | 自定义激活tabbar的class | string | | |
-| tabs | tab数据，其中包括选项标题`title`，徽标类型`badgeType`分为圆点`dot`和文本`text`，徽标文本`badgeText`在`badgeType`为`text`时生效 | Array<title, badgeType, badgeText> |  | true |
-| activeTab | 当前激活Tab索引	| number |  | true |
+| ---- | ---- | ---- | ---- | ---- |
+| className | 自定义class | String | | false |
+| activeCls | 自定义激活tabbar的class | String | | |
+| tabs | tab数据，其中包括选项标题`title`，徽标类型`badgeType`分为圆点`dot`和文本`text`，不设置`badgeType`则不显示徽标。徽标文本`badgeText`在`badgeType`为`text`时生效 | Array<title, badgeType, badgeText> |  | true |
+| activeTab | 当前激活Tab索引 | Number |  | true |
 | showPlus | 是否显示‘+’icon | Boolean | false | false |
 | onPlusClick | ‘+’icon被点击时的回调 | () => {} |  | false |
-| onTabClick | tab 被点击的回调 | (index: number) => void | | false |
-| onChange | tab变化时触发 | (index: number) => void | | false |
-| swipeable | 是否可以滑动内容切换 | boolean | true | false |
-| duration | 当swipeable为true时滑动动画时长，单位ms	| number | 500(ms) | false |
-| tabBarBackgroundColor | tabBar背景色	| string | | false |
-| tabBarActiveTextColor | tabBar激活Tab文字颜色	| string | | false |
-| tabBarInactiveTextColor | tabBar非激活Tab文字颜色 | string | | false |
-| tabBarUnderlineColor | tabBar下划线颜色 | string | | false |
-| tabBarCls | tabBar自定义样式class | string | | false |
+| onTabClick | tab 被点击的回调 | (index: Number) => void | | false |
+| onChange | tab变化时触发 | (index: Number) => void | | false |
+| swipeable | 是否可以滑动内容切换 | Boolean | true | false |
+| duration | 当swipeable为true时滑动动画时长，单位ms | Number | 500(ms) | false |
+| tabBarBackgroundColor | tabBar背景色 | String | | false |
+| tabBarActiveTextColor | tabBar激活Tab文字颜色 | String | | false |
+| tabBarInactiveTextColor | tabBar非激活Tab文字颜色 | String | | false |
+| tabBarUnderlineColor | tabBar下划线颜色 | String | | false |
+| tabBarCls | tabBar自定义样式class | String | | false |
 
 
 ## tab-content
@@ -32,8 +32,8 @@
 视图内容
 
 | 属性名 | 描述 | 类型 | 默认值 | 必选 |
-|----|----|----|----|----|
-| index | 列表项的唯一索引 | string | | | |
+| ---- | ---- | ---- | ---- | ---- |
+| index | 列表项的唯一索引 | String | | | |
 
 ## 示例
 

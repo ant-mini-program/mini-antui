@@ -9,20 +9,20 @@
 ## filter
 
 | 属性名 | 描述 | 类型 | 默认值 | 必选 |
-|----|----|----|----|----|
-| show | 是否显示 可选值 show or hide | String | hide | false |
+| ---- | ---- | ---- | ---- | ---- |
+| show | 是否显示 可选值 `show` `hide` | String | hide | false |
 | max | 可选数量最大值，1为单选 | Number | 10000 | false |
-| onChange | 多选时提交选中回调 | function | (ev: arry): void | false |
+| onChange | 多选时提交选中回调 | (e: Object) => void | | false |
 
 ## filter-item
 
 | 属性名 | 描述 | 类型 | 默认值 | 必选 |
-|----|----|----|----|----|
+| ---- | ---- | ---- | ---- | ---- |
 | className | 自定义样式 | String | | false |
 | value | 值 | String | | true |
-| id | 自定义标识符 | number or String | | false |
-| selected | 默认选中 | boolean |false | false |
-| onChange | 单选时提交选中回调 | function | (ev: arry): void | false |
+| id | 自定义标识符 | String | | false |
+| selected | 默认选中 | Boolean | false | false |
+| onChange | 单选时提交选中回调 | (e: Object) => void | | false |
 
 ## 示例
 

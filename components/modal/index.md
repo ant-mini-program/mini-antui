@@ -7,23 +7,23 @@
 <img src="https://gw.alipayobjects.com/zos/rmsportal/heaiwgCysVcdCUYmUjri.jpeg" width="154" height="190" />
 
 | 属性名 | 描述 | 类型 | 默认值 |
-|----|----|----|----|
-|className| 自定义class | String| |
-|show| 是否展示`modal` | Boolean| `false` |
-|showClose| 是否渲染`关闭` | Boolean| `true` |
-|closeType| 关闭图表类型 0：灰色图标 1：白色图标 | String | 0 |
-|onModalClick| 点击`footer`部分的回调 | function()|  |
-|onModalClose| 点击`关闭`的回调, `showClose`为false时无需设置  | function()|  |
-|topImage | 顶部图片 | imgSrc |  |
-|topImageSize | 顶部图片规则 | `lg`、`md`、`sm` | `md` |
-|advice| 是否是运营类弹窗 | Bollean | `false` |
+| ---- | ---- | ---- | ---- |
+| className| 自定义class | String| |
+| show | 是否展示`modal` | Boolean | false |
+| showClose | 是否渲染`关闭` | Boolean | true |
+| closeType | 关闭图表类型 0：灰色图标 1：白色图标 | String | 0 |
+| onModalClick | 点击`footer`部分的回调 | () => void |  |
+| onModalClose | 点击`关闭`的回调, `showClose`为false时无需设置  | () => void |  |
+| topImage | 顶部图片 | String |  |
+| topImageSize | 顶部图片规则，可选值：`lg`、`md`、`sm`  | String | md |
+| advice| 是否是运营类弹窗 | Boolean | false |
 
 ## slots
 
-|slotName | 说明 |
-|----|----|
-|header | 可选，modal头部 |
-|footer | 可选，modal尾部 |
+| slotName | 说明 |
+| ---- | ---- |
+| header | 可选，modal头部 |
+| footer | 可选，modal尾部 |
 
 
 ## 示例

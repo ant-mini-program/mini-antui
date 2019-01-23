@@ -8,15 +8,15 @@
 
 
 | 属性名 | 描述 | 类型 | 默认值 | 必选 |
-|----- | ----- | ----- | ---- | ---- |
-| className| 自定义的class | String| false |
+| ----- | ----- | ----- | ---- | ---- |
+| className| 自定义的class | String | | false |
 | type | 有success、fail、info、warn、waiting、info五种状态类型，默认为success | String | success | false |
-| title | 主标题 | String  | '' | true |
-| subTitle | 副标题 | String  | '' | false |
-| mainButton | 主按钮的文本和可用性相关 | Object, 如{buttonText: "确认",disabled: false}   |  | false |
-| subButton | 副按钮的文本和可用性相关 | Object, {buttonText: "取消",disabled: false}  |  | false | 
-| onTapMain | 主按钮的点击函数 | Function  | ()=>{} | false |
-| onTapSub | 副按钮的点击函数 | Function  | ()=>{} | false |
+| title | 主标题 | String  |  | true |
+| subTitle | 副标题 | String  |  | false |
+| mainButton | 主按钮的文本和可用性相关 | Object<buttonText, disabled> |  | false |
+| subButton | 副按钮的文本和可用性相关 | Object<buttonText, disabled>  |  | false |
+| onTapMain | 主按钮的点击函数 | () => {}  |  | false |
+| onTapSub | 副按钮的点击函数 | () => {}  |  | false |
 
 ## 示例
 

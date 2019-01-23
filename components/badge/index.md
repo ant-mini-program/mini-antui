@@ -7,16 +7,16 @@
 <img src="https://gw.alipayobjects.com/zos/rmsportal/NQlAfTbzwLneEYbNYNht.jpeg" width="154" height="190" />
 
 | 属性名 | 描述 | 类型 | 默认值 | 必选 |
-|----|----|----|----|----|
-| text | 展示的数字或文案 | string/number |  | false |
-| dot | 不展示数字，只有一个小红点 | boolean |  | false |
-| overflowCount | 展示封顶的数字值，超出部分用“+”号表示 | number | 99 | false |
+| ---- | ---- | ---- | ---- | ---- |
+| text | 展示的数字或文案 | String / Number |  | false |
+| dot | 不展示数字，只有一个小红点 | Boolean |  | false |
+| overflowCount | 展示封顶的数字值，超出部分用“+”号表示 | Number | 99 | false |
 
 ## slots
 
-|slotName | 说明 |
-|----|----|
-|inner | 可选，badge作为wrapper时，用于渲染内部的区域 |
+| slotName | 说明 |
+| ---- | ---- |
+| inner | 可选，badge作为wrapper时，用于渲染内部的区域 |
 
 ## 示例
 

@@ -8,7 +8,7 @@
 
 
 | 属性名 | 描述 | 类型 | 默认值 | 必选 |
-|----|----|----|----|----|
+| ---- | ---- | ---- | ---- | ---- |
 | type | 异常页面类型，可选，网络异常`network`,服务繁忙`busy`,服务异常`error`,空状态`empty`,用户注销`logoff` | String | network | false |
 | local | 是否是局部异常内容 | Boolean | false | false |
 | title | 错误提示标题 | String |  | false |
