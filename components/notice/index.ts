@@ -1,3 +1,5 @@
+const noop = () => {};
+const canIUseTransitionEnd = my.canIUse('view.onTransitionEnd');
 Component({
   props: {
     className: '',
@@ -16,20 +18,32 @@ Component({
   data: {
     animatedWidth: 0,
     overflowWidth: 0,
+    duration: 0,
+    marqueeStyle: '',
+    canIUseTransitionEnd,
   },
   didMount() {
     if (this.props.enableMarquee) {
-      this._measureText();
-      this._startAnimation();
+      if (!canIUseTransitionEnd) {
+        this._measureText();
+        this._startAnimation();
+      } else {
+        this._measureText(this.startMarquee.bind(this));
+      }
     }
   },
+
   didUpdate() {
-    this._measureText();
-    if (this.props.enableMarquee && !this._marqueeTimer) {
+    // 这里更新处理的原因是防止notice内容在动画过程中发生改变。
+    if (!canIUseTransitionEnd) {
+      this._measureText();
+    }
+    if (this.props.enableMarquee && !this._marqueeTimer && !canIUseTransitionEnd) {
       this._measureText();
       this._startAnimation();
     }
   },
+
   didUnmount() {
     if (this._marqueeTimer) {
       clearTimeout(this._marqueeTimer);
@@ -37,7 +51,30 @@ Component({
     }
   },
   methods: {
-    _measureText() {
+    resetMarquee() {
+      const marqueeStyle = 'transform: translateX(0px); transition: 0s all linear;';
+      this.setData({ marqueeStyle });
+    },
+
+    startMarquee() {
+      const { marqueeProps } = this.props;
+      const { duration, overflowWidth } = this.data;
+      const marqueeStyle = `transform: translateX(${-overflowWidth}px); transition: ${duration}s all linear ${typeof marqueeProps.leading === 'number' ? `${marqueeProps.leading / 1000}s` : '0s'};`;
+      this.setData({ marqueeStyle });
+    },
+
+    onTransitionEnd() {
+      const { marqueeProps } = this.props;
+      if (marqueeProps.loop) {
+        setTimeout(() => {
+          this.resetMarquee();
+          this._measureText(this.startMarquee.bind(this));
+        }, typeof marqueeProps.trailing === 'number' ? marqueeProps.trailing : 0);
+      }
+    },
+
+    _measureText(callback = noop) {
+      const { fps } = this.props.marqueeProps;
       // 计算文本所占据的宽度，计算需要滚动的宽度
       my.createSelectorQuery()
         .select(`.am-notice-marquee-${this.$id}`)
@@ -48,9 +85,12 @@ Component({
           const overflowWidth = (ret && ret[0] && ret[1] && (ret[0].width - ret[1].width)) || 0;
           this.setData({
             overflowWidth,
+            duration: (overflowWidth / fps),
           });
+          callback();
         });
     },
+
     _startAnimation() {
       if (this._marqueeTimer) {
         clearTimeout(this._marqueeTimer);
@@ -95,7 +135,7 @@ Component({
         this._marqueeTimer = setTimeout(animate, timeout);
       }
     },
-    
+
     onNoticeTap() {
       const { mode, onClick } = this.props;
       if (mode === 'link' && typeof onClick === 'function') {
