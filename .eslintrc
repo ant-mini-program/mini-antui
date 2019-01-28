@@ -6,5 +6,12 @@
     "Component": true,
     "Page": true
   },
-  "rules": {}
+  "parser": "typescript-eslint-parser",
+  "plugins": [
+    "typescript"
+  ],
+  "rules": {
+    "typescript/class-name-casing": "error",
+    "typescript/type-annotation-spacing": "error"
+  }
 }
