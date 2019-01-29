@@ -3,7 +3,7 @@ const noop = () => {};
 Component({
   data: {
     totalPage: 0,
-    current: 0
+    current: 0,
   },
 
   props: {
@@ -16,14 +16,14 @@ Component({
     nextText: '下一页',
     onChange: noop,
     className: '',
-    btnClass: ''
+    btnClass: '',
   },
 
   didMount() {
     const { current, total } = this.props;
     this.setData({
       current,
-      total
+      total,
     });
   },
 
@@ -33,7 +33,7 @@ Component({
       const { disabled } = this.props;
       if (current - 1 > 0 && !disabled) {
         this.setData({
-          current: current - 1
+          current: current - 1,
         });
         this.props.onChange(this.data.current);
       }
@@ -43,10 +43,10 @@ Component({
       const { current, total } = this.data;
       if (current + 1 <= total && !disabled) {
         this.setData({
-          current: current + 1
+          current: current + 1,
         });
         this.props.onChange(this.data.current);
       }
-    }
-  }
+    },
+  },
 });
