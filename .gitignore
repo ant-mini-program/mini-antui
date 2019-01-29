@@ -22,7 +22,6 @@ node_modules
 .cache
 .vscode
 *.xcworkspace
-yarn.lock
 .tea
 .entry
 /build/

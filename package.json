@@ -29,6 +29,8 @@
     "gulp-rename": "^1.2.3",
     "lint-staged": "^8.1.0",
     "pre-commit": "^1.2.2",
+    "stylelint": "^9.10.1",
+    "stylelint-config-standard": "^18.2.0",
     "typescript": "^3.2.4",
     "typescript-eslint-parser": "^22.0.0"
   },
@@ -49,6 +51,9 @@
     "*.js": [
       "eslint",
       "git add"
+    ],
+    "*.less": [
+      "stylelint --syntax less"
     ]
   }
 }
