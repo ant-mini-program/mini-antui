@@ -1,3 +1,4 @@
+<import-sjs name="index" from="./index.sjs"/>
 <view class="am-pagination-container am-pagination-border-top {{className}}">
   <view class="am-pagination-content am-pagination-prev">
     <view
@@ -5,13 +6,13 @@
       onTap="onTapPrev">
       <view
         a:if="{{mode === 'text'}}"
-        class="{{btnClass}} {{disabled || current === 1 ? 'button-text-disabled' : ''}} am-pagination-text-ellipsis"
+        class="{{btnClass}} {{disabled || index.calcCurrent(current, currentPage) === 1 ? 'button-text-disabled' : ''}} am-pagination-text-ellipsis"
       >{{prevText}}</view>
       <view a:else class="am-pagination-arrow arrow-left" />
     </view>
   </view>
   <view a:if="{{!simple}}" class="am-pagination-page">
-    <text class="text-current">{{current}}</text>/<text class="text-total">{{total}}</text>
+    <text class="text-current">{{index.calcCurrent(current, currentPage)}}</text>/<text class="text-total">{{total}}</text>
   </view>
   <view class="am-pagination-content am-pagination-next">
     <view
@@ -19,7 +20,7 @@
       onTap="onTapNext">
       <view
         a:if="{{mode === 'text'}}"
-        class="{{btnClass}} {{disabled || current === total ? 'button-text-disabled' : ''}} am-pagination-text-ellipsis"
+        class="{{btnClass}} {{disabled || index.calcCurrent(current, currentPage) === total ? 'button-text-disabled' : ''}} am-pagination-text-ellipsis"
       >{{nextText}}</view>
       <view a:else class="am-pagination-arrow arrow-right" />
     </view>
