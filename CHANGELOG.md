@@ -1,3 +1,11 @@
+## 0.4.15
+
+`2019-02-01`
+
+- **Enhancement**
+  - 优化`notice`动画性能([#140](https://github.com/ant-mini-program/mini-antui/issues/140))
+  - 修复`pagination`闪烁问题
+
 ## 0.4.14
 
 `2019-01-25`
