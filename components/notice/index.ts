@@ -57,24 +57,24 @@ Component({
     },
 
     startMarquee() {
-      const { marqueeProps } = this.props;
+      const { leading = 500 } = this.props.marqueeProps;
       const { duration, overflowWidth } = this.data;
-      const marqueeStyle = `transform: translateX(${-overflowWidth}px); transition: ${duration}s all linear ${typeof marqueeProps.leading === 'number' ? `${marqueeProps.leading / 1000}s` : '0s'};`;
+      const marqueeStyle = `transform: translateX(${-overflowWidth}px); transition: ${duration}s all linear ${typeof leading === 'number' ? `${leading / 1000}s` : '0s'};`;
       this.setData({ marqueeStyle });
     },
 
     onTransitionEnd() {
-      const { marqueeProps } = this.props;
-      if (marqueeProps.loop) {
+      const { loop = false, trailing = 800 } = this.props.marqueeProps;
+      if (loop) {
         setTimeout(() => {
           this.resetMarquee();
           this._measureText(this.startMarquee.bind(this));
-        }, typeof marqueeProps.trailing === 'number' ? marqueeProps.trailing : 0);
+        }, typeof trailing === 'number' ? trailing : 0);
       }
     },
 
     _measureText(callback = noop) {
-      const { fps } = this.props.marqueeProps;
+      const { fps = 40 } = this.props.marqueeProps;
       // 计算文本所占据的宽度，计算需要滚动的宽度
       my.createSelectorQuery()
         .select(`.am-notice-marquee-${this.$id}`)
@@ -96,7 +96,12 @@ Component({
         clearTimeout(this._marqueeTimer);
       }
 
-      const { loop, fps, trailing, leading } = this.props.marqueeProps;
+      const {
+        loop = false,
+        leading = 500,
+        trailing = 800,
+        fps = 40,
+      } = this.props.marqueeProps;
       const TIMEOUT = 1 / fps * 1000;
       const isLeading = this.data.animatedWidth === 0;
       const timeout = isLeading ? leading : TIMEOUT;
