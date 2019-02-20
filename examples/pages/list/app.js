@@ -11,6 +11,11 @@ Page({
       path: '/pages/amount-input/index',
     },
     {
+      name: 'AmIcon',
+      nameZN: '图标',
+      path: '/pages/am-icon/index',
+    },
+    {
       name: 'Badge',
       nameZN: '徽标',
       path: '/pages/badge/index',

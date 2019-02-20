@@ -3,6 +3,7 @@
     "pages/list/app",
     "pages/list/index",
     "pages/amount-input/index",
+    "pages/am-icon/index",
     "pages/picker-item/index",
     "pages/input-item/index",
     "pages/badge/index",
