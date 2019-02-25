@@ -1,5 +1,6 @@
 const noop = () => {};
 const canIUseTransitionEnd = my.canIUse('view.onTransitionEnd');
+
 Component({
   props: {
     className: '',
@@ -83,11 +84,13 @@ Component({
         .boundingClientRect()
         .exec((ret) => {
           const overflowWidth = (ret && ret[0] && ret[1] && (ret[0].width - ret[1].width)) || 0;
-          this.setData({
-            overflowWidth,
-            duration: (overflowWidth / fps),
-          });
-          callback();
+          if (overflowWidth > 0) {
+            this.setData({
+              overflowWidth,
+              duration: (overflowWidth / fps),
+            });
+            callback();
+          }
         });
     },
 
