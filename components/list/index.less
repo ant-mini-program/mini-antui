@@ -1,3 +1,5 @@
+@import '../style/mixins/hairline.less';
+
 .am-list-header,
 .am-list-footer {
   font-size: 14px;
@@ -10,28 +12,8 @@
 
 .am-list-body {
   position: relative;
-}
-
-.am-list-body::before {
-  position: absolute;
-  content: '';
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 1px;
-  transform: scaleY(0.5);
-  background-color: #eee;
-}
-
-.am-list-body::after {
-  position: absolute;
-  content: '';
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 1px;
-  transform: scaleY(0.5);
-  background-color: #eee;
+  .hairline('top');
+  .hairline('bottom');
 }
 
 .am-list-footer {
