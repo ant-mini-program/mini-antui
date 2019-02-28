@@ -1,3 +1,5 @@
+@import '../style/mixins/hairline.less';
+
 .am-picker-item {
   display: flex;
   align-items: center;
@@ -41,18 +43,8 @@
   display: flex;
 }
 
-.am-picker-line-bottom::after {
-  content: '';
-  display: block;
-  position: absolute;
-  width: 100%;
-  height: 1px;
-  transform: scaleY(0.5);
-  left: 0;
-  bottom: 0;
-  right: auto;
-  top: auto;
-  background-color: #eee;
+.am-picker-line-bottom {
+  .hairline('bottom');
 }
 
 /* 最后一行 */
