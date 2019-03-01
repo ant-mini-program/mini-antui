@@ -2,6 +2,10 @@
 
 CSS flex布局的封装。
 
+扫码体验：
+
+<img src="https://gw.alipayobjects.com/mdn/miniProgra/afts/img/A*7eyvR59-2LIAAAAAAAAAAABjARQnAQ" width="154" height="190" />
+
 ## flex
 
 | 属性名 | 描述 | 类型 | 默认值 | 必选 |

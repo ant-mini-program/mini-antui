@@ -2,6 +2,10 @@
 
 图标。
 
+扫码体验：
+
+<img src="https://gw.alipayobjects.com/mdn/miniProgram_mendian/afts/img/A*mQn6SLUq1KkAAAAAAAAAAABjARQnAQ" width="154" height="190" />
+
 | 属性名 | 描述 | 类型 | 默认值 | 必选 |
 | ---- | ---- | ---- | ---- | ---- |
 | type | icon类型 | String | | true |
