@@ -1,3 +1,5 @@
+@import '../../style/mixins/hairline.less';
+
 .am-list-item {
   display: flex;
   align-items: center;
@@ -84,18 +86,8 @@
   visibility: hidden;
 }
 
-.am-list-line-bottom::after {
-  content: '';
-  display: block;
-  position: absolute;
-  width: 100%;
-  height: 1px;
-  background: #eee;
-  transform: scaleY(0.5);
-  left: 0;
-  bottom: 0;
-  right: auto;
-  top: auto;
+.am-list-line-bottom {
+  .hairline('bottom');
 }
 
 /* 子元素垂直对齐 */

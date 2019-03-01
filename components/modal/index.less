@@ -1,3 +1,5 @@
+@import '../style/mixins/hairline.less';
+
 .am-modal-show {
   position: fixed;
   top: 0;
@@ -38,7 +40,6 @@
 .am-modal-image-sm {
   margin-top: 24px;
 }
- 
 .am-modal-image-lg image {
   width: 270px;
   height: 156px;
@@ -74,10 +75,11 @@
   margin-top: 12px;
   height: 50px;
   line-height: 50px;
-  border-top: 1rpx solid #ddd;
+  position: relative;
   font-size: 18px;
   color: #108ee9;
   text-align: center;
+  .hairline('top', #ddd);
 }
 .am-modal-close {
   position: absolute;
@@ -90,14 +92,14 @@
   background-size: 16px 16px;
 }
 
-.am-close-white {
-  background: url("https://gw.alipayobjects.com/zos/rmsportal/fdmdsySxNBrpcVBVGEUM.png") center no-repeat;;
+.am-modal-close-white {
+  background: url("https://gw.alipayobjects.com/zos/rmsportal/fdmdsySxNBrpcVBVGEUM.png") center no-repeat;
   background-size: 16px 16px;
 }
 
 .am-modal-close-active,
 .am-modal-footer-active {
-  background-color: rgba(37,39,40,.05);
+  background-color: rgba(37, 39, 40, .05);
 }
 
 .am-modal-document-advice .am-modal {

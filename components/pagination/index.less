@@ -1,3 +1,4 @@
+@import '../style/mixins/hairline.less';
 
 .am-pagination {
   &-container {
@@ -6,7 +7,7 @@
     display: flex;
     font-size: 14px;
     line-height: 50px;
-    padding: 0px 20px;
+    padding: 0 20px;
     align-items: center;
     box-sizing: border-box;
     background-color: #fff;
@@ -39,7 +40,7 @@
       }
       &-right {
         right: 5px;
-        transform: rotate(-45deg);          
+        transform: rotate(-45deg);
       }
     }
   }
@@ -63,27 +64,16 @@
   }
   &-next {
     justify-content: flex-end;
-  }  
+  }
   &-text-ellipsis {
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
   }
-  
+
   &-border-top {
     position: relative;
     border: none;
-  }
-  &-border-top::before {
-    top: 0;
-    left: 0;
-    right: 0;
-    content: '';
-    width: 100%;
-    height: 1px;
-    position: absolute;
-    background-color: #eee;
-    transform-origin: 0 0;
-    transform: scaleY(0.5);
+    .hairline('top');
   }
 }

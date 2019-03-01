@@ -7,7 +7,7 @@
     {{subTitle}}
   </view>
 </view>
-<view class="am-button-wrap" a:if="{{mainButton || subButton}}">
+<view class="am-message-button-wrap" a:if="{{mainButton || subButton}}">
   <button
     a:if="{{mainButton}}"
     type="primary"

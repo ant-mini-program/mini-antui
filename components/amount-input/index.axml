@@ -17,7 +17,7 @@
       onFocus="onFocus"
       onBlur="onBlur" />
     <view class="am-amount-clear {{ value.length > 0 && _focus ? 'am-amount-clear-show' : '' }}" onTap="onClearTap">
-      <icon type="clear" size="22" />
+      <icon class="am-amount-clear-icon" type="clear" size="22" />
     </view>
   </view>
   <view class="am-amount-footer">
