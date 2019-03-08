@@ -140,6 +140,11 @@ Page({
       nameZN: '分页',
       path: '/pages/pagination/index',
     },
+    {
+      name: 'Collapse',
+      nameZN: '折叠',
+      path: '/pages/collapse/index',
+    },
     ],
   },
 });
