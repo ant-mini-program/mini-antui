@@ -35,7 +35,7 @@
   <view class="am-vtabs-content-wrap" onTouchMove="onWrapTouchMove">
     <block a:if="{{swipeable}}">
       <scroll-view
-        class="am-vtabs-slides"
+        class="am-vtabs-slides am-vtabs-slides-{{$id}}"
         scroll-with-animation="{{animated}}"
         scroll-y="{{true}"
         scroll-top="{{wrapScrollTop}}"
@@ -44,7 +44,7 @@
       </scroll-view>
     </block>
     <block a:else>
-      <view class="am-vtabs-slides {{animated ? 'animate' : ''}}" style="{{ transform: 'translate3d(0, ' +(-wrapScrollTop) + 'px, 0)' }}">
+      <view class="am-vtabs-slides am-vtabs-slides-{{$id}} {{animated ? 'animate' : ''}}" style="{{ transform: 'translate3d(0, ' +(-wrapScrollTop) + 'px, 0)' }}">
         <slot></slot>
       </view>
     </block>
