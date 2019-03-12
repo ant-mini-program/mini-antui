@@ -23,7 +23,8 @@ Component({
     this.calcHeight();
   },
   didUpdate(prevProps) {
-    if (this.props.tabs.length !== prevProps.tabs.length) {
+    const { activeTab } = this.props;
+    if (this.props.tabs.length !== prevProps.tabs.length || activeTab !== prevProps.activeTab) {
       this.calcHeight();
     }
   },
@@ -42,7 +43,7 @@ Component({
       this.scrollWrapHeight = 0;
 
       my.createSelectorQuery()
-        .select('.am-vtabs-slides')
+        .select(`.am-vtabs-slides-${this.$id}`)
         .boundingClientRect()
         .exec((ret) => {
           this.wrapHeight = ret[0].height;
