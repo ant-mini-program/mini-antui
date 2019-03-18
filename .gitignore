@@ -10,6 +10,7 @@
 *.patch
 *.bak
 .DS_Store
+package-lock.json
 Thumbs.db
 .project
 .*proj
