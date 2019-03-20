@@ -28,6 +28,11 @@ Component({
   data: {
     _focus: false,
   },
+  didMount() {
+    this.setData({
+      _focus: this.props.focus,
+    });
+  },
   methods: {
     onBlur(e) {
       this.setData({
