@@ -6,6 +6,8 @@ Component({
     value: '',
     placeholder: '',
     onSelect: () => {},
+    labelCls: '',
+    pickerCls: '',
   },
   methods: {
     onPickerTap(e) {
