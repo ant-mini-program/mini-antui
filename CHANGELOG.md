@@ -1,3 +1,15 @@
+## 0.4.20
+
+`2019-03-22`
+
+- **Feature**
+  - 新增`collapase`组件
+  - `grid`支持slot
+
+- **Enhancement**
+  - 优化`picker-item`文字超出换行问题
+  - `vtabs`组件activeTab属性变化重新计算高度
+
 ## 0.4.19
 
 `2019-03-01`
