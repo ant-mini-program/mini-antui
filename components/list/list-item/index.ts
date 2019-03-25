@@ -7,14 +7,20 @@ Component({
     wrap: false,
   },
   didMount() {
-    this.dataset = {};
-    for (const key in this.props) {
-      if ((/data-/gi).test(key)) {
-        this.dataset[key.replace(/data-/gi, '')] = this.props[key];
-      }
-    }
+    this._updateDataSet();
+  },
+  didUpdate() {
+    this._updateDataSet();
   },
   methods: {
+    _updateDataSet() {
+      this.dataset = {};
+      for (const key in this.props) {
+        if ((/data-/gi).test(key)) {
+          this.dataset[key.replace(/data-/gi, '')] = this.props[key];
+        }
+      }
+    },
     onItemTap(ev) {
       const { onClick, disabled } = this.props;
       if (onClick && !disabled) {
