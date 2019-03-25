@@ -15,6 +15,20 @@
 | circular | 是否圆角 | Boolean | `false` | false |
 | hasLine | 是否有边框 | Boolean | `true` | false |
 
+## slot
+
+> 可以自定义Grid中的展示内容，在slot根元素上使用 `slot-scope` 属性获取传给`slot`的`list`中的各项数据，如下代码中：`slot-scope="props"`，这样在模板中使用`props.item`即可访问`list`中的数据。使用`props.item.xx`访问`item`中的数据，参考以下代码：
+
+```html
+<view slot-scope="props">
+  <image src="{{props.item.icon}}" />
+  <view>
+    <text>{{props.item.text}}</text>
+    <text>{{props.item.desc}}</text>
+  </view>
+</view>
+```
+
 ## 示例
 
 ```json
