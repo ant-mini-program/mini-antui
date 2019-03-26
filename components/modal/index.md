@@ -70,7 +70,7 @@ Page({
   },
   onModalClose() {
     this.setData({
-      modalOpened2: false,
+      modalOpened: false,
     });
   }
 });
