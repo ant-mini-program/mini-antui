@@ -4,6 +4,7 @@ const less = require('gulp-less');
 const rename = require('gulp-rename');
 const cleanCss = require('gulp-clean-css');
 const babel = require('gulp-babel');
+const gulpif = require('gulp-if');
 
 const isProduction = process.env.NODE_ENV === 'production';
 const dist = isProduction ? path.join(__dirname, '../es') : path.join(__dirname, '../examples/es');
@@ -13,7 +14,7 @@ const extTypes = ['ts', 'less', 'json', 'axml', 'sjs'];
 gulp.task('less', () => {
   gulp.src(`${src}/**/*.less`)
     .pipe(less())
-    .pipe(cleanCss())
+    .pipe(gulpif(isProduction, cleanCss()))
     .pipe(rename({
       extname: '.acss',
     }))
