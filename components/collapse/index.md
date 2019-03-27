@@ -7,7 +7,7 @@
 | 属性名 | 描述 | 类型 | 默认值 | 必选 |
 |----|----|----|----|----|
 | activeKey | 当前激活 tab 面板的 key | Array or String | 默认无，accordion模式下默认第一个元素 | false |
-| onChange | 切换面板的回调	| Function | noop | false |
+| onChange | 切换面板的回调	| (activeKeys: Array): void	 | noop | false |
 | accordion | 手风琴模式 | Boolean | false | false |
 | collapseKey | 唯一标示collapse和对应的collapse-item | String | false | false |
 ## collapse-item
