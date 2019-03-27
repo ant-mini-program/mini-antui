@@ -1,21 +1,19 @@
 @import '../style/mixins/hairline.less';
 
-.am-list-header,
-.am-list-footer {
-  font-size: 14px;
-  color: #888;
-}
-
-.am-list-header {
-  padding: 16px 16px 8px;
-}
-
-.am-list-body {
-  position: relative;
-  .hairline('top');
-  .hairline('bottom');
-}
-
-.am-list-footer {
-  padding: 8px 16px 16px 16px;
+.am-list {
+  &-header,&-footer {
+    font-size: 14px;
+    color: #888;
+  }
+  &-header {
+    padding: 16px 16px 8px;
+  }
+  &-body {
+    position: relative;
+    .hairline('top');
+    .hairline('bottom');
+  }
+  &-footer {
+    padding: 8px 16px 16px 16px;
+  }
 }
