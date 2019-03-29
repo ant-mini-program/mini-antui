@@ -1,3 +1,10 @@
+# 0.4.22
+
+`2019-03-29`
+
+- **Bug Fix**
+  - 修复`flex`没有justify-content:center的问题([#247](https://github.com/ant-mini-program/mini-antui/issues/247))
+
 ## 0.4.21
 
 `2019-03-25`
