@@ -12,7 +12,8 @@
 | right | 滑动选项，最多两项 | Array[Object{type: `edit`/`delete`, text: string}]| [] |
 | onRightItemClick | 点击滑动选项 | ({index, detail, extra, done}) => void | 调用done从而使swipe-action合上 |
 | restore | 还原组件到初始状态，当有多个swipe-action组件时，当滑动其中一个时，需要将其他的组件的`restore`属性设置为`true`，避免一个页面同时存在多个swipeAction处于活动状态。 | Boolean | false |
-
+| onSwipeStart | 开始滑动回调 | (e: Object) => void |  |
+| extra | 附属信息，会在onRightItemClick回调中获取 | any | |
 
 ## 示例
 
