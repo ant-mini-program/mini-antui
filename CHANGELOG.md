@@ -1,5 +1,13 @@
 # 0.4.22
 
+`2019-04-11`
+
+- **Enhancement**
+  - `notice`样式写明box-sizing类型避免开发者全局css属性影响组件样式
+  - `modal`新增`disableScroll`属性
+
+# 0.4.22
+
 `2019-03-29`
 
 - **Bug Fix**
