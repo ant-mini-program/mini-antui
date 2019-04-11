@@ -4,6 +4,7 @@ Component({
     topImageSize: 'md',
     showClose: true,
     closeType: '0',
+    disableScroll: true,
   },
   methods: {
     onModalClick() {
