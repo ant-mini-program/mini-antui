@@ -39,7 +39,7 @@
     "lint-staged": "lint-staged",
     "build": "NODE_ENV=production node scripts/compiler.js",
     "pub": "npm run build && node scripts/pub.js",
-    "dev": "node scripts/compiler.js"
+    "dev": "yarn install && node scripts/compiler.js"
   },
   "pre-commit": [
     "lint-staged"

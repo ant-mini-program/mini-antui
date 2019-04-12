@@ -1,4 +1,4 @@
-<view class="am-notice {{className}}" a:if="{{show}}" onTap="onNoticeTap">
+<view class="am-notice {{className}}" style="height: {{show ? '36px' : '0px'}}" onTap="onNoticeTap">
   <view class="am-notice-thumb"></view>
   <view class="am-notice-content am-notice-content-{{$id}}">
     <view
