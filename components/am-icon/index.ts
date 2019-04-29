@@ -3,5 +3,6 @@ Component({
     type: '',
     size: 23,
     color: '#333',
+    className: '',
   },
 });
