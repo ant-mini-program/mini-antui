@@ -37,7 +37,7 @@
       <scroll-view
         class="am-vtabs-slides am-vtabs-slides-{{$id}}"
         scroll-with-animation="{{animated}}"
-        scroll-y="{{true}"
+        scroll-y="{{true}}"
         scroll-top="{{wrapScrollTop}}"
         onScroll="onScroll">
         <slot></slot>
