@@ -1,11 +1,20 @@
-# 0.4.25
+## 0.4.26
+
+`2019-05-10`
+
+- **Bug Fix**
+  - 修复`vtabs`的预发错误([#264](https://github.com/ant-mini-program/mini-antui/issues/264))
+  - 修复`am-icon`默认class为undefined的问题([#261](https://github.com/ant-mini-program/mini-antui/issues/261))
+  - 修复`list-item`数字和英文不换行的问题
+
+## 0.4.25
 
 `2019-04-24`
 
 - **Bug Fix**
   - 修复`badge`类型为text的情况下，文字换行的问题
 
-# 0.4.23
+## 0.4.23
 
 `2019-04-11`
 
@@ -13,7 +22,7 @@
   - `notice`样式写明box-sizing类型避免开发者全局css属性影响组件样式
   - `modal`新增`disableScroll`属性
 
-# 0.4.22
+## 0.4.22
 
 `2019-03-29`
 
