@@ -65,7 +65,7 @@ Component({
       this.setData({ activeArr });
       this.props.onChange(activeArr);
       this.$page[collapsePrefix(`updates-${collapseKey}`)].forEach((update) => {
-        if (update instanceof Function) {
+        if (typeof update === 'function') {
           update({
             activeKey: this.data.activeArr,
           });
