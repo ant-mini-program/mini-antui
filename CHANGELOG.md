@@ -3,7 +3,7 @@
 `2019-05-10`
 
 - **Bug Fix**
-  - 修复`vtabs`的预发错误([#264](https://github.com/ant-mini-program/mini-antui/issues/264))
+  - 修复`vtabs`的语法错误([#264](https://github.com/ant-mini-program/mini-antui/issues/264))
   - 修复`am-icon`默认class为undefined的问题([#261](https://github.com/ant-mini-program/mini-antui/issues/261))
   - 修复`list-item`数字和英文不换行的问题
 

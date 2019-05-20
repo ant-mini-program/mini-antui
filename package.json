@@ -30,6 +30,7 @@
     "gulp-less": "^4.0.1",
     "gulp-rename": "^1.2.3",
     "lint-staged": "^8.1.0",
+    "mini-types": "^0.0.1",
     "pre-commit": "^1.2.2",
     "stylelint": "^9.10.1",
     "stylelint-config-standard": "^18.2.0",
