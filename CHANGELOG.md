@@ -1,3 +1,11 @@
+## 0.4.27
+
+`2019-05-24`
+
+- **Bug Fix**
+  - 修复`collapse`无法在钉钉小程序上展开的问题([#272](https://github.com/ant-mini-program/mini-antui/issues/272))
+  - 修复`stepper` readOnly状态下按钮点击无效的问题
+
 ## 0.4.26
 
 `2019-05-10`
@@ -41,7 +49,7 @@
 `2019-03-22`
 
 - **Feature**
-  - 新增`collapase`组件
+  - 新增`collapse`组件
   - `grid`支持slot
 
 - **Enhancement**
