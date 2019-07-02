@@ -35,6 +35,7 @@
   <view class="am-vtabs-content-wrap" onTouchMove="onWrapTouchMove">
     <block a:if="{{swipeable}}">
       <scroll-view
+        trap-scroll="{{true}}"
         class="am-vtabs-slides am-vtabs-slides-{{$id}}"
         scroll-with-animation="{{animated}}"
         scroll-y="{{true}}"
