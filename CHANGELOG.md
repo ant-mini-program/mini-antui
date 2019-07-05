@@ -1,3 +1,11 @@
+## 0.4.28
+
+`2019-07-05`
+
+- **Bug Fix**
+  - 修复`vtabs`在页面`allowsBounceVertical`时不能滚动的问题
+  - 修复`search-bar`在`placeholder`很长的情况下点击无法清除内容的问题
+
 ## 0.4.27
 
 `2019-05-24`
