@@ -46,7 +46,7 @@ Component({
         .select(`.am-vtabs-slides-${this.$id}`)
         .boundingClientRect()
         .exec((ret) => {
-          this.wrapHeight = ret[0].height;
+          this.wrapHeight = (<my.IBoundingClientRect>ret[0]).height;
         });
 
       let cacheHeight = 0;
@@ -64,7 +64,7 @@ Component({
                 wrapScrollTop: this.indexMap[i],
               });
             }
-            cacheHeight += ret[0].height;
+            cacheHeight += (<my.IBoundingClientRect>ret[0]).height;
             this.scrollWrapHeight = cacheHeight;
           });
       }
