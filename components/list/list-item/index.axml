@@ -5,7 +5,7 @@
 	data-index="{{index}}"
 >
 	<view a:if={{$slots.prefix}} class="am-list-prefix">
-		<slot name="prefix">
+		<slot name="prefix" />
 	</view>
 	<image a:if={{thumb}} class="am-list-thumb" src="{{thumb}}" mode="scaleToFill" />
 	<view class="am-list-line {{wrap ? 'am-list-wrap' : ''}}">
