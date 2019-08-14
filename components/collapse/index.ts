@@ -22,6 +22,12 @@ Component({
     this.initData();
   },
 
+  didUnmount() {
+    // clear cache in page when didUnmount
+    delete this.$page[collapsePrefix(`ids-${this.props.collapseKey}`)];
+    delete this.$page[collapsePrefix(`updates-${this.props.collapseKey}`)];
+  },
+
   methods: {
     initData() {
       const { accordion, activeKey, collapseKey } = this.props;
