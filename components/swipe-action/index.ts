@@ -67,7 +67,7 @@ Component({
         });
     },
     onSwipeTap() {
-      if (!this.data.swiping) {
+      if (!this.data.swiping && this.data.x < 0) {
         this.setData({
           leftPos: 0,
           swiping: false,
