@@ -1,6 +1,6 @@
 {
   "name": "mini-antui",
-  "version": "0.4.29",
+  "version": "0.4.30",
   "description": "小程序版AntUI",
   "repository": {
     "type": "git",
@@ -36,6 +36,9 @@
     "stylelint-config-standard": "^18.2.0",
     "typescript": "^3.2.4",
     "typescript-eslint-parser": "^22.0.0"
+  },
+  "engines": {
+    "node": "^10.0.0" 
   },
   "scripts": {
     "lint-staged": "lint-staged",

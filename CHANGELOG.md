@@ -1,3 +1,21 @@
+## 0.4.30
+
+`2019-08-14`
+
+- **Bug Fix**
+  - 修复 `collapse` 在 `didUnmout` 时清除缓存的问题 [#291](https://github.com/ant-mini-program/mini-antui/pull/291)
+
+`2019-08-16`
+
+- **Bug Fix**
+  - 修复 `swipe-action` 在模拟器中点击会触发滑动的问题 [#294](https://github.com/ant-mini-program/mini-antui/pull/294)
+
+`2019-08-27`
+
+- **Enhancement**
+  - package.json 增加 node 版本限定 `"node": "^10.0.0"`
+  - 更新 yarn.lock
+
 ## 0.4.29
 
 `2019-07-19`
