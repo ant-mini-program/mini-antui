@@ -17,7 +17,7 @@
 | topImage | 顶部图片 | String |  |
 | topImageSize | 顶部图片规则，可选值：`lg`、`md`、`sm`  | String | md |
 | advice| 是否是运营类弹窗 | Boolean | false |
-| disableScroll | modal展示时是否禁止页面滚动 | Boolean | true | false |
+| disableScroll | modal展示时是否禁止页面滚动（**以真机效果为准**） | Boolean | true | false |
 
 ## slots
 
