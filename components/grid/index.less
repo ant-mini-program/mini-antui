@@ -48,15 +48,6 @@
 	color: @color_2;
 	font-size: 12px;
 }
-.am-grid-no-line {
-	.am-grid-item {
-		padding-top: 110px;
-	}
-	.am-grid-border {
-		border-right: none;
-		border-bottom: none;
-	}
-}
 
 .am-grid-2 {
 	.am-grid-item-wrapper {
@@ -128,6 +119,16 @@
   }
 	.am-grid-item {
 		padding-top: 125px;
+	}
+}
+
+.am-grid-no-line {
+	.am-grid-item {
+		padding-top: 110px;
+		.am-grid-border {
+			border-right: 0 none;
+			border-bottom: 0 none;
+		}
 	}
 }
 
