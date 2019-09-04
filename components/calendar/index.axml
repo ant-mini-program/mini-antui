@@ -1,11 +1,17 @@
 <view class="am-calendar {{className}}" a:if="{{dates.length > 0}}">
   <view class="am-calendar-months">
+    <view class="am-calendar-prev-month" onTap="onPrevYearTap" a:if="{{haveYear}}">
+      <view class="am-calendar-arrow am-calendar-arrow_year"></view>
+    </view>
     <view class="am-calendar-prev-month" onTap="onPrevMonthTap">
       <view class="am-calendar-arrow"></view>
     </view>
     <view class="am-calendar-selected-month">{{selectedYear}}年{{selectedMonth + 1}}月</view>
     <view class="am-calendar-next-month" onTap="onNextMonthTap">
       <view class="am-calendar-arrow next"></view>
+    </view>
+    <view class="am-calendar-next-month" onTap="onNextYearTap" a:if="{{haveYear}}">
+      <view class="am-calendar-arrow am-calendar-arrow_year next"></view>
     </view>
   </view>
   <view class="am-calendar-days">
@@ -38,7 +44,7 @@
             >{{item.date}}</view>
             <view class="am-calendar-tag" style="{{
               color: item.isSelected || item.isMiddle || item.isStart || item.isEnd ? '#fff' : (item.disable ? '#999' : item.color)
-            }}">{{item.disable ? 'disable' : item.tag}}</view>
+            }}">{{item.disable ? '' : item.tag}}</view>
           </view>
         </block>
       </view>
