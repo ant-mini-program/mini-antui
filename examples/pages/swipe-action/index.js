@@ -2,11 +2,11 @@ Page({
   data: {
     swipeIndex: null,
     list: [
-      { right: [{ type: 'delete', text: '删除' }], content: 'AAA' },
-      { right: [{ type: 'edit', text: '取消收藏' }, { type: 'delete', text: '删除' }], content: '2BBB' },
-      { right: [{ type: 'edit', text: '取消收藏' }, { type: 'delete', text: '删除' }], content: '3BBB' },
-      { right: [{ type: 'edit', text: '取消收藏' }, { type: 'delete', text: '删除' }], content: '4BBB' },
-      { right: [{ type: 'edit', text: '取消收藏' }, { type: 'delete', text: '删除' }], content: '5BBB' },
+      { right: [{ type: 'delete', text: '删除', fColor: 'black' }], content: '更换文字颜色' },
+      { right: [{ type: 'edit', text: '取消收藏', fColor: 'rgba(0,0,0,.5)' }, { type: 'delete', text: '删除', fColor: 'yellow' }], content: '改变文字颜色' },
+      { right: [{ type: 'edit', text: '取消收藏', bgColor: '#333' }, { type: 'delete', text: '删除' }], content: '其中一个背景色变化' },
+      { right: [{ type: 'edit', text: '取消收藏', bgColor: '#ccc', fColor: '#f00' }, { type: 'delete', text: '删除', bgColor: '#0ff', fColor: '#333' }], content: '文字和背景色同时改变' },
+      { right: [{ type: 'edit', text: '取消收藏' }, { type: 'delete', text: '删除' }], content: '默认颜色样式' },
       { right: [{ type: 'edit', text: '取消收藏' }, { type: 'delete', text: '删除' }], content: '6BBB' },
       { right: [{ type: 'edit', text: '取消收藏' }, { type: 'delete', text: '删除' }], content: '7BBB' },
       { right: [{ type: 'edit', text: '取消收藏' }, { type: 'delete', text: '删除' }], content: '8BBB' },

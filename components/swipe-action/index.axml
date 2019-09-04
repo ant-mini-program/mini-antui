@@ -8,6 +8,7 @@
           onTap="onItemClick"
           data-index="{{index}}"
           key="swipe-item-{{index}}"
+          style="{{item.bgColor?'background-color:' + item.bgColor + ';':''}} {{item.fColor?'color: ' + item.fColor + ';':''}}"
         >
           {{item.text}}
         </view>
@@ -44,6 +45,7 @@
             onTap="onItemClick"
             data-index="{{index}}"
             key="swipe-item-{{index}}"
+            style="{{item.bgColor?'background-color:' + item.bgColor + ';':''}} {{item.fColor?'color: ' + item.fColor + ';':''}}"
           >
             {{item.text}}
           </view>
