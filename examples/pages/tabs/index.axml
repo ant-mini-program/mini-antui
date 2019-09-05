@@ -6,10 +6,16 @@
     onChange="handleTabChange"
     onPlusClick="handlePlusClick"
     activeTab="{{activeTab}}"
-    swipeable="{{true}}"
+    swipeable="{{false}}"
   >
     <block a:for="{{tabs}}">
-      <tab-content key="{{index}}">
+      <tab-content key="{{index}}" tabId="{{index}}" activeTab="{{activeTab}}" a:if="{{index === 1}}">
+        <view class="tab-content" style="height: 100px;">高度为 100px {{item.title}}</view>
+      </tab-content>
+      <tab-content key="{{index}}" tabId="{{index}}" activeTab="{{activeTab}}" a:elif="{{index === 2}}">
+        <view class="tab-content" style="height: 200px;">改变 tab-content 高度为 200px {{item.title}}</view>
+      </tab-content>
+      <tab-content key="{{index}}" tabId="{{index}}" activeTab="{{activeTab}}" a:else>
         <view class="tab-content">content of {{item.title}}</view>
       </tab-content>
     </block>

@@ -2,5 +2,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 300px;
+  padding: 40rpx;
+  /* 如果 swipeable="{{true}}"，需要增加 height */
+  /* height: 350px; */
 }
