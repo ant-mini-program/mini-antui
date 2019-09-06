@@ -1,11 +1,12 @@
-## InputItem 文本输入
-
 文本输入。
 
-扫码体验：
-
+## 扫码体验
 <img src="https://gw.alipayobjects.com/zos/rmsportal/HoUOLnPEOaymuHlbeyqR.jpeg" width="154" height="190" />
 
+## 效果示例
+![输入框.png](https://intranetproxy.alipay.com/skylark/lark/0/2019/png/188518/1564389321807-3fdc73ec-f8c4-454b-aa2b-69121edd0d25.png) 
+
+## 属性
 | 属性名 | 描述 | 类型 | 默认值 |
 | ---- |----|----|----|
 | className | 自定义的class | String| '' |
@@ -14,7 +15,7 @@
 | last | 是否最后一行 | Boolean | false |
 | value | 初始内容 | String | '' |
 | name | 组件名字，用于表单提交获取数据 | String | '' |
-| type | input 的类型，有效值：`text`, `number`, `idcard`, `digit` | String | text |
+| type | input 的类型，有效值：`text`, `number`, `idcard`, `digit`  | String | text |
 | password | 是否是密码类型 | Boolean | false |
 | placeholder | 占位符 | String | '' |
 | placeholderStyle | 指定 placeholder 的样式 | String | '' |
@@ -29,15 +30,24 @@
 | onBlur | 失去焦点时触发 | (e: Object) => void |  |
 | onClear | 点击清除icon时触发 | () => void |  |
 
+### type 属性值介绍
+* `text`： 字符输入框
+* `number`： 纯数字输入框（ 0-9 之间的数字）
+* `idcard`：身份证输入框（ 0-9 之间的数字，以及字符 x）
+* `digit`：数字输入框，（ 0-9 之间的数字，以及小数点 . 字符，可用于含有小数的数字）
+
+**注**：`type` 的属性值影响的是真机中的键盘类型，在模拟器中并不一定会有效果。
+
 ## slots
 
 | slotname | 说明 |
 | ---- | ---- |
 | extra | 可选，用于渲染input-item项右边说明 |
 
-## 示例
+## 示例代码
 
 ```json
+// API-DEMO page/component/input-item/input-item.json
 {
   "defaultTitle": "小程序AntUI组件库",
   "usingComponents": {
@@ -49,7 +59,8 @@
 }
 ```
 
-```axml
+```html
+<!-- API-DEMO page/component/input-item/input-item.axml -->
 <view>
   <view style="margin-top: 10px;" />
   <list>
@@ -108,6 +119,7 @@
 ```
 
 ```javascript
+// API-DEMO page/component/input-item/input-item.js
 const banks = ['网商银行', '建设银行', '工商银行', '浦发银行'];
 
 Page({
@@ -159,6 +171,7 @@ Page({
 ```
 
 ```css
+/* API-DEMO page/component/input-item/input-item.acss */
 .extra {
   background-image: url('https://gw.alipayobjects.com/zos/rmsportal/dOfSJfWQvYdvsZiJStvg.svg');
   background-size: contain;
