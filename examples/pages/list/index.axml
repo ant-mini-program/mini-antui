@@ -1,5 +1,5 @@
 <view>
-	<scroll-view style="height: 80vh;" scroll-y onScrollToLower="onScrollToLower">
+	<scroll-view style="height: 80vh;" scroll-y onScrollToLower="onScrollToLower" enable-back-to-top="true">
 		<list>
 			<view slot="header">
 				列表头部
@@ -143,7 +143,7 @@
 				</list-item>
 			</block>
 		</list>
-		<list >
+		<list loadMore="{{loadMore}}" loadContent="{{loadContent}}">
 			<view slot="header">
 				无限滚动列表
 			</view>
@@ -166,9 +166,6 @@
 					</view>
 				</list-item>
 			</block>
-			<view slot="footer">
-				列表尾部
-			</view>
 		</list>
 	</scroll-view>
 </view>
