@@ -1,3 +1,19 @@
+## 0.4.32
+
+`2019-09-09`
+
+- **Bug Fix**
+  - **Grid** 组件 `hasLine` 无效修复；
+  - **Notice** 组件切换 `show` 时无跑马灯修复；
+  - **Calendar** 组件去除 `disable` 时的 tag；
+- **Enhancement**
+  - **SwipeAction** 组件 item 可修改文字和背景色；
+  - **Calendar** 组件可控制年份；
+  - 相关组件文档内容优化
+- **Feature**
+  - **Tabs** 组件新增 `tab-content` 高度自适应；（[#71](https://github.com/ant-mini-program/mini-antui/issues/71)）
+  - **List** 组件新增 `loadMore` 属性；([#73](https://github.com/ant-mini-program/mini-antui/issues/73))
+
 ## 0.4.31
 
 `2019-08-28`
