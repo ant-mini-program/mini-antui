@@ -1,4 +1,4 @@
-const noop = () => {};
+const noop = () => { };
 const canIUseTransitionEnd = my.canIUse('view.onTransitionEnd');
 
 Component({
@@ -8,7 +8,7 @@ Component({
     action: '', // 文本按钮
     show: true, // 是否显示
     enableMarquee: false, // 是否开启marquee
-    onClick: () => {},
+    onClick: () => { },
     marqueeProps: {
       loop: false,
       leading: 500,
@@ -42,6 +42,12 @@ Component({
     if (this.props.enableMarquee && !this._marqueeTimer && !canIUseTransitionEnd) {
       this._measureText();
       this._startAnimation();
+    } else {
+      // 当通过脚本切换 show 的值时（true or false），导致跑马灯动画效果失效的 bug 处理
+      if (!this.props.show) {
+        this.setData({ marqueeStyle: '' });
+      }
+      this._measureText(this.startMarquee.bind(this));
     }
   },
 

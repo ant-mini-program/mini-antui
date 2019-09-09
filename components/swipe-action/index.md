@@ -9,7 +9,7 @@
 | 属性名 | 描述 | 类型 | 默认值 |
 | ---- | ---- | ---- | ---- |
 | className | 自定义class | String| |
-| right | 滑动选项，最多两项 | Array[Object{type: `edit`/`delete`, text: string}]| [] |
+| right | 滑动选项，最多两项 | Array[Object{type: `edit`/`delete`, text: string, fColor: '颜色值', bgColor: '颜色值'}]| [] |
 | onRightItemClick | 点击滑动选项 | ({index, detail, extra, done}) => void | 调用done从而使swipe-action合上 |
 | restore | 还原组件到初始状态，当有多个swipe-action组件时，当滑动其中一个时，需要将其他的组件的`restore`属性设置为`true`，避免一个页面同时存在多个swipeAction处于活动状态。 | Boolean | false |
 | onSwipeStart | 开始滑动回调 | (e: Object) => void |  |
@@ -60,6 +60,7 @@ Page({
   data: {
     swipeIndex: null,
     list: [
+      { right: [{ type: 'edit', text: '取消收藏', bgColor: '#ccc', fColor: '#f00' }, { type: 'delete', text: '删除', bgColor: '#0ff', fColor: '#333' }], content: '文字和背景色同时改变' },
       { right: [{ type: 'delete', text: '删除' }], content: 'AAA' },
       { right: [{ type: 'edit', text: '取消收藏' }, { type: 'delete', text: '删除' }], content: 'BBB' },
       { right: [{ type: 'delete', text: '删除' }], content: 'CCC' },

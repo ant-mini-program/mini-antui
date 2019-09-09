@@ -48,6 +48,7 @@ Component({
     className: '',
     tagData: [],
     type: 'single',
+    haveYear: false,
   },
   didMount() {
     this.tapTimes = 1;
@@ -83,6 +84,40 @@ Component({
     });
   },
   methods: {
+    onPrevYearTap() {
+      const { selectedMonth, selectedYear } = this.data;
+      let year = selectedYear;
+      const month = selectedMonth;
+
+      year = selectedYear - 1;
+
+      if (this.props.onYearChange) {
+        this.props.onYearChange(year, selectedYear);
+      }
+
+      this.setData({
+        selectedYear: year,
+      });
+
+      this.refreshdates(month, year);
+    },
+    onNextYearTap() {
+      const { selectedMonth, selectedYear } = this.data;
+      let year = selectedYear;
+      const month = selectedMonth;
+
+      year = selectedYear + 1;
+
+      if (this.props.onYearChange) {
+        this.props.onYearChange(year, selectedYear);
+      }
+
+      this.setData({
+        selectedYear: year,
+      });
+
+      this.refreshdates(month, year);
+    },
     onPrevMonthTap() {
       const { selectedMonth, selectedYear } = this.data;
       let year = selectedYear;
@@ -352,7 +387,7 @@ Component({
               const dateObj = dates[i][j];
               if (dateObj.year === year && dateObj.month === month && dateObj.date === date) {
                 if (dateObj.disable) {
-                  console.log(1111);
+                  // console.log(1111);
                   isDisable = true;
                   dateObj.isSelected = false;
                 } else {

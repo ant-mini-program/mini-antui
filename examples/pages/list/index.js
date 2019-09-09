@@ -228,6 +228,12 @@ Page({
         align: 'middle',
       },
     ],
+    loadMore: '',
+    loadContent: [
+      '马不停蹄加载更多数据中...',
+      '-- 已经到底了，加不了咯 --',
+    ],
+    maxList: 5,
   },
   onItemClick(ev) {
     my.alert({
@@ -235,10 +241,23 @@ Page({
     });
   },
   onScrollToLower() {
-    const { items5 } = this.data;
-    const newItems = items5.concat(newitems);
     this.setData({
-      items5: newItems,
+      loadMore: 'load',
     });
+    const { items5 } = this.data;
+    // 加入 maxList 用于判断“假设”数据加载完毕后的情况
+    if (this.data.maxList > 0) {
+      const newItems = items5.concat(newitems);
+      const MAXList = this.data.maxList - 1;
+      this.setData({
+        items5: newItems,
+        maxList: MAXList,
+      });
+    } else {
+      // 数据加载完毕之后，改变 loadMore 为 over 即可
+      this.setData({
+        loadMore: 'over',
+      });
+    }
   },
 });

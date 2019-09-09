@@ -33,6 +33,9 @@
   <notice>因全国公民身份系统升级，添加银行卡银行卡银行卡银行卡</notice>
 </view>
 <view class="demo-item">
+  <notice enableMarquee="{{true}}" marqueeProps="{{loop: true, leading: 500, trailing: 800, fps: 40 }}">因全国公民身份系统升级，添加银行卡银行卡银行卡银行卡</notice>
+</view>
+<view class="demo-item">
   <notice mode="link" onClick="linkClick">因全国公民身份系统升级，添加银行卡银行卡银行卡银行卡</notice>
 </view>
 <view class="demo-item">
