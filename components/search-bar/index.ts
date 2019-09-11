@@ -40,6 +40,10 @@ Component({
       //   focus: true,
       // });
 
+      setTimeout(() => {
+        this.handleFocus();
+      }, 100);
+
       if (!('value' in this.props)) {
         this.setData({
           _value: '',
