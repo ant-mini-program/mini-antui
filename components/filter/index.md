@@ -13,6 +13,7 @@
 | show | 是否显示 可选值 `show` `hide` | String | hide | false |
 | max | 可选数量最大值，1为单选 | Number | 10000 | false |
 | onChange | 多选时提交选中回调 | (e: Object) => void | | false |
+| onMaskTap | 点击遮罩层时触发，可用于关闭 filter | () => void | | false |
 
 ## filter-item
 
@@ -37,7 +38,7 @@
 ```
 
 ```html
-<filter show="{{show}}" max="{{5}}" onChange="handleCallBack">
+<filter show="{{show}}" max="{{5}}" onChange="handleCallBack" onMaskTap="toggleFilter">
   <block a:for="{{items}}">
     <filter-item value="{{item.value}}" id="{{item.id}}" selected="{{item.selected}}"/>
   </block>

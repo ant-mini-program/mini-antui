@@ -30,5 +30,10 @@ Component({
       const { results } = this.data;
       onChange(results);
     },
+    maskTap() {
+      if (this.props.onMaskTap) {
+        this.props.onMaskTap();
+      }
+    },
   },
 });
