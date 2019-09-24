@@ -1,3 +1,14 @@
+## 0.4.34
+
+`2019-09-24`
+
+- **Bug Fix**
+  - **search-bar** 点击清除 icon 后搜索框自动获取焦点 [#289](https://github.com/ant-mini-program/mini-antui/issues/289)
+
+- **Feature**
+  - **filter** 组件可点击遮罩层关闭;调整最大高度值 [#287](https://github.com/ant-mini-program/mini-antui/issues/287)
+
+
 ## 0.4.33
 
 `2019-09-10`
