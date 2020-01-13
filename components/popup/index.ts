@@ -9,10 +9,16 @@ Component({
   },
   methods: {
     onMaskTap() {
-      const { onClose } = this.props;
+      const { onClose, animation } = this.props;
 
       if (onClose) {
-        onClose();
+        if (animation) {
+          onClose();
+        } else {
+          setTimeout(() => {
+            onClose();
+          }, 200);
+        }
       }
     },
   },
