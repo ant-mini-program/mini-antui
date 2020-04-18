@@ -8,7 +8,7 @@
   bottom: 0;
 }
 .am-modal-hide {
-  display: none;
+  display: none !important;
 }
 .am-modal-mask,
 .am-modal-document {
@@ -30,7 +30,10 @@
   background-color: #fff;
   border-radius: 2px;
   width: 270px;
-  position: relative;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 .am-modal-image {
   display: flex;
