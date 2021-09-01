@@ -1,4 +1,4 @@
-<swiper-item a:if="{{style}}" style="{{style}}" class="am-tabs-pane-wrap" key="tabs-pane-{{key}}">
+<swiper-item a:if="{{style}}" style="{{style}}" class="am-tabs-pane-wrap am-tabs-pane-wrap-swiper-item" key="tabs-pane-{{key}}">
   <slot></slot>
 </swiper-item>
 <view a:else style="{{tabId !== '' && activeTab !== '' ? tabId === activeTab?'':'height: 0px;' : ''}}" class="am-tabs-pane-wrap" key="tabs-pane-{{key}}">
