@@ -4,5 +4,6 @@ Component({
     size: 23,
     color: '#333',
     className: '',
+    ariaHidden: undefined,
   },
 });
